@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+  <xs:complexType name="PoseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Heading" type="xs:double" />
+      <xs:element minOccurs="0" name="X" type="xs:double" />
+      <xs:element minOccurs="0" name="Y" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoseData" nillable="true" type="tns:PoseData" />
+  <xs:complexType name="FleetState">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Kingpin" minOccurs="0" name="KingpinStates" nillable="true" type="q1:ArrayOfKingpinState" />
+      <xs:element minOccurs="0" name="Tick" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FleetState" nillable="true" type="tns:FleetState" />
+</xs:schema>

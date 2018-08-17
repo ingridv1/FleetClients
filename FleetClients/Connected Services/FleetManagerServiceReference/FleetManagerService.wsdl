@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FleetManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IFleetManagerService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IFleetManagerService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex" />
+        <ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Services" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFleetManagerService_VersionMajor_InputMessage">
+    <wsdl:part name="parameters" element="tns:VersionMajor" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_VersionMajor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VersionMajorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_VersionMinor_InputMessage">
+    <wsdl:part name="parameters" element="tns:VersionMinor" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_VersionMinor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VersionMinorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_VersionPatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:VersionPatch" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_VersionPatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VersionPatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SubscriptionHeartbeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscriptionHeartbeat" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SubscriptionHeartbeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscriptionHeartbeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_GetKingpinDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKingpinDescription" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_GetKingpinDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKingpinDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_CommitExtendedWaypoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommitExtendedWaypoints" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_CommitExtendedWaypoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommitExtendedWaypointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RequestFreeze_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFreeze" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RequestFreeze_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestFreezeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RequestUnfreeze_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestUnfreeze" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RequestUnfreeze_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestUnfreezeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_CreateVirtualVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVirtualVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_CreateVirtualVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVirtualVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RemoveVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_RemoveVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetPose_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPose" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetPose_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPoseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_ResetKingpin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetKingpin" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_ResetKingpin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetKingpinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_OnCallback_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnCallback" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_OnCallback_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnCallbackResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFleetManagerService">
+    <wsdl:operation name="VersionMajor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionMajor" message="tns:IFleetManagerService_VersionMajor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionMajorResponse" message="tns:IFleetManagerService_VersionMajor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VersionMinor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionMinor" message="tns:IFleetManagerService_VersionMinor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionMinorResponse" message="tns:IFleetManagerService_VersionMinor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VersionPatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionPatch" message="tns:IFleetManagerService_VersionPatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionPatchResponse" message="tns:IFleetManagerService_VersionPatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionHeartbeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat" message="tns:IFleetManagerService_SubscriptionHeartbeat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse" message="tns:IFleetManagerService_SubscriptionHeartbeat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKingpinDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription" message="tns:IFleetManagerService_GetKingpinDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse" message="tns:IFleetManagerService_GetKingpinDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitExtendedWaypoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" message="tns:IFleetManagerService_CommitExtendedWaypoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypointsResponse" message="tns:IFleetManagerService_CommitExtendedWaypoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeze">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/RequestFreeze" message="tns:IFleetManagerService_RequestFreeze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/RequestFreezeResponse" message="tns:IFleetManagerService_RequestFreeze_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestUnfreeze">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/RequestUnfreeze" message="tns:IFleetManagerService_RequestUnfreeze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/RequestUnfreezeResponse" message="tns:IFleetManagerService_RequestUnfreeze_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVirtualVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle" message="tns:IFleetManagerService_CreateVirtualVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicleResponse" message="tns:IFleetManagerService_CreateVirtualVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveVehicle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/RemoveVehicle" message="tns:IFleetManagerService_RemoveVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/RemoveVehicleResponse" message="tns:IFleetManagerService_RemoveVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPose">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/SetPose" message="tns:IFleetManagerService_SetPose_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/SetPoseResponse" message="tns:IFleetManagerService_SetPose_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetKingpin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/ResetKingpin" message="tns:IFleetManagerService_ResetKingpin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/ResetKingpinResponse" message="tns:IFleetManagerService_ResetKingpin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnCallback">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/OnCallback" message="tns:IFleetManagerService_OnCallback_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/OnCallbackResponse" message="tns:IFleetManagerService_OnCallback_InputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IFleetManagerService" type="tns:IFleetManagerService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IFleetManagerService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="VersionMajor">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionMajor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionMinor">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionMinor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionPatch">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionPatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionHeartbeat">
+      <soap12:operation soapAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKingpinDescription">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/GetKingpinDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitExtendedWaypoints">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeze">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RequestFreeze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestUnfreeze">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RequestUnfreeze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVirtualVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RemoveVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPose">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetPose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetKingpin">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/ResetKingpin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnCallback">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/OnCallback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSDualHttpBinding_IFleetManagerService" type="tns:IFleetManagerService">
+    <wsp:PolicyReference URI="#WSDualHttpBinding_IFleetManagerService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VersionMajor">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionMajor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionMinor">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionMinor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionPatch">
+      <soap12:operation soapAction="http://tempuri.org/IService/VersionPatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionHeartbeat">
+      <soap12:operation soapAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKingpinDescription">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/GetKingpinDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitExtendedWaypoints">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestFreeze">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RequestFreeze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestUnfreeze">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RequestUnfreeze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVirtualVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveVehicle">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/RemoveVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPose">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetPose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetKingpin">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/ResetKingpin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnCallback">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/OnCallback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FleetManagerService">
+    <wsdl:port name="NetTcpBinding_IFleetManagerService" binding="tns:NetTcpBinding_IFleetManagerService">
+      <soap12:address location="net.tcp://127.0.0.1:41917/fleetManager.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:41917/fleetManager.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSDualHttpBinding_IFleetManagerService" binding="tns:WSDualHttpBinding_IFleetManagerService">
+      <soap12:address location="http://127.0.0.1:41916/fleetManager.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://127.0.0.1:41916/fleetManager.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

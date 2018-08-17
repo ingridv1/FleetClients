@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Kingpin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Kingpin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="BaseMovementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Forwards" />
+      <xs:enumeration value="Backwards" />
+      <xs:enumeration value="Stationary" />
+      <xs:enumeration value="Rotate" />
+      <xs:enumeration value="Miscellaneous" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BaseMovementType" nillable="true" type="tns:BaseMovementType" />
+  <xs:complexType name="ArrayOfKingpinState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KingpinState" nillable="true" type="tns:KingpinState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKingpinState" nillable="true" type="tns:ArrayOfKingpinState" />
+  <xs:complexType name="KingpinState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgvMode" type="tns:AgvMode" />
+      <xs:element minOccurs="0" name="BatteryChargePercentage" type="xs:double" />
+      <xs:element minOccurs="0" name="DynamicLimiterStatus" type="tns:DynamicLimiterStatus" />
+      <xs:element minOccurs="0" name="ExtendedDataFaultStatus" type="tns:ExtendedDataFaultStatus" />
+      <xs:element minOccurs="0" name="FrozenState" type="tns:FrozenState" />
+      <xs:element minOccurs="0" name="Heading" type="xs:float" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="IPAddress" nillable="true" type="q1:IPAddress" />
+      <xs:element minOccurs="0" name="IsCharging" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastCompletedInstructionId" type="xs:int" />
+      <xs:element minOccurs="0" name="NavigationStatus" type="tns:NavigationStatus" />
+      <xs:element minOccurs="0" name="PositionControlStatus" type="tns:PositionControlStatus" />
+      <xs:element minOccurs="0" name="Speed" type="xs:double" />
+      <xs:element minOccurs="0" name="StateCastExtendedData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Stationary" type="ser:duration" />
+      <xs:element minOccurs="0" name="WaypointLastId" type="xs:int" />
+      <xs:element minOccurs="0" name="WaypointNextId" type="xs:int" />
+      <xs:element minOccurs="0" name="X" type="xs:float" />
+      <xs:element minOccurs="0" name="Y" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KingpinState" nillable="true" type="tns:KingpinState" />
+  <xs:simpleType name="AgvMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Automatic">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Manual">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AgvMode" nillable="true" type="tns:AgvMode" />
+  <xs:simpleType name="DynamicLimiterStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedShort" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="SafetySensor" />
+      <xs:enumeration value="Warning_1" />
+      <xs:enumeration value="Warning_2" />
+      <xs:enumeration value="MotorFault" />
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65535</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DynamicLimiterStatus" nillable="true" type="tns:DynamicLimiterStatus" />
+  <xs:simpleType name="ExtendedDataFaultStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="Fault" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExtendedDataFaultStatus" nillable="true" type="tns:ExtendedDataFaultStatus" />
+  <xs:simpleType name="FrozenState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Frozen" />
+      <xs:enumeration value="Unfrozen" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FrozenState" nillable="true" type="tns:FrozenState" />
+  <xs:simpleType name="NavigationStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedShort" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="Lost" />
+      <xs:enumeration value="AssociationFailure" />
+      <xs:enumeration value="HighUncertainty" />
+      <xs:enumeration value="PoorAssociaton" />
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65535</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NavigationStatus" nillable="true" type="tns:NavigationStatus" />
+  <xs:simpleType name="PositionControlStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedShort" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Disabling" />
+      <xs:enumeration value="NoWaypoints" />
+      <xs:enumeration value="OutOfPosition" />
+      <xs:enumeration value="WaypointDiscontinuity" />
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65535</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PositionControlStatus" nillable="true" type="tns:PositionControlStatus" />
+</xs:schema>
