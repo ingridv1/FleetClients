@@ -25,9 +25,13 @@ namespace FleetClients.DevConsole
             }             
         }
 
-        private static void HandleFleetState(FleetState fleetState)
-        {
+        private static readonly Queue<FleetState> toProcess = new Queue<FleetState>();
 
+        private static void ProcessFleetState(FleetState fleetState)
+        {
+            Console.SetCursorPosition(0, 2);
+
+            Console.WriteLine("Kingpins connected: {0}", fleetState.KingpinStates.Count());
         }
 
         private static void Client_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -37,8 +41,8 @@ namespace FleetClients.DevConsole
             switch (e.PropertyName)
             {
                 case "FleetState":
-                    {
-                        HandleFleetState(client.FleetState);
+                    {                       
+                        ProcessFleetState(client.FleetState);
                         break;
                     }                
 
