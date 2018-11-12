@@ -34,7 +34,7 @@ namespace FleetClients
             FleetState = fleetState;
         }
 
-        public TimeSpan Heartbeat { get { return heartbeat; } }
+        public TimeSpan Heartbeat => heartbeat; 
 
         ~FleetManagerClient()
         {
@@ -270,15 +270,14 @@ namespace FleetClients
         {
             Logger.Debug("Dispose({0})", isDisposing);
 
-            if (isDisposed)
-            {
-                return;
-            }
-
+            if (isDisposed) return;
+  
             if (isDisposing)
             {
                 this.callback.FleetStateUpdate -= Callback_FleetStateUpdate;
             }
+
+            base.Dispose(isDisposing);
 
             isDisposed = true;
         }
@@ -287,10 +286,7 @@ namespace FleetClients
         {
             Logger.Debug("GetKingpinDescription()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<XElement, ServiceCallData> result;
 
@@ -308,10 +304,7 @@ namespace FleetClients
         {
             Logger.Debug("RequestFreeze()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -329,10 +322,7 @@ namespace FleetClients
         {
             Logger.Debug("CommitExtendedWaypoints");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -350,10 +340,7 @@ namespace FleetClients
         {
             Logger.Debug("RequestUnfreeze()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -371,10 +358,7 @@ namespace FleetClients
         {
             Logger.Debug("CreateVirtualVehicle()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -392,10 +376,7 @@ namespace FleetClients
         {
             Logger.Debug("RemoveVehicle()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -413,10 +394,7 @@ namespace FleetClients
         {
             Logger.Debug("SetPose()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
@@ -434,10 +412,7 @@ namespace FleetClients
         {
             Logger.Debug("ResetKingpin()");
 
-            if (isDisposed)
-            {
-                throw new ObjectDisposedException("FleetManagerClient");
-            }
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
             Tuple<bool, ServiceCallData> result;
 
