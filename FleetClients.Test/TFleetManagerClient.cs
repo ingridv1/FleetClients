@@ -61,5 +61,49 @@ namespace FleetClients.Test
 
             Assert.IsTrue(success);
         }
-    }
+
+		[Test]
+		public void EnableVirtual()
+		{
+			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+			bool success;
+			client.TrySetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Enabled, out success);
+
+			Assert.IsTrue(success);
+		}
+
+		[Test]
+		public void DisableVirtual()
+		{
+			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+			bool success;
+			client.TrySetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Disabled, out success);
+
+			Assert.IsTrue(success);
+		}
+
+		[Test]
+		public void EnableFleet()
+		{
+			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+			bool success;
+			client.TrySetFleetState(VehicleControllerState.Enabled, out success);
+
+			Assert.IsTrue(success);
+		}
+
+		[Test]
+		public void DisableFleet()
+		{
+			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+			bool success;
+			client.TrySetFleetState(VehicleControllerState.Disabled, out success);
+
+			Assert.IsTrue(success);
+		}
+	}
 }

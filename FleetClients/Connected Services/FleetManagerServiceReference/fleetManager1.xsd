@@ -34,6 +34,7 @@
       <xs:element minOccurs="0" name="Speed" type="xs:double" />
       <xs:element minOccurs="0" name="StateCastExtendedData" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Stationary" type="ser:duration" />
+      <xs:element minOccurs="0" name="Tick" type="xs:unsignedByte" />
       <xs:element minOccurs="0" name="WaypointLastId" type="xs:int" />
       <xs:element minOccurs="0" name="WaypointNextId" type="xs:int" />
       <xs:element minOccurs="0" name="X" type="xs:float" />
@@ -72,6 +73,7 @@
       <xs:enumeration value="Warning_1" />
       <xs:enumeration value="Warning_2" />
       <xs:enumeration value="MotorFault" />
+      <xs:enumeration value="FastStop" />
       <xs:enumeration value="Unknown">
         <xs:annotation>
           <xs:appinfo>
@@ -113,6 +115,7 @@
       <xs:enumeration value="AssociationFailure" />
       <xs:enumeration value="HighUncertainty" />
       <xs:enumeration value="PoorAssociaton" />
+      <xs:enumeration value="NoResponse" />
       <xs:enumeration value="Unknown">
         <xs:annotation>
           <xs:appinfo>

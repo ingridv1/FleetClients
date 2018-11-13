@@ -94,6 +94,9 @@
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager8.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\FleetManagerServiceReference\fleetManager9.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />

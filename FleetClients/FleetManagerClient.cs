@@ -266,7 +266,41 @@ namespace FleetClients
             }
         }
 
-        protected override void Dispose(bool isDisposing)
+		public ServiceOperationResult TrySetFleetState(VehicleControllerState controllerState, out bool success)
+		{
+			Logger.Info("TrySetFleetState");
+
+			try
+			{
+				var result = SetFleetState(controllerState);
+				success = result.Item1;
+				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+			}
+			catch (Exception ex)
+			{
+				success = false;
+				return HandleClientException(ex);
+			}
+		}
+
+		public ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success)
+		{
+			Logger.Info("TrySetKingpinState");
+
+			try
+			{
+				var result = SetKingpinState(ipAddress, controllerState);
+				success = result.Item1;
+				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+			}
+			catch (Exception ex)
+			{
+				success = false;
+				return HandleClientException(ex);
+			}
+		}
+
+		protected override void Dispose(bool isDisposing)
         {
             Logger.Debug("Dispose({0})", isDisposing);
 
@@ -425,5 +459,41 @@ namespace FleetClients
 
             return result;
         }
-    }
+
+		private Tuple<bool, ServiceCallData> SetFleetState(VehicleControllerState controllerState)
+		{
+			Logger.Debug("SetFleetState()");
+
+			if(isDisposed) throw new ObjectDisposedException("FleetManagerClient");
+
+			Tuple<bool, ServiceCallData> result;
+
+			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
+			{
+				IFleetManagerService channel = channelFactory.CreateChannel();
+				result = channel.SetFleetState(controllerState);
+				channelFactory.Close();
+			}
+
+			return result;
+		}
+
+		private Tuple<bool, ServiceCallData> SetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState)
+		{
+			Logger.Debug("SetKingpinState()");
+
+			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
+
+			Tuple<bool, ServiceCallData> result;
+
+			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
+			{
+				IFleetManagerService channel = channelFactory.CreateChannel();
+				result = channel.SetKingpinState(ipAddress, controllerState);
+				channelFactory.Close();
+			}
+
+			return result;
+		}
+	}
 }

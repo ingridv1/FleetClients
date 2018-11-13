@@ -240,6 +240,9 @@ namespace FleetClients.FleetManagerServiceReference {
         GETALLAGENTSINLIFETIMESTATEFAILED = 6002,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        SETAGENTLIFETIMESTATEFAILED = 6003,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         COMMITINSTRUCTIONFAILED = 7001,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -270,6 +273,27 @@ namespace FleetClients.FleetManagerServiceReference {
         RESETKINGPINFAILED = 7012,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        ENABLEALLVEHICLESFAILED = 7013,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DISABLEALLVEHICLESFAILED = 7014,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        INVALIDIPADDRESS = 7015,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ENABLEVEHICLEFAILED = 7016,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DISABLEVEHICLEFAILED = 7017,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        SETFLEETSTATEFAILED = 7018,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        SETKINGPINSTATEFAILED = 7019,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         DOWNLOADFAILED = 8001,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -292,6 +316,9 @@ namespace FleetClients.FleetManagerServiceReference {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         GETPLUGINVERSIONSFAILED = 10002,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        GETOUTSTANDINGAGENTREQUESTSFAILED = 11001,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -389,6 +416,17 @@ namespace FleetClients.FleetManagerServiceReference {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleControllerState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles")]
+    public enum VehicleControllerState : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Enabled = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Disabled = 1,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -502,6 +540,9 @@ namespace FleetClients.FleetManagerServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.TimeSpan StationaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte TickField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int WaypointLastIdField;
@@ -708,6 +749,19 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte Tick {
+            get {
+                return this.TickField;
+            }
+            set {
+                if ((this.TickField.Equals(value) != true)) {
+                    this.TickField = value;
+                    this.RaisePropertyChanged("Tick");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int WaypointLastId {
             get {
                 return this.WaypointLastIdField;
@@ -800,6 +854,9 @@ namespace FleetClients.FleetManagerServiceReference {
         MotorFault = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        FastStop = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         Unknown = 65535,
     }
     
@@ -843,6 +900,9 @@ namespace FleetClients.FleetManagerServiceReference {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         PoorAssociaton = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NoResponse = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Unknown = 65535,
@@ -949,6 +1009,18 @@ namespace FleetClients.FleetManagerServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService/ResetKingpinResponse")]
         System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
+        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
+        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1080,6 +1152,22 @@ namespace FleetClients.FleetManagerServiceReference {
         
         public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.ResetKingpinAsync(ipAddress);
+        }
+        
+        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+            return base.Channel.SetFleetState(controllerState);
+        }
+        
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+            return base.Channel.SetFleetStateAsync(controllerState);
+        }
+        
+        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+            return base.Channel.SetKingpinState(ipAddress, controllerState);
+        }
+        
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+            return base.Channel.SetKingpinStateAsync(ipAddress, controllerState);
         }
     }
 }
