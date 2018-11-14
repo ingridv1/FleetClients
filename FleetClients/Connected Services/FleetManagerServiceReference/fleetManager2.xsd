@@ -5,6 +5,7 @@
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
   <xs:element name="VersionMajor">
     <xs:complexType>
       <xs:sequence />
@@ -166,10 +167,39 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SetFleetState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q19:VehicleControllerState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFleetStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetFleetStateResult" nillable="true" type="q20:TupleOfbooleanServiceCallDatayG81JSvh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKingpinState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q21:IPAddress" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q22:VehicleControllerState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKingpinStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetKingpinStateResult" nillable="true" type="q23:TupleOfbooleanServiceCallDatayG81JSvh" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="OnCallback">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="callbackObject" nillable="true" type="q19:FleetState" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="callbackObject" nillable="true" type="q24:FleetState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

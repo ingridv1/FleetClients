@@ -24,5 +24,9 @@ namespace FleetClients
         FleetState FleetState { get; }
 
     	ServiceOperationResult TryResetKingpin(IPAddress ipAddress, out bool success);
+
+		ServiceOperationResult TrySetFleetState(VehicleControllerState controllerState, out bool success);
+
+		ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success);
     }
 }

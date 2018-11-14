@@ -32,6 +32,7 @@
     <MetadataFile FileName="fleetManager6.xsd" MetadataType="Schema" ID="5db09186-0033-4ad9-a3bf-b4e1b4bcffa6" SourceId="1" SourceUrl="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" />
     <MetadataFile FileName="fleetManager7.xsd" MetadataType="Schema" ID="9b3495ff-f029-40d6-ac84-19d1c15188df" SourceId="1" SourceUrl="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" />
     <MetadataFile FileName="fleetManager8.xsd" MetadataType="Schema" ID="24ee6cd0-4b1a-4984-90e6-36bed46a07ad" SourceId="1" SourceUrl="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" />
+    <MetadataFile FileName="fleetManager9.xsd" MetadataType="Schema" ID="3f73c302-9318-4ebb-af40-1dd8673288e6" SourceId="1" SourceUrl="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

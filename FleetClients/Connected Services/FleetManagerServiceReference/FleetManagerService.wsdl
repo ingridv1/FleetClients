@@ -32,6 +32,7 @@
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Services" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IFleetManagerService_VersionMajor_InputMessage">
@@ -106,6 +107,18 @@
   <wsdl:message name="IFleetManagerService_ResetKingpin_OutputMessage">
     <wsdl:part name="parameters" element="tns:ResetKingpinResponse" />
   </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetFleetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFleetState" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetFleetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFleetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetKingpinState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetKingpinState" />
+  </wsdl:message>
+  <wsdl:message name="IFleetManagerService_SetKingpinState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetKingpinStateResponse" />
+  </wsdl:message>
   <wsdl:message name="IFleetManagerService_OnCallback_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:OnCallback" />
   </wsdl:message>
@@ -160,6 +173,14 @@
     <wsdl:operation name="ResetKingpin">
       <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/ResetKingpin" message="tns:IFleetManagerService_ResetKingpin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/ResetKingpinResponse" message="tns:IFleetManagerService_ResetKingpin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFleetState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/SetFleetState" message="tns:IFleetManagerService_SetFleetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/SetFleetStateResponse" message="tns:IFleetManagerService_SetFleetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetKingpinState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/SetKingpinState" message="tns:IFleetManagerService_SetKingpinState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse" message="tns:IFleetManagerService_SetKingpinState_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="OnCallback">
       <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/OnCallback" message="tns:IFleetManagerService_OnCallback_OutputCallbackMessage" />
@@ -270,6 +291,24 @@
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
       <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/ResetKingpin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFleetState">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetFleetState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKingpinState">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetKingpinState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -391,6 +430,24 @@
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
       <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/ResetKingpin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFleetState">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetFleetState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKingpinState">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/SetKingpinState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
