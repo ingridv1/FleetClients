@@ -84,6 +84,50 @@ namespace FleetClients.Test
 			Assert.IsTrue(success);
 		}
 
+        [Test]
+        public void CreateVirtual()
+        {
+            PoseData poseData = new PoseData()
+            {
+                X = -3,
+                Y = -2,
+                Heading = 0
+            };
+
+            IPAddress ipAddress = IPAddress.Parse("192.0.2.5");
+            IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+            bool success;
+            ServiceOperationResult result = client.TryCreateVirtualVehicle(ipAddress, poseData, out success);
+        }
+
+
+        [Test]
+        public void RemoveAGV()
+        {
+            IPAddress ipAddress = IPAddress.Parse("192.0.2.5");
+            IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+
+            bool success;
+            ServiceOperationResult result = client.TryRemoveVehicle(ipAddress, out success);
+        }
+
+        [Test]
+        [TestCase(0,0,0)]
+        public void SetPose(double x, double y, double heading)
+        {
+            IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+            PoseData poseData = new PoseData()
+            {
+                X = x,
+                Y = y,
+                Heading = heading
+            };
+
+            bool success;
+            ServiceOperationResult result = client.TrySetPose(IPAddress.Parse("192.0.2.5"), poseData, out success);
+        }
+
 		[Test]
 		public void EnableFleet()
 		{
