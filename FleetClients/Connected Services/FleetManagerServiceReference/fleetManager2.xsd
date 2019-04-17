@@ -3,7 +3,7 @@
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
   <xs:element name="VersionMajor">
@@ -73,7 +73,7 @@
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q4:IPAddress" />
         <xs:element minOccurs="0" name="instructionId" type="xs:int" />
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Kingpin" minOccurs="0" name="baseMovementType" type="q5:BaseMovementType" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="baseMovementType" type="q5:BaseMovementType" />
         <xs:element minOccurs="0" name="extendedWaypointBytes" nillable="true" type="xs:base64Binary" />
       </xs:sequence>
     </xs:complexType>

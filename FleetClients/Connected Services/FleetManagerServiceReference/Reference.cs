@@ -322,7 +322,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BaseMovementType", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BaseMovementType", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum BaseMovementType : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -824,7 +824,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AgvMode", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AgvMode", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum AgvMode : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -835,7 +835,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DynamicLimiterStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DynamicLimiterStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum DynamicLimiterStatus : ushort {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -861,7 +861,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ExtendedDataFaultStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExtendedDataFaultStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum ExtendedDataFaultStatus : byte {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -872,7 +872,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FrozenState", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FrozenState", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum FrozenState : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -883,7 +883,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NavigationStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NavigationStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum NavigationStatus : ushort {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -909,7 +909,7 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PositionControlStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PositionControlStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum PositionControlStatus : ushort {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]

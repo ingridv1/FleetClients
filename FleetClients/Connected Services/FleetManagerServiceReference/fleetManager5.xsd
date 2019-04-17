@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
   <xs:complexType name="PoseData">
     <xs:sequence>
       <xs:element minOccurs="0" name="Heading" type="xs:double" />
