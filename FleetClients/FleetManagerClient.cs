@@ -157,13 +157,13 @@ namespace FleetClients
         /// Commit extended waypoints to a kingpin
         /// </summary>
         /// <returns>ServiceOperationResult</returns>
-        public ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] extendedWaypoints, out bool success)
+        public ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success)
         {
             Logger.Info("TryCommitExtendedWaypoints()");
 
             try
             {
-                Tuple<bool, ServiceCallData> result = CommitEx2Waypoints(ipAddress, instructionId, extendedWaypoints);
+                Tuple<bool, ServiceCallData> result = CommitEx2Waypoints(ipAddress, instructionId, ex2Waypoints);
                 success = result.Item1;
                 return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
             }
@@ -352,7 +352,7 @@ namespace FleetClients
             return result;
         }
 
-        private Tuple<bool, ServiceCallData> CommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] extendedWaypoints)
+        private Tuple<bool, ServiceCallData> CommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints)
         {
             Logger.Debug("CommitExtendedWaypoints");
 
@@ -363,7 +363,7 @@ namespace FleetClients
             using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
             {
                 IFleetManagerService channel = channelFactory.CreateChannel();
-                result = channel.CommitEx2Waypoints(ipAddress, instructionId, extendedWaypoints);
+                result = channel.CommitEx2Waypoints(ipAddress, instructionId, ex2Waypoints);
                 channelFactory.Close();
             }
 
