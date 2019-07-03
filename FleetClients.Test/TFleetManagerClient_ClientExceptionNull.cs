@@ -49,7 +49,7 @@ namespace FleetClients.Test
 		{
 			byte[] waypoints = { };
 			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryCommitExtendedWaypoints(IPAddress.Loopback, 1, BaseMovementType.Forwards, waypoints, out success);
+			ServiceOperationResult result = FleetManagerClient.TryCommitEx2Waypoints(IPAddress.Loopback, 1, waypoints, out success);
 
 			Assert.IsNull(result.ClientException);
 		}

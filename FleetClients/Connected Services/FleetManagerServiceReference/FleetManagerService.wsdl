@@ -30,10 +30,10 @@
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Services" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IFleetManagerService_VersionMajor_InputMessage">
@@ -66,11 +66,11 @@
   <wsdl:message name="IFleetManagerService_GetKingpinDescription_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetKingpinDescriptionResponse" />
   </wsdl:message>
-  <wsdl:message name="IFleetManagerService_CommitExtendedWaypoints_InputMessage">
-    <wsdl:part name="parameters" element="tns:CommitExtendedWaypoints" />
+  <wsdl:message name="IFleetManagerService_CommitEx2Waypoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommitEx2Waypoints" />
   </wsdl:message>
-  <wsdl:message name="IFleetManagerService_CommitExtendedWaypoints_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CommitExtendedWaypointsResponse" />
+  <wsdl:message name="IFleetManagerService_CommitEx2Waypoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommitEx2WaypointsResponse" />
   </wsdl:message>
   <wsdl:message name="IFleetManagerService_RequestFreeze_InputMessage">
     <wsdl:part name="parameters" element="tns:RequestFreeze" />
@@ -147,9 +147,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription" message="tns:IFleetManagerService_GetKingpinDescription_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse" message="tns:IFleetManagerService_GetKingpinDescription_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CommitExtendedWaypoints">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" message="tns:IFleetManagerService_CommitExtendedWaypoints_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypointsResponse" message="tns:IFleetManagerService_CommitExtendedWaypoints_OutputMessage" />
+    <wsdl:operation name="CommitEx2Waypoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints" message="tns:IFleetManagerService_CommitEx2Waypoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse" message="tns:IFleetManagerService_CommitEx2Waypoints_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RequestFreeze">
       <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService/RequestFreeze" message="tns:IFleetManagerService_RequestFreeze_InputMessage" />
@@ -236,8 +236,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CommitExtendedWaypoints">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" style="document" />
+    <wsdl:operation name="CommitEx2Waypoints">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -375,8 +375,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CommitExtendedWaypoints">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints" style="document" />
+    <wsdl:operation name="CommitEx2Waypoints">
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

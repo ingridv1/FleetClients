@@ -3,9 +3,8 @@
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
   <xs:element name="VersionMajor">
     <xs:complexType>
       <xs:sequence />
@@ -68,20 +67,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CommitExtendedWaypoints">
+  <xs:element name="CommitEx2Waypoints">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q4:IPAddress" />
         <xs:element minOccurs="0" name="instructionId" type="xs:int" />
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="baseMovementType" type="q5:BaseMovementType" />
-        <xs:element minOccurs="0" name="extendedWaypointBytes" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="ex2WaypointBytes" nillable="true" type="xs:base64Binary" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CommitExtendedWaypointsResponse">
+  <xs:element name="CommitEx2WaypointsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CommitExtendedWaypointsResult" nillable="true" type="q6:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CommitEx2WaypointsResult" nillable="true" type="q5:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -93,7 +91,7 @@
   <xs:element name="RequestFreezeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RequestFreezeResult" nillable="true" type="q7:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RequestFreezeResult" nillable="true" type="q6:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,101 +103,101 @@
   <xs:element name="RequestUnfreezeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RequestUnfreezeResult" nillable="true" type="q8:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RequestUnfreezeResult" nillable="true" type="q7:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateVirtualVehicle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q9:IPAddress" />
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q10:PoseData" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q8:IPAddress" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q9:PoseData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateVirtualVehicleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CreateVirtualVehicleResult" nillable="true" type="q11:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="CreateVirtualVehicleResult" nillable="true" type="q10:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RemoveVehicle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q12:IPAddress" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q11:IPAddress" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RemoveVehicleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoveVehicleResult" nillable="true" type="q13:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RemoveVehicleResult" nillable="true" type="q12:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetPose">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q14:IPAddress" />
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q15:PoseData" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q13:IPAddress" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q14:PoseData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetPoseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetPoseResult" nillable="true" type="q16:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetPoseResult" nillable="true" type="q15:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ResetKingpin">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q17:IPAddress" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q16:IPAddress" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ResetKingpinResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ResetKingpinResult" nillable="true" type="q18:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ResetKingpinResult" nillable="true" type="q17:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetFleetState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q19:VehicleControllerState" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q18:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetFleetStateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetFleetStateResult" nillable="true" type="q20:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetFleetStateResult" nillable="true" type="q19:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetKingpinState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q21:IPAddress" />
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q22:VehicleControllerState" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q20:IPAddress" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" minOccurs="0" name="controllerState" type="q21:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetKingpinStateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetKingpinStateResult" nillable="true" type="q23:TupleOfbooleanServiceCallDatayG81JSvh" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SetKingpinStateResult" nillable="true" type="q22:TupleOfbooleanServiceCallDatayG81JSvh" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="OnCallback">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="callbackObject" nillable="true" type="q24:FleetState" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="callbackObject" nillable="true" type="q23:FleetState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

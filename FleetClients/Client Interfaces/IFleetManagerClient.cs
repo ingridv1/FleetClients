@@ -11,7 +11,7 @@ namespace FleetClients
 
     	ServiceOperationResult TryGetKingpinDescription(IPAddress ipAddress, out XDocument xDocument);
 
-    	ServiceOperationResult TryCommitExtendedWaypoints(IPAddress ipAddress, int instructionId, BaseMovementType baseMovementType, byte[] extendedWaypoints, out bool success);
+    	ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success);
 
     	ServiceOperationResult TryRequestUnfreeze(out bool success);
 

@@ -17,6 +17,7 @@
       <xs:enumeration value="CLIENTEXCEPTION" />
       <xs:enumeration value="SERVICEUNAVAILABLE" />
       <xs:enumeration value="SERVICENOTIMPLEMENTED" />
+      <xs:enumeration value="INTERNALERROR" />
       <xs:enumeration value="COMMITJOBFAILED">
         <xs:annotation>
           <xs:appinfo>
@@ -38,7 +39,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEPIPELINEDTASKFAILED">
+      <xs:enumeration value="CREATEATOMICMOVELISTTASKFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1004</EnumerationValue>
@@ -87,14 +88,14 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEMOVINGTASKFAILED">
+      <xs:enumeration value="CREATEGOTONODETASKFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1011</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="FINALISETASKFAILED">
+      <xs:enumeration value="CREATEATOMICMOVETASKFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1012</EnumerationValue>
@@ -227,7 +228,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETTRAJECTORYFAILED">
+      <xs:enumeration value="GETRAJECTORYFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4004</EnumerationValue>
@@ -241,17 +242,45 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="REGISTERBLOCKINGMANDATEFAILED">
+      <xs:enumeration value="SETOCCUPYINGMANDATEFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4006</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CLEARBLOCKINGMANDATEFAILED">
+      <xs:enumeration value="CLEAROCCUPYINGMANDATEFAILED">
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4007</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONTAINSINVALIDMAPITEMIDS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4008</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONTAINSINVALIDTIMEOUT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4009</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OCCUPATIONALREADYINPROGRESS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4010</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GETOCCUPYINGMANDATEPROGRESSDATAFAILED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4011</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>

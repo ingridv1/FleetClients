@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:simpleType name="VehicleControllerState">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Enabled" />
-      <xs:enumeration value="Disabled" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="VehicleControllerState" nillable="true" type="tns:VehicleControllerState" />
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Kingpin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Kingpin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfKingpinState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KingpinState" nillable="true" type="tns:KingpinState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKingpinState" nillable="true" type="tns:ArrayOfKingpinState" />
+  <xs:complexType name="KingpinState">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="AgvMode" type="q1:AgvMode" />
+      <xs:element minOccurs="0" name="BatteryChargePercentage" type="xs:double" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="DynamicLimiterStatus" type="q2:DynamicLimiterStatus" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="ExtendedDataFaultStatus" type="q3:ExtendedDataFaultStatus" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="FrozenState" type="q4:FrozenState" />
+      <xs:element minOccurs="0" name="Heading" type="xs:float" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="IPAddress" nillable="true" type="q5:IPAddress" />
+      <xs:element minOccurs="0" name="IsCharging" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastCompletedInstructionId" type="xs:int" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="NavigationStatus" type="q6:NavigationStatus" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" minOccurs="0" name="PositionControlStatus" type="q7:PositionControlStatus" />
+      <xs:element minOccurs="0" name="Speed" type="xs:double" />
+      <xs:element minOccurs="0" name="StateCastExtendedData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Stationary" type="ser:duration" />
+      <xs:element minOccurs="0" name="Tick" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="WaypointLastId" type="xs:int" />
+      <xs:element minOccurs="0" name="WaypointNextId" type="xs:int" />
+      <xs:element minOccurs="0" name="X" type="xs:float" />
+      <xs:element minOccurs="0" name="Y" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KingpinState" nillable="true" type="tns:KingpinState" />
 </xs:schema>
