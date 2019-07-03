@@ -126,6 +126,9 @@ namespace FleetClients.FleetManagerServiceReference {
         SERVICENOTIMPLEMENTED = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        INTERNALERROR = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         COMMITJOBFAILED = 1001,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -135,7 +138,7 @@ namespace FleetClients.FleetManagerServiceReference {
         CREATEUNORDEREDLISTTASKFAILED = 1003,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEPIPELINEDTASKFAILED = 1004,
+        CREATEATOMICMOVELISTTASKFAILED = 1004,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         CREATEORDEREDLISTTASKFAILED = 1005,
@@ -156,10 +159,10 @@ namespace FleetClients.FleetManagerServiceReference {
         CREATESLEEPINGTASKFAILED = 1010,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEMOVINGTASKFAILED = 1011,
+        CREATEGOTONODETASKFAILED = 1011,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        FINALISETASKFAILED = 1012,
+        CREATEATOMICMOVETASKFAILED = 1012,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         BEGINEDITINGJOBFAILED = 1013,
@@ -216,16 +219,28 @@ namespace FleetClients.FleetManagerServiceReference {
         GETMAPPINGKEYCARDSIGNATUREFAILED = 4003,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETTRAJECTORYFAILED = 4004,
+        GETRAJECTORYFAILED = 4004,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         INVALIDMOVEID = 4005,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        REGISTERBLOCKINGMANDATEFAILED = 4006,
+        SETOCCUPYINGMANDATEFAILED = 4006,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        CLEARBLOCKINGMANDATEFAILED = 4007,
+        CLEAROCCUPYINGMANDATEFAILED = 4007,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CONTAINSINVALIDMAPITEMIDS = 4008,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CONTAINSINVALIDTIMEOUT = 4009,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        OCCUPATIONALREADYINPROGRESS = 4010,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        GETOCCUPYINGMANDATEPROGRESSDATAFAILED = 4011,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         GETOUTSTANDINGSERVICEREQUESTSFAILED = 5001,
@@ -319,26 +334,6 @@ namespace FleetClients.FleetManagerServiceReference {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         GETOUTSTANDINGAGENTREQUESTSFAILED = 11001,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BaseMovementType", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
-    public enum BaseMovementType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Forwards = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Backwards = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Stationary = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Rotate = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Miscellaneous = 4,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -857,6 +852,9 @@ namespace FleetClients.FleetManagerServiceReference {
         FastStop = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        GoSlow = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         Unknown = 65535,
     }
     
@@ -968,11 +966,11 @@ namespace FleetClients.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse")]
         System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypointsResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitExtendedWaypoints(System.Net.IPAddress ipAddress, int instructionId, FleetClients.FleetManagerServiceReference.BaseMovementType baseMovementType, byte[] extendedWaypointBytes);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
+        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitExtendedWaypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitExtendedWaypointsResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitExtendedWaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, FleetClients.FleetManagerServiceReference.BaseMovementType baseMovementType, byte[] extendedWaypointBytes);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestFreezeResponse")]
         System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestFreeze();
@@ -1098,12 +1096,12 @@ namespace FleetClients.FleetManagerServiceReference {
             return base.Channel.GetKingpinDescriptionAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitExtendedWaypoints(System.Net.IPAddress ipAddress, int instructionId, FleetClients.FleetManagerServiceReference.BaseMovementType baseMovementType, byte[] extendedWaypointBytes) {
-            return base.Channel.CommitExtendedWaypoints(ipAddress, instructionId, baseMovementType, extendedWaypointBytes);
+        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
+            return base.Channel.CommitEx2Waypoints(ipAddress, instructionId, ex2WaypointBytes);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitExtendedWaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, FleetClients.FleetManagerServiceReference.BaseMovementType baseMovementType, byte[] extendedWaypointBytes) {
-            return base.Channel.CommitExtendedWaypointsAsync(ipAddress, instructionId, baseMovementType, extendedWaypointBytes);
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
+            return base.Channel.CommitEx2WaypointsAsync(ipAddress, instructionId, ex2WaypointBytes);
         }
         
         public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestFreeze() {
