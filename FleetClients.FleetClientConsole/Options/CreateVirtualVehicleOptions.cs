@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FleetClients.FleetClientConsole
+namespace FleetClients.FleetClientConsole.Options
 {
-	public static class ExtensionMehods
+	public class CreateVirtualVehicleOptions
 	{
 	}
 }
