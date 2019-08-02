@@ -13,106 +13,32 @@ namespace FleetClients.FleetClientConsole
 {
 	class Program
 	{
-
-		private static int Moo(ConfigureClientOptions opts)
-		{
-			return -1;
-		}
-
-		[Verb("Set", HelpText ="Set pose of an AGV in the fleet")]
-		public class SetPoseOptions
-		{
-
-		}
-
-
-
-		private static int RunSetPoseAndReturnExitCode(SetPoseOptions opts)
-		{
-			return 0;
-		}
-
-		private static int RunRemoveAndReturnExitCode(RemoveOptions opts)
-		{
-			return 0;
-		}
-
 		static void Main(string[] args)
 		{
 			Console.Title = @"Fleet Client Console";
 
-			IFleetManagerClient client = null;		
+			IFleetManagerClient client = null;
+
+			Parser.Default.ParseArguments<ConfigureClientOptions>(args)
+				.WithParsed<ConfigureClientOptions>(o =>
+				{
+					client = o.CreateTcpFleetManagerClient();
+				}
+				)
+				.WithNotParsed<ConfigureClientOptions>(o =>
+				{
+					Environment.Exit(-1);
+				});
 
 			while (true)
 			{
-				Console.WriteLine("reroll");
-
-				string foo = Console.ReadLine();
-
-
-
-				Parser.Default.ParseArguments<ConfigureClientOptions, RemoveOptions, SetPoseOptions>(foo.Split())
-					.MapResult(
-						(ConfigureClientOptions opts) =>
-						{
-							client = opts.CreateTcpFleetManagerClient();
-							return 0;
-						},
+				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, RemoveOptions, SetPoseOptions>(Console.ReadLine().Split())
+					.MapResult(		
+						(CreateVirtualVehicleOptions opts) => opts.CreateVirtualVehicle(client),
 						(RemoveOptions opts) => opts.Remove(client),
-						(SetPoseOptions opts) => RunSetPoseAndReturnExitCode(opts),
-						errs => 1); ;
-
-
-			}
-			/*
-
-			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(IPAddress.Loopback));
-
-			Console.WriteLine("Foo");
-
-			bool continueFlag = true;
-
-			IPAddress ipAddress = IPAddress.Parse("192.168.4.69");
-
-			while (continueFlag)
-			{
-				switch (Console.ReadKey(true).Key)
-				{
-					case ConsoleKey.C:
-						{
-							client.TryCreateVirtualVehicle(ipAddress, PoseDataFactory.ZeroPose, out bool success);
-							break;
-						}
-
-					case ConsoleKey.R:
-						{
-							client.TryRemoveVehicle(ipAddress, out bool success);
-							break;
-						}
-
-					case ConsoleKey.S:
-						{
-							break;
-						}
-
-					case ConsoleKey.Q:
-						{
-							continueFlag = false;
-							break;
-						}
-
-					default:
-						break;
-				}
-			}
-
-
-
-			*/
-			Console.WriteLine("Press <any> key to quit");
-			Console.ReadKey(true);
-
-		
+						(SetPoseOptions opts) => opts.SetPose(client),
+						errs => ServiceOperationResult.FromClientException(new Exception("foo")));
+			}		
 		}
 	}
 }

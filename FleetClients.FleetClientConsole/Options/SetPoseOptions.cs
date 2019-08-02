@@ -1,17 +1,17 @@
-﻿using CommandLine;
+﻿using BaseClients;
+using CommandLine;
+using FleetClients.FleetManagerServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net;
-using BaseClients;
-using FleetClients.FleetManagerServiceReference;
 
 namespace FleetClients.FleetClientConsole.Options
 {
-	[Verb("create", HelpText = "Create a virtual vehicle")]
-	public class CreateVirtualVehicleOptions
+	[Verb("setpose", HelpText = "Set AGV pose")]
+	public class SetPoseOptions
 	{
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }
@@ -19,12 +19,12 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('p', "PoseString", Required = false, Default = "", HelpText = "Pose")]
 		public string PoseString { get; set; }
 
-		public ServiceOperationResult CreateVirtualVehicle(IFleetManagerClient client)
+		public ServiceOperationResult SetPose(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 			PoseDataFactory.TryParseString(PoseString, out PoseData poseData);
-		
-			return client.TryCreateVirtualVehicle(ipAddress, poseData?? PoseDataFactory.NaNPose, out bool success);
+
+			return client.TrySetPose(ipAddress, poseData ?? PoseDataFactory.NaNPose, out bool success);
 		}
 	}
 }
