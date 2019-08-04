@@ -32,12 +32,15 @@ namespace FleetClients.FleetClientConsole
 
 			while (true)
 			{
-				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, RemoveOptions, SetPoseOptions>(Console.ReadLine().Split())
+				Console.Write("fc>");
+				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, RemoveOptions, ResetKingpinOption, SetPoseOptions>(Console.ReadLine().Split())
 					.MapResult(		
-						(CreateVirtualVehicleOptions opts) => opts.CreateVirtualVehicle(client),
-						(RemoveOptions opts) => opts.Remove(client),
-						(SetPoseOptions opts) => opts.SetPose(client),
-						errs => ServiceOperationResult.FromClientException(new Exception("foo")));
+						(CreateVirtualVehicleOptions opts) => opts.ExecuteOption(client),
+						(RemoveOptions opts) => opts.ExecuteOption(client),
+						(ResetKingpinOption opts) => opts.ExecuteOption(client),
+						(SetPoseOptions opts) => opts.ExecuteOption(client),
+						errs => ServiceOperationResult.FromClientException(new Exception("Operation failed"))
+						);
 			}		
 		}
 	}

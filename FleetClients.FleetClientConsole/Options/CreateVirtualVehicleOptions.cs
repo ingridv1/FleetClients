@@ -11,7 +11,7 @@ using FleetClients.FleetManagerServiceReference;
 namespace FleetClients.FleetClientConsole.Options
 {
 	[Verb("create", HelpText = "Create a virtual vehicle")]
-	public class CreateVirtualVehicleOptions
+	public class CreateVirtualVehicleOptions : AbstractOption<IFleetManagerClient>
 	{
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }
@@ -19,7 +19,7 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('p', "PoseString", Required = false, Default = "", HelpText = "Pose")]
 		public string PoseString { get; set; }
 
-		public ServiceOperationResult CreateVirtualVehicle(IFleetManagerClient client)
+		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 			PoseDataFactory.TryParseString(PoseString, out PoseData poseData);

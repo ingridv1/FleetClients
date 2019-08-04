@@ -52,9 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\AbstractOption.cs" />
     <Compile Include="Options\CreateVirtualVehicleOptions.cs" />
     <Compile Include="Options\ConfigureClientOptions.cs" />
     <Compile Include="Options\RemoveOptions.cs" />
+    <Compile Include="Options\ResetKingpinOption.cs" />
     <Compile Include="Options\SetPoseOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
