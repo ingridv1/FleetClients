@@ -1,19 +1,13 @@
 ﻿using BaseClients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using CommandLine;
 using FleetClients.FleetClientConsole.Options;
-using FleetClients;
+using System;
 
 namespace FleetClients.FleetClientConsole
 {
-	class Program
+	internal class Program
 	{
-		static void Main(string[] args)
+		private static void Main(string[] args)
 		{
 			Console.Title = @"Fleet Client Console";
 
@@ -33,16 +27,33 @@ namespace FleetClients.FleetClientConsole
 			while (true)
 			{
 				Console.Write("fc>");
-				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, GetKingpinDescriptionOptions, RemoveOptions, ResetKingpinOption, SetPoseOptions>(Console.ReadLine().Split())
+				args = Console.ReadLine().Split();
+
+				Parser.Default.ParseArguments
+					<CreateVirtualVehicleOptions,
+					 GetKingpinDescriptionOptions,
+					 RemoveOptions,
+					 RequestFreezeOption,
+					 RequestUnfreezeOption,
+					 ResetKingpinOption,
+					 SetFleetStateOption,
+					 SetKingpinStateOption,
+					 SetPoseOptions
+					 >
+					 (args)
 					.MapResult(
 						(CreateVirtualVehicleOptions opts) => opts.ExecuteOption(client),
 						(GetKingpinDescriptionOptions opts) => opts.ExecuteOption(client),
 						(RemoveOptions opts) => opts.ExecuteOption(client),
+						(RequestFreezeOption opts) => opts.ExecuteOption(client),
+						(RequestUnfreezeOption opts) => opts.ExecuteOption(client),
 						(ResetKingpinOption opts) => opts.ExecuteOption(client),
+						(SetFleetStateOption opts) => opts.ExecuteOption(client),
+						(SetKingpinStateOption opts) => opts.ExecuteOption(client),
 						(SetPoseOptions opts) => opts.ExecuteOption(client),
 						errs => ServiceOperationResult.FromClientException(new Exception("Operation failed"))
 						);
-			}		
+			}
 		}
 	}
 }

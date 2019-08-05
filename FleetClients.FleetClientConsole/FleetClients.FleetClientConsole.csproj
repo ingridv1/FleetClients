@@ -68,9 +68,13 @@
     <Compile Include="Options\ConfigureClientOptions.cs" />
     <Compile Include="Options\RemoveOptions.cs" />
     <Compile Include="Options\ResetKingpinOption.cs" />
+    <Compile Include="Options\SetFleetStateOption.cs" />
+    <Compile Include="Options\SetKingpinStateOption.cs" />
     <Compile Include="Options\SetPoseOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Options\RequestFreezeOption.cs" />
+    <Compile Include="Options\RequestUnfreezeOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
