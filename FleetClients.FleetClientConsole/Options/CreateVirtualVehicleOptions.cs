@@ -11,7 +11,7 @@ using FleetClients.FleetManagerServiceReference;
 namespace FleetClients.FleetClientConsole.Options
 {
 	[Verb("create", HelpText = "Create a virtual vehicle")]
-	public class CreateVirtualVehicleOptions : AbstractOption<IFleetManagerClient>
+	public class CreateVirtualVehicleOptions : AbstractConsoleOption<IFleetManagerClient>
 	{
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }

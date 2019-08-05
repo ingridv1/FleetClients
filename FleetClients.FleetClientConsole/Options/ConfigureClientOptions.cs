@@ -15,8 +15,8 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('i', "IPv4String", Required = false, Default = "127.0.0.1", HelpText = "Scheduler IPv4 Address")]
 		public string IPv4String { get; set; }
 
-		[Option('t', "TcpPort", Required = false, Default = 41917, HelpText = "TCP port of scheduler")]
-		public Int32 TcpPort { get; set; }
+		[Option('t', "TcpPort", Required = false, Default = (ushort)41917, HelpText = "TCP port of scheduler")]
+		public ushort TcpPort { get; set; }
 
 		public IFleetManagerClient CreateTcpFleetManagerClient()
 		{

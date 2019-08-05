@@ -33,9 +33,10 @@ namespace FleetClients.FleetClientConsole
 			while (true)
 			{
 				Console.Write("fc>");
-				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, RemoveOptions, ResetKingpinOption, SetPoseOptions>(Console.ReadLine().Split())
-					.MapResult(		
+				Parser.Default.ParseArguments<CreateVirtualVehicleOptions, GetKingpinDescriptionOptions, RemoveOptions, ResetKingpinOption, SetPoseOptions>(Console.ReadLine().Split())
+					.MapResult(
 						(CreateVirtualVehicleOptions opts) => opts.ExecuteOption(client),
+						(GetKingpinDescriptionOptions opts) => opts.ExecuteOption(client),
 						(RemoveOptions opts) => opts.ExecuteOption(client),
 						(ResetKingpinOption opts) => opts.ExecuteOption(client),
 						(SetPoseOptions opts) => opts.ExecuteOption(client),

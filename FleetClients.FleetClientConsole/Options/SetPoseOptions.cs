@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace FleetClients.FleetClientConsole.Options
 {
 	[Verb("setpose", HelpText = "Set AGV pose")]
-	public class SetPoseOptions : AbstractOption<IFleetManagerClient>
+	public class SetPoseOptions : AbstractConsoleOption<IFleetManagerClient>
 	{
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }

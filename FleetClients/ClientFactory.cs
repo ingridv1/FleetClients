@@ -10,7 +10,7 @@ namespace FleetClients
             return new FleetManagerClient(endpointSettings.TcpFleetManagerService());
         }
 
-        public static IFleetManagerClient CreateTcpFleetManagerClient(IPAddress ipAddress, int tcpPort = 41917)
+        public static IFleetManagerClient CreateTcpFleetManagerClient(IPAddress ipAddress, ushort tcpPort = 41917)
         {
             EndpointSettings endpointSettings = new EndpointSettings(ipAddress, 41916, tcpPort);
             return CreateTcpFleetManagerClient(endpointSettings);

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace FleetClients.FleetClientConsole.Options
 {
 	[Verb("reset", HelpText = "Reset a kingpin module")]
-	public class ResetKingpinOption : AbstractOption<IFleetManagerClient>
+	public class ResetKingpinOption : AbstractConsoleOption<IFleetManagerClient>
 	{
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }

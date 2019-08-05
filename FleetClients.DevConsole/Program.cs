@@ -14,7 +14,7 @@ namespace FleetClients.DevConsole
         static void Main(string[] args)
         {
             IPAddress ipAddress = IPAddress.Loopback;
-            int tcpPort = 41917;    
+            ushort tcpPort = 41917;    
 
             using (IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(ipAddress, tcpPort))
             {
