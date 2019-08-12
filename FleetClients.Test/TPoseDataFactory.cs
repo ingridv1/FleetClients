@@ -11,6 +11,8 @@ namespace FleetClients.Test
 		[Test]
 		[TestCase(0,1,2)]
 		[TestCase(0, -1, -2)]
+		[TestCase(1, 1.38, 1.57)]
+		[TestCase(1, -1.38, -1.57)]
 		public void ParseString(double x, double y, double heading)
 		{
 			foreach(string subString in FormattedStrings(x,y,heading))

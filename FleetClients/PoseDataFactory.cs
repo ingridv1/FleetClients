@@ -10,7 +10,7 @@ namespace FleetClients
 {
 	public static class PoseDataFactory
 	{
-		public static Regex PoseStringRegex { get; } = new Regex(@"(?:[^\d-]*)(?<x>-?\d+)(?:[^\d-]*)(?<y>-?\d+)(?:[^\d-]*)(?<heading>-?\d+)", RegexOptions.Singleline);
+		public static Regex PoseStringRegex { get; } = new Regex(@"(?:[^\d-]*)(?<x>-?\d*\.?\d*)(?:[^\d-]*)(?<y>-?\d*\.?\d*)(?:[^\d-]*)(?<heading>-?\d*\.?\d*$)", RegexOptions.Singleline);
 
 		public static bool TryParseString(string poseString, out PoseData poseData)
 		{
