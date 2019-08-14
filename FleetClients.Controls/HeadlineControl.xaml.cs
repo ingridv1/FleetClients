@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GACore.Controls;
 
 namespace FleetClients.Controls
 {
-	/// <summary>
-	/// Interaction logic for KingpinStateControl.xaml
-	/// </summary>
-	public partial class KingpinStateControl : UserControl
-	{
-		public KingpinStateControl()
-		{
-			InitializeComponent();
-                        
-            GACore.Controls.KingpinStatusControl foo = null;
-		}
-	}
+    /// <summary>
+    /// Interaction logic for HeadlineControl.xaml
+    /// </summary>
+    public partial class HeadlineControl : UserControl
+    {
+        public HeadlineControl()
+        {
+            InitializeComponent();
+        }
+    }
 }

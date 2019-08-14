@@ -1,5 +1,6 @@
 ﻿using BaseClients;
 using FleetClients.FleetManagerServiceReference;
+using GACore;
 using System.Net;
 using System.Xml.Linq;
 
@@ -28,5 +29,7 @@ namespace FleetClients
 		ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success);
 
 		ServiceOperationResult TrySetPose(IPAddress ipAddress, PoseData pose, out bool success);
+
+        ServiceOperationResult TryGetSemVer(out SemVerData semVerData);
 	}
 }

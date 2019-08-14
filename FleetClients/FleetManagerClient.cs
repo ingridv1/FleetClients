@@ -1,5 +1,6 @@
 ﻿using BaseClients;
 using FleetClients.FleetManagerServiceReference;
+using GACore;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -124,6 +125,24 @@ namespace FleetClients
             catch (Exception ex)
             {
                 success = false;
+                return HandleClientException(ex);
+            }
+        }
+
+        public ServiceOperationResult TryGetSemVer(out SemVerData semVerData)
+        {
+            Logger.Info("TryGetSemVer()");
+
+            try
+            {
+                var result = GetSemVer();
+                semVerData = result.Item1;
+
+                return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+            }
+            catch (Exception ex)
+            {
+                semVerData = null;
                 return HandleClientException(ex);
             }
         }
@@ -315,6 +334,25 @@ namespace FleetClients
 
             isDisposed = true;
         }
+
+        private Tuple<SemVerData, ServiceCallData> GetSemVer()
+        {
+            Logger.Debug("GetSemVerData()");
+
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
+
+            Tuple<SemVerData, ServiceCallData> result;
+
+            using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
+            {
+                IFleetManagerService channel = channelFactory.CreateChannel();
+                result = channel.GetSemVer();
+                channelFactory.Close();
+            }
+
+            return result;
+        }
+
 
         private Tuple<XElement, ServiceCallData> GetKingpinDescription(IPAddress ipAddress)
         {

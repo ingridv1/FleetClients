@@ -6,6 +6,17 @@
         xmlns:local="clr-namespace:FleetClients.DemoApp"
         xmlns:fcControls="clr-namespace:FleetClients.Controls;assembly=FleetClients.Controls"
         mc:Ignorable="d"
-        Title="Fleet Manager Client Control Host" Height="450" Width="800">
-    <fcControls:FleetManagerClientControl x:Name="fleetManagerClientControl"/>
+        Title="Fleet Manager Client Control Host" Height="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <fcControls:FleetManagerClientControl x:Name="fleetManagerClientControl"/>
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
+        <TextBlock Grid.Column="2">
+            Foo
+        </TextBlock>
+    </Grid>
 </Window>

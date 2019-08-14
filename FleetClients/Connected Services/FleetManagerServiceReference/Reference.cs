@@ -129,6 +129,9 @@ namespace FleetClients.FleetManagerServiceReference {
         INTERNALERROR = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        GETSEMVERFAILED = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         COMMITJOBFAILED = 1001,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -498,10 +501,13 @@ namespace FleetClients.FleetManagerServiceReference {
         private FleetClients.FleetManagerServiceReference.AgvMode AgvModeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AliasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double BatteryChargePercentageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FleetClients.FleetManagerServiceReference.DynamicLimiterStatus DynamicLimiterStatusField;
+        private GACore.DynamicLimiterStatus DynamicLimiterStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private FleetClients.FleetManagerServiceReference.ExtendedDataFaultStatus ExtendedDataFaultStatusField;
@@ -519,13 +525,16 @@ namespace FleetClients.FleetManagerServiceReference {
         private bool IsChargingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsVirtualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int LastCompletedInstructionIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FleetClients.FleetManagerServiceReference.NavigationStatus NavigationStatusField;
+        private GACore.NavigationStatus NavigationStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FleetClients.FleetManagerServiceReference.PositionControlStatus PositionControlStatusField;
+        private GACore.PositionControlStatus PositionControlStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double SpeedField;
@@ -575,6 +584,19 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Alias {
+            get {
+                return this.AliasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AliasField, value) != true)) {
+                    this.AliasField = value;
+                    this.RaisePropertyChanged("Alias");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public double BatteryChargePercentage {
             get {
                 return this.BatteryChargePercentageField;
@@ -588,7 +610,7 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FleetClients.FleetManagerServiceReference.DynamicLimiterStatus DynamicLimiterStatus {
+        public GACore.DynamicLimiterStatus DynamicLimiterStatus {
             get {
                 return this.DynamicLimiterStatusField;
             }
@@ -666,6 +688,19 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsVirtual {
+            get {
+                return this.IsVirtualField;
+            }
+            set {
+                if ((this.IsVirtualField.Equals(value) != true)) {
+                    this.IsVirtualField = value;
+                    this.RaisePropertyChanged("IsVirtual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int LastCompletedInstructionId {
             get {
                 return this.LastCompletedInstructionIdField;
@@ -679,7 +714,7 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FleetClients.FleetManagerServiceReference.NavigationStatus NavigationStatus {
+        public GACore.NavigationStatus NavigationStatus {
             get {
                 return this.NavigationStatusField;
             }
@@ -692,7 +727,7 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FleetClients.FleetManagerServiceReference.PositionControlStatus PositionControlStatus {
+        public GACore.PositionControlStatus PositionControlStatus {
             get {
                 return this.PositionControlStatusField;
             }
@@ -830,35 +865,6 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DynamicLimiterStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
-    public enum DynamicLimiterStatus : ushort {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        OK = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SafetySensor = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Warning_1 = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Warning_2 = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        MotorFault = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        FastStop = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GoSlow = 6,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 65535,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ExtendedDataFaultStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
     public enum ExtendedDataFaultStatus : byte {
         
@@ -880,79 +886,15 @@ namespace FleetClients.FleetManagerServiceReference {
         Unfrozen = 1,
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NavigationStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
-    public enum NavigationStatus : ushort {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        OK = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Lost = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        AssociationFailure = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        HighUncertainty = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        PoorAssociaton = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NoResponse = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 65535,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PositionControlStatus", Namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture")]
-    public enum PositionControlStatus : ushort {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        OK = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Disabled = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Disabling = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NoWaypoints = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        OutOfPosition = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        WaypointDiscontinuity = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 65535,
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService", CallbackContract=typeof(FleetClients.FleetManagerServiceReference.IFleetManagerServiceCallback))]
     public interface IFleetManagerService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionMajor", ReplyAction="http://tempuri.org/IService/VersionMajorResponse")]
-        int VersionMajor();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
+        System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData> GetSemVer();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionMajor", ReplyAction="http://tempuri.org/IService/VersionMajorResponse")]
-        System.Threading.Tasks.Task<int> VersionMajorAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionMinor", ReplyAction="http://tempuri.org/IService/VersionMinorResponse")]
-        int VersionMinor();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionMinor", ReplyAction="http://tempuri.org/IService/VersionMinorResponse")]
-        System.Threading.Tasks.Task<int> VersionMinorAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionPatch", ReplyAction="http://tempuri.org/IService/VersionPatchResponse")]
-        int VersionPatch();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/VersionPatch", ReplyAction="http://tempuri.org/IService/VersionPatchResponse")]
-        System.Threading.Tasks.Task<int> VersionPatchAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
+        System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat", ReplyAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse")]
         void SubscriptionHeartbeat(System.Guid guid);
@@ -1056,28 +998,12 @@ namespace FleetClients.FleetManagerServiceReference {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public int VersionMajor() {
-            return base.Channel.VersionMajor();
+        public System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData> GetSemVer() {
+            return base.Channel.GetSemVer();
         }
         
-        public System.Threading.Tasks.Task<int> VersionMajorAsync() {
-            return base.Channel.VersionMajorAsync();
-        }
-        
-        public int VersionMinor() {
-            return base.Channel.VersionMinor();
-        }
-        
-        public System.Threading.Tasks.Task<int> VersionMinorAsync() {
-            return base.Channel.VersionMinorAsync();
-        }
-        
-        public int VersionPatch() {
-            return base.Channel.VersionPatch();
-        }
-        
-        public System.Threading.Tasks.Task<int> VersionPatchAsync() {
-            return base.Channel.VersionPatchAsync();
+        public System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync() {
+            return base.Channel.GetSemVerAsync();
         }
         
         public void SubscriptionHeartbeat(System.Guid guid) {

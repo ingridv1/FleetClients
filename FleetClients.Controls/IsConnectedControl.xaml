@@ -4,14 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.Controls"
+             xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0">IsConnnected:</TextBlock>
+    <gaCoreC:LabelContentControl Header="IsConnected:">
         <CheckBox Grid.Column="1" IsEnabled="False" IsChecked="{Binding Path=IsConnected, Mode=OneWay}"/>
-    </Grid>
+    </gaCoreC:LabelContentControl>
 </UserControl>

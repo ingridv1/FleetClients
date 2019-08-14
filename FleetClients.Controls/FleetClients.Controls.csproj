@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.1.0\lib\net47\GACore.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.1.0\lib\net47\GACore.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -48,11 +54,16 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FleetManagerClientControl.xaml.cs">
       <DependentUpon>FleetManagerClientControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="FleetStateControl.xaml.cs">
       <DependentUpon>FleetStateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HeadlineControl.xaml.cs">
+      <DependentUpon>HeadlineControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="IsConnectedControl.xaml.cs">
       <DependentUpon>IsConnectedControl.xaml</DependentUpon>
@@ -62,6 +73,9 @@
     </Compile>
     <Compile Include="KingpinStateControl.xaml.cs">
       <DependentUpon>KingpinStateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoseControl.xaml.cs">
+      <DependentUpon>PoseControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -81,6 +95,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +110,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="HeadlineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IsConnectedControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KingpinStateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoseControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

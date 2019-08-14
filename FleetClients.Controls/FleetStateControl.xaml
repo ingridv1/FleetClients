@@ -10,7 +10,8 @@
         <StatusBar DockPanel.Dock="Top">Fleet State</StatusBar>
         <ListBox ItemsSource="{Binding Path=FleetState.KingpinStates}"
                  SelectionMode="Single"
-                 x:Name="listBox">
+                 x:Name="listBox"
+                 HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:KingpinStateControl/>

@@ -4,9 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.Controls"
+             xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock Text="{Binding Path=IPAddress}"/>
-    </StackPanel>
+             d:DesignHeight="450" d:DesignWidth="800" MinWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <local:HeadlineControl Panel.ZIndex="3" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch"  Background="Gray">
+            <gaCoreC:LabelContentControl Header="IPAddress:">
+                <TextBlock Text="{Binding Path=IPAddress}"/>
+            </gaCoreC:LabelContentControl>
+            <local:PoseControl/>
+        </StackPanel>
+        <gaCoreC:KingpinStatusControl Grid.RowSpan="2" Grid.Column="1" DataContext="{Binding}" VerticalAlignment="Center"/>
+    </Grid>
 </UserControl>

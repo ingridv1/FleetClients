@@ -38,7 +38,8 @@ namespace FleetClients.FleetClientConsole
 					 ResetKingpinOption,
 					 SetFleetStateOption,
 					 SetKingpinStateOption,
-					 SetPoseOptions
+					 SetPoseOptions,
+                     GetSemVerOptions
 					 >
 					 (args)
 					.MapResult(
@@ -51,7 +52,8 @@ namespace FleetClients.FleetClientConsole
 						(SetFleetStateOption opts) => opts.ExecuteOption(client),
 						(SetKingpinStateOption opts) => opts.ExecuteOption(client),
 						(SetPoseOptions opts) => opts.ExecuteOption(client),
-						errs => ServiceOperationResult.FromClientException(new Exception("Operation failed"))
+                        (GetSemVerOptions opts) => opts.ExecuteOption(client),
+                        errs => ServiceOperationResult.FromClientException(new Exception("Operation failed"))
 						);
 			}
 		}
