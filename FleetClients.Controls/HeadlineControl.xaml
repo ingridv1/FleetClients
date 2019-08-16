@@ -11,20 +11,16 @@
             <local:KingpinStateColorConverter x:Key="kingpinStateColorConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Left" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"
                Text="{Binding Path=Alias}"
                FontWeight="Bold"
                FontSize="20"
                Foreground="{Binding Converter={StaticResource kingpinStateColorConverter}}">
         </TextBlock>
-        <TextBlock  Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"
+        <TextBlock DockPanel.Dock="Right" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"
                Text="{Binding Path=CurrentMovementType, FallbackValue='Pontificating'}"
                FontWeight="Bold"
                FontSize="20"/>
-    </Grid>
+    </DockPanel>
 </UserControl>

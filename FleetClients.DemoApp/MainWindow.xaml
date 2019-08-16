@@ -8,6 +8,5 @@
         mc:Ignorable="d"
         Title="FleetClients Demo App" Height="450" Width="800">
     <Grid>
-
     </Grid>
 </Window>

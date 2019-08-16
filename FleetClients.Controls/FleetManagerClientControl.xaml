@@ -24,13 +24,37 @@
             <local:IsConnectedControl  DockPanel.Dock="Top"/>
             <Grid DockPanel.Dock="Top">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
+                    <RowDefinition MinHeight="200"/>
                     <RowDefinition Height="5"/>
-                    <RowDefinition/>
+                    <RowDefinition MinHeight="200" Height="250"/>
                 </Grid.RowDefinitions>
-                <local:FleetStateControl Grid.Row="0"/>
+                <ListBox ItemsSource="{Binding Path=KingpinStateMailboxes}" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                 SelectionMode="Single"
+                 x:Name="listBox"
+                         HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <local:KingpinStateControl DataContext="{Binding Path=KingpinState}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.Style>
+                        <Style TargetType="{x:Type ItemsControl}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Items.Count, RelativeSource={RelativeSource Self}}" Value="0">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBlock>No Kingpins connected.</TextBlock>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListBox.Style>
+                </ListBox>
                 <GridSplitter Grid.Row="1"/>
-                <local:KingpinPropertiesControl Grid.Row="2"/>
+                <local:KingpinPropertiesControl Grid.Row="2" x:Name="propertiesControl" DataContext="{Binding ElementName=listBox, Path=SelectedItem.KingpinState}"/>
             </Grid>
         </DockPanel>
     </Grid>  

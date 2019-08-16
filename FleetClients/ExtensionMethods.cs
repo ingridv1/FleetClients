@@ -10,9 +10,6 @@ namespace FleetClients
     public static class ExtensionMethods
     {
 #warning GACORE
-        public static bool IsCurrentByteTickLarger(this byte current, byte other)
-        {
-            return (current < other && (other - current) > 128) || (current > other && (current - other) < 128);
-        }
+
     }
 }

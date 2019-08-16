@@ -4,11 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.Controls"
+             xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Top">
-            <StatusBar>Properties</StatusBar>
-        </StackPanel>
-    </DockPanel>
+    <StackPanel>
+        <StatusBar>Properties</StatusBar>
+        <gaCoreC:LabelContentControl Header="Alias:">
+            <TextBlock Text="{Binding Path=Alias}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="IP Address:">
+            <TextBlock Text="{Binding Path=IPAddress}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="Tick:">
+            <TextBlock Text="{Binding Path=Tick}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="Battery Charge:">
+            <TextBlock Text="{Binding Path=BatteryChargePercentage, StringFormat={}{0:0.0}%}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="Speed:">
+            <TextBlock Text="{Binding Path=Speed, StringFormat={}{0:0.00}m/s}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="Waypoint Next Id:">
+            <TextBlock Text="{Binding Path=WaypointNextId}"/>
+        </gaCoreC:LabelContentControl>
+        <gaCoreC:LabelContentControl Header="Waypoint Last Id:">
+            <TextBlock Text="{Binding Path=WaypointLastId}"/>
+        </gaCoreC:LabelContentControl>
+    </StackPanel>
 </UserControl>

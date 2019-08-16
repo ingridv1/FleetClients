@@ -7,31 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
-        <StatusBar DockPanel.Dock="Top">Fleet State</StatusBar>
-        <ListBox ItemsSource="{Binding Path=FleetState.KingpinStates}"
-                 SelectionMode="Single"
-                 x:Name="listBox"
-                 HorizontalContentAlignment="Stretch">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <local:KingpinStateControl/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            <ListBox.Style>
-                <Style TargetType="{x:Type ItemsControl}">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=Items.Count, RelativeSource={RelativeSource Self}}" Value="0">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate>
-                                        <TextBlock>No Kingpins connected.</TextBlock>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </ListBox.Style>
-        </ListBox>
+        <StatusBar DockPanel.Dock="Top">Fleet State</StatusBar>    
     </DockPanel>
 </UserControl>

@@ -42,6 +42,10 @@ namespace FleetClients.DemoApp
 			};
 
 			window.Show();
+
+            this.DataContext = client;
+
+            Close();
 		}
 	}
 }

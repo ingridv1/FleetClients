@@ -33,8 +33,7 @@
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/GACore.Architecture" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IFleetManagerService_GetSemVer_InputMessage">
