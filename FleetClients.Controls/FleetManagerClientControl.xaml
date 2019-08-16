@@ -11,6 +11,28 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource BaseControlStyle}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ListBoxItem">
+                            <Border Name="border">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="true">
+                                    <Setter TargetName="border" Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#eeeeee"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                                    <Setter TargetName="border" Property="BorderBrush" Value="Black"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -32,10 +54,10 @@
                  SelectionMode="Single"
                  x:Name="listBox"
                          HorizontalContentAlignment="Stretch">
-                    <ListBox.ItemTemplate>
+                    <ListBox.ItemTemplate>                        
                         <DataTemplate>
-                            <local:KingpinStateControl DataContext="{Binding Path=KingpinState}"/>
-                        </DataTemplate>
+                            <local:KingpinStateControl DataContext="{Binding Path=KingpinState}"/>                  
+                        </DataTemplate>                        
                     </ListBox.ItemTemplate>
                     <ListBox.Style>
                         <Style TargetType="{x:Type ItemsControl}">

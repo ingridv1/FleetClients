@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <local:KingpinStateColorConverter x:Key="kingpinStateColorConverter"/>
+            <local:IsInFaultConverter x:Key="isInFaultConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -36,12 +37,22 @@
                FontWeight="Bold"
                FontSize="20"/>
         </DockPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="3,0,3,3">
+            <StackPanel.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Converter={StaticResource isInFaultConverter}}" Value="True">
+                            <Setter Property="StackPanel.Background" Value="Crimson" />
+                            <Setter Property="StackPanel.ToolTip" Value="This agent has experienced a fault and will not receive new jobs until fault(s) are cleared." />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
             <gaCoreC:LabelContentControl Header="IPAddress:">
                 <TextBlock Text="{Binding Path=IPAddress}"/>
             </gaCoreC:LabelContentControl>
             <local:PoseControl/>
         </StackPanel>
-        <gaCoreC:KingpinStatusControl Grid.RowSpan="2" Grid.Column="1" DataContext="{Binding}" VerticalAlignment="Center"/>
+        <gaCoreC:KingpinStatusControl Grid.RowSpan="2" Grid.Column="1" DataContext="{Binding}" VerticalAlignment="Center" Margin="0,0,3,0"/>
     </Grid>
 </UserControl>
