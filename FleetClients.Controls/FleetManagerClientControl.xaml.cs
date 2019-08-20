@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GACore.Controls;
 
 namespace FleetClients.Controls
 {
@@ -23,6 +24,9 @@ namespace FleetClients.Controls
 		public FleetManagerClientControl()
 		{
 			InitializeComponent();
+
+            // 2019 and still doing this since 2010...
+            BrushDictionaries.DynamicLimiterStatusBrushCollectionDictionary.First();
 		}
 	}
 }
