@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FleetClients</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <authors>Martin Davies</authors>
     <owners>Guidance Automation Ltd</owners>
 	<license type="expression">MIT</license>
@@ -13,8 +13,14 @@
     <copyright>Copyright 2019</copyright>
     <tags></tags>
     <dependencies>
-	      <group targetFramework=".NETFramework4.7">
-		  </group>
+      <group targetFramework=".NETFramework4.7">
+        <dependency id="BaseClients" version="1.1.0" />
+        <dependency id="GACore" version="1.6.0" />
+        <dependency id="morelinq" version="3.2.0" />
+        <dependency id="NLog" version="4.6.6" />
+        <dependency id="CommandLineParser" version="2.6.0" />
+        <dependency id="System.ValueTuple" version="4.5.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>

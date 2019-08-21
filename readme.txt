@@ -11,6 +11,10 @@ ______ _           _   _____ _ _            _
 https://github.com/GuidanceAutomation/FleetClients
 https://www.guidanceautomation.com/
 
+v1.2.1 (21st Aug 19)
+
+* Missing dependencies in nuspec.
+
 v1.2.0 (21st Aug 19)
 
 * Refactored base client support
