@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BaseClients.1.1.0-alpha00\lib\net47\BaseClients.dll</HintPath>
+      <HintPath>..\packages\BaseClients.1.1.0\lib\net47\BaseClients.dll</HintPath>
     </Reference>
     <Reference Include="MoreLinq, Version=3.2.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
       <HintPath>..\packages\morelinq.3.2.0\lib\net451\MoreLinq.dll</HintPath>

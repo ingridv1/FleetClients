@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>FleetClients</id>
+    <version>1.2.0</version>
+    <authors>Martin Davies</authors>
+    <owners>Guidance Automation Ltd</owners>
+	<license type="expression">MIT</license>
+    <projectUrl>https://github.com/GuidanceAutomation/FleetClients</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fleet client components for Guidance Automation schedulers</description>
+    <releaseNotes>Requires minimum scheduler version of 7.x.x</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags></tags>
+    <dependencies>
+	      <group targetFramework=".NETFramework4.7">
+		  </group>
+    </dependencies>
+  </metadata>
+  <files>
+        <file src="readme.txt" target="" />
+		<file src="FleetClients\bin\Release\FleetClients.dll" target="lib\net47" />
+		<file src="FleetClients.Controls\bin\Release\FleetClients.Controls.dll" target="lib\net47" />
+  </files>
+</package>

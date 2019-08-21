@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BaseClients.1.1.0-alpha00\lib\net47\BaseClients.dll</HintPath>
+      <HintPath>..\packages\BaseClients.1.1.0\lib\net47\BaseClients.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.dll</HintPath>
