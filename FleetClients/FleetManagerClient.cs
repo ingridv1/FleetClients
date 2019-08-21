@@ -1,9 +1,14 @@
 ﻿using BaseClients;
 using FleetClients.FleetManagerServiceReference;
+using GACore;
+using GACore.Architecture;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Net;
 using System.ServiceModel;
+using System.Windows.Data;
 using System.Xml.Linq;
 
 namespace FleetClients
@@ -13,6 +18,11 @@ namespace FleetClients
         private FleetManagerServiceCallback callback = new FleetManagerServiceCallback();
 
         private bool isDisposed = false;
+
+        private ObservableCollection<KingpinStateMailbox> kingpinStateMailboxes = new ObservableCollection<KingpinStateMailbox>();
+
+
+        private ReadOnlyObservableCollection<KingpinStateMailbox> readonlyKingpinStateMailboxes;
 
         private TimeSpan heartbeat;
 
@@ -27,11 +37,33 @@ namespace FleetClients
         {
             this.heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) ? TimeSpan.FromMilliseconds(1000) : heartbeat;
             this.callback.FleetStateUpdate += Callback_FleetStateUpdate;
+
+            readonlyKingpinStateMailboxes = new ReadOnlyObservableCollection<KingpinStateMailbox>(kingpinStateMailboxes);
+
+            BindingOperations.EnableCollectionSynchronization(KingpinStateMailboxes, lockObject);
         }
+
+        private readonly object lockObject = new object();
+
+        public ReadOnlyObservableCollection<KingpinStateMailbox> KingpinStateMailboxes => readonlyKingpinStateMailboxes;
 
         private void Callback_FleetStateUpdate(FleetState fleetState)
         {
             FleetState = fleetState;
+
+            foreach (IKingpinState kingpinState in fleetState.KingpinStates)
+            {
+                KingpinStateMailbox mailbox = kingpinStateMailboxes.FirstOrDefault(e => e.IPAddress.Equals(kingpinState.IPAddress));
+
+                if (mailbox != null)
+                {
+                    mailbox.Update(kingpinState);
+                }
+                else
+                {
+                    kingpinStateMailboxes.Add(new KingpinStateMailbox(kingpinState));
+                }
+            }
         }
 
         public TimeSpan Heartbeat => heartbeat; 
@@ -124,6 +156,24 @@ namespace FleetClients
             catch (Exception ex)
             {
                 success = false;
+                return HandleClientException(ex);
+            }
+        }
+
+        public ServiceOperationResult TryGetSemVer(out SemVerData semVerData)
+        {
+            Logger.Info("TryGetSemVer()");
+
+            try
+            {
+                var result = GetSemVer();
+                semVerData = result.Item1;
+
+                return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+            }
+            catch (Exception ex)
+            {
+                semVerData = null;
                 return HandleClientException(ex);
             }
         }
@@ -315,6 +365,25 @@ namespace FleetClients
 
             isDisposed = true;
         }
+
+        private Tuple<SemVerData, ServiceCallData> GetSemVer()
+        {
+            Logger.Debug("GetSemVerData()");
+
+            if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
+
+            Tuple<SemVerData, ServiceCallData> result;
+
+            using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
+            {
+                IFleetManagerService channel = channelFactory.CreateChannel();
+                result = channel.GetSemVer();
+                channelFactory.Close();
+            }
+
+            return result;
+        }
+
 
         private Tuple<XElement, ServiceCallData> GetKingpinDescription(IPAddress ipAddress)
         {

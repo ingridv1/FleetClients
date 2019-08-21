@@ -25,34 +25,22 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Services" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Kingpin" />
-      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Kingpin.Architecture" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GACore" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Services" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles" />
+      <xsd:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/GACore.Architecture" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IFleetManagerService_VersionMajor_InputMessage">
-    <wsdl:part name="parameters" element="tns:VersionMajor" />
+  <wsdl:message name="IFleetManagerService_GetSemVer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSemVer" />
   </wsdl:message>
-  <wsdl:message name="IFleetManagerService_VersionMajor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:VersionMajorResponse" />
-  </wsdl:message>
-  <wsdl:message name="IFleetManagerService_VersionMinor_InputMessage">
-    <wsdl:part name="parameters" element="tns:VersionMinor" />
-  </wsdl:message>
-  <wsdl:message name="IFleetManagerService_VersionMinor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:VersionMinorResponse" />
-  </wsdl:message>
-  <wsdl:message name="IFleetManagerService_VersionPatch_InputMessage">
-    <wsdl:part name="parameters" element="tns:VersionPatch" />
-  </wsdl:message>
-  <wsdl:message name="IFleetManagerService_VersionPatch_OutputMessage">
-    <wsdl:part name="parameters" element="tns:VersionPatchResponse" />
+  <wsdl:message name="IFleetManagerService_GetSemVer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSemVerResponse" />
   </wsdl:message>
   <wsdl:message name="IFleetManagerService_SubscriptionHeartbeat_InputMessage">
     <wsdl:part name="parameters" element="tns:SubscriptionHeartbeat" />
@@ -127,17 +115,9 @@
     <wsdl:part name="parameters" element="tns:OnCallbackResponse" />
   </wsdl:message>
   <wsdl:portType name="IFleetManagerService">
-    <wsdl:operation name="VersionMajor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionMajor" message="tns:IFleetManagerService_VersionMajor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionMajorResponse" message="tns:IFleetManagerService_VersionMajor_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="VersionMinor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionMinor" message="tns:IFleetManagerService_VersionMinor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionMinorResponse" message="tns:IFleetManagerService_VersionMinor_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="VersionPatch">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/VersionPatch" message="tns:IFleetManagerService_VersionPatch_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/VersionPatchResponse" message="tns:IFleetManagerService_VersionPatch_OutputMessage" />
+    <wsdl:operation name="GetSemVer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSemVer" message="tns:IFleetManagerService_GetSemVer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSemVerResponse" message="tns:IFleetManagerService_GetSemVer_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SubscriptionHeartbeat">
       <wsdl:input wsaw:Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat" message="tns:IFleetManagerService_SubscriptionHeartbeat_InputMessage" />
@@ -191,26 +171,8 @@
   <wsdl:binding name="NetTcpBinding_IFleetManagerService" type="tns:IFleetManagerService">
     <wsp:PolicyReference URI="#NetTcpBinding_IFleetManagerService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="VersionMajor">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionMajor" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VersionMinor">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionMinor" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VersionPatch">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionPatch" style="document" />
+    <wsdl:operation name="GetSemVer">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetSemVer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -330,26 +292,8 @@
   <wsdl:binding name="WSDualHttpBinding_IFleetManagerService" type="tns:IFleetManagerService">
     <wsp:PolicyReference URI="#WSDualHttpBinding_IFleetManagerService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="VersionMajor">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionMajor" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VersionMinor">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionMinor" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VersionPatch">
-      <soap12:operation soapAction="http://tempuri.org/IService/VersionPatch" style="document" />
+    <wsdl:operation name="GetSemVer">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetSemVer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

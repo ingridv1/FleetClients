@@ -31,11 +31,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BaseClients.1.0.0\lib\net47\BaseClients.dll</HintPath>
+      <HintPath>..\packages\BaseClients.1.1.0\lib\net47\BaseClients.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.Architecture.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=3.2.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.3.2.0\lib\net451\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.6.2\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\packages\NLog.4.6.6\lib\net45\NLog.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -43,6 +56,9 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +78,10 @@
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FleetManagerClient.cs" />
     <Compile Include="FleetManagerServiceCallback.cs" />
+    <Compile Include="KingpinStateMailbox.cs" />
+    <Compile Include="Mailbox.cs" />
+    <Compile Include="PoseDataFactory.cs" />
+    <Compile Include="Postmaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceOperationResultFactory.cs" />
   </ItemGroup>
@@ -105,6 +125,7 @@
     </None>
     <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService.wsdl" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\GACore.SemVerData.datasource" />
     <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
   </ItemGroup>
   <ItemGroup>
