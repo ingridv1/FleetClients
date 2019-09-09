@@ -1,4 +1,5 @@
 ﻿using BaseClients;
+using System.Net;
 using System.Windows;
 
 namespace FleetClients.DemoApp
@@ -26,7 +27,15 @@ namespace FleetClients.DemoApp
 
 		private void FmcControlButton_Click(object sender, RoutedEventArgs e)
 		{
-			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback)))
+			IPAddress ipAddress = ipV4Control.ToIPAddress();
+
+			if (ipAddress == null)
+			{
+				MessageBox.Show("IPv4 Address is invalid", "Invalid IP Address", MessageBoxButton.OK, MessageBoxImage.Error);
+				return;
+			}
+
+			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(ipAddress)))
 			{
 				FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
 				{

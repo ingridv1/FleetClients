@@ -19,7 +19,9 @@
     <Grid>
         <StackPanel>
             <StatusBar>Configuration</StatusBar>
-
+            <gaCoreC:LabelContentControl Header="Scheduler IPv4 Address:">
+                <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="127.0.0.1"/>
+            </gaCoreC:LabelContentControl>
             <StatusBar>Control Libarary</StatusBar>
             <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
                 <Button x:Name="fmcControlButton" Click="FmcControlButton_Click">Create</Button>
