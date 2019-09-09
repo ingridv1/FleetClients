@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FleetClients.DemoApp"
         xmlns:fcControls="clr-namespace:FleetClients.Controls;assembly=FleetClients.Controls"
+        xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
         mc:Ignorable="d"
-        Title="FleetClients Demo App" Height="450" Width="800">
+        Title="FleetClients Demo App" Height="450" Width="800"
+        Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
+        <StackPanel>
+            <StatusBar>Configuration</StatusBar>
+
+            <StatusBar>Control Libarary</StatusBar>
+            <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
+                <Button x:Name="fmcControlButton" Click="FmcControlButton_Click">Create</Button>
+            </gaCoreC:LabelContentControl>
+        </StackPanel>
     </Grid>
 </Window>

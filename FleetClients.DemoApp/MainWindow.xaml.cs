@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BaseClients;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using BaseClients;
-using System.Windows.Shapes;
 
 namespace FleetClients.DemoApp
 {
@@ -24,24 +11,30 @@ namespace FleetClients.DemoApp
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			HandleInit();
 		}
 
-		private void HandleInit()
+		private void HandleClose()
 		{
-			IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback));
+			Application.Current.Shutdown();
+		}
 
-			FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
+		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			e.Cancel = true;
+			HandleClose();
+		}
+
+		private void FmcControlButton_Click(object sender, RoutedEventArgs e)
+		{
+			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback)))
 			{
-				DataContext = client
-			};
+				FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
+				{
+					DataContext = client
+				};
 
-			window.Show();
-
-            this.DataContext = client;
-
-            Close();
+				window.ShowDialog();
+			}		
 		}
 	}
 }
