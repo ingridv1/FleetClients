@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.dll</HintPath>
+      <HintPath>..\packages\GACore.1.6.1\lib\net47\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.Architecture.dll</HintPath>
+      <HintPath>..\packages\GACore.1.6.1\lib\net47\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.6.0\lib\net47\GACore.Controls.dll</HintPath>
+      <HintPath>..\packages\GACore.1.6.1\lib\net47\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -59,9 +59,6 @@
   <ItemGroup>
     <Compile Include="FleetManagerClientControl.xaml.cs">
       <DependentUpon>FleetManagerClientControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FleetStateControl.xaml.cs">
-      <DependentUpon>FleetStateControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="IsConnectedControl.xaml.cs">
       <DependentUpon>IsConnectedControl.xaml</DependentUpon>
@@ -95,10 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="FleetManagerClientControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FleetStateControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

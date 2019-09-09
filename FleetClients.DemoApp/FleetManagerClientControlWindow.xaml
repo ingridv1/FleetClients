@@ -11,12 +11,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*" MinWidth="250"/>
         </Grid.ColumnDefinitions>
         <fcControls:FleetManagerClientControl x:Name="fleetManagerClientControl"/>
         <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
-        <TextBlock Grid.Column="2">
-            Foo
-        </TextBlock>
+        <WebBrowser Grid.Column="2" x:Name="webBrowser"/>
     </Grid>
 </Window>

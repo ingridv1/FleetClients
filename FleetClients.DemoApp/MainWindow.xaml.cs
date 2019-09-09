@@ -25,15 +25,11 @@ namespace FleetClients.DemoApp
 		{
 			InitializeComponent();
 
-			HandleFoo();
+			HandleInit();
 		}
 
-		private void HandleFoo()
+		private void HandleInit()
 		{
-
-
-
-#warning GTFO
 			IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback));
 
 			FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
