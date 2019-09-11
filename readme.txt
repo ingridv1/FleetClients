@@ -11,6 +11,11 @@ ______ _           _   _____ _ _            _
 https://github.com/GuidanceAutomation/FleetClients
 https://www.guidanceautomation.com/
 
+v1.3.0 (11th Sept 19)
+
+* Updates demo app to configurable IP address
+* Added descriptions for demo app windows.
+
 v1.2.1 (21st Aug 19)
 
 * Missing dependencies in nuspec.
