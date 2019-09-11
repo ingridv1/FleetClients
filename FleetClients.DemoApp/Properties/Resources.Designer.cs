@@ -61,17 +61,41 @@ namespace FleetClients.DemoApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Warnings
+        ///   Looks up a localized string similar to # Fleet Manager Client Control
         ///
-        ///## Promises
+        ///A control used to display the current state of the AGV fleet.
         ///
-        ///A FAN
+        ///## Configuration
         ///
-        ///Moose.
+        ///Create a new fleet manager client:
+        ///
+        ///```csharp
+        ///IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback));
+        ///```
+        ///
+        ///and set the controls data context to it.
+        ///
+        ///## Components
+        ///
+        ///### Is Connected Control
+        ///
+        ///This displays if the fleet manager client is currently connected to a scheduler.
+        ///
+        ///### Fleet Manager Client  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string FleetManagerClientControlDescription {
             get {
                 return ResourceManager.GetString("FleetManagerClientControlDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # A Ruthless Badger
+        ///.
+        /// </summary>
+        internal static string MainWindowDescription {
+            get {
+                return ResourceManager.GetString("MainWindowDescription", resourceCulture);
             }
         }
     }

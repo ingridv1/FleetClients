@@ -144,5 +144,8 @@
   <ItemGroup>
     <None Include="Resources\FleetManagerClientControlDescription.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainWindowDescription.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

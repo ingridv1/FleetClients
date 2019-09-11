@@ -1,6 +1,7 @@
 ﻿using BaseClients;
 using System.Net;
 using System.Windows;
+using Markdig;
 
 namespace FleetClients.DemoApp
 {
@@ -12,6 +13,9 @@ namespace FleetClients.DemoApp
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			string html = Markdown.ToHtml(Properties.Resources.MainWindowDescription);
+			webBrowser.NavigateToString(html);
 		}
 
 		private void HandleClose()

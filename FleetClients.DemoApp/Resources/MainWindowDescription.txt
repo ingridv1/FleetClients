@@ -1,0 +1,13 @@
+# Fleet Clients Demo App
+
+Demonstrates the functionality available in the FleetClients and FleetClients.Controls assemblies.
+
+## Configuration
+
+Set the IP address of the scheduler to connect to in the configuration section.
+
+## Controls
+
+### Fleet Manager Client Control
+
+Creates a new window hosting the fleet manager client control, a control that is used to display the current state of the AGV free.
