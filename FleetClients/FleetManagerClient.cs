@@ -21,7 +21,6 @@ namespace FleetClients
 
         private ObservableCollection<KingpinStateMailbox> kingpinStateMailboxes = new ObservableCollection<KingpinStateMailbox>();
 
-
         private ReadOnlyObservableCollection<KingpinStateMailbox> readonlyKingpinStateMailboxes;
 
         private TimeSpan heartbeat;

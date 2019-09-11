@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BaseClients;
+using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using BaseClients;
-using System.Windows.Shapes;
+using Markdig;
 
 namespace FleetClients.DemoApp
 {
@@ -25,23 +14,40 @@ namespace FleetClients.DemoApp
 		{
 			InitializeComponent();
 
-			HandleInit();
+			string html = Markdown.ToHtml(Properties.Resources.MainWindowDescription);
+			webBrowser.NavigateToString(html);
 		}
 
-		private void HandleInit()
+		private void HandleClose()
 		{
-			IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback));
+			Application.Current.Shutdown();
+		}
 
-			FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
+		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			e.Cancel = true;
+			HandleClose();
+		}
+
+		private void FmcControlButton_Click(object sender, RoutedEventArgs e)
+		{
+			IPAddress ipAddress = ipV4Control.ToIPAddress();
+
+			if (ipAddress == null)
 			{
-				DataContext = client
-			};
+				MessageBox.Show("IPv4 Address is invalid", "Invalid IP Address", MessageBoxButton.OK, MessageBoxImage.Error);
+				return;
+			}
 
-			window.Show();
+			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(ipAddress)))
+			{
+				FleetManagerClientControlWindow window = new FleetManagerClientControlWindow()
+				{
+					DataContext = client
+				};
 
-            this.DataContext = client;
-
-            Close();
+				window.ShowDialog();
+			}		
 		}
 	}
 }
