@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.Controls"
+             xmlns:baseClientsC="clr-namespace:BaseClients.Controls;assembly=BaseClients.Controls"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -44,7 +45,7 @@
             <StatusBar DockPanel.Dock="Top">
                 Fleet Client
             </StatusBar>
-            <local:IsConnectedControl  DockPanel.Dock="Top"/>
+            <baseClientsC:IsConnectedControl  DockPanel.Dock="Top"/>
             <Grid DockPanel.Dock="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition MinHeight="200"/>

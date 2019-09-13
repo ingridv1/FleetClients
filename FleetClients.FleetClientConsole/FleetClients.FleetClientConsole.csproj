@@ -34,7 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BaseClients.1.1.1\lib\net47\BaseClients.dll</HintPath>
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseClients.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine, Version=2.6.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\packages\CommandLineParser.2.6.0\lib\net461\CommandLine.dll</HintPath>

@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FleetClients.Test</RootNamespace>
     <AssemblyName>FleetClients.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,7 +35,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BaseClients.1.1.1\lib\net47\BaseClients.dll</HintPath>
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseClients.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.7.0\lib\net47\GACore.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.7.0\lib\net47\GACore.Architecture.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.7.0\lib\net47\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="MoreLinq, Version=3.2.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
       <HintPath>..\packages\morelinq.3.2.0\lib\net451\MoreLinq.dll</HintPath>
