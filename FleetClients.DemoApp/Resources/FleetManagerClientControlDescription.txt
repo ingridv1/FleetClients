@@ -14,10 +14,6 @@ and set the controls data context to it.
 
 ## Components
 
-### Is Connected Control
-
-This displays if the fleet manager client is currently connected to a scheduler.
-
 ### Fleet Manager Client Control
 
 This displays all kingpins currenly present in the fleet. The kingpin state control from the nuget package GACore is used for each item. 

@@ -52,7 +52,7 @@ namespace FleetClients
 
             foreach (IKingpinState kingpinState in fleetState.KingpinStates)
             {
-                KingpinStateMailbox mailbox = kingpinStateMailboxes.FirstOrDefault(e => e.IPAddress.Equals(kingpinState.IPAddress));
+                KingpinStateMailbox mailbox = kingpinStateMailboxes.FirstOrDefault(e => e.Key.Equals(kingpinState.IPAddress));
 
                 if (mailbox != null)
                 {
@@ -60,7 +60,7 @@ namespace FleetClients
                 }
                 else
                 {
-                    kingpinStateMailboxes.Add(new KingpinStateMailbox(kingpinState));
+                    kingpinStateMailboxes.Add(new KingpinStateMailbox(kingpinState.IPAddress, kingpinState));
                 }
             }
         }

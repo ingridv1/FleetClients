@@ -58,7 +58,7 @@
                          HorizontalContentAlignment="Stretch">
                     <ListBox.ItemTemplate>                        
                         <DataTemplate>
-                            <gaCoreC:KingpinStateControl DataContext="{Binding Path=KingpinState}"/>                  
+                            <gaCoreC:KingpinStateControl DataContext="{Binding Path=Mail}"/>                  
                         </DataTemplate>                        
                     </ListBox.ItemTemplate>
                     <ListBox.Style>
@@ -78,7 +78,7 @@
                     </ListBox.Style>
                 </ListBox>
                 <GridSplitter Grid.Row="1"/>
-                <local:KingpinPropertiesControl Grid.Row="2" x:Name="propertiesControl" DataContext="{Binding ElementName=listBox, Path=SelectedItem.KingpinState}"/>
+                <local:KingpinPropertiesControl Grid.Row="2" x:Name="propertiesControl" DataContext="{Binding ElementName=listBox, Path=SelectedItem.Mail}"/>
             </Grid>
         </DockPanel>
     </Grid>  
