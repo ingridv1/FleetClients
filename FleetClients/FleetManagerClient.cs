@@ -2,6 +2,7 @@
 using FleetClients.FleetManagerServiceReference;
 using GACore;
 using GACore.Architecture;
+using GACore.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

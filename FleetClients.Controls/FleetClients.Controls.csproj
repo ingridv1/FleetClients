@@ -77,8 +77,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGVTemplateControl.xaml.cs">
+      <DependentUpon>AGVTemplateControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FleetManagerClientControl.xaml.cs">
       <DependentUpon>FleetManagerClientControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FleetTemplateControl.xaml.cs">
+      <DependentUpon>FleetTemplateControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="KingpinPropertiesControl.xaml.cs">
       <DependentUpon>KingpinPropertiesControl.xaml</DependentUpon>
@@ -108,7 +114,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AGVTemplateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FleetManagerClientControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FleetTemplateControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

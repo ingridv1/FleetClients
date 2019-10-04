@@ -91,6 +91,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FleetTemplateControlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +105,9 @@
     </Compile>
     <Compile Include="FleetManagerClientControlWindow.xaml.cs">
       <DependentUpon>FleetManagerClientControlWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FleetTemplateControlWindow.xaml.cs">
+      <DependentUpon>FleetTemplateControlWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -149,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainWindowDescription.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FleetTemplateControlDescription.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

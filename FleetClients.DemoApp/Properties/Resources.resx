@@ -121,6 +121,9 @@
   <data name="FleetManagerClientControlDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FleetManagerClientControlDescription.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="FleetTemplateControlDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FleetTemplateControlDescription.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="MainWindowDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MainWindowDescription.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

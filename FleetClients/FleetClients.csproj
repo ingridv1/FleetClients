@@ -38,16 +38,22 @@
       <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.dll</HintPath>
+      <HintPath>..\packages\GACore.1.12.2\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.Architecture.dll</HintPath>
+      <HintPath>..\packages\GACore.1.12.2\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.Controls.dll</HintPath>
+      <HintPath>..\packages\GACore.1.12.2\lib\net472\GACore.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.12.2\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="MoreLinq, Version=3.2.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
       <HintPath>..\packages\morelinq.3.2.0\lib\net451\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.6.7\lib\net45\NLog.dll</HintPath>
@@ -71,6 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGVTemplate.cs" />
     <Compile Include="Client Interfaces\IFleetManagerClient.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Connected Services\FleetManagerServiceReference\Reference.cs">
@@ -81,6 +88,7 @@
     <Compile Include="EndpointSettings_ExtensionMethods.cs" />
     <Compile Include="FleetManagerClient.cs" />
     <Compile Include="FleetManagerServiceCallback.cs" />
+    <Compile Include="FleetTemplate.cs" />
     <Compile Include="KingpinStateMailbox.cs" />
     <Compile Include="PoseDataFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
