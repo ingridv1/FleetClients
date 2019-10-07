@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
+using SN = System.Net;
 
 namespace FleetClients
 {
@@ -18,18 +19,23 @@ namespace FleetClients
 		private string poseDataString = string.Empty;
 
 		[DataMember]
-		public IPAddress IPAddress
+		public string IPV4String
 		{
-			get { return IPAddress; }
+			get { return ipAddress != null ? ipAddress.MapToIPv4().ToString() : string.Empty; }
 			set
 			{
-				if (ipAddress != value)
+				if (SN.IPAddress.TryParse(value, out IPAddress parsed))
 				{
-					ipAddress = value;
-					OnNotifyPropertyChanged();
-				}
+					if (ipAddress != parsed)
+					{
+						ipAddress = parsed;
+						OnNotifyPropertyChanged();
+					}
+				}	
 			}
 		}
+
+		public IPAddress GetIPV4Address() => ipAddress;
 
 		[DataMember]
 		public string PoseDataString
@@ -57,5 +63,9 @@ namespace FleetClients
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
+
+		public string ToSummaryString() => string.Format("IPAddress:{0} Pose:{1}", IPV4String, PoseDataString);
+
+		public override string ToString() => ToSummaryString();
 	}
 }

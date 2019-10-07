@@ -89,6 +89,8 @@
     <Compile Include="FleetManagerClient.cs" />
     <Compile Include="FleetManagerServiceCallback.cs" />
     <Compile Include="FleetTemplate.cs" />
+    <Compile Include="JsonConverters\IEnumerableAGVTemplateConverter.cs" />
+    <Compile Include="JsonFactory.cs" />
     <Compile Include="KingpinStateMailbox.cs" />
     <Compile Include="PoseDataFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,5 +157,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

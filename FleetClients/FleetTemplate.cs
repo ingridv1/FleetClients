@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Serialization;
 
 namespace FleetClients
 {
+	[DataContract]
 	public class FleetTemplate
 	{
 		private readonly object lockObject = new object();
@@ -25,7 +28,7 @@ namespace FleetClients
 			{
 				foreach(AGVTemplate agvTemplate in AGVTemplates.ToList())
 				{
-					fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.IPAddress, agvTemplate.ToPoseData(), out bool success);
+					fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);
 				}
 			}
 		}
@@ -35,7 +38,23 @@ namespace FleetClients
 			lock (lockObject) agvTemplates.Clear();
 		}
 
-		public ReadOnlyObservableCollection<AGVTemplate> AGVTemplates => readonlyTemplates;
+		[DataMember]
+		public IEnumerable<AGVTemplate> AGVTemplates
+		{
+			get { return agvTemplates.ToList(); }
+			set
+			{
+				agvTemplates.Clear();
+
+				foreach (AGVTemplate agvTemplate in value)
+				{
+					Add(agvTemplate);
+				}
+			}
+		}
+
+
+		public ReadOnlyObservableCollection<AGVTemplate> AGVTemplatesOC => readonlyTemplates;
 
 		public void Add(AGVTemplate agvTemplate)
 		{
