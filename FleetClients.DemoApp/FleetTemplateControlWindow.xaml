@@ -21,12 +21,14 @@
             <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="1*" MinWidth="250"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
-            <gaCoreC:LabelContentControl Header="Populate">
-                <Button x:Name="populateButton" Click="PopulateButton_Click">Populate</Button>
-            </gaCoreC:LabelContentControl>
-            <fcControls:FleetTemplateControl x:Name="fleetTemplateControl"/>
-        </StackPanel>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top">
+                <gaCoreC:LabelContentControl Header="Populate">
+                    <Button x:Name="populateButton" Click="PopulateButton_Click">Populate</Button>
+                </gaCoreC:LabelContentControl>
+            </StackPanel>
+            <fcControls:FleetTemplateControl x:Name="fleetTemplateControl" DockPanel.Dock="Top"/>
+        </DockPanel>
         <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
         <WebBrowser Grid.Column="2" x:Name="webBrowser"/>
     </Grid>

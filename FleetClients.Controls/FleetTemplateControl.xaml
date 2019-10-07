@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.Controls"
              xmlns:fc="clr-namespace:FleetClients;assembly=FleetClients"
+             xmlns:gacoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -12,20 +13,45 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>    
+        </ResourceDictionary>
     </UserControl.Resources>
-    <StackPanel>
-        <StatusBar>Fleet Template</StatusBar>
-        <Button x:Name="addButton" Click="AddButton_Click">Add</Button>
-        <Button x:Name="clearButton" Click="ClearButton_Click">Clear</Button>
-        <Button x:Name="saveButton" Click="SaveButton_Click">Save</Button>
-        <Button x:Name="loadButton" Click="LoadButton_Click">Load</Button>
-        <ListBox ItemsSource="{Binding Path=AGVTemplatesOC}">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <StatusBar>Fleet Template</StatusBar>
+            <gacoreC:LabelContentControl Header="Add AGV template:">
+                <Button x:Name="addButton" Click="AddButton_Click">Add</Button>
+            </gacoreC:LabelContentControl>
+            <gacoreC:LabelContentControl Header="Clear all AGV template(s):">
+                <Button x:Name="clearButton" Click="ClearButton_Click">Clear</Button>
+            </gacoreC:LabelContentControl>
+            <gacoreC:LabelContentControl Header="Save fleet template:">
+                <Button x:Name="saveButton" Click="SaveButton_Click">Save</Button>
+            </gacoreC:LabelContentControl>
+            <gacoreC:LabelContentControl Header="Load fleet template:">
+                <Button x:Name="loadButton" Click="LoadButton_Click">Load</Button>
+            </gacoreC:LabelContentControl>
+        </StackPanel>
+        <ListBox ItemsSource="{Binding Path=AGVTemplatesOC}" DockPanel.Dock="Top">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:AGVTemplateControl/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
+            <ListBox.Style>
+                <Style TargetType="{x:Type ListBox}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Items.Count, RelativeSource={RelativeSource Self}}" Value="0">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <TextBlock>No AGV templates.</TextBlock>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.Style>
         </ListBox>
-    </StackPanel>
+    </DockPanel>
 </UserControl>
