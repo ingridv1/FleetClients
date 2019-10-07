@@ -58,6 +58,7 @@ namespace FleetClients.Controls
 			}
 			catch (Exception ex)
 			{
+				MessageBox.Show(ex.Message, "Failed to load fleet template", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
 

@@ -22,10 +22,10 @@
         </Grid.ContextMenu>
         <StackPanel>
             <gaCoreC:LabelContentControl Header="IPAddress:">
-                <TextBox Text="{Binding Path=IPV4String}"/>
+                <TextBox Text="{Binding Path=IPV4String}" x:Name="ipV4TextBox" TextChanged="IpV4TextBox_TextChanged" MaxLength="15" MaxLines="1"/>
             </gaCoreC:LabelContentControl>
             <gaCoreC:LabelContentControl Header="Pose:">
-                <TextBox Text="{Binding Path=PoseDataString}"/>
+                <TextBox Text="{Binding Path=PoseDataString}" x:Name="poseDataTextBox" TextChanged="PoseDataTextBox_TextChanged" MaxLength="21" MaxLines="1"/>
             </gaCoreC:LabelContentControl>
         </StackPanel>
     </Grid>   
