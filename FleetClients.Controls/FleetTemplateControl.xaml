@@ -12,15 +12,15 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <fc:FleetTemplate x:Key="fleetTemplate"/>
         </ResourceDictionary>    
     </UserControl.Resources>
     <StackPanel>
         <StatusBar>Fleet Template</StatusBar>
         <Button x:Name="addButton" Click="AddButton_Click">Add</Button>
         <Button x:Name="clearButton" Click="ClearButton_Click">Clear</Button>
-        <Button x:Name="populateButton" Click="PopulateButton_Click">Populate</Button>
-        <ListBox ItemsSource="{Binding Source={StaticResource fleetTemplate}, Path=AGVTemplates}">
+        <Button x:Name="saveButton" Click="SaveButton_Click">Save</Button>
+        <Button x:Name="loadButton" Click="LoadButton_Click">Load</Button>
+        <ListBox ItemsSource="{Binding Path=AGVTemplatesOC}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:AGVTemplateControl/>

@@ -1,23 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FleetClients.Controls
 {
-	/// <summary>
-	/// Interaction logic for FleetTemplateControl.xaml
-	/// </summary>
 	public partial class FleetTemplateControl : UserControl
 	{
 		public FleetTemplateControl()
@@ -25,33 +12,53 @@ namespace FleetClients.Controls
 			InitializeComponent();
 		}
 
-		private void PopulateButton_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				IFleetManagerClient client = DataContext as IFleetManagerClient;
-				FleetTemplate fleetTemplate = FindResource("fleetTemplate") as FleetTemplate;
-
-				fleetTemplate.Populate(client);
-
-			}
-			catch (Exception ex)
-			{
-
-			}
-		}
-
 		private void AddButton_Click(object sender, RoutedEventArgs e)
 		{
-			FleetTemplate fleetTemplate = FindResource("fleetTemplate") as FleetTemplate;
-
+			FleetTemplate fleetTemplate = DataContext as FleetTemplate;
 			fleetTemplate.Add(new AGVTemplate());
 		}
 
 		private void ClearButton_Click(object sender, RoutedEventArgs e)
 		{
-			FleetTemplate fleetTemplate = FindResource("fleetTemplate") as FleetTemplate;
+			FleetTemplate fleetTemplate = DataContext as FleetTemplate;
 			fleetTemplate.Clear();
+		}
+
+		private void SaveButton_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				FleetTemplate fleetTemplate = DataContext as FleetTemplate;
+				SaveFileDialog dialog = DialogFactory.GetSaveJsonDialog();
+
+				if (dialog.ShowDialog() == true) fleetTemplate.ToFile(dialog.FileName);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Failed to save fleet template", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
+
+		private void LoadButton_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				OpenFileDialog dialog = DialogFactory.GetOpenJsonDialog();
+
+				if (dialog.ShowDialog() == true)
+				{
+					FleetTemplate parsedTemplate = JsonFactory.FleetTemplateFromFile(dialog.FileName);
+
+					if (parsedTemplate != null)
+					{
+						DataContext = parsedTemplate;
+						UpdateLayout();
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+			}
 		}
 	}
 }

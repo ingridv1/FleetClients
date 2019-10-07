@@ -30,7 +30,7 @@ namespace FleetClients.Test
 			FleetTemplate fleetTemplateLoaded = JsonFactory.FleetTemplateFromFile(filePath);
 
 			Assert.IsNotNull(fleetTemplateLoaded);
-		
+			CollectionAssert.IsNotEmpty(fleetTemplateLoaded.AGVTemplates);		
 		}
 	}
 }

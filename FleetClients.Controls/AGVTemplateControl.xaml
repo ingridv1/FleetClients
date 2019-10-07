@@ -16,10 +16,10 @@
     </UserControl.Resources>
     <StackPanel>
         <gaCoreC:LabelContentControl Header="IPAddress:">
-            <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="127.0.0.1"/>
+            <TextBox Text="{Binding Path=IPV4String}"/>
         </gaCoreC:LabelContentControl>
         <gaCoreC:LabelContentControl Header="Pose:">
-            <TextBox Text="0,0,0"></TextBox>
+            <TextBox Text="{Binding Path=PoseDataString}"/>
         </gaCoreC:LabelContentControl>
     </StackPanel>
 </UserControl>

@@ -14,29 +14,29 @@ namespace FleetClients
 	[DataContract]
 	public class AGVTemplate : INotifyPropertyChanged
 	{
-		private IPAddress ipAddress = null;
+		private string ipV4string = "192.168.0.100";
 
-		private string poseDataString = string.Empty;
+		private string poseDataString = "0,0,0";
 
 		[DataMember]
 		public string IPV4String
 		{
-			get { return ipAddress != null ? ipAddress.MapToIPv4().ToString() : string.Empty; }
+			get { return ipV4string; }
 			set
 			{
-				if (SN.IPAddress.TryParse(value, out IPAddress parsed))
+				if (value == null) value = string.Empty;
+
+				if (ipV4string != value)
 				{
-					if (ipAddress != parsed)
-					{
-						ipAddress = parsed;
-						OnNotifyPropertyChanged();
-					}
-				}	
+					ipV4string = value;
+					OnNotifyPropertyChanged();
+				}
 			}
 		}
 
-		public IPAddress GetIPV4Address() => ipAddress;
-
+		public IPAddress GetIPV4Address()
+			=> (SN.IPAddress.TryParse(IPV4String, out IPAddress parsed)) ? parsed : null;
+		
 		[DataMember]
 		public string PoseDataString
 		{

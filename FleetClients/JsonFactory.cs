@@ -31,6 +31,11 @@ namespace FleetClients
 			}
 		}
 
+		public static void ToFile(this FleetTemplate fleetTemplate, string filePath)
+		{
+			string json = fleetTemplate.ToJson();
+			File.WriteAllText(filePath, json);
+		}
 
 		public static string ToJson(this FleetTemplate fleetTemplate)
 		{
