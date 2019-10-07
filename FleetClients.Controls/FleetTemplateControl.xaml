@@ -31,10 +31,10 @@
                 <Button x:Name="loadButton" Click="LoadButton_Click">Load</Button>
             </gacoreC:LabelContentControl>
         </StackPanel>
-        <ListBox ItemsSource="{Binding Path=AGVTemplatesOC}" DockPanel.Dock="Top">
+        <ListBox x:Name="listBox" ItemsSource="{Binding Path=AGVTemplatesOC}" DockPanel.Dock="Top" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <local:AGVTemplateControl/>
+                    <local:AGVTemplateControl HorizontalAlignment="Stretch" Delete="AGVTemplateControl_Delete"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
             <ListBox.Style>

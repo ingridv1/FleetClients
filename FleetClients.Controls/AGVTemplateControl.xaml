@@ -14,10 +14,12 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <Grid Background="Transparent">
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Delete" x:Name="deleteMenuItem" Click="DeleteMenuItem_Click"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
         <StackPanel>
             <gaCoreC:LabelContentControl Header="IPAddress:">
                 <TextBox Text="{Binding Path=IPV4String}"/>
@@ -26,5 +28,5 @@
                 <TextBox Text="{Binding Path=PoseDataString}"/>
             </gaCoreC:LabelContentControl>
         </StackPanel>
-    </Grid>
+    </Grid>   
 </UserControl>

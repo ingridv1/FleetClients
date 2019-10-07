@@ -60,5 +60,19 @@ namespace FleetClients.Controls
 			{
 			}
 		}
+
+		private void AGVTemplateControl_Delete(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				AGVTemplate agvTemplate = listBox.SelectedItem as AGVTemplate;
+
+				FleetTemplate fleetTemplate = DataContext as FleetTemplate;
+				fleetTemplate.Remove(agvTemplate);
+			}
+			catch (Exception ex)			
+			{
+			}
+		}
 	}
 }

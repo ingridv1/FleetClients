@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FleetClients.Controls
 {
-	/// <summary>
-	/// Interaction logic for AGVTemplateControl.xaml
-	/// </summary>
 	public partial class AGVTemplateControl : UserControl
 	{
+		public static readonly RoutedEvent DeleteEvent = EventManager.RegisterRoutedEvent("Delete", RoutingStrategy.Bubble,
+			typeof(RoutedEventHandler), typeof(AGVTemplateControl));
+
+		public event RoutedEventHandler Delete
+		{
+			add { AddHandler(DeleteEvent, value); }
+			remove { RemoveHandler(DeleteEvent, value); }
+		}
+
 		public AGVTemplateControl()
 		{
 			InitializeComponent();
 		}
+
+		private void DeleteMenuItem_Click(object sender, RoutedEventArgs e)
+			=> RaiseEvent(new RoutedEventArgs(AGVTemplateControl.DeleteEvent));
 	}
 }

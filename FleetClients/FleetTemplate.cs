@@ -38,6 +38,11 @@ namespace FleetClients
 			lock (lockObject) agvTemplates.Clear();
 		}
 
+		public void Remove(AGVTemplate agvTemplate)
+		{
+			lock (lockObject) agvTemplates.Remove(agvTemplate);
+		}
+
 		[DataMember]
 		public IEnumerable<AGVTemplate> AGVTemplates
 		{
