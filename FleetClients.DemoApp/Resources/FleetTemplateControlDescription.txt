@@ -1,0 +1,3 @@
+# Fleet Template Control
+
+A control used to edit a fleet template, which can be imported to and exported from json. This can be used to represent a virtual vehicle fleet that can be created instantly, rather than manually creating and position virtual AGVs.

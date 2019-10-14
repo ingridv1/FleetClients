@@ -49,5 +49,26 @@ namespace FleetClients.DemoApp
 				window.ShowDialog();
 			}		
 		}
+
+		private void FtControlButton_Click(object sender, RoutedEventArgs e)
+		{
+			IPAddress ipAddress = ipV4Control.ToIPAddress();
+
+			if (ipAddress == null)
+			{
+				MessageBox.Show("IPv4 Address is invalid", "Invalid IP Address", MessageBoxButton.OK, MessageBoxImage.Error);
+				return;
+			}
+
+			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(ipAddress)))
+			{
+				FleetTemplateControlWindow window = new FleetTemplateControlWindow()
+				{
+					DataContext = client
+				};
+
+				window.ShowDialog();
+			}
+		}
 	}
 }

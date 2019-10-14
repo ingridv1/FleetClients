@@ -42,13 +42,16 @@
       <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.dll</HintPath>
+      <HintPath>..\packages\GACore.1.14.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.Architecture.dll</HintPath>
+      <HintPath>..\packages\GACore.1.14.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.8.2\lib\net47\GACore.Controls.dll</HintPath>
+      <HintPath>..\packages\GACore.1.14.0\lib\net472\GACore.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GACore.1.14.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Markdig, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Markdig.0.17.1\lib\net40\Markdig.dll</HintPath>
@@ -91,6 +94,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FleetTemplateControlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +108,9 @@
     </Compile>
     <Compile Include="FleetManagerClientControlWindow.xaml.cs">
       <DependentUpon>FleetManagerClientControlWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FleetTemplateControlWindow.xaml.cs">
+      <DependentUpon>FleetTemplateControlWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -149,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainWindowDescription.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FleetTemplateControlDescription.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

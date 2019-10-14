@@ -77,11 +77,9 @@ namespace FleetClients.DemoApp.Properties {
         ///
         ///## Components
         ///
-        ///### Is Connected Control
+        ///### Fleet Manager Client Control
         ///
-        ///This displays if the fleet manager client is currently connected to a scheduler.
-        ///
-        ///### Fleet Manager Client  [rest of string was truncated]&quot;;.
+        ///This displays all kingpins currenly present in the fleet. The kingpin state control from the nuget pa [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string FleetManagerClientControlDescription {
             get {
@@ -90,8 +88,28 @@ namespace FleetClients.DemoApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # A Ruthless Badger
-        ///.
+        ///   Looks up a localized string similar to # Fleet Template Control.
+        /// </summary>
+        internal static string FleetTemplateControlDescription {
+            get {
+                return ResourceManager.GetString("FleetTemplateControlDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # Fleet Clients Demo App
+        ///
+        ///Demonstrates the functionality available in the FleetClients and FleetClients.Controls assemblies.
+        ///
+        ///## Configuration
+        ///
+        ///Set the IP address of the scheduler to connect to in the configuration section.
+        ///
+        ///## Controls
+        ///
+        ///### Fleet Manager Client Control
+        ///
+        ///Creates a new window hosting the fleet manager client control, a control that is used to display the current state of the AGV free..
         /// </summary>
         internal static string MainWindowDescription {
             get {

@@ -30,6 +30,9 @@
             <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
                 <Button x:Name="fmcControlButton" Click="FmcControlButton_Click">Create</Button>
             </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Fleet Template Control">
+                <Button x:Name="ftControlButton" Click="FtControlButton_Click">Create</Button>
+            </gaCoreC:LabelContentControl>
         </StackPanel>
         <WebBrowser Grid.Column="1" x:Name="webBrowser"/>
     </Grid>
