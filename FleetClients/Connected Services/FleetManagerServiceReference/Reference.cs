@@ -183,6 +183,9 @@ namespace FleetClients.FleetManagerServiceReference {
         CREATEAWAITINGTASKFAILED = 1017,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
+        CREATECHARGETASKFAILED = 1018,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
         ABORTALLJOBSFAILED = 2001,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
