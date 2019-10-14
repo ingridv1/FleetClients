@@ -8,6 +8,12 @@ ______ _           _   _____ _ _            _
 https://github.com/GuidanceAutomation/FleetClients
 https://www.guidanceautomation.com/
 
+v1.4.0 (14th Oct 19)
+
+* Adds fleet template support
+** Serialize fleet templates to json
+** Create fleet templates from json
+
 v1.3.2 (16th Sept 19)
 
 * Minor refactor to use GenericMailbox from GACore
