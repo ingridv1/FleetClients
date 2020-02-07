@@ -9,6 +9,8 @@ using FleetClients;
 using System.Windows.Input;
 using GACore.Command;
 using Microsoft.Win32;
+using FleetClients.UI.Message;
+using GACore.Utility;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -37,6 +39,9 @@ namespace FleetClients.UI.ViewModel
 				if (parsedTemplate != null)
 				{
 					if (Model != null) Model.FleetTemplate = parsedTemplate;
+
+					TemplateUpdatedMessage message = new TemplateUpdatedMessage(parsedTemplate);
+					Messenger.Default.Send(message);
 				}
 			}
 		}

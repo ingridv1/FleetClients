@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DialogFactory.cs" />
+    <Compile Include="Message\TemplateUpdatedMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,9 +114,14 @@
     <Compile Include="Service\FleetTemplateManagerWindow.xaml.cs">
       <DependentUpon>FleetTemplateManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AGVTemplateViewModel.cs" />
     <Compile Include="ViewModel\Enumerators.cs" />
     <Compile Include="ViewModel\FleetTemplateManagerViewModel.cs" />
+    <Compile Include="ViewModel\FleetTemplateViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\FleetTemplateView.xaml.cs">
+      <DependentUpon>FleetTemplateView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FleetTemplateManagerView.xaml.cs">
       <DependentUpon>FleetTemplateManagerView.xaml</DependentUpon>
     </Compile>
@@ -133,6 +139,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Service\FleetTemplateManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FleetTemplateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

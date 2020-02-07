@@ -7,11 +7,16 @@
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              xmlns:viewModel="clr-namespace:FleetClients.UI.ViewModel"
+             xmlns:view="clr-namespace:FleetClients.UI.View"
              mc:Ignorable="d" 
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.FleetTemplateManagerViewModel}}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
             <StatusBar>Fleet Template</StatusBar>
             <gaCoreC:LabelContentControl Header="Load">
                 <Button>
@@ -23,6 +28,7 @@
                     </i:Interaction.Triggers>
                 </Button>
             </gaCoreC:LabelContentControl>
-        </StackPanel>      
+        </StackPanel>
+        <view:FleetTemplateView Grid.Row="1"/>
     </Grid>
 </UserControl>
