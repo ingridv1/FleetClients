@@ -21,15 +21,6 @@
             <gacoreC:LabelContentControl Header="Add AGV template:">
                 <Button x:Name="addButton" Click="AddButton_Click">Add</Button>
             </gacoreC:LabelContentControl>
-            <gacoreC:LabelContentControl Header="Clear all AGV template(s):">
-                <Button x:Name="clearButton" Click="ClearButton_Click">Clear</Button>
-            </gacoreC:LabelContentControl>
-            <gacoreC:LabelContentControl Header="Save fleet template:">
-                <Button x:Name="saveButton" Click="SaveButton_Click">Save</Button>
-            </gacoreC:LabelContentControl>
-            <gacoreC:LabelContentControl Header="Load fleet template:">
-                <Button x:Name="loadButton" Click="LoadButton_Click">Load</Button>
-            </gacoreC:LabelContentControl>
         </StackPanel>
         <ListBox x:Name="listBox" ItemsSource="{Binding Path=AGVTemplatesOC}" DockPanel.Dock="Top" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>

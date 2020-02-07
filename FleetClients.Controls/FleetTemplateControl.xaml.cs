@@ -24,44 +24,6 @@ namespace FleetClients.Controls
 			fleetTemplate.Clear();
 		}
 
-		private void SaveButton_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				FleetTemplate fleetTemplate = DataContext as FleetTemplate;
-				SaveFileDialog dialog = DialogFactory.GetSaveJsonDialog();
-
-				if (dialog.ShowDialog() == true) fleetTemplate.ToFile(dialog.FileName);
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message, "Failed to save fleet template", MessageBoxButton.OK, MessageBoxImage.Error);
-			}
-		}
-
-		private void LoadButton_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				OpenFileDialog dialog = DialogFactory.GetOpenJsonDialog();
-
-				if (dialog.ShowDialog() == true)
-				{
-					FleetTemplate parsedTemplate = JsonFactory.FleetTemplateFromFile(dialog.FileName);
-
-					if (parsedTemplate != null)
-					{
-						DataContext = parsedTemplate;
-						UpdateLayout();
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message, "Failed to load fleet template", MessageBoxButton.OK, MessageBoxImage.Error);
-			}
-		}
-
 		private void AGVTemplateControl_Delete(object sender, RoutedEventArgs e)
 		{
 			try

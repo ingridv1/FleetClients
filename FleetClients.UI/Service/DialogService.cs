@@ -14,6 +14,7 @@ namespace FleetClients.UI.Service
 			logger.Debug("[DialogService] CreateFleetTemplateManagerWindow()");
 
 			ViewModel.ViewModelLocator.FleetTemplateManagerViewModel.Model = manager;
+			ViewModel.ViewModelLocator.FleetTemplateViewModel.Model = manager?.FleetTemplate;
 
 			FleetTemplateManagerWindow window = new FleetTemplateManagerWindow();
 			return window;

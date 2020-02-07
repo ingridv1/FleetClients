@@ -14,7 +14,7 @@ namespace FleetClients.UI.ViewModel
 	{
 		public override AGVTemplateViewModel GetViewModelForModel(AGVTemplate model)
 		{
-			throw new NotImplementedException();
+			return ViewModels.FirstOrDefault(e => e.IPV4String == model.IPV4String);
 		}
 
 		public FleetTemplateViewModel()

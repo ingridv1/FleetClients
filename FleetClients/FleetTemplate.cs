@@ -61,7 +61,16 @@ namespace FleetClients
 
 		public void Clear()
 		{
-			lock (lockObject) agvTemplates.Clear();
+			lock (lockObject)
+			{
+				while (agvTemplates.Any())
+				{
+					AGVTemplate first = agvTemplates.First();
+					agvTemplates.RemoveAt(0);
+					OnRemoved(first);
+				}	
+
+			}
 		}
 
 		public void Remove(AGVTemplate agvTemplate)

@@ -11,6 +11,7 @@ using GACore.Command;
 using Microsoft.Win32;
 using FleetClients.UI.Message;
 using GACore.Utility;
+using System.Windows;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -26,6 +27,24 @@ namespace FleetClients.UI.ViewModel
 		private void HandleLoadCommands()
 		{
 			FTMOptionCommand = new CustomCommand(FleetTemplateOptionClick, CanFleetTemplateOptionClick);
+		}
+
+		private void HandleSave()
+		{ 
+			try
+			{
+				SaveFileDialog dialog = DialogFactory.GetSaveJsonDialog();
+				if (dialog.ShowDialog() == true) Model.FleetTemplate.ToFile(dialog.FileName);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Failed to save fleet template", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
+
+		private void HandleClear()
+		{
+			if (Model != null) Model.FleetTemplate.Clear();	
 		}
 
 		private void HandleLoad()
@@ -50,9 +69,21 @@ namespace FleetClients.UI.ViewModel
 		{
 			switch(option)
 			{
+				case FleetTemplateManagerOption.Clear:
+					{
+						HandleClear();
+						return;
+					}
+
 				case FleetTemplateManagerOption.Load:
 					{
 						HandleLoad();
+						return;
+					}
+
+				case FleetTemplateManagerOption.Save:
+					{
+						HandleSave();
 						return;
 					}
 
