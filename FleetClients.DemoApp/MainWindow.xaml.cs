@@ -2,6 +2,7 @@
 using System.Net;
 using System.Windows;
 using Markdig;
+using FleetClients.UI.Service;
 
 namespace FleetClients.DemoApp
 {
@@ -62,6 +63,10 @@ namespace FleetClients.DemoApp
 
 			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(ipAddress)))
 			{
+				FleetTemplateManager fleetTemplateManager = new FleetTemplateManager();
+
+				DialogService.CreateFleetTemplateManagerWindow(fleetTemplateManager).Show();
+
 				FleetTemplateControlWindow window = new FleetTemplateControlWindow()
 				{
 					DataContext = client

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:FleetClients.Controls"
              xmlns:baseClientsC="clr-namespace:BaseClients.Controls;assembly=BaseClients.Controls"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
+             xmlns:gaCoreView="clr-namespace:GACore.Controls.View;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -58,7 +59,7 @@
                          HorizontalContentAlignment="Stretch">
                     <ListBox.ItemTemplate>                        
                         <DataTemplate>
-                            <gaCoreC:KingpinStateControl DataContext="{Binding Path=Mail}"/>                  
+                            <gaCoreView:KingpinStateView DataContext="{Binding Path=Mail}"/>                  
                         </DataTemplate>                        
                     </ListBox.ItemTemplate>
                     <ListBox.Style>
