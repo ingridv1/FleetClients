@@ -21,8 +21,7 @@ namespace FleetClients.UI.ViewModel
 		{
 			Messenger.Default.Register<TemplateUpdatedMessage>(this, OnTemplateUpdatedMessageRecieved);
 		}
-
-		
+			
 
 		private void OnTemplateUpdatedMessageRecieved(TemplateUpdatedMessage templateUpdatedMessage)
 		{

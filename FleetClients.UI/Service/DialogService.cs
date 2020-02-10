@@ -19,5 +19,16 @@ namespace FleetClients.UI.Service
 			FleetTemplateManagerWindow window = new FleetTemplateManagerWindow();
 			return window;
 		}
+
+		public static Window CreateAGVTemplateFactoryWindow(FleetTemplateManager manager)
+		{
+			logger.Debug("[DialogService] CreateAGVTemplateFactoryWindow()");
+
+			AGVTemplateFactoryWindow window = new AGVTemplateFactoryWindow();
+
+			ViewModel.ViewModelLocator.AGVTemplateFactoryViewModel.Model = manager;
+
+			return window;
+		}
 	}
 }

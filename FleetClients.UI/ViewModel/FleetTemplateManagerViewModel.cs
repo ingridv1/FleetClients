@@ -47,6 +47,12 @@ namespace FleetClients.UI.ViewModel
 			if (Model != null) Model.FleetTemplate.Clear();	
 		}
 
+		private void HandleAdd()
+		{
+			Window window = Service.DialogService.CreateAGVTemplateFactoryWindow(Model);
+			window.ShowDialog();
+		}
+
 		private void HandleLoad()
 		{
 			OpenFileDialog dialog = DialogFactory.GetOpenJsonDialog();
@@ -69,6 +75,12 @@ namespace FleetClients.UI.ViewModel
 		{
 			switch(option)
 			{
+				case FleetTemplateManagerOption.Add:
+					{
+						HandleAdd();
+						return;
+					}
+
 				case FleetTemplateManagerOption.Clear:
 					{
 						HandleClear();

@@ -110,15 +110,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Service\AGVTemplateFactoryWindow.xaml.cs">
+      <DependentUpon>AGVTemplateFactoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\DialogService.cs" />
     <Compile Include="Service\FleetTemplateManagerWindow.xaml.cs">
       <DependentUpon>FleetTemplateManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AGVTemplateFactoryViewModel.cs" />
     <Compile Include="ViewModel\AGVTemplateViewModel.cs" />
     <Compile Include="ViewModel\Enumerators.cs" />
     <Compile Include="ViewModel\FleetTemplateManagerViewModel.cs" />
     <Compile Include="ViewModel\FleetTemplateViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AGVTemplateFactoryView.xaml.cs">
+      <DependentUpon>AGVTemplateFactoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FleetTemplateView.xaml.cs">
       <DependentUpon>FleetTemplateView.xaml</DependentUpon>
     </Compile>
@@ -138,7 +145,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Service\AGVTemplateFactoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Service\FleetTemplateManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AGVTemplateFactoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

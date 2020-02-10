@@ -67,12 +67,15 @@ namespace FleetClients.DemoApp
 
 				DialogService.CreateFleetTemplateManagerWindow(fleetTemplateManager).Show();
 
+
+				/*
+
 				FleetTemplateControlWindow window = new FleetTemplateControlWindow()
 				{
 					DataContext = client
 				};
 
-				window.ShowDialog();
+				window.ShowDialog();*/
 			}
 		}
 	}

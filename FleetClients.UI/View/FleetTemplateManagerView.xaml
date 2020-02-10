@@ -18,6 +18,16 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <StatusBar>Fleet Template</StatusBar>
+            <gaCoreC:LabelContentControl Header="Add">
+                <Button>
+                    Add
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding FTMOptionCommand}" CommandParameter="{x:Static viewModel:FleetTemplateManagerOption.Add}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </gaCoreC:LabelContentControl>
             <gaCoreC:LabelContentControl Header="Clear">
                 <Button>
                     Clear

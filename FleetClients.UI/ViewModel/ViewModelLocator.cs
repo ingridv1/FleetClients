@@ -5,5 +5,7 @@
 		public static FleetTemplateManagerViewModel FleetTemplateManagerViewModel { get; } = new FleetTemplateManagerViewModel();
 
 		public static FleetTemplateViewModel FleetTemplateViewModel { get; } = new FleetTemplateViewModel();
+
+		public static AGVTemplateFactoryViewModel AGVTemplateFactoryViewModel { get; } = new AGVTemplateFactoryViewModel();
 	}
 }
