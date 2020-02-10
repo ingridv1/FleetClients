@@ -5,6 +5,7 @@
 		Add,
 		Clear,
 		Save,
-		Load
+		Load,
+		Populate
 	};
 }

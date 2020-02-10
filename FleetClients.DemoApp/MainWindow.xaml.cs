@@ -63,19 +63,9 @@ namespace FleetClients.DemoApp
 
 			using (IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(ipAddress)))
 			{
-				FleetTemplateManager fleetTemplateManager = new FleetTemplateManager();
+				FleetTemplateManager fleetTemplateManager = new FleetTemplateManager(client);
 
-				DialogService.CreateFleetTemplateManagerWindow(fleetTemplateManager).Show();
-
-
-				/*
-
-				FleetTemplateControlWindow window = new FleetTemplateControlWindow()
-				{
-					DataContext = client
-				};
-
-				window.ShowDialog();*/
+				DialogService.CreateFleetTemplateManagerWindow(fleetTemplateManager).ShowDialog();
 			}
 		}
 	}

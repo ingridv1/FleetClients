@@ -99,6 +99,12 @@ namespace FleetClients.UI.ViewModel
 						return;
 					}
 
+				case FleetTemplateManagerOption.Populate:
+					{
+						Model.Populate();
+						return;
+					}
+
 				default:
 					throw new NotImplementedException();
 			}

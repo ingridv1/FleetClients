@@ -6,6 +6,7 @@ using GACore;
 using GACore.Architecture;
 using System.Runtime.Serialization;
 using MoreLinq;
+using BaseClients;
 
 namespace FleetClients
 {
@@ -54,7 +55,7 @@ namespace FleetClients
 			{
 				foreach(AGVTemplate agvTemplate in AGVTemplates.ToList())
 				{
-					fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);
+					ServiceOperationResult result = fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);				
 				}
 			}
 		}
