@@ -6,7 +6,7 @@ Demonstrates the functionality available in the FleetClients and FleetClients.Co
 
 Set the IP address of the scheduler to connect to in the configuration section.
 
-## Controls
+## Controls Library
 
 ### Fleet Manager Client Control
 

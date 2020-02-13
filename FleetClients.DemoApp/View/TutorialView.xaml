@@ -5,16 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FleetClients.DemoApp.View"
              xmlns:viewModel="clr-namespace:FleetClients.DemoApp.ViewModel"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.TutorialViewModel}}">
-    <StackPanel>
-        <StatusBar>Fleet Clients Tutorial</StatusBar>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Top">Fleet Clients Tutorial</StatusBar>
+        <Grid DockPanel.Dock="Top" x:Name="mainGrid">        
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="5"/>
@@ -27,8 +25,14 @@
                 </gaCoreC:LabelContentControl>
                 <StatusBar>Controls Library</StatusBar>
             </StackPanel>
-            <GridSplitter Grid.Column="1"/>
-            <WebBrowser Grid.Column="2"/>
+            <GridSplitter Grid.Column="1" Height="{Binding ElementName=mainGrid, Path=ActualHeight}" HorizontalAlignment="Stretch"  ResizeDirection="Columns"/>
+            <WebBrowser Grid.Column="2" x:Name="webBrowser">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <i:InvokeCommandAction Command="{Binding RequestNavigateCommand}" CommandParameter="{Binding ElementName=webBrowser}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </WebBrowser>
         </Grid>
-    </StackPanel>
+    </DockPanel>
 </UserControl>
