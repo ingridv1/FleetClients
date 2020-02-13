@@ -15,7 +15,7 @@ namespace FleetClients.DemoApp.Service
 
 		public static Window CreateFleetClientTutorialWindow(IFleetManagerClient client)
 		{
-			uiVM.ViewModelLocator.FleetManagerClientViewModel.Model = client;
+			uiVM.ViewModelLocator.UpdateFleetManagerClientViewModels(client);
 
 			FleetManagerClientTutorialWindow window = new FleetManagerClientTutorialWindow();
 			return window;

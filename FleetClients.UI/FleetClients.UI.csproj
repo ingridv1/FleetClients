@@ -129,6 +129,8 @@
     <Compile Include="ViewModel\FleetManagerClientViewModel.cs" />
     <Compile Include="ViewModel\FleetTemplateManagerViewModel.cs" />
     <Compile Include="ViewModel\FleetTemplateViewModel.cs" />
+    <Compile Include="ViewModel\KingpinStateMailboxViewModel.cs" />
+    <Compile Include="ViewModel\KingpinStatesViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AGVTemplateFactoryView.xaml.cs">
       <DependentUpon>AGVTemplateFactoryView.xaml</DependentUpon>
@@ -141,6 +143,12 @@
     </Compile>
     <Compile Include="View\FleetTemplateManagerView.xaml.cs">
       <DependentUpon>FleetTemplateManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KingpinStatesView.xaml.cs">
+      <DependentUpon>KingpinStatesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KingpinStateView.xaml.cs">
+      <DependentUpon>KingpinStateView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,6 +184,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FleetTemplateManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KingpinStatesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KingpinStateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -20,9 +20,7 @@ namespace FleetClients
 
         private bool isDisposed = false;
 
-        private ObservableCollection<KingpinStateMailbox> kingpinStateMailboxes = new ObservableCollection<KingpinStateMailbox>();
-
-        private ReadOnlyObservableCollection<KingpinStateMailbox> readonlyKingpinStateMailboxes;
+        private List<KingpinStateMailbox> kingpinStateMailboxes = new List<KingpinStateMailbox>();
 
         private TimeSpan heartbeat;
 
@@ -37,31 +35,31 @@ namespace FleetClients
         {
             this.heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) ? TimeSpan.FromMilliseconds(1000) : heartbeat;
             this.callback.FleetStateUpdate += Callback_FleetStateUpdate;
-
-            readonlyKingpinStateMailboxes = new ReadOnlyObservableCollection<KingpinStateMailbox>(kingpinStateMailboxes);
-
-            BindingOperations.EnableCollectionSynchronization(KingpinStateMailboxes, lockObject);
         }
 
         private readonly object lockObject = new object();
-
-        public ReadOnlyObservableCollection<KingpinStateMailbox> KingpinStateMailboxes => readonlyKingpinStateMailboxes;
 
         private void Callback_FleetStateUpdate(FleetState fleetState)
         {
             FleetState = fleetState;
 
-            foreach (IKingpinState kingpinState in fleetState.KingpinStates)
+            lock (kingpinStateMailboxes)
             {
-                KingpinStateMailbox mailbox = kingpinStateMailboxes.FirstOrDefault(e => e.Key.Equals(kingpinState.IPAddress));
+                foreach (IKingpinState kingpinState in fleetState.KingpinStates)
+                {
+                    KingpinStateMailbox mailbox = kingpinStateMailboxes.FirstOrDefault(e => e.Key.Equals(kingpinState.IPAddress));
 
-                if (mailbox != null)
-                {
-                    mailbox.Update(kingpinState);
-                }
-                else
-                {
-                    kingpinStateMailboxes.Add(new KingpinStateMailbox(kingpinState.IPAddress, kingpinState));
+                    if (mailbox != null)
+                    {
+                        mailbox.Update(kingpinState);
+                    }
+                    else
+                    {
+                        KingpinStateMailbox mailBox = new KingpinStateMailbox(kingpinState.IPAddress, kingpinState);
+
+                        kingpinStateMailboxes.Add(mailBox);
+                        OnAdded(mailBox);
+                    }
                 }
             }
         }
@@ -125,6 +123,32 @@ namespace FleetClients
         }
 
         private FleetState fleetState = null;
+
+        public event Action<KingpinStateMailbox> Added;
+
+        public event Action<KingpinStateMailbox> Removed;
+
+        private void OnRemoved(KingpinStateMailbox kingpinStateMailbox)
+        {
+            if (Removed != null)
+            {
+                foreach (Action<KingpinStateMailbox> handler in Added.GetInvocationList())
+                {
+                    handler.BeginInvoke(kingpinStateMailbox, null, null);
+                }
+            }
+        }
+
+        private void OnAdded(KingpinStateMailbox kingpinStateMailbox)
+        {
+            if (Added != null)
+            {
+                foreach(Action<KingpinStateMailbox> handler in Added.GetInvocationList())
+                {
+                    handler.BeginInvoke(kingpinStateMailbox, null, null);
+                }
+            }
+        }
 
         public FleetState FleetState
         {
@@ -564,5 +588,7 @@ namespace FleetClients
 
 			return result;
 		}
-	}
+
+        public IEnumerable<KingpinStateMailbox> GetModels() => kingpinStateMailboxes.ToList();
+    }
 }

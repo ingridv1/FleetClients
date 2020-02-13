@@ -9,12 +9,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.FleetManagerClientViewModel}}">
-    <Grid>
-        <StackPanel>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
             <StatusBar>Fleet Client</StatusBar>
             <gaCoreC:LabelContentControl Header="Endpoint">
                 <TextBlock Text="{Binding EndpointString}"/>
             </gaCoreC:LabelContentControl>
-        </StackPanel>   
-    </Grid>
+            <gaCoreC:LabelContentControl Header="Connected">
+                <CheckBox IsChecked="{Binding IsConnected, Mode=OneWay}" IsEnabled="False"/>
+            </gaCoreC:LabelContentControl>
+        </StackPanel>
+        <local:KingpinStatesView DockPanel.Dock="Top"/>
+    </DockPanel>
 </UserControl>

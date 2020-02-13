@@ -1,17 +1,16 @@
 ﻿using BaseClients;
 using FleetClients.FleetManagerServiceReference;
 using GACore;
+using GACore.Architecture;
 using System.Collections.ObjectModel;
 using System.Net;
 using System.Xml.Linq;
 
 namespace FleetClients
 {
-	public interface IFleetManagerClient : ICallbackClient
+	public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
 	{
 		FleetState FleetState { get; }
-
-        ReadOnlyObservableCollection<KingpinStateMailbox> KingpinStateMailboxes { get; }
 
 		ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success);
 
