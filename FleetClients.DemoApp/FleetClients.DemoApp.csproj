@@ -111,6 +111,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Model\TutorialModel.cs" />
+    <Compile Include="Service\DialogService.cs" />
+    <Compile Include="Service\FleetTemplateManagerTutorialWindow.xaml.cs">
+      <DependentUpon>FleetTemplateManagerTutorialWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\TutorialViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\TutorialView.xaml.cs">
+      <DependentUpon>TutorialView.xaml</DependentUpon>
+    </Compile>
     <Page Include="FleetManagerClientControlWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +148,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Service\FleetTemplateManagerTutorialWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TutorialView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

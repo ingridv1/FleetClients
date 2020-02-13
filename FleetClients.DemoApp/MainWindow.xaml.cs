@@ -13,10 +13,11 @@ namespace FleetClients.DemoApp
 	{
 		public MainWindow()
 		{
+			Bootstrapper.Activate();
 			InitializeComponent();
 
 			string html = Markdown.ToHtml(Properties.Resources.MainWindowDescription);
-			webBrowser.NavigateToString(html);
+			//webBrowser.NavigateToString(html);
 		}
 
 		private void HandleClose()
@@ -32,6 +33,7 @@ namespace FleetClients.DemoApp
 
 		private void FmcControlButton_Click(object sender, RoutedEventArgs e)
 		{
+			/*
 			IPAddress ipAddress = ipV4Control.ToIPAddress();
 
 			if (ipAddress == null)
@@ -48,11 +50,12 @@ namespace FleetClients.DemoApp
 				};
 
 				window.ShowDialog();
-			}		
+			}		*/
 		}
 
 		private void FtControlButton_Click(object sender, RoutedEventArgs e)
 		{
+			/*
 			IPAddress ipAddress = ipV4Control.ToIPAddress();
 
 			if (ipAddress == null)
@@ -66,7 +69,7 @@ namespace FleetClients.DemoApp
 				FleetTemplateManager fleetTemplateManager = new FleetTemplateManager(client);
 
 				DialogService.CreateFleetTemplateManagerWindow(fleetTemplateManager).ShowDialog();
-			}
+			}*/
 		}
 	}
 }
