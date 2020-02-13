@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace FleetClients.UI.View
 {
-	public partial class FleetClientView : UserControl
+	public partial class FleetManagerClientView : UserControl
 	{
-		public FleetClientView()
+		public FleetManagerClientView()
 		{
 			InitializeComponent();
 		}

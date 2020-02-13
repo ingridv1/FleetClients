@@ -63,7 +63,11 @@ namespace FleetClients.DemoApp.ViewModel
 
 		private void HandleShowFleetManager()
 		{
-			Service.DialogService.CreateFleetManagerTutorialWindow().ShowDialog();
+			IPAddress ipAddress = IPAddress.Parse(IPV4String);
+			IFleetManagerClient client = Model.CreateFleetManagerClient(ipAddress);
+
+			Service.DialogService.CreateFleetClientTutorialWindow(client)
+				.ShowDialog();
 		}
 
 		private void HandleOption(TutorialCommandOption option)

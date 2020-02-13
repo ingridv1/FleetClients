@@ -4,9 +4,9 @@ using System.Windows.Controls;
 
 namespace FleetClients.DemoApp.Service
 {
-	public partial class FleetManagerTutorialWindow : Window
+	public partial class FleetManagerClientTutorialWindow : Window
 	{
-		public FleetManagerTutorialWindow()
+		public FleetManagerClientTutorialWindow()
 		{
 			InitializeComponent();
 		}

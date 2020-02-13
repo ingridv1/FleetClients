@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using uiVM = FleetClients.UI.ViewModel;
 
 namespace FleetClients.DemoApp.Service
@@ -18,9 +13,11 @@ namespace FleetClients.DemoApp.Service
 			return window;
 		}
 
-		public static Window CreateFleetManagerTutorialWindow()
+		public static Window CreateFleetClientTutorialWindow(IFleetManagerClient client)
 		{
-			FleetManagerTutorialWindow window = new FleetManagerTutorialWindow();
+			uiVM.ViewModelLocator.FleetManagerClientViewModel.Model = client;
+
+			FleetManagerClientTutorialWindow window = new FleetManagerClientTutorialWindow();
 			return window;
 		}
 	}
