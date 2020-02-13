@@ -18,7 +18,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <StatusBar> Fleet Template Manager</StatusBar>
-            <gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Endpoint">
+                <TextBlock Text="{Binding EndpointString}"/>
+            </gaCoreC:LabelContentControl>
+            <gaCoreC:LabelContentControl Header="Apply Template">
                 <Button>
                     Populate
                     <i:Interaction.Triggers>

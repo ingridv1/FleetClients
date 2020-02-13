@@ -21,9 +21,18 @@
             <StackPanel Grid.Column="0">
                 <StatusBar>Configuration</StatusBar>
                 <gaCoreC:LabelContentControl Header="Scheduler IPv4 Address:">
-                    <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="127.0.0.1"/>
+                    <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="{Binding Path=IPV4String}"/>
                 </gaCoreC:LabelContentControl>
                 <StatusBar>Controls Library</StatusBar>
+                <gaCoreC:LabelContentControl Header="Fleet Manager Control">
+                    <Button>Create
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding TutorialCommand}" CommandParameter="{Binding Source={x:Static viewModel:TutorialCommandOption.ShowFleetManager}}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </gaCoreC:LabelContentControl>
                 <gaCoreC:LabelContentControl Header="Fleet Template Control">
                     <Button>Create
                         <i:Interaction.Triggers>

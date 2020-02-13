@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BaseClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseClients.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GACore.1.21.0\lib\net472\GACore.dll</HintPath>
     </Reference>
@@ -120,11 +126,15 @@
     <Compile Include="ViewModel\AGVTemplateFactoryViewModel.cs" />
     <Compile Include="ViewModel\AGVTemplateViewModel.cs" />
     <Compile Include="ViewModel\Enumerators.cs" />
+    <Compile Include="ViewModel\FleetClientViewModel.cs" />
     <Compile Include="ViewModel\FleetTemplateManagerViewModel.cs" />
     <Compile Include="ViewModel\FleetTemplateViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AGVTemplateFactoryView.xaml.cs">
       <DependentUpon>AGVTemplateFactoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FleetClientView.xaml.cs">
+      <DependentUpon>FleetClientView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FleetTemplateView.xaml.cs">
       <DependentUpon>FleetTemplateView.xaml</DependentUpon>
@@ -154,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AGVTemplateFactoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FleetClientView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

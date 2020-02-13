@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using FleetClients.DemoApp.Model;
+using System.Net;
 using GACore;
 using GACore.Command;
 using Markdig;
@@ -17,6 +18,26 @@ namespace FleetClients.DemoApp.ViewModel
 		internal TutorialViewModel()
 		{
 			HandleLoadCommands();
+		}
+
+		private string ipV4String = "127.0.0.1";
+
+		public string IPV4String
+		{
+			get { return ipV4String; }
+			set
+			{
+				if (ipV4String != value)
+				{
+					ipV4String = value;
+					OnNotifyPropertyChanged();
+				}
+			}
+		}
+
+		protected override void HandleModelUpdate(TutorialModel oldValue, TutorialModel newValue)
+		{
+			base.HandleModelUpdate(oldValue, newValue);
 		}
 
 		public ICommand TutorialCommand { get; set; }
@@ -33,13 +54,28 @@ namespace FleetClients.DemoApp.ViewModel
 
 		private void HandleShowTemplateManager()
 		{
-			Service.DialogService.CreateFleetTemplateManagerTutorialWindow().ShowDialog();
+			IPAddress ipAddress = IPAddress.Parse(IPV4String);
+			FleetTemplateManager manager = Model.CreateFleetTemplateManager(ipAddress);
+
+			Service.DialogService.CreateFleetTemplateManagerTutorialWindow(manager)
+				.ShowDialog();
+		}
+
+		private void HandleShowFleetManager()
+		{
+			Service.DialogService.CreateFleetManagerTutorialWindow().ShowDialog();
 		}
 
 		private void HandleOption(TutorialCommandOption option)
 		{
 			switch(option)
 			{
+				case TutorialCommandOption.ShowFleetManager:
+					{
+						HandleShowFleetManager();
+						break;
+					}
+
 				case TutorialCommandOption.ShowTemplateManager:
 					{
 						HandleShowTemplateManager();

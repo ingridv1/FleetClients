@@ -22,6 +22,26 @@ namespace FleetClients.UI.ViewModel
 			HandleLoadCommands();
 		}
 
+		private string endpointString = string.Empty;
+
+		public string EndpointString
+		{
+			get { return endpointString; }
+			private set
+			{
+				if (endpointString != value)
+				{
+					endpointString = value;
+					OnNotifyPropertyChanged();
+				}
+			}
+		}
+
+		protected override void HandleModelUpdate(FleetTemplateManager oldValue, FleetTemplateManager newValue)
+		{
+			EndpointString = (newValue != null) ? newValue.FleetManagerClient.EndpointAddress.ToString(): string.Empty;
+		}
+
 		public ICommand FTMOptionCommand { get; set; }
 
 		private void HandleLoadCommands()
