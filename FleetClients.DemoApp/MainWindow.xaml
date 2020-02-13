@@ -21,23 +21,4 @@
         <Style BasedOn="{StaticResource Dialog}" TargetType="Window" />
     </Window.Style>   
     <view:TutorialView/>
-    <!--
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*"/>
-        <ColumnDefinition Width="1*"/>
-    </Grid.ColumnDefinitions>
-    <StackPanel Grid.Column="0">
-        <StatusBar>Configuration</StatusBar>
-        <gaCoreC:LabelContentControl Header="Scheduler IPv4 Address:">
-            <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="127.0.0.1"/>
-        </gaCoreC:LabelContentControl>
-        <StatusBar>Control Libarary</StatusBar>
-        <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
-            <Button x:Name="fmcControlButton" Click="FmcControlButton_Click">Create</Button>
-        </gaCoreC:LabelContentControl>
-        <gaCoreC:LabelContentControl Header="Fleet Template Control">
-            <Button x:Name="ftControlButton" Click="FtControlButton_Click">Create</Button>
-        </gaCoreC:LabelContentControl>
-    </StackPanel>
-    <WebBrowser Grid.Column="1" x:Name="webBrowser"/> -->
 </Window>

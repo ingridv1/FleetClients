@@ -18,11 +18,50 @@ namespace FleetClients.DemoApp.ViewModel
 		{
 			HandleLoadCommands();
 		}
+
+		public ICommand TutorialCommand { get; set; }
+
 		public ICommand RequestNavigateCommand { get; set; }
 
 		private void HandleLoadCommands()
 		{
 			RequestNavigateCommand = new CustomCommand(RequestNavigate, CanRequestNavigate);
+			TutorialCommand = new CustomCommand(TutorialClick, CanTutorialClick);
+		}
+
+		private bool CanTutorialClick(object obj) => true;
+
+		private void HandleShowTemplateManager()
+		{
+			Service.DialogService.CreateFleetTemplateManagerTutorialWindow().ShowDialog();
+		}
+
+		private void HandleOption(TutorialCommandOption option)
+		{
+			switch(option)
+			{
+				case TutorialCommandOption.ShowTemplateManager:
+					{
+						HandleShowTemplateManager();
+						break;
+					}
+
+				default:
+					throw new NotImplementedException();
+			}
+		}
+
+		private void TutorialClick(object obj)
+		{
+			try
+			{
+				TutorialCommandOption option = (TutorialCommandOption)obj;
+				HandleOption(option);
+			}
+			catch (Exception ex)
+			{
+				Logger.Error(ex);
+			}
 		}
 
 		private bool CanRequestNavigate(object obj) => true;

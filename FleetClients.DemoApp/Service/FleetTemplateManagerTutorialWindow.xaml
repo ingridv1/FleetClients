@@ -7,13 +7,24 @@
         xmlns:uiView="clr-namespace:FleetClients.UI.View;assembly=FleetClients.UI"
         mc:Ignorable="d"
         Title="Fleet Template Manager Tutorial" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GACore.Controls;component/ResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Style>
+        <Style BasedOn="{StaticResource Dialog}" TargetType="Window" />
+    </Window.Style>
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <uiView:FleetTemplateManagerView/>
-        
+        <GridSplitter Grid.Column="1" Height="{Binding ElementName=mainGrid, Path=ActualHeight}" HorizontalAlignment="Stretch"  ResizeDirection="Columns"/>
+        <WebBrowser Grid.Column="2" x:Name="webBrowser" Loaded="webBrowser_Loaded"/>
     </Grid>
 </Window>

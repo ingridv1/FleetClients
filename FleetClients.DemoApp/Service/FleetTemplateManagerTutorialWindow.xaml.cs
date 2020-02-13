@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Markdig;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace FleetClients.DemoApp.Service
 {
-	/// <summary>
-	/// Interaction logic for FleetTemplateManagerTutorialWindow.xaml
-	/// </summary>
 	public partial class FleetTemplateManagerTutorialWindow : Window
 	{
 		public FleetTemplateManagerTutorialWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void webBrowser_Loaded(object sender, RoutedEventArgs e)
+		{
+			string html = Markdown.ToHtml(Properties.Resources.FleetTemplateControlDescription);
+			WebBrowser webBrowser = (WebBrowser)sender;
+			webBrowser.NavigateToString(html);
 		}
 	}
 }

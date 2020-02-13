@@ -117,16 +117,13 @@
     <Compile Include="Service\FleetTemplateManagerTutorialWindow.xaml.cs">
       <DependentUpon>FleetTemplateManagerTutorialWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Enumerators.cs" />
     <Compile Include="ViewModel\TutorialViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\TutorialView.xaml.cs">
       <DependentUpon>TutorialView.xaml</DependentUpon>
     </Compile>
     <Page Include="FleetManagerClientControlWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FleetTemplateControlWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,9 +137,6 @@
     </Compile>
     <Compile Include="FleetManagerClientControlWindow.xaml.cs">
       <DependentUpon>FleetManagerClientControlWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FleetTemplateControlWindow.xaml.cs">
-      <DependentUpon>FleetTemplateControlWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

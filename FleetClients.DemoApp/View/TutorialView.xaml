@@ -24,6 +24,15 @@
                     <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="127.0.0.1"/>
                 </gaCoreC:LabelContentControl>
                 <StatusBar>Controls Library</StatusBar>
+                <gaCoreC:LabelContentControl Header="Fleet Template Control">
+                    <Button>Create
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding TutorialCommand}" CommandParameter="{Binding Source={x:Static viewModel:TutorialCommandOption.ShowTemplateManager}}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </gaCoreC:LabelContentControl>
             </StackPanel>
             <GridSplitter Grid.Column="1" Height="{Binding ElementName=mainGrid, Path=ActualHeight}" HorizontalAlignment="Stretch"  ResizeDirection="Columns"/>
             <WebBrowser Grid.Column="2" x:Name="webBrowser">
