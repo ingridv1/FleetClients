@@ -139,6 +139,7 @@
     <Compile Include="View\AGVTemplateFactoryView.xaml.cs">
       <DependentUpon>AGVTemplateFactoryView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Converters.cs" />
     <Compile Include="View\FleetManagerClientView.xaml.cs">
       <DependentUpon>FleetManagerClientView.xaml</DependentUpon>
     </Compile>

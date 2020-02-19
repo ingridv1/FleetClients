@@ -9,9 +9,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.SelectedKingpinViewModel}}">
-    <DockPanel>
-        <StatusBar DockPanel.Dock="Top">Properties</StatusBar>
-        <ScrollViewer VerticalScrollBarVisibility="Visible">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:NullToCollapsedVisibiltyConverter x:Key="nullToCollapsedVisibiltyConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StatusBar Grid.Row="0">Properties</StatusBar>
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" 
+                      Visibility="{Binding Path=Model, Converter={StaticResource nullToCollapsedVisibiltyConverter}}">
             <StackPanel>
                 <gaCoreC:LabelContentControl Header="Alias:">
                     <TextBlock Text="{Binding Path=KingpinState.Alias}"/>
@@ -26,15 +36,15 @@
                     <TextBlock Text="{Binding Path=KingpinState.BatteryChargePercentage, StringFormat={}{0:0.0}%}"/>
                 </gaCoreC:LabelContentControl>
                 <gaCoreC:LabelContentControl Header="Speed:">
-                    <TextBlock Text="{Binding Path=KingpinState.Speed, StringFormat={}{0:0.00}m/s}"/>
+                    <TextBlock Text="{Binding Path=KingpinState.Speed, StringFormat={}{0:0.00} m/s}"/>
                 </gaCoreC:LabelContentControl>
                 <gaCoreC:LabelContentControl Header="Waypoint Next Id:">
                     <TextBlock Text="{Binding Path=KingpinState.WaypointNextId}"/>
                 </gaCoreC:LabelContentControl>
                 <gaCoreC:LabelContentControl Header="Waypoint Last Id:">
-                    <TextBlock Text="{Binding Path=WaypointLastId}"/>
+                    <TextBlock Text="{Binding Path=KingpinState.WaypointLastId}"/>
                 </gaCoreC:LabelContentControl>
             </StackPanel>
         </ScrollViewer>
-    </DockPanel>
+    </Grid>
 </UserControl>

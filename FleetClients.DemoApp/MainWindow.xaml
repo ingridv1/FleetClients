@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FleetClients.DemoApp"
-        xmlns:fcControls="clr-namespace:FleetClients.Controls;assembly=FleetClients.Controls"
         xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
         xmlns:view="clr-namespace:FleetClients.DemoApp.View"
         mc:Ignorable="d"

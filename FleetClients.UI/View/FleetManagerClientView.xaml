@@ -10,14 +10,9 @@
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.FleetManagerClientViewModel}}">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-            <RowDefinition Height="5"/>
-            <RowDefinition MinHeight="200" Height="250" MaxHeight="650"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <StatusBar>Fleet Client</StatusBar>
@@ -28,8 +23,15 @@
                 <CheckBox IsChecked="{Binding IsConnected, Mode=OneWay}" IsEnabled="False"/>
             </gaCoreC:LabelContentControl>
         </StackPanel>
-        <local:KingpinStatesView Grid.Row="1"/>
-        <GridSplitter Grid.Row="2" />
-        <local:SelectedKingpinView Grid.Row="3" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="200"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition MinHeight="200" Height="250" MaxHeight="650"/>
+            </Grid.RowDefinitions>
+            <local:KingpinStatesView Grid.Row="0"/>
+            <GridSplitter Grid.Row="1"/>
+            <local:SelectedKingpinView Grid.Row="2" />
+        </Grid>
     </Grid>
 </UserControl>

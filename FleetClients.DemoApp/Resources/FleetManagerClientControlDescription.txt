@@ -4,22 +4,17 @@ A control used to display the current state of the AGV fleet.
 
 ## Configuration
 
-Create a new fleet manager client:
+Use the view
 
-```csharp
-IFleetManagerClient client = FleetClients.ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(System.Net.IPAddress.Loopback));
-```
+<pre>
+  FleetClients.UI.View.FleetManagerClientView
+</pre>
 
-and set the controls data context to it.
+And create a fleet manager client update the view model in
 
-## Components
+<pre>
+  IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+  IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(ipAddress);
 
-### Fleet Manager Client Control
-
-This displays all kingpins currenly present in the fleet. The kingpin state control from the nuget package GACore is used for each item. 
-
-### Kingpin Properties Control
-
-This displays the state of the current selected AGV.
-
-
+  FleetClients.UI.ViewModel.ViewModelLocator.UpdateFleetManagerClientViewModels(client);
+</pre>

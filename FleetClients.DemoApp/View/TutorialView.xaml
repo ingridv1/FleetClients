@@ -24,7 +24,7 @@
                     <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="{Binding Path=IPV4String}"/>
                 </gaCoreC:LabelContentControl>
                 <StatusBar>Controls Library</StatusBar>
-                <gaCoreC:LabelContentControl Header="Fleet Manager Control">
+                <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
                     <Button>Create
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">

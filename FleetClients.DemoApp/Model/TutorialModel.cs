@@ -13,7 +13,6 @@ namespace FleetClients.DemoApp.Model
 		{
 		}
 
-
 		public IFleetManagerClient CreateFleetManagerClient(IPAddress ipAddress)
 		{
 			return ClientFactory.CreateTcpFleetManagerClient(ipAddress);

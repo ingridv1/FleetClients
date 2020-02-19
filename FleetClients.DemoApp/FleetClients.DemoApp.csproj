@@ -126,10 +126,6 @@
     <Compile Include="View\TutorialView.xaml.cs">
       <DependentUpon>TutorialView.xaml</DependentUpon>
     </Compile>
-    <Page Include="FleetManagerClientControlWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -137,9 +133,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FleetManagerClientControlWindow.xaml.cs">
-      <DependentUpon>FleetManagerClientControlWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -186,10 +179,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FleetClients.Controls\FleetClients.Controls.csproj">
-      <Project>{980b8e31-a68e-4d26-b027-2c49d042072d}</Project>
-      <Name>FleetClients.Controls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FleetClients.UI\FleetClients.UI.csproj">
       <Project>{80a20e0e-3a34-4a7c-b8f4-d21d917f13c6}</Project>
       <Name>FleetClients.UI</Name>
