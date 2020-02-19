@@ -9,8 +9,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.FleetManagerClientViewModel}}">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Top">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
             <StatusBar>Fleet Client</StatusBar>
             <gaCoreC:LabelContentControl Header="Endpoint">
                 <TextBlock Text="{Binding EndpointString}"/>
@@ -19,6 +26,6 @@
                 <CheckBox IsChecked="{Binding IsConnected, Mode=OneWay}" IsEnabled="False"/>
             </gaCoreC:LabelContentControl>
         </StackPanel>
-        <local:KingpinStatesView DockPanel.Dock="Top"/>
-    </DockPanel>
+        <local:KingpinStatesView Grid.Row="1"/>
+    </Grid>
 </UserControl>
