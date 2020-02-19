@@ -39,19 +39,19 @@
       <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Architecture.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Controls.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Extensions.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GACore.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.UI.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>

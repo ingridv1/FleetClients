@@ -39,19 +39,19 @@
       <HintPath>..\packages\BaseClients.1.2.1\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Architecture.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Controls.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.Extensions.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GACore.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GACore.1.22.0-alpha00\lib\net472\GACore.UI.dll</HintPath>
+      <HintPath>..\packages\GACore.1.22.0\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
@@ -123,6 +123,9 @@
     <Compile Include="Service\FleetTemplateManagerWindow.xaml.cs">
       <DependentUpon>FleetTemplateManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\KingpinDiagnosticWindow.xaml.cs">
+      <DependentUpon>KingpinDiagnosticWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\AGVTemplateFactoryViewModel.cs" />
     <Compile Include="ViewModel\AGVTemplateViewModel.cs" />
     <Compile Include="ViewModel\Enumerators.cs" />
@@ -131,6 +134,7 @@
     <Compile Include="ViewModel\FleetTemplateViewModel.cs" />
     <Compile Include="ViewModel\KingpinStateMailboxViewModel.cs" />
     <Compile Include="ViewModel\KingpinStatesViewModel.cs" />
+    <Compile Include="ViewModel\SelectedKingpinViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AGVTemplateFactoryView.xaml.cs">
       <DependentUpon>AGVTemplateFactoryView.xaml</DependentUpon>
@@ -144,8 +148,14 @@
     <Compile Include="View\FleetTemplateManagerView.xaml.cs">
       <DependentUpon>FleetTemplateManagerView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KingpinStateMailboxDiagnosticView.xaml.cs">
+      <DependentUpon>KingpinStateMailboxDiagnosticView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KingpinStatesView.xaml.cs">
       <DependentUpon>KingpinStatesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectedKingpinView.xaml.cs">
+      <DependentUpon>SelectedKingpinView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Service\KingpinDiagnosticWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AGVTemplateFactoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,7 +198,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\KingpinStateMailboxDiagnosticView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\KingpinStatesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SelectedKingpinView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,4 +1,5 @@
-﻿using GACore;
+﻿using FleetClients.UI.ViewModel;
+using GACore;
 using GACore.NLog;
 using NLog;
 using System.Windows;
@@ -27,6 +28,18 @@ namespace FleetClients.UI.Service
 			AGVTemplateFactoryWindow window = new AGVTemplateFactoryWindow();
 
 			ViewModel.ViewModelLocator.AGVTemplateFactoryViewModel.Model = manager;
+
+			return window;
+		}
+
+		public static Window CreateKingpinDiagnosticWindow(KingpinStateMailboxViewModel ksmViewModel)
+		{
+			logger.Debug("[DialogService] CreateKingpinDiagnosticWindow()");
+
+			KingpinDiagnosticWindow window = new KingpinDiagnosticWindow()
+			{
+				DataContext = ksmViewModel
+			};
 
 			return window;
 		}

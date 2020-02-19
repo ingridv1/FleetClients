@@ -16,6 +16,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
+            <RowDefinition Height="5"/>
+            <RowDefinition MinHeight="200" Height="250" MaxHeight="650"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <StatusBar>Fleet Client</StatusBar>
@@ -27,5 +29,7 @@
             </gaCoreC:LabelContentControl>
         </StackPanel>
         <local:KingpinStatesView Grid.Row="1"/>
+        <GridSplitter Grid.Row="2" />
+        <local:SelectedKingpinView Grid.Row="3" />
     </Grid>
 </UserControl>

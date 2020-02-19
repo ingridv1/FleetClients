@@ -19,18 +19,40 @@ namespace FleetClients.UI.ViewModel
 			HandleLoadCommands();
 		}
 
-		public ICommand SelectedKingpinCommand { get; set; }
+		public ICommand MouseDoubleClickCommand { get; set; }
+
+		public ICommand SelectionChangedCommand { get; set; }
 
 		private void HandleLoadCommands()
 		{
-			SelectedKingpinCommand = new CustomCommand(SelectedKingpin, CanSelectedKingpin);
+			MouseDoubleClickCommand = new CustomCommand(MouseDoubleClick, CanMouseDoubleClick);
+			SelectionChangedCommand = new CustomCommand(SelectionChanged, CanSelectionChanged);
 		}
 
-		private void SelectedKingpin(object obj)
+		private bool CanSelectionChanged(object obj) => true;
+
+		private void SelectionChanged(object obj)
 		{
 			try
 			{
 				KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
+				ViewModelLocator.SelectedKingpinViewModel.Model = ksmViewModel.Model;
+			}
+			catch(Exception ex)
+			{
+				ViewModelLocator.SelectedKingpinViewModel.Model = null;
+				Logger.Error(ex);
+			}
+		}
+
+		private void MouseDoubleClick(object obj)
+		{
+			try
+			{
+				KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
+
+				Service.DialogService.CreateKingpinDiagnosticWindow(ksmViewModel)
+					.Show();
 			}
 			catch(Exception ex)
 			{
@@ -38,7 +60,7 @@ namespace FleetClients.UI.ViewModel
 			}
 		}
 
-		private bool CanSelectedKingpin(object obj) => true;
+		private bool CanMouseDoubleClick(object obj) => true;
 
 		public override KingpinStateMailboxViewModel GetViewModelForModel(KingpinStateMailbox model)
 		{

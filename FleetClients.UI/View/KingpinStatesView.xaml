@@ -13,9 +13,13 @@
     <ListBox ItemsSource="{Binding ViewModels}" HorizontalContentAlignment="Stretch" x:Name="listBox">
         <i:Interaction.Triggers>
             <i:EventTrigger EventName="MouseDoubleClick">
-                <i:InvokeCommandAction Command="{Binding SelectedKingpinCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}"/>
+                <i:InvokeCommandAction Command="{Binding MouseDoubleClickCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}"/>
             </i:EventTrigger>
-        </i:Interaction.Triggers>
+            <i:EventTrigger EventName="SelectionChanged">
+                <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}"
+                                       CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>       
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <gaCoreCV:KingpinStateView/>
