@@ -7,6 +7,7 @@ using System.Windows.Input;
 using GACore;
 using GACore.Architecture;
 using GACore.Command;
+using NLog;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -41,7 +42,15 @@ namespace FleetClients.UI.ViewModel
 
 		public override KingpinStateMailboxViewModel GetViewModelForModel(KingpinStateMailbox model)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				return ViewModels.FirstOrDefault(e => e.KingpinState.IPAddress.Equals(model.Key));			
+			}
+			catch (Exception ex)
+			{
+				Logger.Error(ex);
+				return null;
+			}
 		}
 	}
 }

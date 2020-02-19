@@ -61,6 +61,17 @@ namespace FleetClients
                         OnAdded(mailBox);
                     }
                 }
+
+                IEnumerable<IPAddress> activeIP = fleetState.KingpinStates.Select(e => e.IPAddress);
+                IEnumerable<IPAddress> deadIP = kingpinStateMailboxes.Select(e => e.Key).Except(activeIP).ToList();
+
+                foreach(IPAddress ipAddress in deadIP)
+                {
+                    KingpinStateMailbox deadMailBox = kingpinStateMailboxes.First(e => e.Key == ipAddress);
+                    kingpinStateMailboxes.Remove(deadMailBox);
+
+                    OnRemoved(deadMailBox);
+                }
             }
         }
 
@@ -132,7 +143,7 @@ namespace FleetClients
         {
             if (Removed != null)
             {
-                foreach (Action<KingpinStateMailbox> handler in Added.GetInvocationList())
+                foreach (Action<KingpinStateMailbox> handler in Removed.GetInvocationList())
                 {
                     handler.BeginInvoke(kingpinStateMailbox, null, null);
                 }
