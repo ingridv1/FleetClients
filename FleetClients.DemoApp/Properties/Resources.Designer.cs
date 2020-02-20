@@ -88,7 +88,12 @@ namespace FleetClients.DemoApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Fleet Template Control.
+        ///   Looks up a localized string similar to # Fleet Template Control
+        ///
+        ///A control used to create and edit a fleet template. Represents a virtual vehicle fleet that can be created instantly, rather than manually creating and positioning virtual AGVs within the scheduler.
+        ///
+        ///The template can be imported from exported to json.
+        ///.
         /// </summary>
         internal static string FleetTemplateControlDescription {
             get {
@@ -105,7 +110,7 @@ namespace FleetClients.DemoApp.Properties {
         ///
         ///Set the IP address of the scheduler to connect to in the configuration section.
         ///
-        ///## Controls
+        ///## Controls Library
         ///
         ///### Fleet Manager Client Control
         ///
