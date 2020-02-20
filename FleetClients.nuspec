@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FleetClients</id>
-    <version>1.4.0</version>
+    <version>2.0.0</version>
     <authors>Martin Davies, Callum Clarke</authors>
     <owners>Guidance Automation Ltd</owners>
 	<license type="expression">MIT</license>
@@ -10,14 +10,15 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Fleet client components for Guidance Automation schedulers</description>
     <releaseNotes>Requires minimum scheduler version of 7.x.x</releaseNotes>
-    <copyright>Copyright 2019</copyright>
+    <copyright>Copyright 2020</copyright>
     <tags></tags>
     <dependencies>
       <group targetFramework=".NETFramework4.7.2">
         <dependency id="BaseClients" version="1.2.1" />
-        <dependency id="GACore" version="1.14.0" />
-        <dependency id="morelinq" version="3.2.0" />
+        <dependency id="GACore" version="1.22.0" />
+        <dependency id="morelinq" version="3.3.2" />
         <dependency id="NLog" version="4.6.7" />
+		<dependency id="Newtonsoft.Json" version="12.0.3" />
         <dependency id="CommandLineParser" version="2.6.0" />
         <dependency id="System.ValueTuple" version="4.5.0" />
       </group>
@@ -26,6 +27,6 @@
   <files>
         <file src="readme.txt" target="" />
 		<file src="FleetClients\bin\Release\FleetClients.dll" target="lib\net472" />
-		<file src="FleetClients.Controls\bin\Release\FleetClients.Controls.dll" target="lib\net472" />
+		<file src="FleetClients.Controls\bin\Release\FleetClients.UI.dll" target="lib\net472" />
   </files>
 </package>

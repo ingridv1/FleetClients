@@ -8,6 +8,14 @@ ______ _           _   _____ _ _            _
 https://github.com/GuidanceAutomation/FleetClients
 https://www.guidanceautomation.com/
 
+v2.0.0 (20th Feb 20)
+
+* Major refactor to MVVM 
+* Removes FleetClients.Controls
+* Adds FleetClients.UI for MVVM implementation
+* Adds FleetClients.DemoApp to demonstrate MVVM controls
+* FleetTemplateManger for quickly creating virtual fleets from a file.
+
 v1.4.0 (14th Oct 19)
 
 * Adds fleet template support
