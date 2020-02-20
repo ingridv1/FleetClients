@@ -27,6 +27,6 @@
   <files>
         <file src="readme.txt" target="" />
 		<file src="FleetClients\bin\Release\FleetClients.dll" target="lib\net472" />
-		<file src="FleetClients.Controls\bin\Release\FleetClients.UI.dll" target="lib\net472" />
+		<file src="FleetClients.UI\bin\Release\FleetClients.UI.dll" target="lib\net472" />
   </files>
 </package>
