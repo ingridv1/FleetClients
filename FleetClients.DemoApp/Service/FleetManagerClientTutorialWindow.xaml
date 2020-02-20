@@ -19,9 +19,9 @@
     </Window.Style>
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <view:FleetManagerClientView/>
         <GridSplitter Grid.Column="1" Height="{Binding ElementName=mainGrid, Path=ActualHeight}" HorizontalAlignment="Stretch"  ResizeDirection="Columns"/>

@@ -20,21 +20,6 @@ namespace FleetClients.DemoApp.ViewModel
 			HandleLoadCommands();
 		}
 
-		private string ipV4String = "127.0.0.1";
-
-		public string IPV4String
-		{
-			get { return ipV4String; }
-			set
-			{
-				if (ipV4String != value)
-				{
-					ipV4String = value;
-					OnNotifyPropertyChanged();
-				}
-			}
-		}
-
 		protected override void HandleModelUpdate(TutorialModel oldValue, TutorialModel newValue)
 		{
 			base.HandleModelUpdate(oldValue, newValue);
@@ -54,7 +39,7 @@ namespace FleetClients.DemoApp.ViewModel
 
 		private void HandleShowTemplateManager()
 		{
-			IPAddress ipAddress = IPAddress.Parse(IPV4String);
+			IPAddress ipAddress = GACore.UI.ViewModel.ViewModelLocator.IPAddressViewModel.IPAddress;
 			FleetTemplateManager manager = Model.CreateFleetTemplateManager(ipAddress);
 
 			Service.DialogService.CreateFleetTemplateManagerTutorialWindow(manager)
@@ -63,7 +48,7 @@ namespace FleetClients.DemoApp.ViewModel
 
 		private void HandleShowFleetManager()
 		{
-			IPAddress ipAddress = IPAddress.Parse(IPV4String);
+			IPAddress ipAddress = GACore.UI.ViewModel.ViewModelLocator.IPAddressViewModel.IPAddress;
 			IFleetManagerClient client = Model.CreateFleetManagerClient(ipAddress);
 
 			Service.DialogService.CreateFleetClientTutorialWindow(client)

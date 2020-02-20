@@ -1,4 +1,5 @@
 ﻿using FleetClients.DemoApp.Model;
+using System.Net;
 
 namespace FleetClients.DemoApp
 {
@@ -8,6 +9,8 @@ namespace FleetClients.DemoApp
 		{
 			TutorialModel tutorialModel = new TutorialModel();
 			ViewModel.ViewModelLocator.TutorialViewModel.Model = tutorialModel;
+
+			GACore.UI.ViewModel.ViewModelLocator.IPAddressViewModel.IPAddress = IPAddress.Loopback;
 		}
 	}
 }

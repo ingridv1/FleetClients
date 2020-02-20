@@ -7,6 +7,7 @@
              xmlns:viewModel="clr-namespace:FleetClients.DemoApp.ViewModel"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
+             xmlns:gaCoreUIView="clr-namespace:GACore.UI.View;assembly=GACore.UI"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={x:Static viewModel:ViewModelLocator.TutorialViewModel}}">
@@ -14,14 +15,14 @@
         <StatusBar DockPanel.Dock="Top">Fleet Clients Tutorial</StatusBar>
         <Grid DockPanel.Dock="Top" x:Name="mainGrid">        
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <StatusBar>Configuration</StatusBar>
                 <gaCoreC:LabelContentControl Header="Scheduler IPv4 Address:">
-                    <gaCoreC:IPV4Control x:Name="ipV4Control" IPV4String="{Binding Path=IPV4String}"/>
+                    <gaCoreUIView:IPAddressView/>
                 </gaCoreC:LabelContentControl>
                 <StatusBar>Controls Library</StatusBar>
                 <gaCoreC:LabelContentControl Header="Fleet Manager Client Control">
