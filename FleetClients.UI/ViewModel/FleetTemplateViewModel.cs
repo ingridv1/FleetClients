@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using FleetClients.UI.Message;
 using GACore;
 using GACore.Architecture;
+using GACore.Command;
 using GACore.Utility;
 
 namespace FleetClients.UI.ViewModel
@@ -22,7 +24,6 @@ namespace FleetClients.UI.ViewModel
 			Messenger.Default.Register<TemplateUpdatedMessage>(this, OnTemplateUpdatedMessageRecieved);
 		}
 			
-
 		private void OnTemplateUpdatedMessageRecieved(TemplateUpdatedMessage templateUpdatedMessage)
 		{
 			try
