@@ -1,12 +1,7 @@
-﻿using CommandLine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net;
-using BaseClients;
+﻿using BaseClients;
+using CommandLine;
 using FleetClients.FleetManagerServiceReference;
+using System.Net;
 
 namespace FleetClients.FleetClientConsole.Options
 {
@@ -23,8 +18,8 @@ namespace FleetClients.FleetClientConsole.Options
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 			PoseDataFactory.TryParseString(PoseString, out PoseData poseData);
-		
-			return client.TryCreateVirtualVehicle(ipAddress, poseData?? PoseDataFactory.NaNPose, out bool success);
+
+			return client.TryCreateVirtualVehicle(ipAddress, poseData ?? PoseDataFactory.NaNPose, out bool success);
 		}
 	}
 }

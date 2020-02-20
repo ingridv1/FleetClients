@@ -19,6 +19,6 @@ namespace FleetClients.DemoApp
 		{
 			e.Cancel = true;
 			HandleClose();
-		}	
+		}
 	}
 }

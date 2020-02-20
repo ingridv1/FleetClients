@@ -19,10 +19,10 @@
     </Window.Style>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <view:FleetTemplateManagerView/>
+        <view:FleetTemplateManagerView />
         <Button Grid.Row="1" HorizontalAlignment="Right" Name="okButton" Click="okButton_Click">OK</Button>
     </Grid>
 </Window>

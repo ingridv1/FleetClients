@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
+
 using SN = System.Net;
 
 namespace FleetClients
@@ -36,7 +37,7 @@ namespace FleetClients
 
 		public IPAddress GetIPV4Address()
 			=> (SN.IPAddress.TryParse(IPV4String, out IPAddress parsed)) ? parsed : null;
-		
+
 		[DataMember]
 		public string PoseDataString
 		{
@@ -55,8 +56,8 @@ namespace FleetClients
 		{
 			PoseDataFactory.TryParseString(PoseDataString, out PoseData poseData);
 			return poseData;
-		}		
-		
+		}
+
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		private void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")

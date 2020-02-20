@@ -26,6 +26,5 @@ namespace FleetClients.UI
 
 			return saveFileDialog;
 		}
-
 	}
 }

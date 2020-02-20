@@ -2,7 +2,6 @@
 using FleetClients.FleetManagerServiceReference;
 using GACore;
 using GACore.Architecture;
-using System.Collections.ObjectModel;
 using System.Net;
 using System.Xml.Linq;
 
@@ -32,6 +31,6 @@ namespace FleetClients
 
 		ServiceOperationResult TrySetPose(IPAddress ipAddress, PoseData pose, out bool success);
 
-        ServiceOperationResult TryGetSemVer(out SemVerData semVerData);
+		ServiceOperationResult TryGetSemVer(out SemVerData semVerData);
 	}
 }

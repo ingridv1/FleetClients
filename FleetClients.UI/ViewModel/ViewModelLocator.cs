@@ -13,7 +13,7 @@
 		public static AGVTemplateFactoryViewModel AGVTemplateFactoryViewModel { get; } = new AGVTemplateFactoryViewModel();
 
 		public static SelectedKingpinViewModel SelectedKingpinViewModel { get; } = new SelectedKingpinViewModel();
-		
+
 		public static void UpdateFleetManagerClientViewModels(IFleetManagerClient client)
 		{
 			FleetManagerClientViewModel.Model = client;
@@ -25,6 +25,5 @@
 			FleetTemplateManagerViewModel.Model = manager;
 			FleetTemplateViewModel.Model = manager?.FleetTemplate;
 		}
-
 	}
 }

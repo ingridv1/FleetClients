@@ -18,6 +18,6 @@
     </Window.Resources>
     <Window.Style>
         <Style BasedOn="{StaticResource Dialog}" TargetType="Window" />
-    </Window.Style>   
-    <view:TutorialView/>
+    </Window.Style>
+    <view:TutorialView />
 </Window>

@@ -22,7 +22,7 @@ namespace FleetClients.UI.ViewModel
 
 		protected override void HandleModelUpdate(KingpinStateMailbox oldValue, KingpinStateMailbox newValue)
 		{
-			if (oldValue != null) oldValue.Updated -= Model_Updated;		
+			if (oldValue != null) oldValue.Updated -= Model_Updated;
 			if (newValue != null) newValue.Updated += Model_Updated;
 
 			KingpinState = (newValue != null) ? newValue.Mail : null;

@@ -1,5 +1,4 @@
 ﻿using GACore;
-using FleetClients;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -49,7 +48,6 @@ namespace FleetClients.UI.ViewModel
 
 			EndpointString = (newValue != null) ? newValue.EndpointAddress.ToString() : string.Empty;
 		}
-
 
 		private void Model_Disconnected(System.DateTime obj)
 		{

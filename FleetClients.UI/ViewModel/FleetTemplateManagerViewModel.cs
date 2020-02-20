@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FleetClients.UI.Message;
 using GACore;
-using GACore.Architecture;
-using FleetClients;
-using System.Windows.Input;
 using GACore.Command;
-using Microsoft.Win32;
-using FleetClients.UI.Message;
 using GACore.Utility;
+using Microsoft.Win32;
+using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -39,7 +33,7 @@ namespace FleetClients.UI.ViewModel
 
 		protected override void HandleModelUpdate(FleetTemplateManager oldValue, FleetTemplateManager newValue)
 		{
-			EndpointString = (newValue != null) ? newValue.FleetManagerClient.EndpointAddress.ToString(): string.Empty;
+			EndpointString = (newValue != null) ? newValue.FleetManagerClient.EndpointAddress.ToString() : string.Empty;
 		}
 
 		public ICommand FTMOptionCommand { get; set; }
@@ -50,7 +44,7 @@ namespace FleetClients.UI.ViewModel
 		}
 
 		private void HandleSave()
-		{ 
+		{
 			try
 			{
 				SaveFileDialog dialog = DialogFactory.GetSaveJsonDialog();
@@ -64,7 +58,7 @@ namespace FleetClients.UI.ViewModel
 
 		private void HandleClear()
 		{
-			if (Model != null) Model.FleetTemplate.Clear();	
+			if (Model != null) Model.FleetTemplate.Clear();
 		}
 
 		private void HandleAdd()
@@ -93,7 +87,7 @@ namespace FleetClients.UI.ViewModel
 
 		private void HandleFleetTemplateManagerOption(FleetTemplateManagerOption option)
 		{
-			switch(option)
+			switch (option)
 			{
 				case FleetTemplateManagerOption.Add:
 					{

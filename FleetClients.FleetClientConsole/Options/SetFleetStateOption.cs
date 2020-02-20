@@ -13,7 +13,7 @@ namespace FleetClients.FleetClientConsole.Options
 
 		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
 		{
-			VehicleControllerState controllerstate = (VehicleControllerState) Enum.Parse(typeof(VehicleControllerState), ControllerState, true);
+			VehicleControllerState controllerstate = (VehicleControllerState)Enum.Parse(typeof(VehicleControllerState), ControllerState, true);
 
 			ServiceOperationResult result = client.TrySetFleetState(controllerstate, out bool success);
 

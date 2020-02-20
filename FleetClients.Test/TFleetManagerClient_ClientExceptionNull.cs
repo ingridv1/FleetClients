@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BaseClients;
+using FleetClients.FleetManagerServiceReference;
 using NUnit.Framework;
 using System.Net;
-using BaseClients;
 using System.Xml.Linq;
-using FleetClients.FleetManagerServiceReference;
 
 namespace FleetClients.Test
 {
@@ -15,7 +10,7 @@ namespace FleetClients.Test
 	[Category("Fleet")]
 	public class TFleetManagerClient_ClientExceptionNull
 	{
-		IFleetManagerClient FleetManagerClient;
+		private IFleetManagerClient FleetManagerClient;
 
 		[OneTimeSetUp]
 		public void OneTimeSetup()

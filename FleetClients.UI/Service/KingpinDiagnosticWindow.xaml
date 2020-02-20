@@ -19,10 +19,10 @@
     </Window.Style>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <view:KingpinStateMailboxDiagnosticView/>
+        <view:KingpinStateMailboxDiagnosticView />
         <Button Grid.Row="1" HorizontalAlignment="Right" x:Name="okButton" Click="okButton_Click">OK</Button>
     </Grid>
 </Window>

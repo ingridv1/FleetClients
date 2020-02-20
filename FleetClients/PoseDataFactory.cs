@@ -1,9 +1,5 @@
 ﻿using FleetClients.FleetManagerServiceReference;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 namespace FleetClients
@@ -45,12 +41,12 @@ namespace FleetClients
 		}
 
 		public static PoseData NaNPose => new PoseData() { X = double.NaN, Y = double.NaN, Heading = double.NaN };
-		
+
 		public static PoseData ZeroPose => new PoseData() { X = 0, Y = 0, Heading = 0 };
 
 		public static PoseData OriginEast => new PoseData() { X = 0, Y = 0, Heading = 0 };
 
-		public static PoseData OriginWest=> new PoseData() { X = 0, Y = 0, Heading = Math.PI };
+		public static PoseData OriginWest => new PoseData() { X = 0, Y = 0, Heading = Math.PI };
 
 		public static PoseData OriginSouth => new PoseData() { X = 0, Y = 0, Heading = -Math.PI / 2 };
 

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using GACore;
+﻿using BaseClients;
 using GACore.Architecture;
-using System.Runtime.Serialization;
 using MoreLinq;
-using BaseClients;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
 
 namespace FleetClients
 {
@@ -36,7 +34,7 @@ namespace FleetClients
 		{
 			if (Added != null)
 			{
-				foreach(Action<AGVTemplate> handler in Added.GetInvocationList())
+				foreach (Action<AGVTemplate> handler in Added.GetInvocationList())
 				{
 					handler.BeginInvoke(agvTemplate, null, null);
 				}
@@ -53,9 +51,9 @@ namespace FleetClients
 
 			lock (lockObject)
 			{
-				foreach(AGVTemplate agvTemplate in AGVTemplates.ToList())
+				foreach (AGVTemplate agvTemplate in AGVTemplates.ToList())
 				{
-					ServiceOperationResult result = fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);				
+					ServiceOperationResult result = fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);
 				}
 			}
 		}
@@ -69,8 +67,7 @@ namespace FleetClients
 					AGVTemplate first = agvTemplates.First();
 					agvTemplates.RemoveAt(0);
 					OnRemoved(first);
-				}	
-
+				}
 			}
 		}
 

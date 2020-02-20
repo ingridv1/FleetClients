@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GACore;
-using FleetClients.UI.Message;
-using GACore.Architecture;
-using GACore.Utility;
+﻿using GACore;
 
 namespace FleetClients.UI.ViewModel
 {
@@ -45,7 +37,6 @@ namespace FleetClients.UI.ViewModel
 		public AGVTemplateViewModel()
 		{
 		}
-
 
 		protected override void HandleModelUpdate(AGVTemplate oldValue, AGVTemplate newValue)
 		{

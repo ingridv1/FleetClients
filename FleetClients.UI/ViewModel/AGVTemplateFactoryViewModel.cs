@@ -55,12 +55,11 @@ namespace FleetClients.UI.ViewModel
 					return;
 				}
 
-				if (!PoseDataFactory.TryParseString(poseString, out _ ))
+				if (!PoseDataFactory.TryParseString(poseString, out _))
 				{
-					MessageBox.Show("Pose must be in the format: xx,yy,hh","Pose string invalid", MessageBoxButton.OK, MessageBoxImage.Error);
+					MessageBox.Show("Pose must be in the format: xx,yy,hh", "Pose string invalid", MessageBoxButton.OK, MessageBoxImage.Error);
 					return;
 				}
-
 
 				AGVTemplate template = new AGVTemplate()
 				{

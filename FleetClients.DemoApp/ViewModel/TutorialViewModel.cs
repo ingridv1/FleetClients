@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Input;
-using FleetClients.DemoApp.Model;
-using System.Net;
+﻿using FleetClients.DemoApp.Model;
 using GACore;
 using GACore.Command;
 using Markdig;
+using System;
+using System.Net;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace FleetClients.DemoApp.ViewModel
 {
@@ -57,7 +53,7 @@ namespace FleetClients.DemoApp.ViewModel
 
 		private void HandleOption(TutorialCommandOption option)
 		{
-			switch(option)
+			switch (option)
 			{
 				case TutorialCommandOption.ShowFleetManager:
 					{

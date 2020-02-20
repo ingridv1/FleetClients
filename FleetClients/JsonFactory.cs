@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FleetClients.JsonConverters;
+﻿using FleetClients.JsonConverters;
 using Newtonsoft.Json;
+using System;
+using System.IO;
 
 namespace FleetClients
 {
 	public static class JsonFactory
 	{
-
 		private static JsonSerializerSettings GetJsonSerializerSettings()
 		{
 			JsonSerializerSettings settings = new JsonSerializerSettings();
@@ -20,7 +15,6 @@ namespace FleetClients
 
 			return settings;
 		}
-
 
 		public static FleetTemplate FleetTemplateFromFile(string filePath)
 		{

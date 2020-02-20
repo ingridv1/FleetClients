@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using GACore;
-using GACore.Architecture;
+﻿using GACore;
 using GACore.Command;
 using NLog;
+using System;
+using System.Linq;
+using System.Windows.Input;
 
 namespace FleetClients.UI.ViewModel
 {
 	public class KingpinStatesViewModel : AbstractCollectionViewModel<IFleetManagerClient, KingpinStateMailboxViewModel, KingpinStateMailbox>
 	{
-
-		public KingpinStatesViewModel()			
+		public KingpinStatesViewModel()
 		{
 			HandleLoadCommands();
 		}
@@ -38,7 +33,7 @@ namespace FleetClients.UI.ViewModel
 				KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
 				ViewModelLocator.SelectedKingpinViewModel.Model = ksmViewModel.Model;
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				ViewModelLocator.SelectedKingpinViewModel.Model = null;
 				Logger.Error(ex);
@@ -54,7 +49,7 @@ namespace FleetClients.UI.ViewModel
 				Service.DialogService.CreateKingpinDiagnosticWindow(ksmViewModel)
 					.Show();
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				Logger.Error(ex);
 			}
@@ -66,7 +61,7 @@ namespace FleetClients.UI.ViewModel
 		{
 			try
 			{
-				return ViewModels.FirstOrDefault(e => e.KingpinState.IPAddress.Equals(model.Key));			
+				return ViewModels.FirstOrDefault(e => e.KingpinState.IPAddress.Equals(model.Key));
 			}
 			catch (Exception ex)
 			{
