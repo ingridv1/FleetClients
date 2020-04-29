@@ -1,14 +1,15 @@
 {
   "metadata": [
     {
-    "src": [
-      {
-        "files": [ "**.csproj" ],
-        "exclude": [ "**/bin/**", "**/obj/**" , "**Console/", "**App/" ],
-        "src": "../src"        
-      }
+      "src": [
+        {
+          "files": [ "**.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**", "**Console/", "**App/" ],
+          "src": "../src"
+        }
       ],
       "dest": "api",
+      "filter": "filterConfig.yml",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }

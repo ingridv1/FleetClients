@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.AGVTemplate.html",
-          "hash": "GvG0HgGsUmZIwwmdnahJrw=="
+          "hash": "Tv8JpK8Qyq3lcrBdCZRMMg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.ClientFactory.html",
-          "hash": "k5WICu7Ao1qEn8VYGc2zaQ=="
+          "hash": "dVD8iD9pEQN5hzFf23lfBg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.EndpointSettings_ExtensionMethods.html",
-          "hash": "X4CtjatX2gGWR1JYy/Brqg=="
+          "hash": "lNF9QkC5en7VgWsRSODouw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetManagerServiceCallback.html",
-          "hash": "zIXiv8WJPQVhU470d0HahQ=="
+          "hash": "/xq6BCNh3yDSL+RmG4Maig=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetManagerServiceReference.FleetManagerServiceClient.html",
-          "hash": "4Y4Eg6cmHDCuEe/s1VMIWA=="
+          "hash": "wq4yKmB4niKgP5xckq2rXg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetManagerServiceReference.FleetState.html",
-          "hash": "U1gvQYx+WtlWfS9H6zCURw=="
+          "hash": "pLY55yTVrVwXXWwN8r5PYw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "x6flXvLQPzVqh5c5hfUXzA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "RMF+lvbGS5CSOZc8vdD2UA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "BJAXkKOHvSdN0JBF+vmH9g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetManagerServiceReference.PoseData.html",
-          "hash": "zDKTYa5YjiK7KN9k0j/dgQ=="
+          "hash": "RalrD+TR9IHKBnecX+C0Ng=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetManagerServiceReference.ServiceCallData.html",
-          "hash": "5NAKimUR7oXcIDlqhsJbCg=="
+          "hash": "EIA6uHmh67MrdpnnjDRTUA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -144,7 +144,7 @@
           "hash": "C8f2YLBVWVoJvKkt8YNysg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "Uw9jSl9H27B2E4RI0HDvvg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "wxalyRkB6QoIH6QmvZux6w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetTemplate.html",
-          "hash": "rP5OT2lY4Df1HLeoztMkzw=="
+          "hash": "yaalC5DTOCOdrxNHcwMC2A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetTemplateManager.html",
-          "hash": "jN6Ubw0ljh0LjCBdspKfAw=="
+          "hash": "VZpzUi6NfP07UbkDtGR+yw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "b62DCWLQaFEDG2fGUcszPw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.JsonConverters.IEnumerableAGVTemplateConverter.html",
-          "hash": "HkIds2BWZjhu834kGkz+mw=="
+          "hash": "Jm/BvsuTAh3O1EsnBdIuRA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -228,7 +228,7 @@
           "hash": "H7O3AVrxja83dH2cwgaVUg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.JsonFactory.html",
-          "hash": "vDuItNmL6kGhIdwGrYhTkg=="
+          "hash": "6AEPr+VPrWN+U2vk07RplQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.KingpinStateMailbox.html",
-          "hash": "9TKhR2io3kuTKot1sbPRAg=="
+          "hash": "B3Tm7WJEXVt/X9+uBuDF8Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.PoseDataFactory.html",
-          "hash": "oEReK0JjnQTnibjt14ioiw=="
+          "hash": "Y4dA7OiFFFPUK537/ZBSjA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -276,7 +276,7 @@
           "hash": "ndl79zSNyzGd5czKT7Bk2Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.DialogFactory.html",
-          "hash": "Up2bUk5mN+gabIVHwY5sLw=="
+          "hash": "RoWsWw4UevuigaJyxBS8VA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.Message.TemplateUpdatedMessage.html",
-          "hash": "HRTGtl5MEdrJjiP0ZJZi5w=="
+          "hash": "nDXcp08sV0lT4ffjena+UA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -312,7 +312,7 @@
           "hash": "28d/7hU+KaiOyRW85+jAig=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.Service.AGVTemplateFactoryWindow.html",
-          "hash": "Sy2FC4e8SF2Bfwg6tJqrRQ=="
+          "hash": "MXpXH0ecoXsjQqa1SOvLyQ=="
         }
       },
       "is_incremental": false,
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.Service.DialogService.html",
-          "hash": "Y/rGdDHH8S6u4fVgAhJqNg=="
+          "hash": "VvdDDhJBxQmcL0N2dzbVqQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.Service.FleetTemplateManagerWindow.html",
-          "hash": "jvIDuohjMeBrN1K35FftMQ=="
+          "hash": "vACw0M/Z52SP/8RAzDUepA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.Service.KingpinDiagnosticWindow.html",
-          "hash": "WFIZY6SQ+PEJa9z4gZWsmg=="
+          "hash": "+jftKxHVHCkE/ePcSmVYwQ=="
         }
       },
       "is_incremental": false,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.AGVTemplateFactoryView.html",
-          "hash": "U1Y22TgDuAc8eFSbcSWOKg=="
+          "hash": "KnJXDSgp1zkRMgFldUoJvA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.FleetManagerClientView.html",
-          "hash": "jpEuaQSSJ4bUxBguCBw6og=="
+          "hash": "+d2m3Nzy4RkVRszHYFzgkQ=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.FleetTemplateManagerView.html",
-          "hash": "9p5c8k+xmgaBk7Ah5XKHiQ=="
+          "hash": "7IzlPD8rys2QSnUINzZNpQ=="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.FleetTemplateView.html",
-          "hash": "uqslBYpntRFH+VpbgshUDw=="
+          "hash": "O44LPJ52UViBStrtRPu7Ug=="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.KingpinStateMailboxDiagnosticView.html",
-          "hash": "bSOUyzU2avxFPwRnDYndfQ=="
+          "hash": "Sn97hTkNCtaNu3WGn2a54Q=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.KingpinStatesView.html",
-          "hash": "KAJlRVlqhSUTau0LHNjtKQ=="
+          "hash": "ReM1CGnFy2cyBTWeNW+R2A=="
         }
       },
       "is_incremental": false,
@@ -453,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.NullToCollapsedVisibiltyConverter.html",
-          "hash": "J+r97R4NLo/XKu+pI90LyQ=="
+          "hash": "khLm9JfO7ul9OyUilNKNPA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.View.SelectedKingpinView.html",
-          "hash": "/8FWMxYnZ4m4dzWV5Sd5Mg=="
+          "hash": "wmoqpPztiLU5YIgVgNCbew=="
         }
       },
       "is_incremental": false,
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateFactoryViewModel.html",
-          "hash": "c6wip8s6YVLG0E/SWXBSyQ=="
+          "hash": "sBqhY/n7ci220+kxxpyleg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -501,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateViewModel.html",
-          "hash": "5ieP7qokNyTw2aABbCPTTA=="
+          "hash": "KEo4+c4yBkgeklbTiMtmEQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -513,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.FleetManagerClientViewModel.html",
-          "hash": "/kqGIY2kG5sQCA77DcESww=="
+          "hash": "SgSRjqYM7X910NEkrD7/UQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -528,7 +528,7 @@
           "hash": "uEcE3AdOFzb66Y1w52dO1Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -537,10 +537,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateManagerViewModel.html",
-          "hash": "ldmmpxUBipEcBH/JBFut6A=="
+          "hash": "c0UZh/v39gg654GXNFclfg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -549,10 +549,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateViewModel.html",
-          "hash": "7TIowgWHgIHb5p832PqIhQ=="
+          "hash": "1jAigCqK0c2G2xvTRuc7gw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -561,10 +561,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.KingpinStateMailboxViewModel.html",
-          "hash": "PfYN4+0QrUEmqy9wpVB+TA=="
+          "hash": "yasOONy2wPFBPPcyooUXzA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -573,10 +573,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.KingpinStatesViewModel.html",
-          "hash": "jBE6C1OsqFhSbJTDO/DoqA=="
+          "hash": "kehmmqIzTmXuqtaE0nAqog=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -585,10 +585,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.SelectedKingpinViewModel.html",
-          "hash": "a5HXKYtZseqqPC3hf1jcrQ=="
+          "hash": "YID6uWDgXb+iI0pTWagmrg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -597,10 +597,10 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.UI.ViewModel.ViewModelLocator.html",
-          "hash": "ptvtC7gIh8Ev7z/EbRl4Fw=="
+          "hash": "9t+3JKodoqj08UyubqtEAg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -612,7 +612,7 @@
           "hash": "joOla7iNeW1Mm2lDW6l1gg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -624,7 +624,7 @@
           "hash": "iynJFTDI7okDNWg01QFFFw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -633,10 +633,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "arIs8wgkcOPqIvcXKQb3EQ=="
+          "hash": "yio8aGxe9Hj3OYkK3T0NdA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -657,10 +657,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/about.html",
-          "hash": "8b/y0rwzwuIhfOhuYIc7pw=="
+          "hash": "P5O3NdIXOn32JwMpQuE7Aw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -672,7 +672,7 @@
           "hash": "97B+9xCXdhTI/NUbJqYMVw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -684,7 +684,7 @@
           "hash": "wuMShq5i8yBVEk9nAcYBxA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -708,7 +708,7 @@
           "hash": "cuEK5rlulH65hhAV6Ft6nA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -737,13 +737,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 2
+          "skipped_file_count": 5
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 52,
-          "skipped_file_count": 7
+          "skipped_file_count": 42
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
