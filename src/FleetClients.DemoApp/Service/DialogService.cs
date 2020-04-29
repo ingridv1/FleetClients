@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using FleetClients.Core;
+using System.Windows;
 using uiVM = FleetClients.UI.ViewModel;
 
 namespace FleetClients.DemoApp.Service

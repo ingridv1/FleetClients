@@ -1,4 +1,5 @@
-﻿using GACore;
+﻿using FleetClients.Core;
+using GACore;
 using GACore.Controls;
 using System.Linq;
 
@@ -7,7 +8,7 @@ namespace FleetClients.UI.ViewModel
 	public class FleetManagerClientViewModel : AbstractViewModel<IFleetManagerClient>
 	{
 		public FleetManagerClientViewModel()
-		{      
+		{
 			// 2020 and still doing this since 2010...
 			BrushDictionaries.DynamicLimiterStatusBrushCollectionDictionary.First();
 		}

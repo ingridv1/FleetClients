@@ -1,5 +1,6 @@
 ﻿using BaseClients;
 using CommandLine;
+using FleetClients.Core;
 using System;
 using System.Diagnostics;
 using System.IO;

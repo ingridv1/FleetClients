@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFleetManagerClient
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFleetManagerClient
+   ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="FleetClients.Core.IFleetManagerClient">
+  
+  
+  <h1 id="FleetClients_Core_IFleetManagerClient" data-uid="FleetClients.Core.IFleetManagerClient" class="text-break">Interface IFleetManagerClient
+  </h1>
+  <div class="markdown level0 summary"><p>For interacting with the fleet manager remotely.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">BaseClients.ICallbackClient.IsConnected</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.ICallbackClient.Key</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.ICallbackClient.Connected</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.ICallbackClient.Disconnected</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.IClient.EndpointAddress</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.IClient.LastCaughtException</span>
+    </div>
+    <div>
+      <span class="xref">BaseClients.IClient.Logger</span>
+    </div>
+    <div>
+      <span class="xref">System.IDisposable.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">GACore.Architecture.IModelCollection&lt;FleetClients.Core.KingpinStateMailbox&gt;.GetModels()</span>
+    </div>
+    <div>
+      <span class="xref">GACore.Architecture.IModelCollection&lt;FleetClients.Core.KingpinStateMailbox&gt;.Added</span>
+    </div>
+    <div>
+      <span class="xref">GACore.Architecture.IModelCollection&lt;FleetClients.Core.KingpinStateMailbox&gt;.Removed</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FleetClients.Core.html">FleetClients.Core</a></h6>
+  <h6><strong>Assembly</strong>: FleetClients.Core.dll</h6>
+  <h5 id="FleetClients_Core_IFleetManagerClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFleetManagerClient : ICallbackClient, IClient, IDisposable, INotifyPropertyChanged, IModelCollection&lt;KingpinStateMailbox&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_FleetState_" data-uid="FleetClients.Core.IFleetManagerClient.FleetState*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_FleetState" data-uid="FleetClients.Core.IFleetManagerClient.FleetState">FleetState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FleetState FleetState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.FleetState.html">FleetState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryCommitEx2Waypoints_" data-uid="FleetClients.Core.IFleetManagerClient.TryCommitEx2Waypoints*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryCommitEx2Waypoints_System_Net_IPAddress_System_Int32_System_Byte___System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryCommitEx2Waypoints(System.Net.IPAddress,System.Int32,System.Byte[],System.Boolean@)">TryCommitEx2Waypoints(IPAddress, Int32, Byte[], out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">instructionId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">ex2Waypoints</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryCreateVirtualVehicle_" data-uid="FleetClients.Core.IFleetManagerClient.TryCreateVirtualVehicle*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryCreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseData_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryCreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseData,System.Boolean@)">TryCreateVirtualVehicle(IPAddress, PoseData, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryCreateVirtualVehicle(IPAddress ipAddress, PoseData pose, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.PoseData.html">PoseData</a></td>
+        <td><span class="parametername">pose</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryGetKingpinDescription_" data-uid="FleetClients.Core.IFleetManagerClient.TryGetKingpinDescription*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryGetKingpinDescription_System_Net_IPAddress_System_Xml_Linq_XDocument__" data-uid="FleetClients.Core.IFleetManagerClient.TryGetKingpinDescription(System.Net.IPAddress,System.Xml.Linq.XDocument@)">TryGetKingpinDescription(IPAddress, out XDocument)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryGetKingpinDescription(IPAddress ipAddress, out XDocument xDocument)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Xml.Linq.XDocument</span></td>
+        <td><span class="parametername">xDocument</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryGetSemVer_" data-uid="FleetClients.Core.IFleetManagerClient.TryGetSemVer*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryGetSemVer_GACore_SemVerData__" data-uid="FleetClients.Core.IFleetManagerClient.TryGetSemVer(GACore.SemVerData@)">TryGetSemVer(out SemVerData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryGetSemVer(out SemVerData semVerData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GACore.SemVerData</span></td>
+        <td><span class="parametername">semVerData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryRemoveVehicle_" data-uid="FleetClients.Core.IFleetManagerClient.TryRemoveVehicle*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryRemoveVehicle_System_Net_IPAddress_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryRemoveVehicle(System.Net.IPAddress,System.Boolean@)">TryRemoveVehicle(IPAddress, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryRemoveVehicle(IPAddress ipAddress, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryRequestFreeze_" data-uid="FleetClients.Core.IFleetManagerClient.TryRequestFreeze*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryRequestFreeze_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryRequestFreeze(System.Boolean@)">TryRequestFreeze(out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryRequestFreeze(out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryRequestUnfreeze_" data-uid="FleetClients.Core.IFleetManagerClient.TryRequestUnfreeze*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryRequestUnfreeze_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryRequestUnfreeze(System.Boolean@)">TryRequestUnfreeze(out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryRequestUnfreeze(out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TryResetKingpin_" data-uid="FleetClients.Core.IFleetManagerClient.TryResetKingpin*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TryResetKingpin_System_Net_IPAddress_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TryResetKingpin(System.Net.IPAddress,System.Boolean@)">TryResetKingpin(IPAddress, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TryResetKingpin(IPAddress ipAddress, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TrySetFleetState_" data-uid="FleetClients.Core.IFleetManagerClient.TrySetFleetState*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TrySetFleetState_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TrySetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState,System.Boolean@)">TrySetFleetState(VehicleControllerState, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TrySetFleetState(VehicleControllerState controllerState, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.VehicleControllerState.html">VehicleControllerState</a></td>
+        <td><span class="parametername">controllerState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TrySetKingpinState_" data-uid="FleetClients.Core.IFleetManagerClient.TrySetKingpinState*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TrySetKingpinState_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TrySetKingpinState(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.VehicleControllerState,System.Boolean@)">TrySetKingpinState(IPAddress, VehicleControllerState, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.VehicleControllerState.html">VehicleControllerState</a></td>
+        <td><span class="parametername">controllerState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FleetClients_Core_IFleetManagerClient_TrySetPose_" data-uid="FleetClients.Core.IFleetManagerClient.TrySetPose*"></a>
+  <h4 id="FleetClients_Core_IFleetManagerClient_TrySetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseData_System_Boolean__" data-uid="FleetClients.Core.IFleetManagerClient.TrySetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseData,System.Boolean@)">TrySetPose(IPAddress, PoseData, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceOperationResult TrySetPose(IPAddress ipAddress, PoseData pose, out bool success)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPAddress</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.PoseData.html">PoseData</a></td>
+        <td><span class="parametername">pose</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BaseClients.ServiceOperationResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright <strong>Guidance Automation Ltd</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

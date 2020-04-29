@@ -1,4 +1,5 @@
-﻿using FleetClients.UI.ViewModel;
+﻿using FleetClients.Core;
+using FleetClients.UI.ViewModel;
 using GACore;
 using GACore.NLog;
 using NLog;

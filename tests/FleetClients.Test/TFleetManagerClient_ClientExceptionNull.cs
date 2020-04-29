@@ -1,5 +1,6 @@
 ﻿using BaseClients;
-using FleetClients.FleetManagerServiceReference;
+using FleetClients.Core;
+using FleetClients.Core.FleetManagerServiceReference;
 using NUnit.Framework;
 using System.Net;
 using System.Xml.Linq;

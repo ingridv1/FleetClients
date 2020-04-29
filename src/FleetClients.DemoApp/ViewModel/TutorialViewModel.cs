@@ -1,4 +1,5 @@
-﻿using FleetClients.DemoApp.Model;
+﻿using FleetClients.Core;
+using FleetClients.DemoApp.Model;
 using GACore;
 using GACore.Command;
 using Markdig;

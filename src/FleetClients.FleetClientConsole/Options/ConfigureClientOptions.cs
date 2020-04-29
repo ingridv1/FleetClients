@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using FleetClients.Core;
 using System.Net;
 
 namespace FleetClients.FleetClientConsole.Options
