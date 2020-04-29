@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 
-namespace FleetClients.JsonConverters
+namespace FleetClients.Core.JsonConverters
 {
 	public class IEnumerableAGVTemplateConverter : JsonConverter<List<AGVTemplate>>
 	{

@@ -1,4 +1,5 @@
 ﻿using GACore;
+using FleetClients.Core;
 
 namespace FleetClients.UI.ViewModel
 {

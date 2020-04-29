@@ -1,9 +1,9 @@
-﻿using FleetClients.JsonConverters;
+﻿using FleetClients.Core.JsonConverters;
 using Newtonsoft.Json;
 using System;
 using System.IO;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public static class JsonFactory
 	{

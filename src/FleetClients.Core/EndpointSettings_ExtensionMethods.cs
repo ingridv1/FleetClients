@@ -1,7 +1,7 @@
 ﻿using BaseClients;
 using System;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public static class EndpointSettings_ExtensionMethods
 	{

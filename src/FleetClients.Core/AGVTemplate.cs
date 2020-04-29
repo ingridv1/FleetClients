@@ -1,4 +1,4 @@
-﻿using FleetClients.FleetManagerServiceReference;
+﻿using FleetClients.Core.FleetManagerServiceReference;
 using System;
 using System.ComponentModel;
 using System.Net;
@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 using SN = System.Net;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	/// <summary>
 	/// Lightweight object to couple an ipAddress and a pose.

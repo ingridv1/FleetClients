@@ -1,11 +1,11 @@
 ﻿using BaseClients;
-using FleetClients.FleetManagerServiceReference;
+using FleetClients.Core.FleetManagerServiceReference;
 using GACore;
 using GACore.Architecture;
 using System.Net;
 using System.Xml.Linq;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
 	{

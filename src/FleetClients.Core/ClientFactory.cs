@@ -1,7 +1,7 @@
 ﻿using BaseClients;
 using System.Net;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public static class ClientFactory
 	{

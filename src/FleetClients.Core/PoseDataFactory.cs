@@ -1,8 +1,8 @@
-﻿using FleetClients.FleetManagerServiceReference;
+﻿using FleetClients.Core.FleetManagerServiceReference;
 using System;
 using System.Text.RegularExpressions;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public static class PoseDataFactory
 	{

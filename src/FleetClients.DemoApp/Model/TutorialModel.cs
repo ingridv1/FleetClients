@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using FleetClients.Core;
 
 namespace FleetClients.DemoApp.Model
 {

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	[DataContract]
 	public class FleetTemplate : IModelCollection<AGVTemplate>

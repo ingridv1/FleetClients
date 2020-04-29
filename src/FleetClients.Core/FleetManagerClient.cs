@@ -1,5 +1,5 @@
 ﻿using BaseClients;
-using FleetClients.FleetManagerServiceReference;
+using FleetClients.Core.FleetManagerServiceReference;
 using GACore;
 using GACore.Architecture;
 using GACore.Extensions;
@@ -10,7 +10,7 @@ using System.Net;
 using System.ServiceModel;
 using System.Xml.Linq;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	internal class FleetManagerClient : AbstractCallbackClient<IFleetManagerService>, IFleetManagerClient
 	{

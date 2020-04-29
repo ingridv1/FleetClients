@@ -1,6 +1,7 @@
 ﻿using BaseClients;
 using CommandLine;
 using System;
+using FleetClients.Core;
 
 namespace FleetClients.FleetClientConsole.Options
 {

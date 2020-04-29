@@ -2,7 +2,7 @@
 using GACore.Architecture;
 using System.Net;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public class KingpinStateMailbox : GenericMailbox<IPAddress, IKingpinState>
 	{

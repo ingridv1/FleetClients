@@ -1,4 +1,6 @@
-﻿namespace FleetClients.UI.Message
+﻿using FleetClients.Core;
+
+namespace FleetClients.UI.Message
 {
 	public class TemplateUpdatedMessage
 	{

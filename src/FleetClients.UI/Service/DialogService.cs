@@ -2,6 +2,7 @@
 using GACore;
 using GACore.NLog;
 using NLog;
+using FleetClients.Core;
 using System.Windows;
 
 namespace FleetClients.UI.Service

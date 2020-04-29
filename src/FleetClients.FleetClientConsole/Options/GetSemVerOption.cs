@@ -2,6 +2,7 @@
 using CommandLine;
 using GACore;
 using System;
+using FleetClients.Core;
 
 namespace FleetClients.FleetClientConsole.Options
 {

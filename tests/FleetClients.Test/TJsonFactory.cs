@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System.IO;
+using FleetClients.Core;
 
 namespace FleetClients.Test
 {

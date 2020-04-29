@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Xml.Linq;
+using FleetClients.Core;
 
 namespace FleetClients.FleetClientConsole.Options
 {

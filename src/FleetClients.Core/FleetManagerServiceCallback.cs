@@ -1,7 +1,7 @@
-﻿using FleetClients.FleetManagerServiceReference;
+﻿using FleetClients.Core.FleetManagerServiceReference;
 using System;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public class FleetManagerServiceCallback : IFleetManagerServiceCallback
 	{

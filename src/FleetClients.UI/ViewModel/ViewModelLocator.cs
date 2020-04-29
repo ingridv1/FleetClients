@@ -1,4 +1,6 @@
-﻿namespace FleetClients.UI.ViewModel
+﻿using FleetClients.Core;
+
+namespace FleetClients.UI.ViewModel
 {
 	public static class ViewModelLocator
 	{

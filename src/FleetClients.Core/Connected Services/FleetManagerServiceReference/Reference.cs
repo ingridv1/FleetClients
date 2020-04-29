@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FleetClients.FleetManagerServiceReference {
+namespace FleetClients.Core.FleetManagerServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,7 +26,7 @@ namespace FleetClients.FleetManagerServiceReference {
         private string MessageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FleetClients.FleetManagerServiceReference.ServiceCode ServiceCodeField;
+        private FleetClients.Core.FleetManagerServiceReference.ServiceCode ServiceCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SourceField;
@@ -58,7 +58,7 @@ namespace FleetClients.FleetManagerServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FleetClients.FleetManagerServiceReference.ServiceCode ServiceCode {
+        public FleetClients.Core.FleetManagerServiceReference.ServiceCode ServiceCode {
             get {
                 return this.ServiceCodeField;
             }
@@ -492,14 +492,14 @@ namespace FleetClients.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService", CallbackContract=typeof(FleetClients.FleetManagerServiceReference.IFleetManagerServiceCallback))]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService", CallbackContract=typeof(FleetClients.Core.FleetManagerServiceReference.IFleetManagerServiceCallback))]
     public interface IFleetManagerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
-        System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData> GetSemVer();
+        System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetSemVer();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
-        System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync();
+        System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat", ReplyAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse")]
         void SubscriptionHeartbeat(System.Guid guid);
@@ -508,80 +508,80 @@ namespace FleetClients.FleetManagerServiceReference {
         System.Threading.Tasks.Task SubscriptionHeartbeatAsync(System.Guid guid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse")]
-        System.Tuple<System.Xml.Linq.XElement, FleetClients.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress);
+        System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse")]
-        System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
+        System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestFreezeResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestFreeze();
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestFreeze();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestFreezeResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync();
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestUnfreezeResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze();
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestUnfreezeResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync();
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicleResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicleResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/RemoveVehicleResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/RemoveVehicleResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService/SetPoseResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService/SetPoseResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService/ResetKingpinResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService/ResetKingpinResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
-        System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IFleetManagerServiceCallback {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/OnCallback", ReplyAction="http://tempuri.org/IFleetManagerService/OnCallbackResponse")]
-        void OnCallback(FleetClients.FleetManagerServiceReference.FleetState callbackObject);
+        void OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState callbackObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFleetManagerServiceChannel : FleetClients.FleetManagerServiceReference.IFleetManagerService, System.ServiceModel.IClientChannel {
+    public interface IFleetManagerServiceChannel : FleetClients.Core.FleetManagerServiceReference.IFleetManagerService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FleetManagerServiceClient : System.ServiceModel.DuplexClientBase<FleetClients.FleetManagerServiceReference.IFleetManagerService>, FleetClients.FleetManagerServiceReference.IFleetManagerService {
+    public partial class FleetManagerServiceClient : System.ServiceModel.DuplexClientBase<FleetClients.Core.FleetManagerServiceReference.IFleetManagerService>, FleetClients.Core.FleetManagerServiceReference.IFleetManagerService {
         
         public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
@@ -603,11 +603,11 @@ namespace FleetClients.FleetManagerServiceReference {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData> GetSemVer() {
+        public System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetSemVer() {
             return base.Channel.GetSemVer();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync() {
+        public System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync() {
             return base.Channel.GetSemVerAsync();
         }
         
@@ -619,83 +619,83 @@ namespace FleetClients.FleetManagerServiceReference {
             return base.Channel.SubscriptionHeartbeatAsync(guid);
         }
         
-        public System.Tuple<System.Xml.Linq.XElement, FleetClients.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress) {
+        public System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress) {
             return base.Channel.GetKingpinDescription(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.GetKingpinDescriptionAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
             return base.Channel.CommitEx2Waypoints(ipAddress, instructionId, ex2WaypointBytes);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
             return base.Channel.CommitEx2WaypointsAsync(ipAddress, instructionId, ex2WaypointBytes);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestFreeze() {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestFreeze() {
             return base.Channel.RequestFreeze();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync() {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync() {
             return base.Channel.RequestFreezeAsync();
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze() {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze() {
             return base.Channel.RequestUnfreeze();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync() {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync() {
             return base.Channel.RequestUnfreezeAsync();
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.CreateVirtualVehicle(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.CreateVirtualVehicleAsync(ipAddress, pose);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress) {
             return base.Channel.RemoveVehicle(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.RemoveVehicleAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.SetPose(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.SetPoseAsync(ipAddress, pose);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress) {
             return base.Channel.ResetKingpin(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.ResetKingpinAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetFleetState(controllerState);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetFleetStateAsync(controllerState);
         }
         
-        public System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinState(ipAddress, controllerState);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinStateAsync(ipAddress, controllerState);
         }
     }

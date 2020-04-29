@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using System;
 using System.Windows;
 using System.Windows.Input;
+using FleetClients.Core;
 
 namespace FleetClients.UI.ViewModel
 {

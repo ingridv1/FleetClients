@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FleetClients
+namespace FleetClients.Core
 {
 	public class FleetTemplateManager
 	{

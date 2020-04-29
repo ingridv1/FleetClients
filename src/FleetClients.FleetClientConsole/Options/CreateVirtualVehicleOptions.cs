@@ -1,7 +1,8 @@
 ﻿using BaseClients;
 using CommandLine;
-using FleetClients.FleetManagerServiceReference;
+using FleetClients.Core.FleetManagerServiceReference;
 using System.Net;
+using FleetClients.Core;
 
 namespace FleetClients.FleetClientConsole.Options
 {
