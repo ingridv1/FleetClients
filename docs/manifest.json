@@ -1,0 +1,1098 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/git/FleetClients/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.AGVTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.AGVTemplate.html",
+          "hash": "Ucv0HGJ3+n8UDDxFOCIhaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.ClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.ClientFactory.html",
+          "hash": "wMGdtbQ525iizq+HCec0Rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.App.html",
+          "hash": "/ad5JGJrQWzStV1xTER3Qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.MainWindow.html",
+          "hash": "Z2S6BlpFWLm19WPd8ernFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Model.TutorialModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Model.TutorialModel.html",
+          "hash": "sitBhQlgBgttFP3w0ZrB+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Model.html",
+          "hash": "7XHsdSun6c8w0Of7YRIkoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Service.DialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Service.DialogService.html",
+          "hash": "qVx1Pi9lZGSO+LIeZW6y1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Service.FleetManagerClientTutorialWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Service.FleetManagerClientTutorialWindow.html",
+          "hash": "ZnQbTEdgHruZhekLGjEpMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Service.FleetTemplateManagerTutorialWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Service.FleetTemplateManagerTutorialWindow.html",
+          "hash": "KoGcc/ip7Lsd0mCiUTxzgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.Service.html",
+          "hash": "vOf9oJCOst0hdCEOmFmzQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.View.TutorialView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.View.TutorialView.html",
+          "hash": "i0ngnimlm9Cc8m0wwpU/qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.View.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.View.html",
+          "hash": "xa5VU3U8Ekpoph1gnpShcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.ViewModel.TutorialCommandOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.ViewModel.TutorialCommandOption.html",
+          "hash": "iWhYAQplDhLZNKh8Nl/q/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.ViewModel.TutorialViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.ViewModel.TutorialViewModel.html",
+          "hash": "QjP40vQd9xGyMlRqeV5kXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.ViewModel.ViewModelLocator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.ViewModel.ViewModelLocator.html",
+          "hash": "KRqL8o/4xM56yW7GibhooA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.ViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.ViewModel.html",
+          "hash": "PBHe2TclD5o+QscZTMORkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.DemoApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.DemoApp.html",
+          "hash": "J6GX8ohBWZghOZ5RjpkzFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.EndpointSettings_ExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.EndpointSettings_ExtensionMethods.html",
+          "hash": "rDRvWQdjTfDGu/IOpqTRWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.ConfigureClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.ConfigureClientOptions.html",
+          "hash": "op4R4dA7Up2DnylQAF4K4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.CreateVirtualVehicleOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.CreateVirtualVehicleOptions.html",
+          "hash": "dpz2F26eVc3vBpr6rdPKAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.GetKingpinDescriptionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.GetKingpinDescriptionOptions.html",
+          "hash": "mMEBy6gn09SoA0yKqnAf9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.GetSemVerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.GetSemVerOptions.html",
+          "hash": "wfLUmxazzjA/SRHnD3g/7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.RemoveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.RemoveOptions.html",
+          "hash": "aFoyY+29EIXvzBxkJ68JPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.RequestFreezeOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.RequestFreezeOption.html",
+          "hash": "+uxpzNdNCBX7plETpRStaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.RequestUnfreezeOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.RequestUnfreezeOption.html",
+          "hash": "vzrSHVLLG5VfQTsQ9awz/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.ResetKingpinOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.ResetKingpinOption.html",
+          "hash": "+VCa9x61/q1r3G6T1H3irA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.SetFleetStateOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.SetFleetStateOption.html",
+          "hash": "kAp0fyUdQFVR3XBNz2RFFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.SetKingpinStateOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.SetKingpinStateOption.html",
+          "hash": "GhW064ZNnpGh/yyxBa+7dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.SetPoseOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.SetPoseOptions.html",
+          "hash": "jY65k9urcVRJLW3cJKVCOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetClientConsole.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetClientConsole.Options.html",
+          "hash": "VhlnAWaQszKFyrzJVjxwLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceCallback.html",
+          "hash": "Y4wcHb19GQP3YguY6twr8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.FleetManagerServiceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.FleetManagerServiceClient.html",
+          "hash": "BfhzwzJ6wCyOjwr8g+UPzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.FleetState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.FleetState.html",
+          "hash": "AqU4Lfln8GiVuJqJlJWaxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerService.html",
+          "hash": "bKvcUdzvHGpZNAE99/jfcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerServiceCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerServiceCallback.html",
+          "hash": "RE9V/PPAwJoa+yfe0rybvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerServiceChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.IFleetManagerServiceChannel.html",
+          "hash": "8x6rCcYPBrBLydM6mKBptQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.PoseData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.PoseData.html",
+          "hash": "/eBw3QsO0MJFpwm2i/Di1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.ServiceCallData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.ServiceCallData.html",
+          "hash": "pN5wStJWhWGb5v2iXoxA1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.ServiceCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.ServiceCode.html",
+          "hash": "OlNFs0JSTOL/s1t4T3lJiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.VehicleControllerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.VehicleControllerState.html",
+          "hash": "5Lhne1LTKbWt2f9kigqEhA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetManagerServiceReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetManagerServiceReference.html",
+          "hash": "8o0QgwKD1Lb/mpvsa+v4/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetTemplate.html",
+          "hash": "D34ibNqhxniXQy80d1vxfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.FleetTemplateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.FleetTemplateManager.html",
+          "hash": "NkiRZTADf3CcjcW/Ksu2ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.IFleetManagerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.IFleetManagerClient.html",
+          "hash": "D+Mbh/uR1ABgyc2+YHwJ1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.JsonConverters.IEnumerableAGVTemplateConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.JsonConverters.IEnumerableAGVTemplateConverter.html",
+          "hash": "2OMnLyzCKttJlEtGMtdqFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.JsonConverters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.JsonConverters.html",
+          "hash": "gRTHQn/84xKAbYzu8zsdVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.JsonFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.JsonFactory.html",
+          "hash": "/mgSCD0STQZI8I+k2Fqokw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.KingpinStateMailbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.KingpinStateMailbox.html",
+          "hash": "4nCO9g2hiXcfI6tX5jsuCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.PoseDataFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.PoseDataFactory.html",
+          "hash": "Nvk5OOQudezNUGa3k0cXQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.DialogFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.DialogFactory.html",
+          "hash": "Up2bUk5mN+gabIVHwY5sLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Message.TemplateUpdatedMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Message.TemplateUpdatedMessage.html",
+          "hash": "UBDjommGO1OinFQnyhH2/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Message.html",
+          "hash": "28d/7hU+KaiOyRW85+jAig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Service.AGVTemplateFactoryWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Service.AGVTemplateFactoryWindow.html",
+          "hash": "Sy2FC4e8SF2Bfwg6tJqrRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Service.DialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Service.DialogService.html",
+          "hash": "CObdg9OuV22Tf5dWTjAu3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Service.FleetTemplateManagerWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Service.FleetTemplateManagerWindow.html",
+          "hash": "jvIDuohjMeBrN1K35FftMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Service.KingpinDiagnosticWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Service.KingpinDiagnosticWindow.html",
+          "hash": "WFIZY6SQ+PEJa9z4gZWsmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.Service.html",
+          "hash": "SRqfG2xLRwk9ofbVKVmuHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.AGVTemplateFactoryView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.AGVTemplateFactoryView.html",
+          "hash": "U1Y22TgDuAc8eFSbcSWOKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.FleetManagerClientView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.FleetManagerClientView.html",
+          "hash": "jpEuaQSSJ4bUxBguCBw6og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.FleetTemplateManagerView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.FleetTemplateManagerView.html",
+          "hash": "9p5c8k+xmgaBk7Ah5XKHiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.FleetTemplateView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.FleetTemplateView.html",
+          "hash": "uqslBYpntRFH+VpbgshUDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.KingpinStateMailboxDiagnosticView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.KingpinStateMailboxDiagnosticView.html",
+          "hash": "bSOUyzU2avxFPwRnDYndfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.KingpinStatesView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.KingpinStatesView.html",
+          "hash": "KAJlRVlqhSUTau0LHNjtKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.NullToCollapsedVisibiltyConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.NullToCollapsedVisibiltyConverter.html",
+          "hash": "J+r97R4NLo/XKu+pI90LyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.SelectedKingpinView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.SelectedKingpinView.html",
+          "hash": "/8FWMxYnZ4m4dzWV5Sd5Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.View.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.View.html",
+          "hash": "lhro4j8T4MTGhWNfZ70xdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateFactoryViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateFactoryViewModel.html",
+          "hash": "j+/02aexI3FFPWI8lh71tA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.AGVTemplateViewModel.html",
+          "hash": "YHtf+NrwBM8xx2FfwiwLig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.FleetManagerClientViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.FleetManagerClientViewModel.html",
+          "hash": "XSeMznR1e+rlpZy/MbIJ7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateManagerOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateManagerOption.html",
+          "hash": "uEcE3AdOFzb66Y1w52dO1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateManagerViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateManagerViewModel.html",
+          "hash": "1pf8WURfrn5Jc25JZVUYMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.FleetTemplateViewModel.html",
+          "hash": "icg7fYJ+Boau/3i85bxB4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.KingpinStateMailboxViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.KingpinStateMailboxViewModel.html",
+          "hash": "WQlTel1dcG1UyBzbXpFuEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.KingpinStatesViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.KingpinStatesViewModel.html",
+          "hash": "MCEsDsyupXsXCatfYPi7DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.SelectedKingpinViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.SelectedKingpinViewModel.html",
+          "hash": "y9WFk8BUlk7AqWqG3mzEEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.ViewModelLocator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.ViewModelLocator.html",
+          "hash": "ofoMN8Iautwpp21ELyoSOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.ViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.ViewModel.html",
+          "hash": "joOla7iNeW1Mm2lDW6l1gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.UI.html",
+          "hash": "iynJFTDI7okDNWg01QFFFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FleetClients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FleetClients.html",
+          "hash": "IR8jJAFpLEf89HCbYQOx/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "arIs8wgkcOPqIvcXKQb3EQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Z9YgoyasH9fNLW1GunWL3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/about.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/about.html",
+          "hash": "OjZNlQmjkc7eKEm8c6RdMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "97B+9xCXdhTI/NUbJqYMVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/overview.html",
+          "hash": "eWlvv5iAbeB05IPJBm60jQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "PJPWUAix821HjHwt9sgpHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "YyRMEGNTH5TbaXKOthAkqg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 5
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 79,
+          "skipped_file_count": 33
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
