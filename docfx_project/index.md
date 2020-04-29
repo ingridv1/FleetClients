@@ -1,5 +1,11 @@
-# Welcome to the **FleetClients HOMEPAGE**.
+# Welcome to the **FleetClients Homepage**.
 
-## Quick Start Guide
+Here you find:
 
-Pull down the latest **FleetClients** package from [https://www.nuget.org](https://www.nuget.org/packages/FleetClients/).
+* API documentation
+* Example code
+* Source code
+
+Nuget package available at [nuget.org](https://www.nuget.org/packages/FleetClients/)
+
+![AGV image](images/incaartBW.jpg)

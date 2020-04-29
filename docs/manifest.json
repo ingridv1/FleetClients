@@ -660,7 +660,7 @@
           "hash": "P5O3NdIXOn32JwMpQuE7Aw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -672,7 +672,7 @@
           "hash": "wuMShq5i8yBVEk9nAcYBxA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -684,7 +684,7 @@
           "hash": "+v5ifTRD92KQulFqJzapWw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -700,15 +700,26 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/incaartBw.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/incaartBw.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "cuEK5rlulH65hhAV6Ft6nA=="
+          "hash": "R7Rz+POCDZ2OOiEkSq/V1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -744,6 +755,13 @@
           "incrementalPhase": "build",
           "total_file_count": 52,
           "skipped_file_count": 52
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
