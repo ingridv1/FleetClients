@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.AGVTemplate.html",
-          "hash": "Tv8JpK8Qyq3lcrBdCZRMMg=="
+          "hash": "3pNUbQjGb5Asn08Etm1zrw=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.ClientFactory.html",
-          "hash": "dVD8iD9pEQN5hzFf23lfBg=="
+          "hash": "aBs5tlCrkOmibP7tyFHbuA=="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.FleetTemplate.html",
-          "hash": "yaalC5DTOCOdrxNHcwMC2A=="
+          "hash": "NL2JTL3p7aUL4EWjx4snfg=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.JsonFactory.html",
-          "hash": "6AEPr+VPrWN+U2vk07RplQ=="
+          "hash": "OVOtymErlSQnyZpCxDgG5g=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.KingpinStateMailbox.html",
-          "hash": "B3Tm7WJEXVt/X9+uBuDF8Q=="
+          "hash": "GEw6wCACVG9DU79Wv3Bx8w=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.PoseDataFactory.html",
-          "hash": "Y4dA7OiFFFPUK537/ZBSjA=="
+          "hash": "fXPgpAB4j5BlFV8Jy9ajYg=="
         }
       },
       "is_incremental": true,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FleetClients.Core.html",
-          "hash": "ndl79zSNyzGd5czKT7Bk2Q=="
+          "hash": "uC6mcZPyeA/zkUP2DAPLmw=="
         }
       },
       "is_incremental": true,
@@ -324,7 +324,7 @@
           "hash": "MXpXH0ecoXsjQqa1SOvLyQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -348,7 +348,7 @@
           "hash": "vACw0M/Z52SP/8RAzDUepA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -360,7 +360,7 @@
           "hash": "+jftKxHVHCkE/ePcSmVYwQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -372,7 +372,7 @@
           "hash": "SRqfG2xLRwk9ofbVKVmuHg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -384,7 +384,7 @@
           "hash": "KnJXDSgp1zkRMgFldUoJvA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -396,7 +396,7 @@
           "hash": "+d2m3Nzy4RkVRszHYFzgkQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -408,7 +408,7 @@
           "hash": "7IzlPD8rys2QSnUINzZNpQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -420,7 +420,7 @@
           "hash": "O44LPJ52UViBStrtRPu7Ug=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -432,7 +432,7 @@
           "hash": "Sn97hTkNCtaNu3WGn2a54Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -444,7 +444,7 @@
           "hash": "ReM1CGnFy2cyBTWeNW+R2A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -468,7 +468,7 @@
           "hash": "wmoqpPztiLU5YIgVgNCbew=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -480,7 +480,7 @@
           "hash": "lhro4j8T4MTGhWNfZ70xdA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -660,19 +660,7 @@
           "hash": "P5O3NdIXOn32JwMpQuE7Aw=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "97B+9xCXdhTI/NUbJqYMVw=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -684,7 +672,19 @@
           "hash": "wuMShq5i8yBVEk9nAcYBxA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/releaseNotes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/releaseNotes.html",
+          "hash": "+v5ifTRD92KQulFqJzapWw=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "PJPWUAix821HjHwt9sgpHA=="
+          "hash": "6zy3ELlekm7r9kytzDPpOQ=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+          "hash": "ngXmgyexScqJU/ILMpkgJQ=="
         }
       },
       "is_incremental": false,
@@ -737,13 +737,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 5
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 52,
-          "skipped_file_count": 42
+          "skipped_file_count": 52
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -14,15 +14,15 @@ namespace FleetClients.Core
 {
 	internal class FleetManagerClient : AbstractCallbackClient<IFleetManagerService>, IFleetManagerClient
 	{
-		private FleetManagerServiceCallback callback = new FleetManagerServiceCallback();
+		private readonly FleetManagerServiceCallback callback = new FleetManagerServiceCallback();
 
 		private bool isDisposed = false;
 
-		private List<KingpinStateMailbox> kingpinStateMailboxes = new List<KingpinStateMailbox>();
+		private readonly List<KingpinStateMailbox> kingpinStateMailboxes = new List<KingpinStateMailbox>();
 
 		private TimeSpan heartbeat;
 
-		private Queue<byte[]> buffer = new Queue<byte[]>();
+		private readonly Queue<byte[]> buffer = new Queue<byte[]>();
 
 		/// <summary>
 		/// Creates a new FleetManagerClient

@@ -1,4 +1,5 @@
-﻿using FleetClients.UI.Message;
+﻿using FleetClients.Core;
+using FleetClients.UI.Message;
 using GACore;
 using GACore.Command;
 using GACore.Utility;
@@ -6,7 +7,6 @@ using Microsoft.Win32;
 using System;
 using System.Windows;
 using System.Windows.Input;
-using FleetClients.Core;
 
 namespace FleetClients.UI.ViewModel
 {

@@ -1,8 +1,5 @@
 ﻿using FleetClients.Core.FleetManagerServiceReference;
-using System;
-using System.ComponentModel;
 using System.Net;
-using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
 using SN = System.Net;
@@ -10,61 +7,44 @@ using SN = System.Net;
 namespace FleetClients.Core
 {
 	/// <summary>
-	/// Lightweight object to couple an ipAddress and a pose.
+	/// Lightweight object to couple an ipAddress and a pose as a template for a virtual vehicle.
 	/// </summary>
 	[DataContract]
-	public class AGVTemplate : INotifyPropertyChanged
+	public class AGVTemplate 
 	{
-		private string ipV4string = "192.168.0.100";
-
-		private string poseDataString = "0,0,0";
-
+		/// <summary>
+		/// IP address in ipV4 format e.g. 192.168.0.100
+		/// </summary>
 		[DataMember]
-		public string IPV4String
-		{
-			get { return ipV4string; }
-			set
-			{
-				if (value == null) value = string.Empty;
+		public string IPV4String { get; set; } = "192.168.0.100";
 
-				if (ipV4string != value)
-				{
-					ipV4string = value;
-					OnNotifyPropertyChanged();
-				}
-			}
-		}
+		/// <summary>
+		/// Pose in x,y,heading format e.g. 0,0,0
+		/// </summary>
+		[DataMember]
+		public string PoseDataString { get; set; } = "0,0,0";
 
+		/// <summary>
+		/// Gets IPv4 address 
+		/// </summary>
+		/// <returns>IPAddress</returns>
 		public IPAddress GetIPV4Address()
 			=> (SN.IPAddress.TryParse(IPV4String, out IPAddress parsed)) ? parsed : null;
 
-		[DataMember]
-		public string PoseDataString
-		{
-			get { return poseDataString; }
-			set
-			{
-				if (poseDataString != value)
-				{
-					poseDataString = value;
-					OnNotifyPropertyChanged();
-				}
-			}
-		}
-
+		/// <summary>
+		/// Converts PoseDataString to PoseData. 
+		/// </summary>
+		/// <returns>Parsed PoseData</returns>
 		public PoseData ToPoseData()
 		{
 			PoseDataFactory.TryParseString(PoseDataString, out PoseData poseData);
 			return poseData;
 		}
 
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		private void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-		}
-
+		/// <summary>
+		/// Provides a short summary in the form IPAddress, Pose.
+		/// </summary>
+		/// <returns>Summary string</returns>
 		public string ToSummaryString() => string.Format("IPAddress:{0} Pose:{1}", IPV4String, PoseDataString);
 
 		public override string ToString() => ToSummaryString();

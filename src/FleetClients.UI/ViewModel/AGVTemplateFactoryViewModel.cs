@@ -1,10 +1,10 @@
-﻿using GACore;
+﻿using FleetClients.Core;
+using GACore;
 using GACore.Command;
 using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Input;
-using FleetClients.Core;
 
 namespace FleetClients.UI.ViewModel
 {

@@ -10,9 +10,7 @@ namespace FleetClients.Core
 
 		public FleetTemplateManager(IFleetManagerClient client)
 		{
-			if (client == null) throw new ArgumentNullException("client");
-
-			FleetManagerClient = client;
+			FleetManagerClient = client ?? throw new ArgumentNullException("client");
 		}
 
 		public void Populate() => FleetTemplate.Populate(FleetManagerClient);

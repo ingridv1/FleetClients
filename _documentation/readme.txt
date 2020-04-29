@@ -7,6 +7,9 @@ ______ _           _   _____ _ _            _
                                                               
 * Read the documentation here:
 https://guidanceautomation.github.io/FleetClients/
+                
+* Source available here:                                              
+https://github.com/GuidanceAutomation/FleetClients
 
 Copyright Guidance Automation Ltd 2020
 https://www.guidanceautomation.com/

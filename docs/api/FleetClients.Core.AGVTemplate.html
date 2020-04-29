@@ -73,7 +73,7 @@
   
   <h1 id="FleetClients_Core_AGVTemplate" data-uid="FleetClients.Core.AGVTemplate" class="text-break">Class AGVTemplate
   </h1>
-  <div class="markdown level0 summary"><p>Lightweight object to couple an ipAddress and a pose.</p>
+  <div class="markdown level0 summary"><p>Lightweight object to couple an ipAddress and a pose as a template for a virtual vehicle.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,16 +81,12 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AGVTemplate</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FleetClients.Core.html">FleetClients.Core</a></h6>
   <h6><strong>Assembly</strong>: FleetClients.Core.dll</h6>
   <h5 id="FleetClients_Core_AGVTemplate_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DataContract]
-public class AGVTemplate : INotifyPropertyChanged</code></pre>
+public class AGVTemplate</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -98,7 +94,8 @@ public class AGVTemplate : INotifyPropertyChanged</code></pre>
   
   <a id="FleetClients_Core_AGVTemplate_IPV4String_" data-uid="FleetClients.Core.AGVTemplate.IPV4String*"></a>
   <h4 id="FleetClients_Core_AGVTemplate_IPV4String" data-uid="FleetClients.Core.AGVTemplate.IPV4String">IPV4String</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>IP address in ipV4 format e.g. 192.168.0.100</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -124,7 +121,8 @@ public string IPV4String { get; set; }</code></pre>
   
   <a id="FleetClients_Core_AGVTemplate_PoseDataString_" data-uid="FleetClients.Core.AGVTemplate.PoseDataString*"></a>
   <h4 id="FleetClients_Core_AGVTemplate_PoseDataString" data-uid="FleetClients.Core.AGVTemplate.PoseDataString">PoseDataString</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pose in x,y,heading format e.g. 0,0,0</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +150,8 @@ public string PoseDataString { get; set; }</code></pre>
   
   <a id="FleetClients_Core_AGVTemplate_GetIPV4Address_" data-uid="FleetClients.Core.AGVTemplate.GetIPV4Address*"></a>
   <h4 id="FleetClients_Core_AGVTemplate_GetIPV4Address" data-uid="FleetClients.Core.AGVTemplate.GetIPV4Address">GetIPV4Address()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets IPv4 address</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -169,7 +168,8 @@ public string PoseDataString { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
-        <td></td>
+        <td><p>IPAddress</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -177,7 +177,8 @@ public string PoseDataString { get; set; }</code></pre>
   
   <a id="FleetClients_Core_AGVTemplate_ToPoseData_" data-uid="FleetClients.Core.AGVTemplate.ToPoseData*"></a>
   <h4 id="FleetClients_Core_AGVTemplate_ToPoseData" data-uid="FleetClients.Core.AGVTemplate.ToPoseData">ToPoseData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts PoseDataString to PoseData.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -194,7 +195,8 @@ public string PoseDataString { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.PoseData.html">PoseData</a></td>
-        <td></td>
+        <td><p>Parsed PoseData</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -229,7 +231,8 @@ public string PoseDataString { get; set; }</code></pre>
   
   <a id="FleetClients_Core_AGVTemplate_ToSummaryString_" data-uid="FleetClients.Core.AGVTemplate.ToSummaryString*"></a>
   <h4 id="FleetClients_Core_AGVTemplate_ToSummaryString" data-uid="FleetClients.Core.AGVTemplate.ToSummaryString">ToSummaryString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Provides a short summary in the form IPAddress, Pose.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -246,40 +249,11 @@ public string PoseDataString { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Summary string</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="FleetClients_Core_AGVTemplate_PropertyChanged" data-uid="FleetClients.Core.AGVTemplate.PropertyChanged">PropertyChanged</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ComponentModel.PropertyChangedEventHandler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
-  </div>
 </article>
           </div>
           

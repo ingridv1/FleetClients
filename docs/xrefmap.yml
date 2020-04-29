@@ -52,12 +52,6 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.AGVTemplate.PoseDataString
   nameWithType: AGVTemplate.PoseDataString
-- uid: FleetClients.Core.AGVTemplate.PropertyChanged
-  name: PropertyChanged
-  href: api/FleetClients.Core.AGVTemplate.html#FleetClients_Core_AGVTemplate_PropertyChanged
-  commentId: E:FleetClients.Core.AGVTemplate.PropertyChanged
-  fullName: FleetClients.Core.AGVTemplate.PropertyChanged
-  nameWithType: AGVTemplate.PropertyChanged
 - uid: FleetClients.Core.AGVTemplate.ToPoseData
   name: ToPoseData()
   href: api/FleetClients.Core.AGVTemplate.html#FleetClients_Core_AGVTemplate_ToPoseData
@@ -2179,19 +2173,6 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.PoseDataFactory.ParseString
   nameWithType: PoseDataFactory.ParseString
-- uid: FleetClients.Core.PoseDataFactory.PoseStringRegex
-  name: PoseStringRegex
-  href: api/FleetClients.Core.PoseDataFactory.html#FleetClients_Core_PoseDataFactory_PoseStringRegex
-  commentId: P:FleetClients.Core.PoseDataFactory.PoseStringRegex
-  fullName: FleetClients.Core.PoseDataFactory.PoseStringRegex
-  nameWithType: PoseDataFactory.PoseStringRegex
-- uid: FleetClients.Core.PoseDataFactory.PoseStringRegex*
-  name: PoseStringRegex
-  href: api/FleetClients.Core.PoseDataFactory.html#FleetClients_Core_PoseDataFactory_PoseStringRegex_
-  commentId: Overload:FleetClients.Core.PoseDataFactory.PoseStringRegex
-  isSpec: "True"
-  fullName: FleetClients.Core.PoseDataFactory.PoseStringRegex
-  nameWithType: PoseDataFactory.PoseStringRegex
 - uid: FleetClients.Core.PoseDataFactory.TryParseString(System.String,FleetClients.Core.FleetManagerServiceReference.PoseData@)
   name: TryParseString(String, out PoseData)
   href: api/FleetClients.Core.PoseDataFactory.html#FleetClients_Core_PoseDataFactory_TryParseString_System_String_FleetClients_Core_FleetManagerServiceReference_PoseData__

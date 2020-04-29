@@ -4,10 +4,18 @@ using System.Net;
 
 namespace FleetClients.Core
 {
+	/// <summary>
+	/// Wraps GenericMailbox and provides a container tightly coupling an IP Address and an IKingpinState
+	/// </summary>
 	public class KingpinStateMailbox : GenericMailbox<IPAddress, IKingpinState>
 	{
-		public KingpinStateMailbox(IPAddress ipAddress, IKingpinState kingpingState)
-			: base(ipAddress, kingpingState)
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="ipAddress">Kingpin hardware IP address</param>
+		/// <param name="kingpinState">Current IKingpinState</param>
+		public KingpinStateMailbox(IPAddress ipAddress, IKingpinState kingpinState)
+			: base(ipAddress, kingpinState)
 		{
 		}
 	}

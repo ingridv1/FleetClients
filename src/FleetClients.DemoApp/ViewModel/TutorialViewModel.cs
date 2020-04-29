@@ -1,4 +1,5 @@
-﻿using FleetClients.DemoApp.Model;
+﻿using FleetClients.Core;
+using FleetClients.DemoApp.Model;
 using GACore;
 using GACore.Command;
 using Markdig;
@@ -6,7 +7,6 @@ using System;
 using System.Net;
 using System.Windows.Controls;
 using System.Windows.Input;
-using FleetClients.Core;
 
 namespace FleetClients.DemoApp.ViewModel
 {

@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace FleetClients.Core
-   </title>
+    <title>Release Notes </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace FleetClients.Core
-   ">
+    <meta name="title" content="Release Notes ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -68,44 +66,77 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="FleetClients.Core">
-  
-  <h1 id="FleetClients_Core" data-uid="FleetClients.Core" class="text-break">Namespace FleetClients.Core
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="FleetClients.Core.AGVTemplate.html">AGVTemplate</a></h4>
-      <section><p>Lightweight object to couple an ipAddress and a pose as a template for a virtual vehicle.</p>
-</section>
-      <h4><a class="xref" href="FleetClients.Core.ClientFactory.html">ClientFactory</a></h4>
-      <section><p>Factory class for creating IFleetManagerClient instances</p>
-</section>
-      <h4><a class="xref" href="FleetClients.Core.EndpointSettings_ExtensionMethods.html">EndpointSettings_ExtensionMethods</a></h4>
-      <section></section>
-      <h4><a class="xref" href="FleetClients.Core.FleetManagerServiceCallback.html">FleetManagerServiceCallback</a></h4>
-      <section></section>
-      <h4><a class="xref" href="FleetClients.Core.FleetTemplate.html">FleetTemplate</a></h4>
-      <section><p>A template for a virtual vehicle fleet. Used to quickly populate the fleet manager with pre-fabricated fleets of AGVs at set poses.</p>
-</section>
-      <h4><a class="xref" href="FleetClients.Core.FleetTemplateManager.html">FleetTemplateManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="FleetClients.Core.JsonFactory.html">JsonFactory</a></h4>
-      <section><p>Factory class for json maniupulating json.</p>
-</section>
-      <h4><a class="xref" href="FleetClients.Core.KingpinStateMailbox.html">KingpinStateMailbox</a></h4>
-      <section><p>Wraps GenericMailbox and provides a container tightly coupling an IP Address and an IKingpinState</p>
-</section>
-      <h4><a class="xref" href="FleetClients.Core.PoseDataFactory.html">PoseDataFactory</a></h4>
-      <section><p>Factory class for parsing pose strings.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="FleetClients.Core.IFleetManagerClient.html">IFleetManagerClient</a></h4>
-      <section><p>For interacting with the fleet manager remotely.</p>
-</section>
+            <article class="content wrap" id="_content" data-uid="">
+
+<pre><code>______ _           _   _____ _ _            _
+|  ___| |         | | /  __ \ (_)          | |
+| |_  | | ___  ___| |_| /  \/ |_  ___ _ __ | |_ ___
+|  _| | |/ _ \/ _ \ __| |   | | |/ _ \ '_ \| __/ __|
+| |   | |  __/  __/ |_| \__/\ | |  __/ | | | |_\__ \
+\_|   |_|\___|\___|\__|\____/_|_|\___|_| |_|\__|___/
+</code></pre>
+<ul>
+<li><a href="https://github.com/GuidanceAutomation/FleetClients">https://github.com/GuidanceAutomation/FleetClients</a></li>
+<li><a href="https://www.guidanceautomation.com/">https://www.guidanceautomation.com/</a></li>
+</ul>
+<h1 id="release-notes">Release Notes</h1>
+<h2 id="v200-20th-feb-20">v2.0.0 (20th Feb 20)</h2>
+<ul>
+<li>Major refactor to MVVM</li>
+<li>Removes FleetClients.Controls</li>
+<li>Adds FleetClients.UI for MVVM implementation</li>
+<li>Adds FleetClients.DemoApp to demonstrate MVVM controls</li>
+<li>FleetTemplateManger for quickly creating virtual fleets from a file.</li>
+</ul>
+<h2 id="v140-14th-oct-19">v1.4.0 (14th Oct 19)</h2>
+<ul>
+<li>Adds fleet template support
+** Serialize fleet templates to json
+** Create fleet templates from json</li>
+</ul>
+<h2 id="v132-16th-sept-19">v1.3.2 (16th Sept 19)</h2>
+<ul>
+<li>Minor refactor to use GenericMailbox from GACore</li>
+</ul>
+<h2 id="v131-13th-sept-19">v1.3.1 (13th Sept 19)</h2>
+<ul>
+<li>Moved the IsConnectedControl out to BaseClients.Controls.</li>
+<li>All assemblies .net 4.7.2 Framework.</li>
+</ul>
+<h2 id="v130-11th-sept-19">v1.3.0 (11th Sept 19)</h2>
+<ul>
+<li>Updates demo app to configurable IP address.</li>
+<li>Added descriptions for demo app windows.</li>
+</ul>
+<h2 id="v121-21st-aug-19">v1.2.1 (21st Aug 19)</h2>
+<ul>
+<li>Missing dependencies in nuspec.</li>
+</ul>
+<h2 id="v120-21st-aug-19">v1.2.0 (21st Aug 19)</h2>
+<ul>
+<li>Refactored base client support.</li>
+<li>Fleet manager client control.</li>
+<li>v7.x.x scheduler support.</li>
+</ul>
+<h2 id="v112-3rd-jul-19">v1.1.2 (3rd Jul 19)</h2>
+<ul>
+<li>Ex2 waypoint support for v6.x.x schedulers.</li>
+</ul>
+<h2 id="v111-17th-apr-19">v1.1.1 (17th Apr 19)</h2>
+<ul>
+<li>Scheduler v5.8.x support.</li>
+</ul>
+<h2 id="v110-14th-nov-18">v1.1.0 (14th Nov 18)</h2>
+<ul>
+<li>Enable /disable individual AGVs.</li>
+</ul>
+<h2 id="v100-17th-aug-18">v1.0.0 (17th Aug 18)</h2>
+<ul>
+<li>Initial release.</li>
+</ul>
+<ul>
+<li>Base functionality.</li>
+</ul>
 </article>
           </div>
           

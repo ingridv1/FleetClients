@@ -1,8 +1,8 @@
-﻿using FleetClients.UI.ViewModel;
+﻿using FleetClients.Core;
+using FleetClients.UI.ViewModel;
 using GACore;
 using GACore.NLog;
 using NLog;
-using FleetClients.Core;
 using System.Windows;
 
 namespace FleetClients.UI.Service

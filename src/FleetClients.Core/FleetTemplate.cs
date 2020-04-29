@@ -1,5 +1,4 @@
-﻿using BaseClients;
-using GACore.Architecture;
+﻿using GACore.Architecture;
 using MoreLinq;
 using System;
 using System.Collections.Generic;
@@ -8,43 +7,54 @@ using System.Runtime.Serialization;
 
 namespace FleetClients.Core
 {
+	/// <summary>
+	/// A template for a virtual vehicle fleet. Used to quickly populate the fleet manager with pre-fabricated fleets of AGVs at set poses.
+	/// </summary>
 	[DataContract]
 	public class FleetTemplate : IModelCollection<AGVTemplate>
 	{
 		private readonly object lockObject = new object();
 
-		private List<AGVTemplate> agvTemplates = new List<AGVTemplate>();
+		private readonly List<AGVTemplate> agvTemplates = new List<AGVTemplate>();
 
+		/// <summary>
+		/// Occurs whenever an AGV template is added to the fleet template.
+		/// </summary>
 		public event Action<AGVTemplate> Added;
 
+		/// <summary>
+		/// Occurs whenever an AGV template is removed from the fleet template.
+		/// </summary>
 		public event Action<AGVTemplate> Removed;
 
 		private void OnRemoved(AGVTemplate agvTemplate)
 		{
-			if (Removed != null)
-			{
-				foreach (Action<AGVTemplate> handler in Removed.GetInvocationList())
-				{
-					handler.BeginInvoke(agvTemplate, null, null);
-				}
-			}
+			Action<AGVTemplate> handlers = Removed;
+
+			handlers?
+				.GetInvocationList()
+				.Cast<Action<AGVTemplate>>()
+				.ForEach(e => e.BeginInvoke(agvTemplate, null, null));
 		}
 
 		private void OnAdded(AGVTemplate agvTemplate)
 		{
-			if (Added != null)
-			{
-				foreach (Action<AGVTemplate> handler in Added.GetInvocationList())
-				{
-					handler.BeginInvoke(agvTemplate, null, null);
-				}
-			}
+			Action<AGVTemplate> handlers = Added;
+
+			handlers?
+				.GetInvocationList()
+				.Cast<Action<AGVTemplate>>()
+				.ForEach(e => e.BeginInvoke(agvTemplate, null, null));
 		}
 
 		public FleetTemplate()
 		{
 		}
 
+		/// <summary>
+		/// Attempts to create virtual vehicles in the fleet manager for every AGV template in the collection. 
+		/// </summary>
+		/// <param name="fleetManagerClient">Fleet manager client to use</param>
 		public void Populate(IFleetManagerClient fleetManagerClient)
 		{
 			if (fleetManagerClient == null) throw new ArgumentNullException("fleetManagerClient");
@@ -53,11 +63,14 @@ namespace FleetClients.Core
 			{
 				foreach (AGVTemplate agvTemplate in AGVTemplates.ToList())
 				{
-					ServiceOperationResult result = fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out bool success);
+					_ = fleetManagerClient.TryCreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData(), out _);
 				}
 			}
 		}
 
+		/// <summary>
+		/// Removes all AGV templates from the fleet template.
+		/// </summary>
 		public void Clear()
 		{
 			lock (lockObject)
@@ -71,6 +84,10 @@ namespace FleetClients.Core
 			}
 		}
 
+		/// <summary>
+		/// Removes an AGV template from the fleet template
+		/// </summary>
+		/// <param name="agvTemplate">AGV template to remove</param>
 		public void Remove(AGVTemplate agvTemplate)
 		{
 			lock (lockObject)
@@ -80,6 +97,9 @@ namespace FleetClients.Core
 			}
 		}
 
+		/// <summary>
+		/// Enumerable collection of AGV templates
+		/// </summary>
 		[DataMember]
 		public IEnumerable<AGVTemplate> AGVTemplates
 		{
@@ -95,6 +115,10 @@ namespace FleetClients.Core
 			}
 		}
 
+		/// <summary>
+		/// Adds a new AGV template to the fleet template.
+		/// </summary>
+		/// <param name="agvTemplate">AGV template to add</param>
 		public void Add(AGVTemplate agvTemplate)
 		{
 			if (agvTemplate == null) throw new ArgumentNullException("agvTemplate");
@@ -106,6 +130,10 @@ namespace FleetClients.Core
 			}
 		}
 
+		/// <summary>
+		/// Returns all AGV templates in the fleet template.
+		/// </summary>
+		/// <returns>Enumerable of AGV templates</returns>
 		public IEnumerable<AGVTemplate> GetModels() => agvTemplates.ToList();
 	}
 }
