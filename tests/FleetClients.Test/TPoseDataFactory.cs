@@ -1,7 +1,7 @@
-﻿using FleetClients.Core.FleetManagerServiceReference;
+﻿using FleetClients.Core;
+using FleetClients.Core.FleetManagerServiceReference;
 using NUnit.Framework;
 using System.Collections.Generic;
-using FleetClients.Core;
 
 namespace FleetClients.Test
 {

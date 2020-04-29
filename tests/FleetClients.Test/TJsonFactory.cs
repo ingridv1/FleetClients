@@ -1,6 +1,6 @@
-﻿using NUnit.Framework;
+﻿using FleetClients.Core;
+using NUnit.Framework;
 using System.IO;
-using FleetClients.Core;
 
 namespace FleetClients.Test
 {

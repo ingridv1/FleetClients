@@ -1,8 +1,8 @@
 ﻿using BaseClients;
+using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
 using NUnit.Framework;
 using System.Net;
-using FleetClients.Core;
 
 namespace FleetClients.Test
 {

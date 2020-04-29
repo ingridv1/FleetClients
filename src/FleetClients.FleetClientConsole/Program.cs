@@ -2,6 +2,7 @@
 using CommandLine;
 using FleetClients.FleetClientConsole.Options;
 using System;
+using FleetClients.Core;
 
 namespace FleetClients.FleetClientConsole
 {

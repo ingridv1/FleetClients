@@ -3,7 +3,7 @@ using FleetClients.Core.FleetManagerServiceReference;
 using System;
 
 namespace FleetClients.Core
-{ 
+{
 	internal static class ServiceOperationResultFactory
 	{
 		public static ServiceOperationResult FromFleetManagerServiceCallData(ServiceCallData serviceCallData)

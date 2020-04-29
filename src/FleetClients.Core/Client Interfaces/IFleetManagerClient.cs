@@ -7,6 +7,9 @@ using System.Xml.Linq;
 
 namespace FleetClients.Core
 {
+	/// <summary>
+	/// For interacting with the fleet manager remotely.
+	/// </summary>
 	public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
 	{
 		FleetState FleetState { get; }
