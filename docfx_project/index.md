@@ -1,6 +1,6 @@
 # Welcome to the **FleetClients Homepage**.
 
-Fleet clients allows remote manipulation of the fleet manager. 
+Fleet clients allows remote manipulation of the fleet manager.
 
 Here you can find:
 
@@ -29,6 +29,14 @@ Remote fleet manager manipulation.
 * [Documentation](https://guidanceautomation.github.io/FleetClients/)
 * [Github](https://github.com/GuidanceAutomation/FleetClients)
 * [Nuget](https://www.nuget.org/packages/FleetClients/)
+
+### Scheduling Clients
+
+Job creation, task tracking and map support.
+
+* [Documentation](https://guidanceautomation.github.io/SchedulingClients/)
+* [Github](https://github.com/GuidanceAutomation/SchedulingClients)
+* [Nuget](https://www.nuget.org/packages/SchedulingClients/)
 
 <div style="text-align: right">
   <img src="images/incaartBW.jpg" alt="AGV image" width="200"/>
