@@ -1,11 +1,9 @@
-﻿using BaseClients;
+﻿using BaseClients.Core;
 using CommandLine;
 using FleetClients.Core;
 using GAAPICommon.Architecture;
-using GACore;
-using System;
 using GAAPICommon.Core.Dtos;
-using BaseClients.Core;
+using System;
 
 namespace FleetClients.FleetClientConsole.Options
 {
