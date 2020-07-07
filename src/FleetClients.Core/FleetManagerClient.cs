@@ -1,5 +1,9 @@
 ﻿using BaseClients;
+using BaseClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
+using GAAPICommon.Core;
+using GAAPICommon.Core.Dtos;
 using GACore;
 using GACore.Architecture;
 using GACore.Extensions;
@@ -12,7 +16,7 @@ using System.Xml.Linq;
 
 namespace FleetClients.Core
 {
-	internal class FleetManagerClient : AbstractCallbackClient<IFleetManagerService>, IFleetManagerClient
+	internal class FleetManagerClient : AbstractCallbackClient<IFleetManagerService_PublicAPI_v2_0>, IFleetManagerClient
 	{
 		private readonly FleetManagerServiceCallback callback = new FleetManagerServiceCallback();
 
@@ -172,25 +176,24 @@ namespace FleetClients.Core
 			}
 		}
 
-		/// <summary>
-		/// Requests fleet manager freeze
-		/// </summary>
-		/// <param name="success">True if frozen</param>
-		/// <returns>ServiceOperationResult</returns>
-		public ServiceOperationResult TryRequestFreeze(out bool success)
+		public IServiceCallResult RequestFreeze()
 		{
-			Logger.Info("TryRequestFreeze()");
+			Logger.Info("RequestFreeze()");
 
 			try
 			{
-				var result = RequestFreeze();
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.RequestFreeze();
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
@@ -212,175 +215,180 @@ namespace FleetClients.Core
 			}
 		}
 
-		/// <summary>
-		/// Get xDocument of kingpin description
-		/// </summary>
-		/// <param name="ipAddress">IPAddress</param>
-		/// <param name="xDocument">kingpin.xml xDocument</param>
-		/// <returns>ServiceOperationResult</returns>
-		public ServiceOperationResult TryGetKingpinDescription(IPAddress ipAddress, out XDocument xDocument)
+		public IServiceCallResult<XElement> TryGetKingpinDescription(IPAddress ipAddress)
 		{
-			Logger.Info("TryGetKingpinDescription()");
+			Logger.Info("GetKingpinDescription()");
 
 			try
 			{
-				var result = GetKingpinDescription(ipAddress);
-				XElement xElement = result.Item1;
-				xDocument = new XDocument(xElement);
-
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto<XElement> result = channel.GetKingpinDescription(ipAddress);
+					channelFactory.Close();
+					
+					return result;					
+				}	
 			}
 			catch (Exception ex)
 			{
-				xDocument = null;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory<XElement>.FromClientException(ex);
 			}
 		}
 
-		/// <summary>
-		/// Commit extended waypoints to a kingpin
-		/// </summary>
-		/// <returns>ServiceOperationResult</returns>
-		public ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success)
-		{
-			Logger.Info("TryCommitExtendedWaypoints()");
 
-			try
-			{
-				Tuple<bool, ServiceCallData> result = CommitEx2Waypoints(ipAddress, instructionId, ex2Waypoints);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
-			}
-			catch (Exception ex)
-			{
-				success = false;
-				return HandleClientException(ex);
-			}
-		}
-
-		/// <summary>
-		/// Requests fleet manager unfreeze
-		/// </summary>
-		/// <param name="success">True if unfrozen</param>
-		/// <returns>ServiceOperationResult</returns>
-		public ServiceOperationResult TryRequestUnfreeze(out bool success)
+		public IServiceCallResult RequestUnfreeze()
 		{
 			Logger.Info("TryRequestUnfreeze()");
 
 			try
 			{
-				var result = RequestUnfreeze();
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.RequestUnfreeze();
+					channelFactory.Close();
+
+					return result;
+				}
+
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory<XElement>.FromClientException(ex); 
 			}
 		}
 
-		public ServiceOperationResult TryCreateVirtualVehicle(IPAddress ipAddress, PoseData pose, out bool success)
+
+
+		public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseData pose)
 		{
 			Logger.Info("TryCreateVirtualVehicle()");
 
 			try
 			{
-				var result = CreateVirtualVehicle(ipAddress, pose);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.CreateVirtualVehicle(ipAddress, pose);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
-		public ServiceOperationResult TryRemoveVehicle(IPAddress ipAddress, out bool success)
+		public IServiceCallResult RemoveVehicle(IPAddress ipAddress)
 		{
-			Logger.Info("TryRemoveVehicle()");
+			Logger.Info("RemoveVehicle()");
 
 			try
 			{
-				var result = RemoveVehicle(ipAddress);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.RemoveVehicle(ipAddress);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
-		public ServiceOperationResult TrySetPose(IPAddress ipAddress, PoseData pose, out bool success)
+		public IServiceCallResult SetPose(IPAddress ipAddress, PoseData pose)
 		{
-			Logger.Info("TrySetPose()");
+			Logger.Info("SetPose()");
 
 			try
 			{
-				var result = SetPose(ipAddress, pose);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.SetPose(ipAddress, pose);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
-		public ServiceOperationResult TryResetKingpin(IPAddress ipAddress, out bool success)
+		public IServiceCallResult ResetKingpin(IPAddress ipAddress)
 		{
-			Logger.Info("TryResetKingpin()");
+			Logger.Info("ResetKingpin()");
 
 			try
 			{
-				var result = ResetKingpin(ipAddress);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.ResetKingpin(ipAddress);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
-		public ServiceOperationResult TrySetFleetState(VehicleControllerState controllerState, out bool success)
+		public IServiceCallResult SetFleetState(VehicleControllerState controllerState)
 		{
-			Logger.Info("TrySetFleetState");
+			Logger.Info("SetFleetState");
 
 			try
 			{
-				var result = SetFleetState(controllerState);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.SetFleetState(controllerState);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
 
-		public ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success)
+		public IServiceCallResult SetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState)
 		{
-			Logger.Info("TrySetKingpinState");
+			Logger.Info("SetKingpinState");
 
 			try
 			{
-				var result = SetKingpinState(ipAddress, controllerState);
-				success = result.Item1;
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto result = channel.SetKingpinState(ipAddress, controllerState);
+					channelFactory.Close();
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				success = false;
-				return HandleClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 		}
+
+
+
 
 		protected override void Dispose(bool isDisposing)
 		{
@@ -416,41 +424,8 @@ namespace FleetClients.Core
 			return result;
 		}
 
-		private Tuple<XElement, ServiceCallData> GetKingpinDescription(IPAddress ipAddress)
-		{
-			Logger.Debug("GetKingpinDescription()");
 
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
-			Tuple<XElement, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.GetKingpinDescription(ipAddress);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> RequestFreeze()
-		{
-			Logger.Debug("RequestFreeze()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.RequestFreeze();
-				channelFactory.Close();
-			}
-
-			return result;
-		}
 
 		private Tuple<bool, ServiceCallData> CommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints)
 		{
@@ -470,131 +445,11 @@ namespace FleetClients.Core
 			return result;
 		}
 
-		private Tuple<bool, ServiceCallData> RequestUnfreeze()
-		{
-			Logger.Debug("RequestUnfreeze()");
 
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
 
-			Tuple<bool, ServiceCallData> result;
 
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.RequestUnfreeze();
-				channelFactory.Close();
-			}
 
-			return result;
-		}
 
-		private Tuple<bool, ServiceCallData> CreateVirtualVehicle(IPAddress ipAddress, PoseData pose)
-		{
-			Logger.Debug("CreateVirtualVehicle()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.CreateVirtualVehicle(ipAddress, pose);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> RemoveVehicle(IPAddress ipAddress)
-		{
-			Logger.Debug("RemoveVehicle()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.RemoveVehicle(ipAddress);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> SetPose(IPAddress ipAddress, PoseData pose)
-		{
-			Logger.Debug("SetPose()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.SetPose(ipAddress, pose);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> ResetKingpin(IPAddress ipAddress)
-		{
-			Logger.Debug("ResetKingpin()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.ResetKingpin(ipAddress);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> SetFleetState(VehicleControllerState controllerState)
-		{
-			Logger.Debug("SetFleetState()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.SetFleetState(controllerState);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-		private Tuple<bool, ServiceCallData> SetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState)
-		{
-			Logger.Debug("SetKingpinState()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.SetKingpinState(ipAddress, controllerState);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
 
 		public IEnumerable<KingpinStateMailbox> GetModels() => kingpinStateMailboxes.ToList();
 	}

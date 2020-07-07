@@ -1,515 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Net.Sockets" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:complexType name="ServiceCallData">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ServiceCode" type="tns:ServiceCode" />
-      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ServiceCallData" nillable="true" type="tns:ServiceCallData" />
-  <xs:simpleType name="ServiceCode">
+  <xs:simpleType name="AddressFamily">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="NOERROR" />
-      <xs:enumeration value="SERVICENOTCONFIGURED" />
-      <xs:enumeration value="CLIENTEXCEPTION" />
-      <xs:enumeration value="SERVICEUNAVAILABLE" />
-      <xs:enumeration value="SERVICENOTIMPLEMENTED" />
-      <xs:enumeration value="INTERNALERROR" />
-      <xs:enumeration value="GETSEMVERFAILED" />
-      <xs:enumeration value="COMMITJOBFAILED">
+      <xs:enumeration value="Unknown">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1001</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEJOBFAILED">
+      <xs:enumeration value="Unspecified">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1002</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEUNORDEREDLISTTASKFAILED">
+      <xs:enumeration value="Unix">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1003</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEATOMICMOVELISTTASKFAILED">
+      <xs:enumeration value="InterNetwork">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1004</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEORDEREDLISTTASKFAILED">
+      <xs:enumeration value="ImpLink">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1005</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATESERVICINGTASKFAILED">
+      <xs:enumeration value="Pup">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1006</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="NOTACCEPTINGNEWJOBS">
+      <xs:enumeration value="Chaos">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1007</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="DIRECTIVENOTALLOWED">
+      <xs:enumeration value="NS">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1008</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="INVALIDNODETASKID">
+      <xs:enumeration value="Ipx">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1009</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATESLEEPINGTASKFAILED">
+      <xs:enumeration value="Iso">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1010</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEGOTONODETASKFAILED">
+      <xs:enumeration value="Osi">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1011</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEATOMICMOVETASKFAILED">
+      <xs:enumeration value="Ecma">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1012</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="BEGINEDITINGJOBFAILED">
+      <xs:enumeration value="DataKit">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1013</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="FINISHEDITINGJOBFAILED">
+      <xs:enumeration value="Ccitt">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1014</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="BEGINEDITINGTASKFAILED">
+      <xs:enumeration value="Sna">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1015</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="FINISHEDITINGTASKFAILED">
+      <xs:enumeration value="DecNet">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1016</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATEAWAITINGTASKFAILED">
+      <xs:enumeration value="DataLink">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1017</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="CREATECHARGETASKFAILED">
+      <xs:enumeration value="Lat">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1018</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="ABORTALLJOBSFAILED">
+      <xs:enumeration value="HyperChannel">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2001</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="ABORTALLJOBSFORAGENTFAILED">
+      <xs:enumeration value="AppleTalk">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2002</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="ABORTJOBFAILED">
+      <xs:enumeration value="NetBios">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2003</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETACTIVEJOBSFORAGENTFAILED">
+      <xs:enumeration value="VoiceView">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2004</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="ABORTTASKFAILED">
+      <xs:enumeration value="FireFox">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2005</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="RESOLVEFAULTEDJOBFAILED">
+      <xs:enumeration value="Banyan">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2006</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="RESOLVEFAULTEDTASKFAILED">
+      <xs:enumeration value="Atm">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2007</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETJOBSTATEFAILED">
+      <xs:enumeration value="InterNetworkV6">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3001</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="INVALIDJOBID">
+      <xs:enumeration value="Cluster">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3002</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="INVALIDTASKID">
+      <xs:enumeration value="Ieee12844">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3003</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETALLMOVEDATAFAILED">
+      <xs:enumeration value="Irda">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4001</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETALLNODEDATAFAILED">
+      <xs:enumeration value="NetworkDesigners">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4002</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="GETMAPPINGKEYCARDSIGNATUREFAILED">
+      <xs:enumeration value="Max">
         <xs:annotation>
           <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4003</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETRAJECTORYFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4004</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="INVALIDMOVEID">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4005</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETOCCUPYINGMANDATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4006</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CLEAROCCUPYINGMANDATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4007</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CONTAINSINVALIDMAPITEMIDS">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4008</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CONTAINSINVALIDTIMEOUT">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4009</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="OCCUPATIONALREADYINPROGRESS">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4010</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETOCCUPYINGMANDATEPROGRESSDATAFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4011</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETOUTSTANDINGSERVICEREQUESTSFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETSERVICECOMPLETEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETALLAGENTDATAFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETALLAGENTSINLIFETIMESTATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETAGENTLIFETIMESTATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6003</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="COMMITINSTRUCTIONFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="REQUESTFREEZEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="REQUESTUNFREEZEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7003</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="INCORRECTNUMBEROFBYTES">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7004</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="COMMITEXTENDEDWAYPOINTSFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7005</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETKINGPINDESCRIPTIONFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7008</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CREATEVIRTUALVEHICLEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7009</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="REMOVEVEHICLEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7010</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETPOSEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7011</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="RESETKINGPINFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7012</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ENABLEALLVEHICLESFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7013</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DISABLEALLVEHICLESFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7014</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="INVALIDIPADDRESS">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7015</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ENABLEVEHICLEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7016</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DISABLEVEHICLEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7017</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETFLEETSTATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7018</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SETKINGPINSTATEFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7019</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DOWNLOADFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="UPLOADFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETFILENAMESFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8003</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="INVALIDAGENTID">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="INVALIDSTATECASTVARIABLEALIAS">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="STATECASTVARIABLEDATATYPEMISMATCH">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9003</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETSCHEDULERVERSIONFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10001</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETPLUGINVERSIONSFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10002</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="GETOUTSTANDINGAGENTREQUESTSFAILED">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11001</EnumerationValue>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:element name="ServiceCode" nillable="true" type="tns:ServiceCode" />
+  <xs:element name="AddressFamily" nillable="true" type="tns:AddressFamily" />
 </xs:schema>
