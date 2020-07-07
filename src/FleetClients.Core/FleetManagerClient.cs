@@ -84,12 +84,33 @@ namespace FleetClients.Core
 			Dispose(false);
 		}
 
+		public IServiceCallResult<XElement> GetKingpinDescription(IPAddress ipAddress)
+		{
+			Logger.Info("GetKingpinDescription()");
+
+			try
+			{
+				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
+				{
+					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
+					ServiceCallResultDto<XElement> result = channel.GetKingpinDescription(ipAddress);
+					channelFactory.Close();
+
+					return result;
+				}
+			}
+			catch (Exception ex)
+			{
+				return ServiceCallResultFactory<XElement>.FromClientException(ex);
+			}
+		}
+
 		protected override void HeartbeatThread()
 		{
 			Logger.Debug("HeartbeatThread()");
 
-			ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory();
-			IFleetManagerService fleetManagerService = channelFactory.CreateChannel();
+			ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory();
+			IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
 
 			bool? exceptionCaught;
 
@@ -100,7 +121,7 @@ namespace FleetClients.Core
 				try
 				{
 					Logger.Trace("SubscriptionHeartbeat({0})", Key);
-					fleetManagerService.SubscriptionHeartbeat(Key);
+					channel.SubscriptionHeartbeat(Key);
 					IsConnected = true;
 					exceptionCaught = false;
 				}
@@ -121,7 +142,7 @@ namespace FleetClients.Core
 					IsConnected = false;
 
 					channelFactory = CreateChannelFactory(); // Create a new channel as this one is dead
-					fleetManagerService = channelFactory.CreateChannel();
+					channel = channelFactory.CreateChannel();
 				}
 
 				heartbeatReset.WaitOne(Heartbeat);
@@ -168,11 +189,8 @@ namespace FleetClients.Core
 			get { return fleetState; }
 			set
 			{
-				if (fleetState == null || value.Tick.IsCurrentByteTickLarger(fleetState.Tick))
-				{
-					fleetState = value;
-					OnNotifyPropertyChanged();
-				}
+				if (fleetState == null || value.Tick.IsCurrentByteTickLarger(fleetState.Tick))				
+					fleetState = value;		
 			}
 		}
 
@@ -197,44 +215,28 @@ namespace FleetClients.Core
 			}
 		}
 
-		public ServiceOperationResult TryGetSemVer(out SemVerData semVerData)
+		public IServiceCallResult<SemVerDto> GetAPISemVer()
 		{
-			Logger.Info("TryGetSemVer()");
-
-			try
-			{
-				var result = GetSemVer();
-				semVerData = result.Item1;
-
-				return ServiceOperationResultFactory.FromFleetManagerServiceCallData(result.Item2);
-			}
-			catch (Exception ex)
-			{
-				semVerData = null;
-				return HandleClientException(ex);
-			}
-		}
-
-		public IServiceCallResult<XElement> TryGetKingpinDescription(IPAddress ipAddress)
-		{
-			Logger.Info("GetKingpinDescription()");
+			Logger.Info("GetSemVer()");
 
 			try
 			{
 				using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
 				{
 					IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
-					ServiceCallResultDto<XElement> result = channel.GetKingpinDescription(ipAddress);
+					ServiceCallResultDto<SemVerDto> result = channel.GetAPISemVer();
 					channelFactory.Close();
-					
-					return result;					
-				}	
+
+					return result;
+				}
 			}
 			catch (Exception ex)
 			{
-				return ServiceCallResultFactory<XElement>.FromClientException(ex);
+				return ServiceCallResultFactory<SemVerDto>.FromClientException(ex);
 			}
 		}
+
+
 
 
 		public IServiceCallResult RequestUnfreeze()
@@ -258,8 +260,6 @@ namespace FleetClients.Core
 				return ServiceCallResultFactory<XElement>.FromClientException(ex); 
 			}
 		}
-
-
 
 		public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseData pose)
 		{
@@ -387,9 +387,6 @@ namespace FleetClients.Core
 			}
 		}
 
-
-
-
 		protected override void Dispose(bool isDisposing)
 		{
 			Logger.Debug("Dispose({0})", isDisposing);
@@ -405,51 +402,6 @@ namespace FleetClients.Core
 
 			isDisposed = true;
 		}
-
-		private Tuple<SemVerData, ServiceCallData> GetSemVer()
-		{
-			Logger.Debug("GetSemVerData()");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<SemVerData, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.GetSemVer();
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-
-
-
-		private Tuple<bool, ServiceCallData> CommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints)
-		{
-			Logger.Debug("CommitExtendedWaypoints");
-
-			if (isDisposed) throw new ObjectDisposedException("FleetManagerClient");
-
-			Tuple<bool, ServiceCallData> result;
-
-			using (ChannelFactory<IFleetManagerService> channelFactory = CreateChannelFactory())
-			{
-				IFleetManagerService channel = channelFactory.CreateChannel();
-				result = channel.CommitEx2Waypoints(ipAddress, instructionId, ex2Waypoints);
-				channelFactory.Close();
-			}
-
-			return result;
-		}
-
-
-
-
-
-
 
 		public IEnumerable<KingpinStateMailbox> GetModels() => kingpinStateMailboxes.ToList();
 	}

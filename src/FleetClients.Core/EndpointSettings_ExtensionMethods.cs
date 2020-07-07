@@ -1,4 +1,5 @@
 ﻿using BaseClients;
+using BaseClients.Core;
 using System;
 
 namespace FleetClients.Core

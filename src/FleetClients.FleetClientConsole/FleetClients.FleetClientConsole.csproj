@@ -34,13 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha01\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0-alpha02\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha01\lib\net472\BaseClients.Controls.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0-alpha02\lib\net472\BaseClients.Controls.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha01\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0-alpha02\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine, Version=2.8.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CommandLineParser.2.8.0\lib\net461\CommandLine.dll</HintPath>
@@ -115,7 +115,7 @@
     <Compile Include="Options\GetKingpinDescriptionOptions.cs" />
     <Compile Include="Options\CreateVirtualVehicleOptions.cs" />
     <Compile Include="Options\ConfigureClientOptions.cs" />
-    <Compile Include="Options\GetSemVerOption.cs" />
+    <Compile Include="Options\GetApiSemVerOption.cs" />
     <Compile Include="Options\RemoveOptions.cs" />
     <Compile Include="Options\ResetKingpinOption.cs" />
     <Compile Include="Options\SetFleetStateOption.cs" />

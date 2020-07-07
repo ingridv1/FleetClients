@@ -1,7 +1,8 @@
-﻿using BaseClients;
+﻿using BaseClients.Core;
 using CommandLine;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
 using System;
 using System.Net;
 
@@ -16,15 +17,15 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('v', "VehicleControllerState", Required = true, Default = "Enabled", HelpText = "Enabled, Disabled")]
 		public string ControllerState { get; set; }
 
-		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
+		protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 
 			VehicleControllerState controllerstate = (VehicleControllerState)Enum.Parse(typeof(VehicleControllerState), ControllerState, true);
 
-			ServiceOperationResult result = client.TrySetKingpinState(ipAddress, controllerstate, out bool success);
+			IServiceCallResult result = client.SetKingpinState(ipAddress, controllerstate);
 
-			Console.WriteLine("SetFleetState:{0}", success ? "Success" : "Failed");
+			Console.WriteLine("SetFleetState:{0}", result.ServiceCode == 0 ? "Success" : "Failed");
 			return result;
 		}
 	}

@@ -35,6 +35,6 @@ namespace FleetClients.Core
 
 		IServiceCallResult SetPose(IPAddress ipAddress, PoseData pose);
 
-		IServiceCallResult<SemVerDto> GetSemVer();
+		IServiceCallResult<SemVerDto> GetAPISemVer();
 	}
 }

@@ -1,6 +1,7 @@
-﻿using BaseClients;
+﻿using BaseClients.Core;
 using CommandLine;
 using FleetClients.Core;
+using GAAPICommon.Architecture;
 using System;
 using System.Net;
 
@@ -12,13 +13,13 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }
 
-		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
+		protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 
-			ServiceOperationResult result = client.TryResetKingpin(ipAddress, out bool output);
+			IServiceCallResult result = client.ResetKingpin(ipAddress);
 
-			Console.WriteLine("ResetKingpin:{0}", output ? "Success" : "Failed");
+			Console.WriteLine("ResetKingpin:{0}", result.ServiceCode == 0 ? "Success" : "Failed");
 			return result;
 		}
 	}

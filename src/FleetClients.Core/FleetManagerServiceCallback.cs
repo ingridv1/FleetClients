@@ -3,7 +3,7 @@ using System;
 
 namespace FleetClients.Core
 {
-	public class FleetManagerServiceCallback : IFleetManagerServiceCallback
+	public class FleetManagerServiceCallback : IFleetManagerService_PublicAPI_v2_0Callback
 	{
 		public FleetManagerServiceCallback()
 		{

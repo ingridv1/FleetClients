@@ -2,6 +2,7 @@
 using CommandLine;
 using FleetClients.Core;
 using FleetClients.FleetClientConsole.Options;
+using GAAPICommon.Core;
 using System;
 
 namespace FleetClients.FleetClientConsole
@@ -54,7 +55,7 @@ namespace FleetClients.FleetClientConsole
 						(SetKingpinStateOption opts) => opts.ExecuteOption(client),
 						(SetPoseOptions opts) => opts.ExecuteOption(client),
 						(GetSemVerOptions opts) => opts.ExecuteOption(client),
-						errs => ServiceOperationResult.FromClientException(new Exception("Operation failed"))
+						errs => ServiceCallResultFactory.FromClientException(new Exception("Operation failed"))
 						);
 			}
 		}

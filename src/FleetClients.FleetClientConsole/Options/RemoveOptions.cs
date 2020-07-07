@@ -1,6 +1,9 @@
 ﻿using BaseClients;
+using BaseClients.Core;
 using CommandLine;
 using FleetClients.Core;
+using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
 using System.Net;
 
 namespace FleetClients.FleetClientConsole.Options
@@ -11,11 +14,11 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('i', "IPv4String", Required = true, Default = "192.168.0.1", HelpText = "IPv4 Address")]
 		public string IPv4String { get; set; }
 
-		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
+		protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 
-			return client.TryRemoveVehicle(ipAddress, out bool success);
+			return client.RemoveVehicle(ipAddress);
 		}
 	}
 }

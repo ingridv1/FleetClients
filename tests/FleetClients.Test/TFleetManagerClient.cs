@@ -1,4 +1,5 @@
 ﻿using BaseClients;
+using BaseClients.Core;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
 using NUnit.Framework;
@@ -7,7 +8,7 @@ using System.Net;
 namespace FleetClients.Test
 {
 	/// <summary>
-	/// Requires a server to be running on local host to be succesfull
+	/// Requires a server to be running on local host to be successful
 	/// </summary>
 	[TestFixture]
 	[Category("FleetManagerClient")]
@@ -27,10 +28,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TryRequestUnfreeze(out success);
-
-			Assert.IsTrue(success);
+			var result = client.RequestUnfreeze();
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -38,10 +37,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TryRequestFreeze(out success);
-
-			Assert.IsTrue(success);
+			var result = client.RequestFreeze();
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -56,11 +53,9 @@ namespace FleetClients.Test
 				Y = 0,
 				Heading = 0
 			};
-
-			bool success;
-			client.TryCreateVirtualVehicle(IPAddress.Parse(ipV4String), poseData, out success);
-
-			Assert.IsTrue(success);
+			
+			var result= client.CreateVirtualVehicle(IPAddress.Parse(ipV4String), poseData);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -68,10 +63,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TrySetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Enabled, out success);
-
-			Assert.IsTrue(success);
+			var result = client.SetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Enabled);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -79,10 +72,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TrySetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Disabled, out success);
-
-			Assert.IsTrue(success);
+			var result = client.SetKingpinState(IPAddress.Parse("192.0.2.0"), VehicleControllerState.Disabled);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -98,8 +89,8 @@ namespace FleetClients.Test
 			IPAddress ipAddress = IPAddress.Parse("192.0.2.5");
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			ServiceOperationResult result = client.TryCreateVirtualVehicle(ipAddress, poseData, out success);
+			var result = client.CreateVirtualVehicle(ipAddress, poseData);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -108,8 +99,8 @@ namespace FleetClients.Test
 			IPAddress ipAddress = IPAddress.Parse("192.0.2.5");
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			ServiceOperationResult result = client.TryRemoveVehicle(ipAddress, out success);
+			var result = client.RemoveVehicle(ipAddress);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -124,8 +115,8 @@ namespace FleetClients.Test
 				Heading = heading
 			};
 
-			bool success;
-			ServiceOperationResult result = client.TrySetPose(IPAddress.Parse("192.0.2.5"), poseData, out success);
+			var result = client.SetPose(IPAddress.Parse("192.0.2.5"), poseData);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -133,10 +124,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TrySetFleetState(VehicleControllerState.Enabled, out success);
-
-			Assert.IsTrue(success);
+			var result = client.SetFleetState(VehicleControllerState.Enabled);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 
 		[Test]
@@ -144,10 +133,8 @@ namespace FleetClients.Test
 		{
 			IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-			bool success;
-			client.TrySetFleetState(VehicleControllerState.Disabled, out success);
-
-			Assert.IsTrue(success);
+			var result = client.SetFleetState(VehicleControllerState.Disabled);
+			Assert.AreEqual(0, result.ServiceCode);
 		}
 	}
 }

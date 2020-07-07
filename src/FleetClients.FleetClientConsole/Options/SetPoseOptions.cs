@@ -1,7 +1,9 @@
 ﻿using BaseClients;
+using BaseClients.Core;
 using CommandLine;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
 using System.Net;
 
 namespace FleetClients.FleetClientConsole.Options
@@ -15,12 +17,12 @@ namespace FleetClients.FleetClientConsole.Options
 		[Option('p', "PoseString", Required = false, Default = "", HelpText = "Pose")]
 		public string PoseString { get; set; }
 
-		protected override ServiceOperationResult HandleExecution(IFleetManagerClient client)
+		protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
 		{
 			IPAddress ipAddress = IPAddress.Parse(IPv4String);
 			PoseDataFactory.TryParseString(PoseString, out PoseData poseData);
 
-			return client.TrySetPose(ipAddress, poseData ?? PoseDataFactory.NaNPose, out bool success);
+			return client.SetPose(ipAddress, poseData ?? PoseDataFactory.NaNPose);
 		}
 	}
 }

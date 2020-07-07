@@ -1,9 +1,8 @@
-﻿using BaseClients;
+﻿using BaseClients.Core;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
 using NUnit.Framework;
 using System.Net;
-using System.Xml.Linq;
 
 namespace FleetClients.Test
 {
@@ -23,81 +22,56 @@ namespace FleetClients.Test
 		[Category("ClientExceptionNull")]
 		public void TryRequestFreeze_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryRequestFreeze(out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.RequestFreeze();
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TryGetKingpinDescription_ClientExceptionNull()
 		{
-			XDocument description;
-			ServiceOperationResult result = FleetManagerClient.TryGetKingpinDescription(IPAddress.Loopback, out description);
-
-			Assert.IsNull(result.ClientException);
-		}
-
-		[Test]
-		[Category("ClientExceptionNull")]
-		public void TryCommitExtendedWaypoints_ClientExceptionNull()
-		{
-			byte[] waypoints = { };
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryCommitEx2Waypoints(IPAddress.Loopback, 1, waypoints, out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.GetKingpinDescription(IPAddress.Loopback);
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TryRequestUnfreeze_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryRequestUnfreeze(out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.RequestUnfreeze();
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TryCreateVirtualVehicle_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryCreateVirtualVehicle(IPAddress.Loopback, new PoseData(), out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.CreateVirtualVehicle(IPAddress.Loopback, new PoseData());
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TryRemoveVehicle_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryRemoveVehicle(IPAddress.Loopback, out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.RemoveVehicle(IPAddress.Loopback);
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TrySetPose_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TrySetPose(IPAddress.Loopback, new PoseData(), out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.SetPose(IPAddress.Loopback, new PoseData());
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 
 		[Test]
 		[Category("ClientExceptionNull")]
 		public void TryResetKingpin_ClientExceptionNull()
 		{
-			bool success;
-			ServiceOperationResult result = FleetManagerClient.TryResetKingpin(IPAddress.Loopback, out success);
-
-			Assert.IsNull(result.ClientException);
+			var result = FleetManagerClient.ResetKingpin(IPAddress.Loopback);
+			Assert.IsNotNull(result.ExceptionMessage);
 		}
 	}
 }
