@@ -26,7 +26,6 @@
     </dependencies>
   </metadata>
   <files>
-        <file src="docfx_project\articles\readme.md" target="" />
 		<file src="src\FleetClients\bin\Release\FleetClients.dll" target="lib\net472" />
 		<file src="src\FleetClients.UI\bin\Release\FleetClients.UI.dll" target="lib\net472" />
   </files>
