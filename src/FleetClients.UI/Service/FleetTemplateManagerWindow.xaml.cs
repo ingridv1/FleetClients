@@ -2,16 +2,16 @@
 
 namespace FleetClients.UI.Service
 {
-	public partial class FleetTemplateManagerWindow : Window
-	{
-		public FleetTemplateManagerWindow()
-		{
-			InitializeComponent();
-		}
+    public partial class FleetTemplateManagerWindow : Window
+    {
+        public FleetTemplateManagerWindow()
+        {
+            InitializeComponent();
+        }
 
-		private void okButton_Click(object sender, RoutedEventArgs e)
-		{
-			Close();
-		}
-	}
+        private void okButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+    }
 }

@@ -2,16 +2,16 @@
 
 namespace FleetClients.UI.Service
 {
-	public partial class KingpinDiagnosticWindow : Window
-	{
-		public KingpinDiagnosticWindow()
-		{
-			InitializeComponent();
-		}
+    public partial class KingpinDiagnosticWindow : Window
+    {
+        public KingpinDiagnosticWindow()
+        {
+            InitializeComponent();
+        }
 
-		private void okButton_Click(object sender, RoutedEventArgs e)
-		{
-			Close();
-		}
-	}
+        private void okButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+    }
 }

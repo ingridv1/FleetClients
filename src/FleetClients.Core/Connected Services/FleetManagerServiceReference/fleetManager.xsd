@@ -1,56 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GACore" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Services" />
-  <xs:complexType name="TupleOfSemVerDataServiceCallData20ExA2_SX">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ServiceCallResultDtoOfSemVerDtoroFpNV7u">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SemVerData" Namespace="http://schemas.datacontract.org/2004/07/GACore" />
-          <GenericParameter Name="ServiceCallData" Namespace="http://schemas.datacontract.org/2004/07/Services" />
+        <GenericType Name="ServiceCallResultDtoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SemVerDto" Namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ServiceCallResultDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="tns:SemVerDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceCallResultDtoOfSemVerDtoroFpNV7u" nillable="true" type="tns:ServiceCallResultDtoOfSemVerDtoroFpNV7u" />
+  <xs:complexType name="ServiceCallResultDto">
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GACore" name="m_Item1" nillable="true" type="q1:SemVerData" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Services" name="m_Item2" nillable="true" type="q2:ServiceCallData" />
+      <xs:element minOccurs="0" name="ExceptionMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExceptionSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExceptionStackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceCode" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TupleOfSemVerDataServiceCallData20ExA2_SX" nillable="true" type="tns:TupleOfSemVerDataServiceCallData20ExA2_SX" />
-  <xs:complexType name="TupleOfXElementServiceCallDataFtVIqT19">
+  <xs:element name="ServiceCallResultDto" nillable="true" type="tns:ServiceCallResultDto" />
+  <xs:complexType name="SemVerDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Major" type="xs:int" />
+      <xs:element minOccurs="0" name="Minor" type="xs:int" />
+      <xs:element minOccurs="0" name="Patch" type="xs:int" />
+      <xs:element minOccurs="0" name="ReleaseFlag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SemVerDto" nillable="true" type="tns:SemVerDto" />
+  <xs:complexType name="ServiceCallResultDtoOfXElementg0J7U6Qr">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        <GenericType Name="ServiceCallResultDtoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
           <GenericParameter Name="XElement" Namespace="http://schemas.datacontract.org/2004/07/System.Xml.Linq" />
-          <GenericParameter Name="ServiceCallData" Namespace="http://schemas.datacontract.org/2004/07/Services" />
         </GenericType>
       </xs:appinfo>
     </xs:annotation>
-    <xs:sequence>
-      <xs:element name="m_Item1" nillable="true">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:any minOccurs="0" processContents="lax" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Services" name="m_Item2" nillable="true" type="q3:ServiceCallData" />
-    </xs:sequence>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ServiceCallResultDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:any minOccurs="0" processContents="lax" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
-  <xs:element name="TupleOfXElementServiceCallDataFtVIqT19" nillable="true" type="tns:TupleOfXElementServiceCallDataFtVIqT19" />
-  <xs:complexType name="TupleOfbooleanServiceCallDatayG81JSvh">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
-          <GenericParameter Name="ServiceCallData" Namespace="http://schemas.datacontract.org/2004/07/Services" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="m_Item1" type="xs:boolean" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Services" name="m_Item2" nillable="true" type="q4:ServiceCallData" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="TupleOfbooleanServiceCallDatayG81JSvh" nillable="true" type="tns:TupleOfbooleanServiceCallDatayG81JSvh" />
+  <xs:element name="ServiceCallResultDtoOfXElementg0J7U6Qr" nillable="true" type="tns:ServiceCallResultDtoOfXElementg0J7U6Qr" />
 </xs:schema>

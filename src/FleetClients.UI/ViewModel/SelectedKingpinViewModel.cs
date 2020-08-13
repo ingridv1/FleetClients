@@ -1,9 +1,9 @@
 ﻿namespace FleetClients.UI.ViewModel
 {
-	public class SelectedKingpinViewModel : KingpinStateMailboxViewModel
-	{
-		internal SelectedKingpinViewModel()
-		{
-		}
-	}
+    public class SelectedKingpinViewModel : KingpinStateMailboxViewModel
+    {
+        internal SelectedKingpinViewModel()
+        {
+        }
+    }
 }

@@ -2,13 +2,13 @@
 
 namespace FleetClients.UI.Message
 {
-	public class TemplateUpdatedMessage
-	{
-		public FleetTemplate FleetTemplate { get; } = null;
+    public class TemplateUpdatedMessage
+    {
+        public FleetTemplate FleetTemplate { get; } = null;
 
-		public TemplateUpdatedMessage(FleetTemplate fleetTemplate)
-		{
-			FleetTemplate = fleetTemplate;
-		}
-	}
+        public TemplateUpdatedMessage(FleetTemplate fleetTemplate)
+        {
+            FleetTemplate = fleetTemplate;
+        }
+    }
 }

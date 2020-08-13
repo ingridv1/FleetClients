@@ -15,335 +15,6 @@ namespace FleetClients.Core.FleetManagerServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceCallData", Namespace="http://schemas.datacontract.org/2004/07/Services")]
-    [System.SerializableAttribute()]
-    public partial class ServiceCallData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FleetClients.Core.FleetManagerServiceReference.ServiceCode ServiceCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SourceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StackTraceField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message {
-            get {
-                return this.MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public FleetClients.Core.FleetManagerServiceReference.ServiceCode ServiceCode {
-            get {
-                return this.ServiceCodeField;
-            }
-            set {
-                if ((this.ServiceCodeField.Equals(value) != true)) {
-                    this.ServiceCodeField = value;
-                    this.RaisePropertyChanged("ServiceCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Source {
-            get {
-                return this.SourceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SourceField, value) != true)) {
-                    this.SourceField = value;
-                    this.RaisePropertyChanged("Source");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StackTrace {
-            get {
-                return this.StackTraceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StackTraceField, value) != true)) {
-                    this.StackTraceField = value;
-                    this.RaisePropertyChanged("StackTrace");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceCode", Namespace="http://schemas.datacontract.org/2004/07/Services")]
-    public enum ServiceCode : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NOERROR = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SERVICENOTCONFIGURED = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CLIENTEXCEPTION = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SERVICEUNAVAILABLE = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SERVICENOTIMPLEMENTED = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INTERNALERROR = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETSEMVERFAILED = 6,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        COMMITJOBFAILED = 1001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEJOBFAILED = 1002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEUNORDEREDLISTTASKFAILED = 1003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEATOMICMOVELISTTASKFAILED = 1004,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEORDEREDLISTTASKFAILED = 1005,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATESERVICINGTASKFAILED = 1006,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NOTACCEPTINGNEWJOBS = 1007,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        DIRECTIVENOTALLOWED = 1008,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDNODETASKID = 1009,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATESLEEPINGTASKFAILED = 1010,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEGOTONODETASKFAILED = 1011,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEATOMICMOVETASKFAILED = 1012,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        BEGINEDITINGJOBFAILED = 1013,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        FINISHEDITINGJOBFAILED = 1014,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        BEGINEDITINGTASKFAILED = 1015,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        FINISHEDITINGTASKFAILED = 1016,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEAWAITINGTASKFAILED = 1017,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATECHARGETASKFAILED = 1018,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ABORTALLJOBSFAILED = 2001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ABORTALLJOBSFORAGENTFAILED = 2002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ABORTJOBFAILED = 2003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETACTIVEJOBSFORAGENTFAILED = 2004,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ABORTTASKFAILED = 2005,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        RESOLVEFAULTEDJOBFAILED = 2006,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        RESOLVEFAULTEDTASKFAILED = 2007,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETJOBSTATEFAILED = 3001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDJOBID = 3002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDTASKID = 3003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETALLMOVEDATAFAILED = 4001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETALLNODEDATAFAILED = 4002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETMAPPINGKEYCARDSIGNATUREFAILED = 4003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETRAJECTORYFAILED = 4004,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDMOVEID = 4005,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETOCCUPYINGMANDATEFAILED = 4006,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CLEAROCCUPYINGMANDATEFAILED = 4007,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CONTAINSINVALIDMAPITEMIDS = 4008,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CONTAINSINVALIDTIMEOUT = 4009,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        OCCUPATIONALREADYINPROGRESS = 4010,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETOCCUPYINGMANDATEPROGRESSDATAFAILED = 4011,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETOUTSTANDINGSERVICEREQUESTSFAILED = 5001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETSERVICECOMPLETEFAILED = 5002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETALLAGENTDATAFAILED = 6001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETALLAGENTSINLIFETIMESTATEFAILED = 6002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETAGENTLIFETIMESTATEFAILED = 6003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        COMMITINSTRUCTIONFAILED = 7001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        REQUESTFREEZEFAILED = 7002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        REQUESTUNFREEZEFAILED = 7003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INCORRECTNUMBEROFBYTES = 7004,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        COMMITEXTENDEDWAYPOINTSFAILED = 7005,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETKINGPINDESCRIPTIONFAILED = 7008,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CREATEVIRTUALVEHICLEFAILED = 7009,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        REMOVEVEHICLEFAILED = 7010,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETPOSEFAILED = 7011,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        RESETKINGPINFAILED = 7012,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ENABLEALLVEHICLESFAILED = 7013,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        DISABLEALLVEHICLESFAILED = 7014,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDIPADDRESS = 7015,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ENABLEVEHICLEFAILED = 7016,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        DISABLEVEHICLEFAILED = 7017,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETFLEETSTATEFAILED = 7018,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        SETKINGPINSTATEFAILED = 7019,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        DOWNLOADFAILED = 8001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UPLOADFAILED = 8002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETFILENAMESFAILED = 8003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDAGENTID = 9001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        INVALIDSTATECASTVARIABLEALIAS = 9002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        STATECASTVARIABLEDATATYPEMISMATCH = 9003,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETSCHEDULERVERSIONFAILED = 10001,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETPLUGINVERSIONSFAILED = 10002,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        GETOUTSTANDINGAGENTREQUESTSFAILED = 11001,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PoseData", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet")]
     [System.SerializableAttribute()]
     public partial class PoseData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -420,7 +91,7 @@ namespace FleetClients.Core.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleControllerState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleControllerState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture")]
     public enum VehicleControllerState : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -492,14 +163,14 @@ namespace FleetClients.Core.FleetManagerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService", CallbackContract=typeof(FleetClients.Core.FleetManagerServiceReference.IFleetManagerServiceCallback))]
-    public interface IFleetManagerService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0", CallbackContract=typeof(FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback))]
+    public interface IFleetManagerService_PublicAPI_v2_0 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
-        System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetSemVer();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetAPISemVer", ReplyAction="http://tempuri.org/IService/GetAPISemVerResponse")]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto> GetAPISemVer();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetSemVer", ReplyAction="http://tempuri.org/IService/GetSemVerResponse")]
-        System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetAPISemVer", ReplyAction="http://tempuri.org/IService/GetAPISemVerResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>> GetAPISemVerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat", ReplyAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse")]
         void SubscriptionHeartbeat(System.Guid guid);
@@ -507,108 +178,118 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeat", ReplyAction="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse")]
         System.Threading.Tasks.Task SubscriptionHeartbeatAsync(System.Guid guid);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse")]
-        System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescriptionResponse")]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement> GetKingpinDescription(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService/GetKingpinDescriptionResponse")]
-        System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescriptionResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreezeResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto RequestFreeze();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CommitEx2Waypoints", ReplyAction="http://tempuri.org/IFleetManagerService/CommitEx2WaypointsResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreezeResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestFreezeAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestFreezeResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestFreeze();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreezeResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto RequestUnfreeze();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestFreezeResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreezeResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestUnfreezeAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestUnfreezeResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService/RequestUnfreezeResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicleResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicleResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto RemoveVehicle(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/CreateVirtualVehicleResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicleResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RemoveVehicleAsync(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/RemoveVehicleResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService/RemoveVehicleResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService/SetPoseResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto ResetKingpin(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService/SetPoseResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> ResetKingpinAsync(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService/ResetKingpinResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService/ResetKingpinResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinStateResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService/SetFleetStateResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
-        System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService/SetKingpinStateResponse")]
-        System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinStateResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFleetManagerServiceCallback {
+    public interface IFleetManagerService_PublicAPI_v2_0Callback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService/OnCallback", ReplyAction="http://tempuri.org/IFleetManagerService/OnCallbackResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallbackResponse")]
         void OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState callbackObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFleetManagerServiceChannel : FleetClients.Core.FleetManagerServiceReference.IFleetManagerService, System.ServiceModel.IClientChannel {
+    public interface IFleetManagerService_PublicAPI_v2_0Channel : FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FleetManagerServiceClient : System.ServiceModel.DuplexClientBase<FleetClients.Core.FleetManagerServiceReference.IFleetManagerService>, FleetClients.Core.FleetManagerServiceReference.IFleetManagerService {
+    public partial class FleetManagerService_PublicAPI_v2_0Client : System.ServiceModel.DuplexClientBase<FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0>, FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0 {
         
-        public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
+        public FleetManagerService_PublicAPI_v2_0Client(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
         }
         
-        public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+        public FleetManagerService_PublicAPI_v2_0Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
                 base(callbackInstance, endpointConfigurationName) {
         }
         
-        public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+        public FleetManagerService_PublicAPI_v2_0Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public FleetManagerService_PublicAPI_v2_0Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public FleetManagerServiceClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public FleetManagerService_PublicAPI_v2_0Client(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetSemVer() {
-            return base.Channel.GetSemVer();
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto> GetAPISemVer() {
+            return base.Channel.GetAPISemVer();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<GACore.SemVerData, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetSemVerAsync() {
-            return base.Channel.GetSemVerAsync();
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>> GetAPISemVerAsync() {
+            return base.Channel.GetAPISemVerAsync();
         }
         
         public void SubscriptionHeartbeat(System.Guid guid) {
@@ -619,83 +300,75 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.SubscriptionHeartbeatAsync(guid);
         }
         
-        public System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> GetKingpinDescription(System.Net.IPAddress ipAddress) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement> GetKingpinDescription(System.Net.IPAddress ipAddress) {
             return base.Channel.GetKingpinDescription(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<System.Xml.Linq.XElement, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.GetKingpinDescriptionAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CommitEx2Waypoints(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
-            return base.Channel.CommitEx2Waypoints(ipAddress, instructionId, ex2WaypointBytes);
-        }
-        
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CommitEx2WaypointsAsync(System.Net.IPAddress ipAddress, int instructionId, byte[] ex2WaypointBytes) {
-            return base.Channel.CommitEx2WaypointsAsync(ipAddress, instructionId, ex2WaypointBytes);
-        }
-        
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestFreeze() {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto RequestFreeze() {
             return base.Channel.RequestFreeze();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestFreezeAsync() {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestFreezeAsync() {
             return base.Channel.RequestFreezeAsync();
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RequestUnfreeze() {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto RequestUnfreeze() {
             return base.Channel.RequestUnfreeze();
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RequestUnfreezeAsync() {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestUnfreezeAsync() {
             return base.Channel.RequestUnfreezeAsync();
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.CreateVirtualVehicle(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.CreateVirtualVehicleAsync(ipAddress, pose);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> RemoveVehicle(System.Net.IPAddress ipAddress) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto RemoveVehicle(System.Net.IPAddress ipAddress) {
             return base.Channel.RemoveVehicle(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> RemoveVehicleAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RemoveVehicleAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.RemoveVehicleAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.SetPose(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
             return base.Channel.SetPoseAsync(ipAddress, pose);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> ResetKingpin(System.Net.IPAddress ipAddress) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto ResetKingpin(System.Net.IPAddress ipAddress) {
             return base.Channel.ResetKingpin(ipAddress);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
             return base.Channel.ResetKingpinAsync(ipAddress);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetFleetState(controllerState);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetFleetStateAsync(controllerState);
         }
         
-        public System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData> SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinState(ipAddress, controllerState);
         }
         
-        public System.Threading.Tasks.Task<System.Tuple<bool, FleetClients.Core.FleetManagerServiceReference.ServiceCallData>> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinStateAsync(ipAddress, controllerState);
         }
     }

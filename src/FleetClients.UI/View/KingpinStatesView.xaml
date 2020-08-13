@@ -22,7 +22,7 @@
         </i:Interaction.Triggers>
         <ListBox.ItemTemplate>
             <DataTemplate>
-                <gaCoreCV:KingpinStateView DataContext="{Binding Path=KingpinState}"/>
+                <gaCoreCV:KingpinStateView DataContext="{Binding Path=KingpinState}" />
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>

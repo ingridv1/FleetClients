@@ -1,8 +1,8 @@
 ﻿namespace FleetClients.DemoApp.ViewModel
 {
-	public enum TutorialCommandOption
-	{
-		ShowFleetManager,
-		ShowTemplateManager
-	};
+    public enum TutorialCommandOption
+    {
+        ShowFleetManager,
+        ShowTemplateManager
+    };
 }

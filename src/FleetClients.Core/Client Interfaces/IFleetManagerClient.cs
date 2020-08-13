@@ -1,39 +1,38 @@
-﻿using BaseClients;
+﻿using BaseClients.Architecture;
 using FleetClients.Core.FleetManagerServiceReference;
-using GACore;
+using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using GACore.Architecture;
 using System.Net;
 using System.Xml.Linq;
 
 namespace FleetClients.Core
 {
-	/// <summary>
-	/// For interacting with the fleet manager remotely.
-	/// </summary>
-	public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
-	{
-		FleetState FleetState { get; }
+    /// <summary>
+    /// For interacting with the fleet manager remotely.
+    /// </summary>
+    public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
+    {
+        FleetState FleetState { get; }
 
-		ServiceOperationResult TryCommitEx2Waypoints(IPAddress ipAddress, int instructionId, byte[] ex2Waypoints, out bool success);
+        IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseData pose);
 
-		ServiceOperationResult TryCreateVirtualVehicle(IPAddress ipAddress, PoseData pose, out bool success);
+        IServiceCallResult<XElement> GetKingpinDescription(IPAddress ipAddress);
 
-		ServiceOperationResult TryGetKingpinDescription(IPAddress ipAddress, out XDocument xDocument);
+        IServiceCallResult RemoveVehicle(IPAddress ipAddress);
 
-		ServiceOperationResult TryRemoveVehicle(IPAddress ipAddress, out bool success);
+        IServiceCallResult RequestFreeze();
 
-		ServiceOperationResult TryRequestFreeze(out bool success);
+        IServiceCallResult RequestUnfreeze();
 
-		ServiceOperationResult TryRequestUnfreeze(out bool success);
+        IServiceCallResult ResetKingpin(IPAddress ipAddress);
 
-		ServiceOperationResult TryResetKingpin(IPAddress ipAddress, out bool success);
+        IServiceCallResult SetFleetState(VehicleControllerState controllerStates);
 
-		ServiceOperationResult TrySetFleetState(VehicleControllerState controllerState, out bool success);
+        IServiceCallResult SetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState);
 
-		ServiceOperationResult TrySetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState, out bool success);
+        IServiceCallResult SetPose(IPAddress ipAddress, PoseData pose);
 
-		ServiceOperationResult TrySetPose(IPAddress ipAddress, PoseData pose, out bool success);
-
-		ServiceOperationResult TryGetSemVer(out SemVerData semVerData);
-	}
+        IServiceCallResult<SemVerDto> GetAPISemVer();
+    }
 }
