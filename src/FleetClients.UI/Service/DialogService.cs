@@ -7,42 +7,42 @@ using System.Windows;
 
 namespace FleetClients.UI.Service
 {
-	public static class DialogService
-	{
-		private static Logger logger { get; } = LoggerFactory.GetStandardLogger(StandardLogger.ViewModel);
+    public static class DialogService
+    {
+        private static Logger logger { get; } = LoggerFactory.GetStandardLogger(StandardLogger.ViewModel);
 
-		public static Window CreateFleetTemplateManagerWindow(FleetTemplateManager manager)
-		{
-			logger.Debug("[DialogService] CreateFleetTemplateManagerWindow()");
+        public static Window CreateFleetTemplateManagerWindow(FleetTemplateManager manager)
+        {
+            logger.Debug("[DialogService] CreateFleetTemplateManagerWindow()");
 
-			ViewModel.ViewModelLocator.FleetTemplateManagerViewModel.Model = manager;
-			ViewModel.ViewModelLocator.FleetTemplateViewModel.Model = manager?.FleetTemplate;
+            ViewModel.ViewModelLocator.FleetTemplateManagerViewModel.Model = manager;
+            ViewModel.ViewModelLocator.FleetTemplateViewModel.Model = manager?.FleetTemplate;
 
-			FleetTemplateManagerWindow window = new FleetTemplateManagerWindow();
-			return window;
-		}
+            FleetTemplateManagerWindow window = new FleetTemplateManagerWindow();
+            return window;
+        }
 
-		public static Window CreateAGVTemplateFactoryWindow(FleetTemplateManager manager)
-		{
-			logger.Debug("[DialogService] CreateAGVTemplateFactoryWindow()");
+        public static Window CreateAGVTemplateFactoryWindow(FleetTemplateManager manager)
+        {
+            logger.Debug("[DialogService] CreateAGVTemplateFactoryWindow()");
 
-			AGVTemplateFactoryWindow window = new AGVTemplateFactoryWindow();
+            AGVTemplateFactoryWindow window = new AGVTemplateFactoryWindow();
 
-			ViewModel.ViewModelLocator.AGVTemplateFactoryViewModel.Model = manager;
+            ViewModel.ViewModelLocator.AGVTemplateFactoryViewModel.Model = manager;
 
-			return window;
-		}
+            return window;
+        }
 
-		public static Window CreateKingpinDiagnosticWindow(KingpinStateMailboxViewModel ksmViewModel)
-		{
-			logger.Debug("[DialogService] CreateKingpinDiagnosticWindow()");
+        public static Window CreateKingpinDiagnosticWindow(KingpinStateMailboxViewModel ksmViewModel)
+        {
+            logger.Debug("[DialogService] CreateKingpinDiagnosticWindow()");
 
-			KingpinDiagnosticWindow window = new KingpinDiagnosticWindow()
-			{
-				DataContext = ksmViewModel
-			};
+            KingpinDiagnosticWindow window = new KingpinDiagnosticWindow()
+            {
+                DataContext = ksmViewModel
+            };
 
-			return window;
-		}
-	}
+            return window;
+        }
+    }
 }

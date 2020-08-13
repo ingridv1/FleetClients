@@ -2,11 +2,11 @@
 
 namespace FleetClients.UI.View
 {
-	public partial class FleetTemplateManagerView : UserControl
-	{
-		public FleetTemplateManagerView()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class FleetTemplateManagerView : UserControl
+    {
+        public FleetTemplateManagerView()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FleetManagerService_PublicAPI_v2_0" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FleetManagerService_PublicAPI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsp:Policy wsu:Id="NetTcpBinding_IFleetManagerService_PublicAPI_v2_0_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -146,44 +146,44 @@
       <wsdl:output wsaw:Action="http://tempuri.org/ISubscriptionService/SubscriptionHeartbeatResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SubscriptionHeartbeat_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetKingpinDescription">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/GetKingpinDescription" message="tns:IFleetManagerService_PublicAPI_v2_0_GetKingpinDescription_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/GetKingpinDescriptionResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_GetKingpinDescription_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription" message="tns:IFleetManagerService_PublicAPI_v2_0_GetKingpinDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescriptionResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_GetKingpinDescription_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RequestFreeze">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestFreeze" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestFreeze_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestFreezeResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestFreeze_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestFreeze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreezeResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestFreeze_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RequestUnfreeze">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestUnfreeze" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestUnfreeze_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestUnfreezeResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestUnfreeze_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestUnfreeze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreezeResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RequestUnfreeze_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreateVirtualVehicle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/CreateVirtualVehicle" message="tns:IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/CreateVirtualVehicleResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle" message="tns:IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveVehicle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RemoveVehicle" message="tns:IFleetManagerService_PublicAPI_v2_0_RemoveVehicle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RemoveVehicleResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RemoveVehicle_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle" message="tns:IFleetManagerService_PublicAPI_v2_0_RemoveVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicleResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_RemoveVehicle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetPose">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetPose" message="tns:IFleetManagerService_PublicAPI_v2_0_SetPose_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetPoseResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetPose_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose" message="tns:IFleetManagerService_PublicAPI_v2_0_SetPose_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetPose_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/ResetKingpin" message="tns:IFleetManagerService_PublicAPI_v2_0_ResetKingpin_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/ResetKingpinResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_ResetKingpin_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin" message="tns:IFleetManagerService_PublicAPI_v2_0_ResetKingpin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_ResetKingpin_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetFleetState">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetFleetState" message="tns:IFleetManagerService_PublicAPI_v2_0_SetFleetState_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetFleetStateResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetFleetState_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState" message="tns:IFleetManagerService_PublicAPI_v2_0_SetFleetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetFleetState_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetKingpinState">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetKingpinState" message="tns:IFleetManagerService_PublicAPI_v2_0_SetKingpinState_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetKingpinStateResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetKingpinState_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState" message="tns:IFleetManagerService_PublicAPI_v2_0_SetKingpinState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinStateResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_SetKingpinState_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="OnCallback">
-      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/OnCallback" message="tns:IFleetManagerService_PublicAPI_v2_0_OnCallback_OutputCallbackMessage" />
-      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/OnCallbackResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_OnCallback_InputCallbackMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback" message="tns:IFleetManagerService_PublicAPI_v2_0_OnCallback_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallbackResponse" message="tns:IFleetManagerService_PublicAPI_v2_0_OnCallback_InputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IFleetManagerService_PublicAPI_v2_0" type="tns:IFleetManagerService_PublicAPI_v2_0">
@@ -208,7 +208,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetKingpinDescription">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/GetKingpinDescription" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -217,7 +217,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestFreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestFreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -226,7 +226,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestUnfreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestUnfreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -235,7 +235,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateVirtualVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/CreateVirtualVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -244,7 +244,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RemoveVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -253,7 +253,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetPose">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetPose" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -262,7 +262,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/ResetKingpin" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -271,7 +271,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetFleetState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetFleetState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -280,7 +280,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetKingpinState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetKingpinState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -289,7 +289,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="OnCallback">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/OnCallback" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -320,7 +320,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetKingpinDescription">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/GetKingpinDescription" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -329,7 +329,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestFreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestFreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -338,7 +338,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestUnfreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestUnfreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -347,7 +347,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateVirtualVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/CreateVirtualVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -356,7 +356,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RemoveVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -365,7 +365,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetPose">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetPose" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -374,7 +374,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/ResetKingpin" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -383,7 +383,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetFleetState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetFleetState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -392,7 +392,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetKingpinState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetKingpinState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -401,7 +401,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="OnCallback">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/OnCallback" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -432,7 +432,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetKingpinDescription">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/GetKingpinDescription" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -441,7 +441,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestFreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestFreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -450,7 +450,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RequestUnfreeze">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RequestUnfreeze" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -459,7 +459,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateVirtualVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/CreateVirtualVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -468,7 +468,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveVehicle">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/RemoveVehicle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -477,7 +477,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetPose">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetPose" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -486,7 +486,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ResetKingpin">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/ResetKingpin" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -495,7 +495,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetFleetState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetFleetState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -504,7 +504,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetKingpinState">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/SetKingpinState" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -513,7 +513,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="OnCallback">
-      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_PublicAPI_v2_0/OnCallback" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -522,7 +522,7 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="FleetManagerService_PublicAPI_v2_0">
+  <wsdl:service name="FleetManagerService_PublicAPI">
     <wsdl:port name="NetTcpBinding_IFleetManagerService_PublicAPI_v2_0" binding="tns:NetTcpBinding_IFleetManagerService_PublicAPI_v2_0">
       <soap12:address location="net.tcp://127.0.0.1:41917/fleetManager.svc" />
       <wsa10:EndpointReference>

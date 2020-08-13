@@ -2,14 +2,14 @@
 
 namespace FleetClients.UI.View
 {
-	/// <summary>
-	/// Interaction logic for KingpinStateMailboxDiagnosticView.xaml
-	/// </summary>
-	public partial class KingpinStateMailboxDiagnosticView : UserControl
-	{
-		public KingpinStateMailboxDiagnosticView()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for KingpinStateMailboxDiagnosticView.xaml
+    /// </summary>
+    public partial class KingpinStateMailboxDiagnosticView : UserControl
+    {
+        public KingpinStateMailboxDiagnosticView()
+        {
+            InitializeComponent();
+        }
+    }
 }

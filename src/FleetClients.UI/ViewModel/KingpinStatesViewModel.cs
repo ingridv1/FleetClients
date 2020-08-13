@@ -8,67 +8,67 @@ using System.Windows.Input;
 
 namespace FleetClients.UI.ViewModel
 {
-	public class KingpinStatesViewModel : AbstractCollectionViewModel<IFleetManagerClient, KingpinStateMailboxViewModel, KingpinStateMailbox>
-	{
-		public KingpinStatesViewModel()
-		{
-			HandleLoadCommands();
-		}
+    public class KingpinStatesViewModel : AbstractCollectionViewModel<IFleetManagerClient, KingpinStateMailboxViewModel, KingpinStateMailbox>
+    {
+        public KingpinStatesViewModel()
+        {
+            HandleLoadCommands();
+        }
 
-		public ICommand MouseDoubleClickCommand { get; set; }
+        public ICommand MouseDoubleClickCommand { get; set; }
 
-		public ICommand SelectionChangedCommand { get; set; }
+        public ICommand SelectionChangedCommand { get; set; }
 
-		private void HandleLoadCommands()
-		{
-			MouseDoubleClickCommand = new CustomCommand(MouseDoubleClick, CanMouseDoubleClick);
-			SelectionChangedCommand = new CustomCommand(SelectionChanged, CanSelectionChanged);
-		}
+        private void HandleLoadCommands()
+        {
+            MouseDoubleClickCommand = new CustomCommand(MouseDoubleClick, CanMouseDoubleClick);
+            SelectionChangedCommand = new CustomCommand(SelectionChanged, CanSelectionChanged);
+        }
 
-		private bool CanSelectionChanged(object obj) => true;
+        private bool CanSelectionChanged(object obj) => true;
 
-		private void SelectionChanged(object obj)
-		{
-			try
-			{
-				KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
-				ViewModelLocator.SelectedKingpinViewModel.Model = ksmViewModel.Model;
-			}
-			catch (Exception ex)
-			{
-				ViewModelLocator.SelectedKingpinViewModel.Model = null;
-				Logger.Error(ex);
-			}
-		}
+        private void SelectionChanged(object obj)
+        {
+            try
+            {
+                KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
+                ViewModelLocator.SelectedKingpinViewModel.Model = ksmViewModel.Model;
+            }
+            catch (Exception ex)
+            {
+                ViewModelLocator.SelectedKingpinViewModel.Model = null;
+                Logger.Error(ex);
+            }
+        }
 
-		private void MouseDoubleClick(object obj)
-		{
-			try
-			{
-				KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
+        private void MouseDoubleClick(object obj)
+        {
+            try
+            {
+                KingpinStateMailboxViewModel ksmViewModel = (KingpinStateMailboxViewModel)obj;
 
-				Service.DialogService.CreateKingpinDiagnosticWindow(ksmViewModel)
-					.Show();
-			}
-			catch (Exception ex)
-			{
-				Logger.Error(ex);
-			}
-		}
+                Service.DialogService.CreateKingpinDiagnosticWindow(ksmViewModel)
+                    .Show();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+        }
 
-		private bool CanMouseDoubleClick(object obj) => true;
+        private bool CanMouseDoubleClick(object obj) => true;
 
-		public override KingpinStateMailboxViewModel GetViewModelForModel(KingpinStateMailbox model)
-		{
-			try
-			{
-				return ViewModels.FirstOrDefault(e => e.KingpinState.IPAddress.Equals(model.Key));
-			}
-			catch (Exception ex)
-			{
-				Logger.Error(ex);
-				return null;
-			}
-		}
-	}
+        public override KingpinStateMailboxViewModel GetViewModelForModel(KingpinStateMailbox model)
+        {
+            try
+            {
+                return ViewModels.FirstOrDefault(e => e.KingpinState.IPAddress.Equals(model.Key));
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+                return null;
+            }
+        }
+    }
 }

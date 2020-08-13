@@ -6,15 +6,15 @@ using System;
 
 namespace FleetClients.FleetClientConsole.Options
 {
-	[Verb("freeze", HelpText = "Freezes fleet movement")]
-	public class RequestFreezeOption : AbstractConsoleOption<IFleetManagerClient>
-	{
-		protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
-		{
-			IServiceCallResult result = client.RequestFreeze();
+    [Verb("freeze", HelpText = "Freezes fleet movement")]
+    public class RequestFreezeOption : AbstractConsoleOption<IFleetManagerClient>
+    {
+        protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
+        {
+            IServiceCallResult result = client.RequestFreeze();
 
-			Console.WriteLine("RequestFreeze:{0}", result.ServiceCode == 0 ? "Success" : "Failed");
-			return result;
-		}
-	}
+            Console.WriteLine("RequestFreeze:{0}", result.ServiceCode == 0 ? "Success" : "Failed");
+            return result;
+        }
+    }
 }

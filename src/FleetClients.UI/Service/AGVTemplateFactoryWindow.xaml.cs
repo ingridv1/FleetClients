@@ -2,16 +2,16 @@
 
 namespace FleetClients.UI.Service
 {
-	public partial class AGVTemplateFactoryWindow : Window
-	{
-		public AGVTemplateFactoryWindow()
-		{
-			InitializeComponent();
-		}
+    public partial class AGVTemplateFactoryWindow : Window
+    {
+        public AGVTemplateFactoryWindow()
+        {
+            InitializeComponent();
+        }
 
-		private void okButton_Click(object sender, RoutedEventArgs e)
-		{
-			Close();
-		}
-	}
+        private void okButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+    }
 }
