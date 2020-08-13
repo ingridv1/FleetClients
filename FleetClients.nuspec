@@ -26,7 +26,7 @@
     </dependencies>
   </metadata>
   <files>
-		<file src="src\FleetClients\bin\Release\FleetClients.dll" target="lib\net472" />
+		<file src="src\FleetClients.Core\bin\Release\FleetClients.Core.dll" target="lib\net472" />
 		<file src="src\FleetClients.UI\bin\Release\FleetClients.UI.dll" target="lib\net472" />
   </files>
 </package>
