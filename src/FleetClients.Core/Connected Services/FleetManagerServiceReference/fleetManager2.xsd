@@ -71,7 +71,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q7:IPAddress" />
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q8:PoseData" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q8:PoseDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -100,7 +100,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q12:IPAddress" />
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q13:PoseData" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q13:PoseDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

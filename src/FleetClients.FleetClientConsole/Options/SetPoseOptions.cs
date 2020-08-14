@@ -19,9 +19,9 @@ namespace FleetClients.FleetClientConsole.Options
         protected override IServiceCallResult HandleExecution(IFleetManagerClient client)
         {
             IPAddress ipAddress = IPAddress.Parse(IPv4String);
-            PoseDataFactory.TryParseString(PoseString, out PoseData poseData);
+            PoseDtoFactory.TryParseString(PoseString, out PoseDto poseData);
 
-            return client.SetPose(ipAddress, poseData ?? PoseDataFactory.NaNPose);
+            return client.SetPose(ipAddress, poseData ?? PoseDtoFactory.NaNPose);
         }
     }
 }

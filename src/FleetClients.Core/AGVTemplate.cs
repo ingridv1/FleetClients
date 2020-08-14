@@ -35,10 +35,10 @@ namespace FleetClients.Core
         /// Converts PoseDataString to PoseData.
         /// </summary>
         /// <returns>Parsed PoseData</returns>
-        public PoseData ToPoseData()
+        public PoseDto ToPoseDto()
         {
-            PoseDataFactory.TryParseString(PoseDataString, out PoseData poseData);
-            return poseData;
+            PoseDtoFactory.TryParseString(PoseDataString, out PoseDto poseDto);
+            return poseDto;
         }
 
         /// <summary>

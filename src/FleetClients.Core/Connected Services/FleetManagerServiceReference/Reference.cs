@@ -15,9 +15,9 @@ namespace FleetClients.Core.FleetManagerServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PoseData", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PoseDto", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet")]
     [System.SerializableAttribute()]
-    public partial class PoseData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class PoseDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -203,10 +203,10 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicleResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -219,10 +219,10 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -324,11 +324,11 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.RequestUnfreezeAsync();
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
             return base.Channel.CreateVirtualVehicle(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
             return base.Channel.CreateVirtualVehicleAsync(ipAddress, pose);
         }
         
@@ -340,11 +340,11 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.RemoveVehicleAsync(ipAddress);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
             return base.Channel.SetPose(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseData pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
             return base.Channel.SetPoseAsync(ipAddress, pose);
         }
         

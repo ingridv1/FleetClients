@@ -18,11 +18,11 @@ namespace FleetClients.Test
         {
             foreach (string subString in FormattedStrings(x, y, heading))
             {
-                PoseData poseData = PoseDataFactory.ParseString(subString);
+                PoseDto pose = PoseDtoFactory.ParseString(subString);
 
-                Assert.AreEqual(x, poseData.X);
-                Assert.AreEqual(y, poseData.Y);
-                Assert.AreEqual(heading, poseData.Heading);
+                Assert.AreEqual(x, pose.X);
+                Assert.AreEqual(y, pose.Y);
+                Assert.AreEqual(heading, pose.Heading);
             }
         }
 

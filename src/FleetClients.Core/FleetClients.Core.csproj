@@ -123,7 +123,7 @@
     <Compile Include="JsonConverters\IEnumerableAGVTemplateConverter.cs" />
     <Compile Include="JsonFactory.cs" />
     <Compile Include="KingpinStateMailbox.cs" />
-    <Compile Include="PoseDataFactory.cs" />
+    <Compile Include="PoseDtoFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

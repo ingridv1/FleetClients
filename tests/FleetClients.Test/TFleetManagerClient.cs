@@ -46,14 +46,14 @@ namespace FleetClients.Test
         {
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-            PoseData poseData = new PoseData()
+            PoseDto poseDto = new PoseDto()
             {
                 X = 0,
                 Y = 0,
                 Heading = 0
             };
 
-            var result = client.CreateVirtualVehicle(IPAddress.Parse(ipV4String), poseData);
+            var result = client.CreateVirtualVehicle(IPAddress.Parse(ipV4String), poseDto);
             Assert.AreEqual(0, result.ServiceCode);
         }
 
@@ -78,7 +78,7 @@ namespace FleetClients.Test
         [Test]
         public void CreateVirtual()
         {
-            PoseData poseData = new PoseData()
+            PoseDto pose = new PoseDto()
             {
                 X = -3,
                 Y = -2,
@@ -88,7 +88,7 @@ namespace FleetClients.Test
             IPAddress ipAddress = IPAddress.Parse("192.0.2.5");
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-            var result = client.CreateVirtualVehicle(ipAddress, poseData);
+            var result = client.CreateVirtualVehicle(ipAddress, pose);
             Assert.AreEqual(0, result.ServiceCode);
         }
 
@@ -107,14 +107,14 @@ namespace FleetClients.Test
         public void SetPose(double x, double y, double heading)
         {
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
-            PoseData poseData = new PoseData()
+            PoseDto poseDto = new PoseDto()
             {
                 X = x,
                 Y = y,
                 Heading = heading
             };
 
-            var result = client.SetPose(IPAddress.Parse("192.0.2.5"), poseData);
+            var result = client.SetPose(IPAddress.Parse("192.0.2.5"), poseDto);
             Assert.AreEqual(0, result.ServiceCode);
         }
 

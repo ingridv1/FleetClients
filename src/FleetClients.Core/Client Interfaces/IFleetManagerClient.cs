@@ -15,7 +15,7 @@ namespace FleetClients.Core
     {
         FleetState FleetState { get; }
 
-        IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseData pose);
+        IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose);
 
         IServiceCallResult<XElement> GetKingpinDescription(IPAddress ipAddress);
 
@@ -31,7 +31,7 @@ namespace FleetClients.Core
 
         IServiceCallResult SetKingpinState(IPAddress ipAddress, VehicleControllerState controllerState);
 
-        IServiceCallResult SetPose(IPAddress ipAddress, PoseData pose);
+        IServiceCallResult SetPose(IPAddress ipAddress, PoseDto pose);
 
         IServiceCallResult<SemVerDto> GetAPISemVer();
     }

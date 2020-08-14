@@ -7,7 +7,7 @@ namespace FleetClients.Core
     /// <summary>
     /// Factory class for parsing pose strings.
     /// </summary>
-    public static class PoseDataFactory
+    public static class PoseDtoFactory
     {
         private static Regex PoseStringRegex { get; } = new Regex(@"(?:[^\d-]*)(?<x>-?\d*\.?\d*)(?:[^\d-]*)(?<y>-?\d*\.?\d*)(?:[^\d-]*)(?<heading>-?\d*\.?\d*$)", RegexOptions.Singleline);
 
@@ -15,20 +15,20 @@ namespace FleetClients.Core
         /// Tries to parse the pose defined in poseString.
         /// </summary>
         /// <param name="poseString">E.g. 0.5,0.2,0.57 or x0.5,y0.2,h0.57</param>
-        /// <param name="poseData">Parsed results</param>
+        /// <param name="poseDto">Parsed results</param>
         /// <returns>True on success</returns>
-        public static bool TryParseString(string poseString, out PoseData poseData)
+        public static bool TryParseString(string poseString, out PoseDto poseDto)
         {
             try
             {
-                poseData = ParseString(poseString);
+                poseDto = ParseString(poseString);
             }
             catch (Exception ex)
             {
-                poseData = null;
+                poseDto = null;
             }
 
-            return poseData != null;
+            return poseDto != null;
         }
 
         /// <summary>
@@ -36,9 +36,10 @@ namespace FleetClients.Core
         /// </summary>
         /// <param name="poseString">E.g. 0.5,0.2,0.57 or x0.5,y0.2,h0.57</param>
         /// <returns>Parsed result</returns>
-        public static PoseData ParseString(string poseString)
+        public static PoseDto ParseString(string poseString)
         {
-            if (string.IsNullOrEmpty(poseString)) throw new ArgumentNullException("poseString");
+            if (string.IsNullOrEmpty(poseString)) 
+                throw new ArgumentNullException("poseString");
 
             Match match = PoseStringRegex.Match(poseString);
 
@@ -48,7 +49,7 @@ namespace FleetClients.Core
                 double y = double.Parse(match.Groups[2].Value);
                 double heading = double.Parse(match.Groups[3].Value);
 
-                return new PoseData() { X = x, Y = y, Heading = heading };
+                return new PoseDto() { X = x, Y = y, Heading = heading };
             }
 
             throw new ArgumentOutOfRangeException("poseString");
@@ -57,31 +58,31 @@ namespace FleetClients.Core
         /// <summary>
         /// A pose where all elements are set to NaN.
         /// </summary>
-        public static PoseData NaNPose => new PoseData() { X = double.NaN, Y = double.NaN, Heading = double.NaN };
+        public static PoseDto NaNPose => new PoseDto() { X = double.NaN, Y = double.NaN, Heading = double.NaN };
 
         /// <summary>
         /// A pose with position origin and heading zero.
         /// </summary>
-        public static PoseData ZeroPose => new PoseData() { X = 0, Y = 0, Heading = 0 };
+        public static PoseDto ZeroPose => new PoseDto() { X = 0, Y = 0, Heading = 0 };
 
         /// <summary>
         /// A pose with position origin and heading zero.
         /// </summary>
-        public static PoseData OriginEast => new PoseData() { X = 0, Y = 0, Heading = 0 };
+        public static PoseDto OriginEast => new PoseDto() { X = 0, Y = 0, Heading = 0 };
 
         /// <summary>
         /// A pose with position origin and heading one hundred and eighty degrees.
         /// </summary>
-        public static PoseData OriginWest => new PoseData() { X = 0, Y = 0, Heading = Math.PI };
+        public static PoseDto OriginWest => new PoseDto() { X = 0, Y = 0, Heading = Math.PI };
 
         /// <summary>
         /// A pose with position origin and heading one hundred and two hundred and seventy degrees.
         /// </summary>
-        public static PoseData OriginSouth => new PoseData() { X = 0, Y = 0, Heading = -Math.PI / 2 };
+        public static PoseDto OriginSouth => new PoseDto() { X = 0, Y = 0, Heading = -Math.PI / 2 };
 
         /// <summary>
         /// A pose with position origin and heading ninety degrees.
         /// </summary>
-        public static PoseData OriginNorth => new PoseData() { X = 0, Y = 0, Heading = Math.PI / 2 };
+        public static PoseDto OriginNorth => new PoseDto() { X = 0, Y = 0, Heading = Math.PI / 2 };
     }
 }

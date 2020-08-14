@@ -63,7 +63,7 @@ namespace FleetClients.Core
             {
                 foreach (AGVTemplate agvTemplate in AGVTemplates.ToList())
                 {
-                    _ = fleetManagerClient.CreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseData());
+                    _ = fleetManagerClient.CreateVirtualVehicle(agvTemplate.GetIPV4Address(), agvTemplate.ToPoseDto());
                 }
             }
         }

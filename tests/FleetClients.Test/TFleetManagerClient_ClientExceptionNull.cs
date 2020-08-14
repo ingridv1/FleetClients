@@ -46,7 +46,7 @@ namespace FleetClients.Test
         [Category("ClientExceptionNull")]
         public void TryCreateVirtualVehicle_ClientExceptionNull()
         {
-            var result = FleetManagerClient.CreateVirtualVehicle(IPAddress.Loopback, new PoseData());
+            var result = FleetManagerClient.CreateVirtualVehicle(IPAddress.Loopback, new PoseDto());
             Assert.IsNotNull(result.ExceptionMessage);
         }
 
@@ -62,7 +62,7 @@ namespace FleetClients.Test
         [Category("ClientExceptionNull")]
         public void TrySetPose_ClientExceptionNull()
         {
-            var result = FleetManagerClient.SetPose(IPAddress.Loopback, new PoseData());
+            var result = FleetManagerClient.SetPose(IPAddress.Loopback, new PoseDto());
             Assert.IsNotNull(result.ExceptionMessage);
         }
 

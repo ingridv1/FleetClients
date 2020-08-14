@@ -252,7 +252,7 @@ namespace FleetClients.Core
             }
         }
 
-        public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseData pose)
+        public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose)
         {
             Logger.Trace("TryCreateVirtualVehicle()");
 
@@ -296,7 +296,7 @@ namespace FleetClients.Core
             }
         }
 
-        public IServiceCallResult SetPose(IPAddress ipAddress, PoseData pose)
+        public IServiceCallResult SetPose(IPAddress ipAddress, PoseDto pose)
         {
             Logger.Trace("SetPose()");
 
