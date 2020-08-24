@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0-alpha07\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0-alpha07\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
@@ -68,7 +68,7 @@
       <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.7.3\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

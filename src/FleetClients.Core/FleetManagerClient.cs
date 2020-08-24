@@ -31,9 +31,8 @@ namespace FleetClients.Core
         /// </summary>
         /// <param name="netTcpUri">net.tcp address of the job builder service</param>
         public FleetManagerClient(Uri netTcpUri, TimeSpan heartbeat = default)
-            : base(netTcpUri)
+            : base(netTcpUri, heartbeat)
         {
-            Heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) ? TimeSpan.FromMilliseconds(1000) : heartbeat;
             callback.FleetStateUpdate += Callback_FleetStateUpdate;
         }
 
@@ -56,8 +55,6 @@ namespace FleetClients.Core
             }
         }
 
-        public TimeSpan Heartbeat { get; private set; }
-
         public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose)
         {
             Logger.Trace("CreateVirtualVehicle");
@@ -68,8 +65,7 @@ namespace FleetClients.Core
         {
             Logger.Trace("GetAPISemVer");
             return HandleAPICall<SemVerDto>(e => e.GetAPISemVer());
-        }
-          
+        }          
 
         public IServiceCallResult<XElement> GetKingpinDescription(IPAddress ipAddress)
         {
@@ -135,53 +131,7 @@ namespace FleetClients.Core
 
             isDisposed = true;
         }
-
-        protected override void HeartbeatThread()
-        {
-            Logger.Trace("HeartbeatThread()");
-
-            ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory();
-            IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
-
-            bool? exceptionCaught;
-
-            while (!Terminate)
-            {
-                exceptionCaught = null;
-
-                try
-                {
-                    Logger.Trace("SubscriptionHeartbeat({0})", Key);
-                    channel.SubscriptionHeartbeat(Key);
-                    IsConnected = true;
-                    exceptionCaught = false;
-                }
-                catch (EndpointNotFoundException)
-                {
-                    Logger.Warn("HeartbeatThread - EndpointNotFoundException. Is the server running?");
-                    exceptionCaught = true;
-                }
-                catch (Exception ex)
-                {
-                    Logger.Error(ex);
-                    exceptionCaught = true;
-                }
-
-                if (exceptionCaught == true)
-                {
-                    channelFactory.Abort();
-                    IsConnected = false;
-
-                    channelFactory = CreateChannelFactory(); // Create a new channel as this one is dead
-                    channel = channelFactory.CreateChannel();
-                }
-
-                heartbeatReset.WaitOne(Heartbeat);
-            }
-
-            Logger.Trace("HeartbeatThread exit");
-        }
-
+  
         protected override void SetInstanceContext()
         {
             context = new InstanceContext(this.callback);
@@ -220,54 +170,6 @@ namespace FleetClients.Core
                 }
             }
         }
-        /// <summary>
-        /// Handles an API call that returns an IServiceCallResult
-        /// </summary>
-        /// <param name="apiCall">Method the handles the channel call</param>
-        private IServiceCallResult HandleAPICall(Func<IFleetManagerService_PublicAPI_v2_0, ServiceCallResultDto> apiCall)
-        {
-            try
-            {
-                using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
-                {
-                    IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
-                    ServiceCallResultDto result = apiCall(channel);
-                    channelFactory.Close();
-
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-                return ServiceCallResultFactory.FromClientException(ex);
-            }
-        }
-
-        /// <summary>
-        /// Handles an API call that returns a value of type T
-        /// </summary>
-        /// <typeparam name="T">Dto type to be returned</typeparam>
-        /// <param name="apiCall">Method the handles the channel call</param>
-        private IServiceCallResult<T> HandleAPICall<T>(Func<IFleetManagerService_PublicAPI_v2_0, ServiceCallResultDto<T>> apiCall)
-        {
-            try
-            {
-                using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = CreateChannelFactory())
-                {
-                    IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
-                    ServiceCallResultDto<T> result = apiCall(channel);
-                    channelFactory.Close();
-
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-                return ServiceCallResultFactory<T>.FromClientException(ex);
-            }
-        }
 
         private void OnAdded(KingpinStateMailbox kingpinStateMailbox)
         {
@@ -293,6 +195,11 @@ namespace FleetClients.Core
                 .GetInvocationList()
                 .Cast<Action<KingpinStateMailbox>>()
                 .ForEach(e => e.BeginInvoke(kingpinStateMailbox, null, null));
+        }
+
+        protected override void HandleSubscriptionHeartbeat(IFleetManagerService_PublicAPI_v2_0 channel, Guid key)
+        {
+            channel.SubscriptionHeartbeat(key);
         }
     }
 }
