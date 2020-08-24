@@ -18,8 +18,6 @@ namespace FleetClients.Core
 {
     internal class FleetManagerClient : AbstractCallbackClient<IFleetManagerService_PublicAPI_v2_0>, IFleetManagerClient
     {
-        private readonly Queue<byte[]> buffer = new Queue<byte[]>();
-
         private readonly FleetManagerServiceCallback callback = new FleetManagerServiceCallback();
 
         private readonly List<KingpinStateMailbox> kingpinStateMailboxes = new List<KingpinStateMailbox>();
@@ -279,6 +277,12 @@ namespace FleetClients.Core
                 .GetInvocationList()
                 .Cast<Action<KingpinStateMailbox>>()
                 .ForEach(e => e.BeginInvoke(kingpinStateMailbox, null, null));
+        }
+
+        public event Action<FleetState> FleetStateUpdated
+        {
+            add { callback.FleetStateUpdate += value; }
+            remove { callback.FleetStateUpdate -= value; }            
         }
 
         private void OnRemoved(KingpinStateMailbox kingpinStateMailbox)
