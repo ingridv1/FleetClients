@@ -5,12 +5,8 @@ using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Architecture;
 using GACore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace Tutorial_02
 {
