@@ -184,21 +184,13 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescription", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/GetKingpinDescriptionResponse")]
         System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>> GetKingpinDescriptionAsync(System.Net.IPAddress ipAddress);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreezeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto RequestFreeze();
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GACore.Architecture.FrozenState frozenState);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestFreezeResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestFreezeAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreezeResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto RequestUnfreeze();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreeze", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RequestUnfreezeResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestUnfreezeAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenStateResponse")]
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GACore.Architecture.FrozenState frozenState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -223,14 +215,6 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
         System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto ResetKingpin(System.Net.IPAddress ipAddress);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpin", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/ResetKingpinResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> ResetKingpinAsync(System.Net.IPAddress ipAddress);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -308,20 +292,12 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.GetKingpinDescriptionAsync(ipAddress);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto RequestFreeze() {
-            return base.Channel.RequestFreeze();
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GACore.Architecture.FrozenState frozenState) {
+            return base.Channel.SetFrozenState(frozenState);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestFreezeAsync() {
-            return base.Channel.RequestFreezeAsync();
-        }
-        
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto RequestUnfreeze() {
-            return base.Channel.RequestUnfreeze();
-        }
-        
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> RequestUnfreezeAsync() {
-            return base.Channel.RequestUnfreezeAsync();
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GACore.Architecture.FrozenState frozenState) {
+            return base.Channel.SetFrozenStateAsync(frozenState);
         }
         
         public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
@@ -346,14 +322,6 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         
         public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
             return base.Channel.SetPoseAsync(ipAddress, pose);
-        }
-        
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto ResetKingpin(System.Net.IPAddress ipAddress) {
-            return base.Channel.ResetKingpin(ipAddress);
-        }
-        
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> ResetKingpinAsync(System.Net.IPAddress ipAddress) {
-            return base.Channel.ResetKingpinAsync(ipAddress);
         }
         
         public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {

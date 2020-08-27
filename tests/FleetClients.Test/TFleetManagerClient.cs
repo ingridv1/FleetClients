@@ -1,6 +1,7 @@
 ﻿using BaseClients.Core;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
+using GACore.Architecture;
 using NUnit.Framework;
 using System.Net;
 
@@ -27,7 +28,7 @@ namespace FleetClients.Test
         {
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-            var result = client.RequestUnfreeze();
+            var result = client.SetFrozenState(FrozenState.Unfrozen);
             Assert.AreEqual(0, result.ServiceCode);
         }
 
@@ -36,7 +37,7 @@ namespace FleetClients.Test
         {
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
-            var result = client.RequestFreeze();
+            var result = client.SetFrozenState(FrozenState.Frozen);
             Assert.AreEqual(0, result.ServiceCode);
         }
 

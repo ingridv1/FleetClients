@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="AGVTemplate.cs" />
     <Compile Include="Client Interfaces\IFleetManagerClient.cs" />
+    <Compile Include="Client Interfaces\IFleetManagerClient_ExtensionMethods.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Connected Services\FleetManagerServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>

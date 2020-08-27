@@ -81,22 +81,10 @@ namespace FleetClients.Core
             return HandleAPICall(e => e.RemoveVehicle(ipAddress));
         }
 
-        public IServiceCallResult RequestFreeze()
+        public IServiceCallResult SetFrozenState(FrozenState frozenState)
         {
-            Logger.Trace("RequestFreeze");
-            return HandleAPICall(e => e.RequestFreeze());
-        }
-
-        public IServiceCallResult RequestUnfreeze()
-        {
-            Logger.Trace("RequestUnfreeze");
-            return HandleAPICall(e => e.RequestUnfreeze());
-        }
-
-        public IServiceCallResult ResetKingpin(IPAddress ipAddress)
-        {
-            Logger.Trace("ResetKingpin");
-            return HandleAPICall(e => e.ResetKingpin(ipAddress));
+            Logger.Trace("SetFrozenState");
+            return HandleAPICall(e => e.SetFrozenState(frozenState));
         }
 
         public IServiceCallResult SetFleetState(VehicleControllerState controllerState)
