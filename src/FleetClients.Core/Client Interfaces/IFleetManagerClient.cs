@@ -24,11 +24,7 @@ namespace FleetClients.Core
 
         IServiceCallResult RemoveVehicle(IPAddress ipAddress);
 
-        IServiceCallResult RequestFreeze();
-
-        IServiceCallResult RequestUnfreeze();
-
-        IServiceCallResult ResetKingpin(IPAddress ipAddress);
+        IServiceCallResult SetFrozenState(FrozenState frozenState);
 
         IServiceCallResult SetFleetState(VehicleControllerState controllerStates);
 
