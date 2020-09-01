@@ -1,5 +1,6 @@
 ﻿using BaseClients.Architecture;
 using FleetClients.Core.FleetManagerServiceReference;
+
 using GAAPICommon.Architecture;
 using GAAPICommon.Core.Dtos;
 using GACore.Architecture;
@@ -14,9 +15,9 @@ namespace FleetClients.Core
     /// </summary>
     public interface IFleetManagerClient : ICallbackClient, IModelCollection<KingpinStateMailbox>
     {
-        FleetState FleetState { get; }
+        FleetStateDto FleetState { get; }
 
-        event Action<FleetState> FleetStateUpdated;
+        event Action<FleetStateDto> FleetStateUpdated;
 
         IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose);
 

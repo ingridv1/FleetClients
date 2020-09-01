@@ -1,42 +1,31 @@
-# Welcome to the **FleetClients Homepage**.
+# Welcome to the **FleetClients** Homepage
 
-Fleet clients allows remote manipulation of the fleet manager.
+The fleet manager client interface allows remote manipulation of the fleet manager, supporting:
+
+* Real-time fleet monitoring
+  - Live AGV poses
+  - AGV charge level(s)
+  - Fleet health
+* Virtual vehicle creation
+* Disabling / Enabling the fleet remotely
 
 Here you can find:
 
-* API documentation
-* Example code
-* Source code
+- API documentation
+- Example code
 
-Nuget package available at [nuget.org](https://www.nuget.org/packages/FleetClients/)
+With
+
+* Source code available on [GitHub](https://github.com/GuidanceAutomation/FleetClients)
+* Pre-built package available at [nuget.org](https://www.nuget.org/packages/FleetClients/)
 
 ## Guidance Automation Client Wrappers:
 
 The client wrapper family consists of:
 
-### Base Clients
-
-Core component library.
-
-* [Documentation](https://guidanceautomation.github.io/BaseClients/)
-* [Github](https://github.com/GuidanceAutomation/BaseClients)
-* [Nuget](https://www.nuget.org/packages/BaseClients/)
-
-### Fleet Clients
-
-Remote fleet manager manipulation.
-
-* [Documentation](https://guidanceautomation.github.io/FleetClients/)
-* [Github](https://github.com/GuidanceAutomation/FleetClients)
-* [Nuget](https://www.nuget.org/packages/FleetClients/)
-
-### Scheduling Clients
-
-Job creation, task tracking and map support.
-
-* [Documentation](https://guidanceautomation.github.io/SchedulingClients/)
-* [Github](https://github.com/GuidanceAutomation/SchedulingClients)
-* [Nuget](https://www.nuget.org/packages/SchedulingClients/)
+* [Base Clients](https://guidanceautomation.github.io/BaseClients/) - core component library for all client libraries
+* [Fleet Clients](https://guidanceautomation.github.io/FleetClients/) - Remote fleet manager manipulation
+* [Scheduling Clients](https://guidanceautomation.github.io/SchedulingClients/) - Job creation, task tracking and map support
 
 <div style="text-align: right">
   <img src="images/incaartBW.jpg" alt="AGV image" width="200"/>

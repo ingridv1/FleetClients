@@ -10,85 +10,7 @@
 
 namespace FleetClients.Core.FleetManagerServiceReference {
     using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PoseDto", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet")]
-    [System.SerializableAttribute()]
-    public partial class PoseDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double HeadingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double XField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double YField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Heading {
-            get {
-                return this.HeadingField;
-            }
-            set {
-                if ((this.HeadingField.Equals(value) != true)) {
-                    this.HeadingField = value;
-                    this.RaisePropertyChanged("Heading");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double X {
-            get {
-                return this.XField;
-            }
-            set {
-                if ((this.XField.Equals(value) != true)) {
-                    this.XField = value;
-                    this.RaisePropertyChanged("X");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Y {
-            get {
-                return this.YField;
-            }
-            set {
-                if ((this.YField.Equals(value) != true)) {
-                    this.YField = value;
-                    this.RaisePropertyChanged("Y");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VehicleControllerState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture")]
@@ -99,67 +21,6 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Disabled = 1,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FleetState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet")]
-    [System.SerializableAttribute()]
-    public partial class FleetState : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GACore.KingpinStateData[] KingpinStatesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte TickField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GACore.KingpinStateData[] KingpinStates {
-            get {
-                return this.KingpinStatesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KingpinStatesField, value) != true)) {
-                    this.KingpinStatesField = value;
-                    this.RaisePropertyChanged("KingpinStates");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte Tick {
-            get {
-                return this.TickField;
-            }
-            set {
-                if ((this.TickField.Equals(value) != true)) {
-                    this.TickField = value;
-                    this.RaisePropertyChanged("Tick");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -187,18 +48,18 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GACore.Architecture.FrozenState frozenState);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GAAPICommon.Architecture.FrozenState frozenState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFrozenStateResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GACore.Architecture.FrozenState frozenState);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState frozenState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/CreateVirtualVehicleResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicle", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/RemoveVehicleResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -211,10 +72,10 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetPose", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetPoseResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
@@ -237,7 +98,7 @@ namespace FleetClients.Core.FleetManagerServiceReference {
     public interface IFleetManagerService_PublicAPI_v2_0Callback {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallback", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/OnCallbackResponse")]
-        void OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState callbackObject);
+        void OnCallback(GAAPICommon.Core.Dtos.FleetStateDto callbackObject);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -292,19 +153,19 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.GetKingpinDescriptionAsync(ipAddress);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GACore.Architecture.FrozenState frozenState) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFrozenState(GAAPICommon.Architecture.FrozenState frozenState) {
             return base.Channel.SetFrozenState(frozenState);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GACore.Architecture.FrozenState frozenState) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState frozenState) {
             return base.Channel.SetFrozenStateAsync(frozenState);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto CreateVirtualVehicle(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose) {
             return base.Channel.CreateVirtualVehicle(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> CreateVirtualVehicleAsync(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose) {
             return base.Channel.CreateVirtualVehicleAsync(ipAddress, pose);
         }
         
@@ -316,11 +177,11 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.RemoveVehicleAsync(ipAddress);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetPose(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose) {
             return base.Channel.SetPose(ipAddress, pose);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto pose) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetPoseAsync(System.Net.IPAddress ipAddress, GAAPICommon.Core.Dtos.PoseDto pose) {
             return base.Channel.SetPoseAsync(ipAddress, pose);
         }
         

@@ -38,25 +38,25 @@
       <HintPath>..\..\packages\BaseClients.2.0.0-alpha07\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.4.0\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.4.0\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Controls.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Extensions.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GACore.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.UI.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
@@ -144,9 +144,6 @@
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\FleetManagerServiceReference\fleetManager5.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager6.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -154,9 +151,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FleetManagerServiceReference\fleetManager9.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService.wsdl" />

@@ -1,6 +1,8 @@
 ﻿using BaseClients.Core;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using GACore.Architecture;
 using NUnit.Framework;
 using System.Net;

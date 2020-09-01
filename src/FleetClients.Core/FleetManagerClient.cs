@@ -22,7 +22,7 @@ namespace FleetClients.Core
 
         private readonly List<KingpinStateMailbox> kingpinStateMailboxes = new List<KingpinStateMailbox>();
 
-        private FleetState fleetState = null;
+        private FleetStateDto fleetState = null;
 
         private bool isDisposed = false;
 
@@ -45,7 +45,7 @@ namespace FleetClients.Core
 
         public event Action<KingpinStateMailbox> Removed;
 
-        public FleetState FleetState
+        public FleetStateDto FleetState
         {
             get { return fleetState; }
             set
@@ -125,7 +125,7 @@ namespace FleetClients.Core
             context = new InstanceContext(this.callback);
         }
 
-        private void Callback_FleetStateUpdate(FleetState fleetState)
+        private void Callback_FleetStateUpdate(FleetStateDto fleetState)
         {
             FleetState = fleetState;
 
@@ -169,7 +169,7 @@ namespace FleetClients.Core
                 .ForEach(e => e.BeginInvoke(kingpinStateMailbox, null, null));
         }
 
-        public event Action<FleetState> FleetStateUpdated
+        public event Action<FleetStateDto> FleetStateUpdated
         {
             add { callback.FleetStateUpdate += value; }
             remove { callback.FleetStateUpdate -= value; }            

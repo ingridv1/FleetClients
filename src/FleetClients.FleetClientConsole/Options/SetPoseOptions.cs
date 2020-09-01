@@ -3,6 +3,7 @@ using CommandLine;
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using System.Net;
 
 namespace FleetClients.FleetClientConsole.Options

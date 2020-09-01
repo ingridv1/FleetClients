@@ -2,8 +2,10 @@
 using FleetClients.Core;
 using FleetClients.Core.FleetManagerServiceReference;
 using GACore.Architecture;
+using GAAPICommon.Architecture;
 using NUnit.Framework;
 using System.Net;
+using GAAPICommon.Core.Dtos;
 
 namespace FleetClients.Test
 {
