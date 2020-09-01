@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BaseClients.Core;
 using FleetClients.Core;
-using FleetClients.Core.FleetManagerServiceReference;
-using BaseClients.Core;
-using System.Net;
 using FleetClients.Core.Client_Interfaces;
 using GAAPICommon.Architecture;
+using System;
+using System.Net;
 
 namespace Tutorial_01
 {
