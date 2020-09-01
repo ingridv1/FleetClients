@@ -1,5 +1,6 @@
 ﻿using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using System;
 using System.Net;
 

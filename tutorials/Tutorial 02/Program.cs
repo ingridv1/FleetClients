@@ -3,6 +3,7 @@ using FleetClients.Core;
 using FleetClients.Core.Client_Interfaces;
 using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using GACore;
 using System;
 using System.Linq;
@@ -50,7 +51,7 @@ namespace Tutorial_02
             fleetManagerClient.Dispose();
         }
 
-        private static void FleetManagerClient_FleetStateUpdated(FleetState fleetState)
+        private static void FleetManagerClient_FleetStateUpdated(FleetStateDto fleetState)
         {
             if (fleetState == null)
                 throw new ArgumentNullException("fleetState");
@@ -66,7 +67,7 @@ namespace Tutorial_02
 
             Console.WriteLine($"Fleet size: {fleetState.KingpinStates.Count()}");
 
-            foreach (KingpinStateData kingpinState in fleetState.KingpinStates)
+            foreach (IKingpinState kingpinState in fleetState.KingpinStates)
             {
                 Console.WriteLine($"IP Address:{kingpinState.IPAddress} Tick:{kingpinState.Tick}, X:{kingpinState.X}, Y:{kingpinState.Y},  Heading:{kingpinState.Heading}");
             }

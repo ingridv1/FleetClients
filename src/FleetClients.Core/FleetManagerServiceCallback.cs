@@ -1,4 +1,5 @@
 ﻿using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Core.Dtos;
 using System;
 
 namespace FleetClients.Core
@@ -9,15 +10,15 @@ namespace FleetClients.Core
         {
         }
 
-        public event Action<FleetState> FleetStateUpdate;
+        public event Action<FleetStateDto> FleetStateUpdate;
 
-        public void OnCallback(FleetState fleetState)
+        public void OnCallback(FleetStateDto fleetState)
         {
-            Action<FleetState> handlers = FleetStateUpdate;
+            Action<FleetStateDto> handlers = FleetStateUpdate;
 
             if (handlers != null)
             {
-                foreach (Action<FleetState> handler in handlers.GetInvocationList())
+                foreach (Action<FleetStateDto> handler in handlers.GetInvocationList())
                 {
                     handler.BeginInvoke(fleetState, null, null);
                 }
