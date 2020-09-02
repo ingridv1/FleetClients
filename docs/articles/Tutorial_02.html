@@ -71,16 +71,40 @@
 
 <p>Pre-requisites:</p>
 <ul>
-<li>An active fleet manager service installation</li>
-<li>Visual Studio 2019</li>
-<li>Basic C# knowledge</li>
+<li>Complete Tutorial 01 first.</li>
 </ul>
 <h2 id="getting-started">Getting Started</h2>
 <ul>
-<li>Create a new console application (.NET framework 4.7.2 or higher)</li>
-<li>Install the <a href="https://www.nuget.org/packages/FleetClients">FleetClients</a> nuget package</li>
+<li>Download the source code from <a href="https://github.com/GuidanceAutomation/FleetClients">Github</a></li>
+<li>Open the solution <code>FleetClients.sln</code> in VS 2019</li>
 </ul>
-<h2 id="creating-a-virtual-vehicle">Creating a Virtual Vehicle</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Ensure your fleet manager service is running and exposing endpoints on localhost.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Check the http endpoint <a href="http://127.0.0.1:41916/fleetManager.svc">fleetManager.svc</a> is active.</p>
+</div>
+<h3 id="run-the-console-application">Run the Console application</h3>
+<p>Select <code>Tutorial 02</code> as the startup project, build and run the solution.</p>
+<p>A simple demo will run where a virtual vehicle is created with a pose of 0,0,0. Upon subscribing to fleet updates the state of the fleet will be continuously flushed to the console window.</p>
+<h2 id="code-snippets">Code Snippets</h2>
+<h3 id="icallbackclient">ICallbackClient</h3>
+<p>The <code>IFleetManagerClient</code> implements the <code>ICallbackClient</code> interface, in that it will automatically connect to the server and subscribe to fleet state update messages. When a new fleet state message is received, the <code>FleetState</code> property will be updated and the event <code>FleetStateUpdated</code> fired.</p>
+<p>The <code>ICallbackClient</code> interface defines two events:</p>
+<pre><code>event Action&lt;DateTime&gt; Connected;
+event Action&lt;DateTime&gt; Disconnected;
+</code></pre>
+<p>Which will fire whenever the client is connected or disconnected from the server. In addition the <code>IsConnected</code> property can be used to determine the state of the connection.</p>
+<p>With the console app running and displaying the fleet state, stopping the Fleet Manager Service will result in the last received fleet state being displayed, e.g.</p>
+<pre><code>Fleet size:1
+IP Address:192.168.0.1 Tick:140, X:1, Y:1, Heading:1.57
+</code></pre>
+<p>Re-starting the Fleet Manager Service will result in:</p>
+<pre><code>Fleet size:0
+</code></pre>
+<p>being displayed as the fleet manager is re-initialized with no virtual vehicles.</p>
 </article>
           </div>
           
