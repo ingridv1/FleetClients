@@ -198,12 +198,12 @@ references:
   commentId: E:FleetClients.Core.FleetManagerServiceCallback.FleetStateUpdate
   fullName: FleetClients.Core.FleetManagerServiceCallback.FleetStateUpdate
   nameWithType: FleetManagerServiceCallback.FleetStateUpdate
-- uid: FleetClients.Core.FleetManagerServiceCallback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  name: OnCallback(FleetState)
-  href: api/FleetClients.Core.FleetManagerServiceCallback.html#FleetClients_Core_FleetManagerServiceCallback_OnCallback_FleetClients_Core_FleetManagerServiceReference_FleetState_
-  commentId: M:FleetClients.Core.FleetManagerServiceCallback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  fullName: FleetClients.Core.FleetManagerServiceCallback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  nameWithType: FleetManagerServiceCallback.OnCallback(FleetState)
+- uid: FleetClients.Core.FleetManagerServiceCallback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  name: OnCallback(FleetStateDto)
+  href: api/FleetClients.Core.FleetManagerServiceCallback.html#FleetClients_Core_FleetManagerServiceCallback_OnCallback_GAAPICommon_Core_Dtos_FleetStateDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceCallback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  fullName: FleetClients.Core.FleetManagerServiceCallback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  nameWithType: FleetManagerServiceCallback.OnCallback(FleetStateDto)
 - uid: FleetClients.Core.FleetManagerServiceCallback.OnCallback*
   name: OnCallback
   href: api/FleetClients.Core.FleetManagerServiceCallback.html#FleetClients_Core_FleetManagerServiceCallback_OnCallback_
@@ -260,11 +260,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.FleetManagerService_PublicAPI_v2_0Client
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.FleetManagerService_PublicAPI_v2_0Client
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: CreateVirtualVehicle(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_CreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_CreateVirtualVehicle_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle*
   name: CreateVirtualVehicle
@@ -273,11 +273,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicle
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: CreateVirtualVehicleAsync(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_CreateVirtualVehicleAsync_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_CreateVirtualVehicleAsync_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.CreateVirtualVehicleAsync*
   name: CreateVirtualVehicleAsync
@@ -390,11 +390,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFleetStateAsync
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetFleetStateAsync
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GACore.Architecture.FrozenState)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   name: SetFrozenState(FrozenState)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetFrozenState_GACore_Architecture_FrozenState_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GACore.Architecture.FrozenState)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GACore.Architecture.FrozenState)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetFrozenState_GAAPICommon_Architecture_FrozenState_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GAAPICommon.Architecture.FrozenState)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetFrozenState(FrozenState)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState*
   name: SetFrozenState
@@ -403,11 +403,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenState
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetFrozenState
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GACore.Architecture.FrozenState)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
   name: SetFrozenStateAsync(FrozenState)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetFrozenStateAsync_GACore_Architecture_FrozenState_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GACore.Architecture.FrozenState)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GACore.Architecture.FrozenState)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetFrozenStateAsync_GAAPICommon_Architecture_FrozenState_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync(FrozenState)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetFrozenStateAsync*
   name: SetFrozenStateAsync
@@ -442,11 +442,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetKingpinStateAsync
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetKingpinStateAsync
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: SetPose(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetPose_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetPose(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose*
   name: SetPose
@@ -455,11 +455,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPose
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetPose
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: SetPoseAsync(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetPoseAsync_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.html#FleetClients_Core_FleetManagerServiceReference_FleetManagerService_PublicAPI_v2_0Client_SetPoseAsync_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SetPoseAsync*
   name: SetPoseAsync
@@ -494,81 +494,17 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.FleetManagerService_PublicAPI_v2_0Client.SubscriptionHeartbeatAsync
   nameWithType: FleetManagerService_PublicAPI_v2_0Client.SubscriptionHeartbeatAsync
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState
-  name: FleetState
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html
-  commentId: T:FleetClients.Core.FleetManagerServiceReference.FleetState
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState
-  nameWithType: FleetState
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData
-  name: ExtensionData
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_ExtensionData
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData
-  nameWithType: FleetState.ExtensionData
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData*
-  name: ExtensionData
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_ExtensionData_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.ExtensionData
-  nameWithType: FleetState.ExtensionData
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates
-  name: KingpinStates
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_KingpinStates
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates
-  nameWithType: FleetState.KingpinStates
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates*
-  name: KingpinStates
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_KingpinStates_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.KingpinStates
-  nameWithType: FleetState.KingpinStates
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.PropertyChanged
-  name: PropertyChanged
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_PropertyChanged
-  commentId: E:FleetClients.Core.FleetManagerServiceReference.FleetState.PropertyChanged
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.PropertyChanged
-  nameWithType: FleetState.PropertyChanged
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged(System.String)
-  name: RaisePropertyChanged(String)
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_RaisePropertyChanged_System_String_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged(System.String)
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged(System.String)
-  nameWithType: FleetState.RaisePropertyChanged(String)
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged*
-  name: RaisePropertyChanged
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_RaisePropertyChanged_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.RaisePropertyChanged
-  nameWithType: FleetState.RaisePropertyChanged
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.Tick
-  name: Tick
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_Tick
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.FleetState.Tick
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.Tick
-  nameWithType: FleetState.Tick
-- uid: FleetClients.Core.FleetManagerServiceReference.FleetState.Tick*
-  name: Tick
-  href: api/FleetClients.Core.FleetManagerServiceReference.FleetState.html#FleetClients_Core_FleetManagerServiceReference_FleetState_Tick_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.FleetState.Tick
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.FleetState.Tick
-  nameWithType: FleetState.Tick
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0
   name: IFleetManagerService_PublicAPI_v2_0
   href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html
   commentId: T:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0
   nameWithType: IFleetManagerService_PublicAPI_v2_0
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: CreateVirtualVehicle(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicle_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle*
   name: CreateVirtualVehicle
@@ -577,11 +513,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle
   nameWithType: IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicle
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: CreateVirtualVehicleAsync(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicleAsync_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_CreateVirtualVehicleAsync_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.CreateVirtualVehicleAsync*
   name: CreateVirtualVehicleAsync
@@ -694,11 +630,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFleetStateAsync
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetFleetStateAsync
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GACore.Architecture.FrozenState)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   name: SetFrozenState(FrozenState)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetFrozenState_GACore_Architecture_FrozenState_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GACore.Architecture.FrozenState)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GACore.Architecture.FrozenState)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetFrozenState_GAAPICommon_Architecture_FrozenState_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GAAPICommon.Architecture.FrozenState)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetFrozenState(FrozenState)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState*
   name: SetFrozenState
@@ -707,11 +643,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenState
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetFrozenState
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GACore.Architecture.FrozenState)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
   name: SetFrozenStateAsync(FrozenState)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetFrozenStateAsync_GACore_Architecture_FrozenState_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GACore.Architecture.FrozenState)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GACore.Architecture.FrozenState)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetFrozenStateAsync_GAAPICommon_Architecture_FrozenState_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(GAAPICommon.Architecture.FrozenState)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync(FrozenState)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetFrozenStateAsync*
   name: SetFrozenStateAsync
@@ -746,11 +682,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetKingpinStateAsync
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetKingpinStateAsync
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: SetPose(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetPose_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetPose(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose*
   name: SetPose
@@ -759,11 +695,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPose
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetPose
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: SetPoseAsync(IPAddress, PoseDto)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetPoseAsync_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0_SetPoseAsync_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerService_PublicAPI_v2_0.SetPoseAsync(IPAddress, PoseDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0.SetPoseAsync*
   name: SetPoseAsync
@@ -804,12 +740,12 @@ references:
   commentId: T:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback
   nameWithType: IFleetManagerService_PublicAPI_v2_0Callback
-- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  name: OnCallback(FleetState)
-  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0Callback_OnCallback_FleetClients_Core_FleetManagerServiceReference_FleetState_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(FleetClients.Core.FleetManagerServiceReference.FleetState)
-  nameWithType: IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(FleetState)
+- uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  name: OnCallback(FleetStateDto)
+  href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0Callback_OnCallback_GAAPICommon_Core_Dtos_FleetStateDto_
+  commentId: M:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(GAAPICommon.Core.Dtos.FleetStateDto)
+  nameWithType: IFleetManagerService_PublicAPI_v2_0Callback.OnCallback(FleetStateDto)
 - uid: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.OnCallback*
   name: OnCallback
   href: api/FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback.html#FleetClients_Core_FleetManagerServiceReference_IFleetManagerService_PublicAPI_v2_0Callback_OnCallback_
@@ -823,83 +759,6 @@ references:
   commentId: T:FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Channel
   fullName: FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Channel
   nameWithType: IFleetManagerService_PublicAPI_v2_0Channel
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto
-  name: PoseDto
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html
-  commentId: T:FleetClients.Core.FleetManagerServiceReference.PoseDto
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto
-  nameWithType: PoseDto
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData
-  name: ExtensionData
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_ExtensionData
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData
-  nameWithType: PoseDto.ExtensionData
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData*
-  name: ExtensionData
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_ExtensionData_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.ExtensionData
-  nameWithType: PoseDto.ExtensionData
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading
-  name: Heading
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_Heading
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading
-  nameWithType: PoseDto.Heading
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading*
-  name: Heading
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_Heading_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.Heading
-  nameWithType: PoseDto.Heading
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.PropertyChanged
-  name: PropertyChanged
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_PropertyChanged
-  commentId: E:FleetClients.Core.FleetManagerServiceReference.PoseDto.PropertyChanged
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.PropertyChanged
-  nameWithType: PoseDto.PropertyChanged
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged(System.String)
-  name: RaisePropertyChanged(String)
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_RaisePropertyChanged_System_String_
-  commentId: M:FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged(System.String)
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged(System.String)
-  nameWithType: PoseDto.RaisePropertyChanged(String)
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged*
-  name: RaisePropertyChanged
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_RaisePropertyChanged_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.RaisePropertyChanged
-  nameWithType: PoseDto.RaisePropertyChanged
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.X
-  name: X
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_X
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.PoseDto.X
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.X
-  nameWithType: PoseDto.X
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.X*
-  name: X
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_X_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.PoseDto.X
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.X
-  nameWithType: PoseDto.X
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.Y
-  name: Y
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_Y
-  commentId: P:FleetClients.Core.FleetManagerServiceReference.PoseDto.Y
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.Y
-  nameWithType: PoseDto.Y
-- uid: FleetClients.Core.FleetManagerServiceReference.PoseDto.Y*
-  name: Y
-  href: api/FleetClients.Core.FleetManagerServiceReference.PoseDto.html#FleetClients_Core_FleetManagerServiceReference_PoseDto_Y_
-  commentId: Overload:FleetClients.Core.FleetManagerServiceReference.PoseDto.Y
-  isSpec: "True"
-  fullName: FleetClients.Core.FleetManagerServiceReference.PoseDto.Y
-  nameWithType: PoseDto.Y
 - uid: FleetClients.Core.FleetManagerServiceReference.VehicleControllerState
   name: VehicleControllerState
   href: api/FleetClients.Core.FleetManagerServiceReference.VehicleControllerState.html
@@ -1091,11 +950,11 @@ references:
   commentId: T:FleetClients.Core.IFleetManagerClient
   fullName: FleetClients.Core.IFleetManagerClient
   nameWithType: IFleetManagerClient
-- uid: FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: CreateVirtualVehicle(IPAddress, PoseDto)
-  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerClient.CreateVirtualVehicle(IPAddress, PoseDto)
 - uid: FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle*
   name: CreateVirtualVehicle
@@ -1175,11 +1034,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.IFleetManagerClient.SetFleetState
   nameWithType: IFleetManagerClient.SetFleetState
-- uid: FleetClients.Core.IFleetManagerClient.SetFrozenState(GACore.Architecture.FrozenState)
+- uid: FleetClients.Core.IFleetManagerClient.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   name: SetFrozenState(FrozenState)
-  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_SetFrozenState_GACore_Architecture_FrozenState_
-  commentId: M:FleetClients.Core.IFleetManagerClient.SetFrozenState(GACore.Architecture.FrozenState)
-  fullName: FleetClients.Core.IFleetManagerClient.SetFrozenState(GACore.Architecture.FrozenState)
+  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_SetFrozenState_GAAPICommon_Architecture_FrozenState_
+  commentId: M:FleetClients.Core.IFleetManagerClient.SetFrozenState(GAAPICommon.Architecture.FrozenState)
+  fullName: FleetClients.Core.IFleetManagerClient.SetFrozenState(GAAPICommon.Architecture.FrozenState)
   nameWithType: IFleetManagerClient.SetFrozenState(FrozenState)
 - uid: FleetClients.Core.IFleetManagerClient.SetFrozenState*
   name: SetFrozenState
@@ -1201,11 +1060,11 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.IFleetManagerClient.SetKingpinState
   nameWithType: IFleetManagerClient.SetKingpinState
-- uid: FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
+- uid: FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
   name: SetPose(IPAddress, PoseDto)
-  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_
-  commentId: M:FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName: FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress, FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  href: api/FleetClients.Core.IFleetManagerClient.html#FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_
+  commentId: M:FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)
+  fullName: FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress, GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: IFleetManagerClient.SetPose(IPAddress, PoseDto)
 - uid: FleetClients.Core.IFleetManagerClient.SetPose*
   name: SetPose
@@ -1322,11 +1181,11 @@ references:
   commentId: T:FleetClients.Core.KingpinStateMailbox
   fullName: FleetClients.Core.KingpinStateMailbox
   nameWithType: KingpinStateMailbox
-- uid: FleetClients.Core.KingpinStateMailbox.#ctor(System.Net.IPAddress,GACore.Architecture.IKingpinState)
+- uid: FleetClients.Core.KingpinStateMailbox.#ctor(System.Net.IPAddress,GAAPICommon.Architecture.IKingpinState)
   name: KingpinStateMailbox(IPAddress, IKingpinState)
-  href: api/FleetClients.Core.KingpinStateMailbox.html#FleetClients_Core_KingpinStateMailbox__ctor_System_Net_IPAddress_GACore_Architecture_IKingpinState_
-  commentId: M:FleetClients.Core.KingpinStateMailbox.#ctor(System.Net.IPAddress,GACore.Architecture.IKingpinState)
-  fullName: FleetClients.Core.KingpinStateMailbox.KingpinStateMailbox(System.Net.IPAddress, GACore.Architecture.IKingpinState)
+  href: api/FleetClients.Core.KingpinStateMailbox.html#FleetClients_Core_KingpinStateMailbox__ctor_System_Net_IPAddress_GAAPICommon_Architecture_IKingpinState_
+  commentId: M:FleetClients.Core.KingpinStateMailbox.#ctor(System.Net.IPAddress,GAAPICommon.Architecture.IKingpinState)
+  fullName: FleetClients.Core.KingpinStateMailbox.KingpinStateMailbox(System.Net.IPAddress, GAAPICommon.Architecture.IKingpinState)
   nameWithType: KingpinStateMailbox.KingpinStateMailbox(IPAddress, IKingpinState)
 - uid: FleetClients.Core.KingpinStateMailbox.#ctor*
   name: KingpinStateMailbox
@@ -1419,13 +1278,13 @@ references:
   isSpec: "True"
   fullName: FleetClients.Core.PoseDtoFactory.ParseString
   nameWithType: PoseDtoFactory.ParseString
-- uid: FleetClients.Core.PoseDtoFactory.TryParseString(System.String,FleetClients.Core.FleetManagerServiceReference.PoseDto@)
+- uid: FleetClients.Core.PoseDtoFactory.TryParseString(System.String,GAAPICommon.Core.Dtos.PoseDto@)
   name: TryParseString(String, out PoseDto)
-  href: api/FleetClients.Core.PoseDtoFactory.html#FleetClients_Core_PoseDtoFactory_TryParseString_System_String_FleetClients_Core_FleetManagerServiceReference_PoseDto__
-  commentId: M:FleetClients.Core.PoseDtoFactory.TryParseString(System.String,FleetClients.Core.FleetManagerServiceReference.PoseDto@)
+  href: api/FleetClients.Core.PoseDtoFactory.html#FleetClients_Core_PoseDtoFactory_TryParseString_System_String_GAAPICommon_Core_Dtos_PoseDto__
+  commentId: M:FleetClients.Core.PoseDtoFactory.TryParseString(System.String,GAAPICommon.Core.Dtos.PoseDto@)
   name.vb: TryParseString(String, ByRef PoseDto)
-  fullName: FleetClients.Core.PoseDtoFactory.TryParseString(System.String, out FleetClients.Core.FleetManagerServiceReference.PoseDto)
-  fullName.vb: FleetClients.Core.PoseDtoFactory.TryParseString(System.String, ByRef FleetClients.Core.FleetManagerServiceReference.PoseDto)
+  fullName: FleetClients.Core.PoseDtoFactory.TryParseString(System.String, out GAAPICommon.Core.Dtos.PoseDto)
+  fullName.vb: FleetClients.Core.PoseDtoFactory.TryParseString(System.String, ByRef GAAPICommon.Core.Dtos.PoseDto)
   nameWithType: PoseDtoFactory.TryParseString(String, out PoseDto)
   nameWithType.vb: PoseDtoFactory.TryParseString(String, ByRef PoseDto)
 - uid: FleetClients.Core.PoseDtoFactory.TryParseString*

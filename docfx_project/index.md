@@ -19,11 +19,17 @@ With
 * Source code available on [GitHub](https://github.com/GuidanceAutomation/FleetClients)
 * Pre-built package available at [nuget.org](https://www.nuget.org/packages/FleetClients/)
 
-## Guidance Automation Client Wrappers:
+## Quickstart
+
+If you have a fleet manager service already up and running, follow these tutorials to try out some basic functionality:
+
+
+
+### Guidance Automation Client Wrappers:
 
 The client wrapper family consists of:
 
-* [Base Clients](https://guidanceautomation.github.io/BaseClients/) - core component library for all client libraries
+* [Base Clients](https://guidanceautomation.github.io/BaseClients/) - Core component library for all client libraries
 * [Fleet Clients](https://guidanceautomation.github.io/FleetClients/) - Remote fleet manager manipulation
 * [Scheduling Clients](https://guidanceautomation.github.io/SchedulingClients/) - Job creation, task tracking and map support
 
