@@ -85,10 +85,14 @@
 <li>Download the source code from <a href="https://github.com/GuidanceAutomation/FleetClients">Github</a></li>
 <li>Open the solution <code>FleetClients.sln</code> in VS 2019</li>
 </ul>
-<p>[!TIP]
-Ensure your fleet manager service is running and exposing endpoints on localhost.</p>
-<p>[!IMPORTANT]
-Check the http endpoint <a href="http://127.0.0.1:41916/fleetManager.svc">fleetManager.svc</a> is active.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Ensure your fleet manager service is running and exposing endpoints on localhost.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Check the http endpoint <a href="http://127.0.0.1:41916/fleetManager.svc">fleetManager.svc</a> is active.</p>
+</div>
 <h3 id="run-the-console-application">Run the Console application</h3>
 <p>Select <code>Tutorial 01</code> as the startup project, build and run the solution.</p>
 <p>A simple demo will run where a virtual vehicle is created with a pose of 0,0,0 and then has its pose updated to 1,1,1.57.</p>
@@ -109,7 +113,7 @@ Check the http endpoint <a href="http://127.0.0.1:41916/fleetManager.svc">fleetM
 </code></pre>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>The client has its own background thread for auto-subscribing to fleet state updates. Dispose &gt; of the client when it is no longer required: <code>fleetManagerClient.Dispose()</code></p>
+<p>The client has its own background thread for auto-subscribing to fleet state updates. Dispose of the client when it is no longer required: <code>fleetManagerClient.Dispose()</code></p>
 </div>
 <h3 id="createvirtualvehicle--setpose">CreateVirtualVehicle &amp; SetPose</h3>
 <p>A virtual vehicle is created via the client with:</p>
@@ -121,7 +125,7 @@ IServiceCallResult result = fleetManagerClient.CreateVirtualVehicle(virtualVehic
 </code></pre>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Remember to check the success of your <code>IServiceCallResult</code></p>
+<p>Remember to check the success of your <code>IServiceCallResult</code> for client or server errors.</p>
 </div>
 </article>
           </div>

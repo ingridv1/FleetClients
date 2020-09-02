@@ -633,10 +633,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/Tutorial_01.html",
-          "hash": "9aw69biXbXdibGn5IWb+9A=="
+          "hash": "zLCfn27+1SwIVLG3ZB5MJQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -751,7 +751,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 7,
-          "skipped_file_count": 6
+          "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

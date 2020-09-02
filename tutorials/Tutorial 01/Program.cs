@@ -21,7 +21,6 @@ namespace Tutorial_01
             // Now we create a fleet manager client using the client factory;
             IFleetManagerClient fleetManagerClient = ClientFactory.CreateTcpFleetManagerClient(endpointSettings);
 
-
             Console.WriteLine("Press <any> key to create a virtual vehicle 192.168.0.1 at 0,0,0");
             Console.ReadKey(true);
 
