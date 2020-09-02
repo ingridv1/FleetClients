@@ -23,7 +23,8 @@ With
 
 If you have a fleet manager service already up and running, follow these tutorials to try out some basic functionality:
 
-
+* [Tutorial 01 - Creating a virtual vehicle](articles/Tutorial_01.html)
+* [Tutorial 02 - Subscribing to fleet state updates ](articles/Tutorial_01.html)
 
 ### Guidance Automation Client Wrappers:
 
@@ -34,7 +35,7 @@ The client wrapper family consists of:
 * [Scheduling Clients](https://guidanceautomation.github.io/SchedulingClients/) - Job creation, task tracking and map support
 
 <div style="text-align: right">
-  <img src="images/incaartBW.jpg" alt="AGV image" width="200"/>
+  <img src="images/incaartBW.png" alt="AGV image" width="200"/>
   <br>
   Beep! Beep! I'm the scheduling support AGV!<br>
   <a href="https://github.com/GuidanceAutomation">Here is my Github</a>
