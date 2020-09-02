@@ -38,7 +38,7 @@ namespace FleetClients.Core
         /// <returns>Parsed result</returns>
         public static PoseDto ParseString(string poseString)
         {
-            if (string.IsNullOrEmpty(poseString)) 
+            if (string.IsNullOrEmpty(poseString))
                 throw new ArgumentNullException("poseString");
 
             Match match = PoseStringRegex.Match(poseString);

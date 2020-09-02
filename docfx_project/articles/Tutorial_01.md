@@ -2,11 +2,11 @@
 
 Pre-requisites:
 
-* An active fleet manager service installation
-  * Hosting HTTP endpoints on 41916
-  * Hosting Net.TCP endpoint on 41917
-* Visual Studio 2019
-* Basic C# knowledge
+* An active fleet manager service installation.
+  * Hosting HTTP endpoints on 41916.
+  * Hosting Net.TCP endpoint on 41917.
+* Visual Studio 2019.
+* Basic C# knowledge.
 
 ## Getting Started
 

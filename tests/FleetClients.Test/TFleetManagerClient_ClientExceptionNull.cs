@@ -1,11 +1,9 @@
 ﻿using BaseClients.Core;
 using FleetClients.Core;
-using FleetClients.Core.FleetManagerServiceReference;
-using GACore.Architecture;
 using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Net;
-using GAAPICommon.Core.Dtos;
 
 namespace FleetClients.Test
 {
@@ -37,7 +35,6 @@ namespace FleetClients.Test
             var result = FleetManagerClient.GetKingpinDescription(IPAddress.Loopback);
             Assert.IsNotNull(result.ExceptionMessage);
         }
-
 
         [Test]
         [Category("ClientExceptionNull")]

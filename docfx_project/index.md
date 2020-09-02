@@ -24,7 +24,7 @@ With
 If you have a fleet manager service already up and running, follow these tutorials to try out some basic functionality:
 
 * [Tutorial 01 - Creating a virtual vehicle](articles/Tutorial_01.html)
-* [Tutorial 02 - Subscribing to fleet state updates ](articles/Tutorial_01.html)
+* [Tutorial 02 - Subscribing to fleet state updates ](articles/Tutorial_02.html)
 
 ### Guidance Automation Client Wrappers:
 

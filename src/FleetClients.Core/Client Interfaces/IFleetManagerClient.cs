@@ -9,7 +9,6 @@ using System.Xml.Linq;
 
 namespace FleetClients.Core
 {
-
     /// <summary>
     /// For interacting with the fleet manager service remotely.
     /// </summary>

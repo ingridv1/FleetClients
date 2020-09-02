@@ -1,6 +1,7 @@
 ﻿using GAAPICommon.Core.Dtos;
 using System.Net;
 using System.Runtime.Serialization;
+
 using SN = System.Net;
 
 namespace FleetClients.Core
