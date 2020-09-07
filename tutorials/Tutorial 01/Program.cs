@@ -16,13 +16,19 @@ namespace Tutorial_01
         {
             // Here we create an endpoint settings object that defines where the fleet manager service is currently running
             // For this demo we are assuming it is running on localhost, using the default TCP port of 41917.
-            EndpointSettings endpointSettings = new EndpointSettings(IPAddress.Loopback, 41916, 41917);
 
+            EndpointSettings endpointSettings = new EndpointSettings(IPAddress.Loopback, 41916, 41917);
+          
             // Now we create a fleet manager client using the client factory;
             IFleetManagerClient fleetManagerClient = ClientFactory.CreateTcpFleetManagerClient(endpointSettings);
 
             Console.WriteLine("Press <any> key to create a virtual vehicle 192.168.0.1 at 0,0,0");
             Console.ReadKey(true);
+
+#warning foo
+            GAAPICommon.Architecture.ServiceCode foo = ServiceCode.ClientException;
+            ServiceCodeSupport.Architecture.ErrorCode errorCode = ServiceCodeSupport.Architecture.ErrorCode.Agent_Agents_Get_Failed;
+
 
             IPAddress virtualVehicle = IPAddress.Parse("192.168.0.1");
             IServiceCallResult result = fleetManagerClient.CreateVirtualVehicle(virtualVehicle, 0, 0, 0);
