@@ -3,7 +3,7 @@
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" />
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" />
   <xs:element name="GetAPISemVer">
     <xs:complexType>
@@ -43,27 +43,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RequestFreeze">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RequestFreezeResponse">
+  <xs:element name="SetFrozenState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="RequestFreezeResult" nillable="true" type="q5:ServiceCallResultDto" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="frozenState" type="q5:FrozenState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RequestUnfreeze">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RequestUnfreezeResponse">
+  <xs:element name="SetFrozenStateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="RequestUnfreezeResult" nillable="true" type="q6:ServiceCallResultDto" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="SetFrozenStateResult" nillable="true" type="q6:ServiceCallResultDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -71,7 +61,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q7:IPAddress" />
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q8:PoseDto" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="pose" nillable="true" type="q8:PoseDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -100,7 +90,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q12:IPAddress" />
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="pose" nillable="true" type="q13:PoseDto" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="pose" nillable="true" type="q13:PoseDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,53 +101,39 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ResetKingpin">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q15:IPAddress" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ResetKingpinResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="ResetKingpinResult" nillable="true" type="q16:ServiceCallResultDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="SetFleetState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q17:VehicleControllerState" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q15:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetFleetStateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="SetFleetStateResult" nillable="true" type="q18:ServiceCallResultDto" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="SetFleetStateResult" nillable="true" type="q16:ServiceCallResultDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetKingpinState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q19:IPAddress" />
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q20:VehicleControllerState" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q17:IPAddress" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q18:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetKingpinStateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="SetKingpinStateResult" nillable="true" type="q21:ServiceCallResultDto" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="SetKingpinStateResult" nillable="true" type="q19:ServiceCallResultDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="OnCallback">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Fleet" minOccurs="0" name="callbackObject" nillable="true" type="q22:FleetState" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/GAAPICommon.Core.Dtos" minOccurs="0" name="callbackObject" nillable="true" type="q20:FleetStateDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -12,23 +12,30 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## v3.0.0 (4th Sep 20)
+
+* Major refactor to ```IServiceResult``` and ```IServiceResult<T>``` implementation.
+* Removes ```ResetKingpin``` functionality.
+* Consistent suffix renaming of all data transfer objects to ```dto```.
+* Uses ```GAAPICommon``` package for .NET Standard enumerator definitions.
+
 ## v2.0.0 (20th Feb 20)
 
-* Major refactor to MVVM
-* Removes FleetClients.Controls
-* Adds FleetClients.UI for MVVM implementation
-* Adds FleetClients.DemoApp to demonstrate MVVM controls
+* Major refactor to MVVM.
+* Removes FleetClients.Controls.
+* Adds FleetClients.UI for MVVM implementation.
+* Adds FleetClients.DemoApp to demonstrate MVVM controls.
 * FleetTemplateManger for quickly creating virtual fleets from a file.
 
 ## v1.4.0 (14th Oct 19)
 
-* Adds fleet template support
-** Serialize fleet templates to json
-** Create fleet templates from json
+* Adds fleet template support.
+  * Serialize fleet templates to json.
+  * Create fleet templates from json.
 
 ## v1.3.2 (16th Sept 19)
 
-* Minor refactor to use GenericMailbox from GACore
+* Minor refactor to use GenericMailbox from GACore.
 
 ## v1.3.1 (13th Sept 19)
 

@@ -32,31 +32,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Controls.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Extensions.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GACore.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.UI.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
@@ -68,7 +68,7 @@
       <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.7.3\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="AGVTemplate.cs" />
     <Compile Include="Client Interfaces\IFleetManagerClient.cs" />
+    <Compile Include="Client Interfaces\IFleetManagerClient_ExtensionMethods.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Connected Services\FleetManagerServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -152,13 +153,7 @@
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager7.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\FleetManagerServiceReference\fleetManager8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FleetManagerServiceReference\fleetManager9.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService.wsdl" />
+    <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService_PublicAPI.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GAAPICommon.Core.Dtos.SemVerDto.datasource" />
     <None Include="Properties\DataSources\GAAPICommon.Core.Dtos.ServiceCallResultDto.datasource" />
@@ -183,6 +178,14 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+  RD /S /Q "$(SolutionDir)docs\"
+  "$(SolutionDir)docfx.bat"
+) ELSE (
+  echo "no docfx content generated in debug"
+)
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>

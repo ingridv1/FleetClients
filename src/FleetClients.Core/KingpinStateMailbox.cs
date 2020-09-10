@@ -1,5 +1,5 @@
-﻿using GACore;
-using GACore.Architecture;
+﻿using GAAPICommon.Architecture;
+using GACore;
 using System.Net;
 
 namespace FleetClients.Core

@@ -34,34 +34,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha03\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine, Version=2.9.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CommandLineParser.2.9.0-preview1\lib\net461\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Controls.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
     <Reference Include="GACore.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.Extensions.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GACore.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.1.25.7\lib\net472\GACore.UI.dll</HintPath>
+      <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
@@ -70,7 +70,7 @@
       <HintPath>..\..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.7.3\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -114,14 +114,13 @@
     <Compile Include="Options\ConfigureClientOptions.cs" />
     <Compile Include="Options\GetApiSemVerOption.cs" />
     <Compile Include="Options\RemoveOptions.cs" />
-    <Compile Include="Options\ResetKingpinOption.cs" />
     <Compile Include="Options\SetFleetStateOption.cs" />
     <Compile Include="Options\SetKingpinStateOption.cs" />
     <Compile Include="Options\SetPoseOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Options\RequestFreezeOption.cs" />
-    <Compile Include="Options\RequestUnfreezeOption.cs" />
+    <Compile Include="Options\FreezeOption.cs" />
+    <Compile Include="Options\UnfreezeOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

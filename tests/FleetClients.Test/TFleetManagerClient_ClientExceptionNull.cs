@@ -1,6 +1,7 @@
 ﻿using BaseClients.Core;
 using FleetClients.Core;
-using FleetClients.Core.FleetManagerServiceReference;
+using GAAPICommon.Architecture;
+using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Net;
 
@@ -18,17 +19,18 @@ namespace FleetClients.Test
             FleetManagerClient = ClientFactory.CreateTcpFleetManagerClient(new EndpointSettings(IPAddress.Loopback));
         }
 
-        [Test]
+        [TestCase(FrozenState.Frozen)]
+        [TestCase(FrozenState.Unfrozen)]
         [Category("ClientExceptionNull")]
-        public void TryRequestFreeze_ClientExceptionNull()
+        public void SetFrozenState_ClientExceptionNull(FrozenState frozenState)
         {
-            var result = FleetManagerClient.RequestFreeze();
+            var result = FleetManagerClient.SetFrozenState(frozenState);
             Assert.IsNotNull(result.ExceptionMessage);
         }
 
         [Test]
         [Category("ClientExceptionNull")]
-        public void TryGetKingpinDescription_ClientExceptionNull()
+        public void GetKingpinDescription_ClientExceptionNull()
         {
             var result = FleetManagerClient.GetKingpinDescription(IPAddress.Loopback);
             Assert.IsNotNull(result.ExceptionMessage);
@@ -36,15 +38,7 @@ namespace FleetClients.Test
 
         [Test]
         [Category("ClientExceptionNull")]
-        public void TryRequestUnfreeze_ClientExceptionNull()
-        {
-            var result = FleetManagerClient.RequestUnfreeze();
-            Assert.IsNotNull(result.ExceptionMessage);
-        }
-
-        [Test]
-        [Category("ClientExceptionNull")]
-        public void TryCreateVirtualVehicle_ClientExceptionNull()
+        public void CreateVirtualVehicle_ClientExceptionNull()
         {
             var result = FleetManagerClient.CreateVirtualVehicle(IPAddress.Loopback, new PoseDto());
             Assert.IsNotNull(result.ExceptionMessage);
@@ -52,7 +46,7 @@ namespace FleetClients.Test
 
         [Test]
         [Category("ClientExceptionNull")]
-        public void TryRemoveVehicle_ClientExceptionNull()
+        public void RemoveVehicle_ClientExceptionNull()
         {
             var result = FleetManagerClient.RemoveVehicle(IPAddress.Loopback);
             Assert.IsNotNull(result.ExceptionMessage);
@@ -60,17 +54,9 @@ namespace FleetClients.Test
 
         [Test]
         [Category("ClientExceptionNull")]
-        public void TrySetPose_ClientExceptionNull()
+        public void SetPose_ClientExceptionNull()
         {
             var result = FleetManagerClient.SetPose(IPAddress.Loopback, new PoseDto());
-            Assert.IsNotNull(result.ExceptionMessage);
-        }
-
-        [Test]
-        [Category("ClientExceptionNull")]
-        public void TryResetKingpin_ClientExceptionNull()
-        {
-            var result = FleetManagerClient.ResetKingpin(IPAddress.Loopback);
             Assert.IsNotNull(result.ExceptionMessage);
         }
     }

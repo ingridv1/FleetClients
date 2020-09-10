@@ -1,4 +1,4 @@
-﻿using FleetClients.Core.FleetManagerServiceReference;
+﻿using GAAPICommon.Core.Dtos;
 using System.Net;
 using System.Runtime.Serialization;
 

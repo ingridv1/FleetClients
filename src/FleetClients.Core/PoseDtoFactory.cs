@@ -1,4 +1,4 @@
-﻿using FleetClients.Core.FleetManagerServiceReference;
+﻿using GAAPICommon.Core.Dtos;
 using System;
 using System.Text.RegularExpressions;
 
@@ -38,7 +38,7 @@ namespace FleetClients.Core
         /// <returns>Parsed result</returns>
         public static PoseDto ParseString(string poseString)
         {
-            if (string.IsNullOrEmpty(poseString)) 
+            if (string.IsNullOrEmpty(poseString))
                 throw new ArgumentNullException("poseString");
 
             Match match = PoseStringRegex.Match(poseString);
