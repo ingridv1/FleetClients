@@ -56,30 +56,7 @@ namespace FleetClients.Core
         public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose)
         {
             Logger.Trace("CreateVirtualVehicle");
-
-
-#warning Foo
-
-            try
-            {
-                using (ChannelFactory<IFleetManagerService_PublicAPI_v2_0> channelFactory = new DuplexChannelFactory<IFleetManagerService_PublicAPI_v2_0>(context, binding, EndpointAddress))
-                {
-                    IFleetManagerService_PublicAPI_v2_0 channel = channelFactory.CreateChannel();
-                    IServiceCallResult result = channel.CreateVirtualVehicle(ipAddress, pose);
-                    channelFactory.Close();
-
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-                LastCaughtException = ex;
-                return ServiceCallResultFactory.FromClientException(ex);
-            }
-
-
-            //return HandleAPICall(e =>  e.CreateVirtualVehicle(ipAddress, pose));
+            return HandleAPICall(e =>  e.CreateVirtualVehicle(ipAddress, pose));
         }
 
         public IServiceCallResult<SemVerDto> GetAPISemVer()
