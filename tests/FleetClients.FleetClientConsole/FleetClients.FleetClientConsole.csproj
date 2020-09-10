@@ -127,7 +127,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FleetClients.Core\FleetClients.Core.csproj">
+    <ProjectReference Include="..\..\src\FleetClients.Core\FleetClients.Core.csproj">
       <Project>{679ae168-c004-468a-8ac6-69b99c8d39a1}</Project>
       <Name>FleetClients.Core</Name>
     </ProjectReference>
