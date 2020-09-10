@@ -198,11 +198,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FleetClients.Core\FleetClients.Core.csproj">
+    <ProjectReference Include="..\..\src\FleetClients.Core\FleetClients.Core.csproj">
       <Project>{679ae168-c004-468a-8ac6-69b99c8d39a1}</Project>
       <Name>FleetClients.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FleetClients.UI\FleetClients.UI.csproj">
+    <ProjectReference Include="..\..\src\FleetClients.UI\FleetClients.UI.csproj">
       <Project>{80a20e0e-3a34-4a7c-b8f4-d21d917f13c6}</Project>
       <Name>FleetClients.UI</Name>
     </ProjectReference>
