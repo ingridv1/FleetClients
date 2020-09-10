@@ -26,13 +26,7 @@ namespace Tutorial_01
             Console.WriteLine("Press <any> key to create a virtual vehicle 192.168.0.1 at 0,0,0");
             Console.ReadKey(true);
 
-#warning foo
-            GAAPICommon.Architecture.ServiceCode foo = ServiceCode.ClientException;
-            ServiceCodeSupport.Architecture.ErrorCode errorCode = ServiceCodeSupport.Architecture.ErrorCode.Agent_Agents_Get_Failed;
-            Console.WriteLine($"I HAS ERRORCODE{errorCode}");
-
-
-             IPAddress virtualVehicle = IPAddress.Parse("192.168.0.1");
+            IPAddress virtualVehicle = IPAddress.Parse("192.168.0.1");
             IServiceCallResult result = fleetManagerClient.CreateVirtualVehicle(virtualVehicle, 0, 0, 0);
             if (!result.IsSuccessful())
                 Console.WriteLine($"Failed to create virtual vehicle serviceCode:{result.ServiceCode}");
