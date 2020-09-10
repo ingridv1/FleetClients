@@ -36,16 +36,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha07\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0-alpha07\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.4.0\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.4.0\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+      <HintPath>..\..\packages\GAAPICommon.1.7.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
     <Reference Include="GACore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\GACore.2.0.0\lib\net472\GACore.dll</HintPath>

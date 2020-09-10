@@ -2,7 +2,6 @@
 using CommandLine;
 using FleetClients.Core;
 using GAAPICommon.Architecture;
-using GACore.Architecture;
 using System;
 
 namespace FleetClients.FleetClientConsole.Options

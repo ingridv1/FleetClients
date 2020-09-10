@@ -2,7 +2,9 @@
   href: overview.md
 - name: Release Notes
   href: releaseNotes.md
-- name: Basic Tutorial
-  href: basicTutorial.md
+- name: Tutorial 01
+  href: Tutorial_01.md
+- name: Tutorial 02
+  href: Tutorial_02.md
 - name: About
   href: about.md

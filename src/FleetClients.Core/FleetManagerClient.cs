@@ -3,14 +3,12 @@ using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Architecture;
 using GAAPICommon.Core;
 using GAAPICommon.Core.Dtos;
-using GACore.Architecture;
 using GACore.Extensions;
 using MoreLinq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.ServiceModel;
 using System.Xml.Linq;
 
@@ -58,14 +56,14 @@ namespace FleetClients.Core
         public IServiceCallResult CreateVirtualVehicle(IPAddress ipAddress, PoseDto pose)
         {
             Logger.Trace("CreateVirtualVehicle");
-            return HandleAPICall(e => e.CreateVirtualVehicle(ipAddress, pose));
+            return HandleAPICall(e =>  e.CreateVirtualVehicle(ipAddress, pose));
         }
 
         public IServiceCallResult<SemVerDto> GetAPISemVer()
         {
             Logger.Trace("GetAPISemVer");
             return HandleAPICall<SemVerDto>(e => e.GetAPISemVer());
-        }          
+        }
 
         public IServiceCallResult<XElement> GetKingpinDescription(IPAddress ipAddress)
         {
@@ -119,7 +117,7 @@ namespace FleetClients.Core
 
             isDisposed = true;
         }
-  
+
         protected override void SetInstanceContext()
         {
             context = new InstanceContext(this.callback);
@@ -172,7 +170,7 @@ namespace FleetClients.Core
         public event Action<FleetStateDto> FleetStateUpdated
         {
             add { callback.FleetStateUpdate += value; }
-            remove { callback.FleetStateUpdate -= value; }            
+            remove { callback.FleetStateUpdate -= value; }
         }
 
         private void OnRemoved(KingpinStateMailbox kingpinStateMailbox)

@@ -1,7 +1,6 @@
 ﻿using FleetClients.Core;
 using GAAPICommon.Architecture;
 using GACore;
-using GACore.Architecture;
 
 namespace FleetClients.UI.ViewModel
 {

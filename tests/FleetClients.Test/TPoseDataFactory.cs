@@ -1,5 +1,4 @@
 ﻿using FleetClients.Core;
-using FleetClients.Core.FleetManagerServiceReference;
 using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Collections.Generic;

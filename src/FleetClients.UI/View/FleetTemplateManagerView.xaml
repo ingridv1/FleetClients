@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:FleetClients.UI.View"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:gaCoreC="clr-namespace:GACore.Controls;assembly=GACore.Controls"
              xmlns:viewModel="clr-namespace:FleetClients.UI.ViewModel"

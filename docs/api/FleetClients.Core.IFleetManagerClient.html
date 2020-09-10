@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -73,7 +73,7 @@
   
   <h1 id="FleetClients_Core_IFleetManagerClient" data-uid="FleetClients.Core.IFleetManagerClient" class="text-break">Interface IFleetManagerClient
   </h1>
-  <div class="markdown level0 summary"><p>For interacting with the fleet manager remotely.</p>
+  <div class="markdown level0 summary"><p>For interacting with the fleet manager service remotely.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -125,18 +125,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_FleetState.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.FleetState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_FleetState.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.FleetState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L17">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L20">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_FleetState_" data-uid="FleetClients.Core.IFleetManagerClient.FleetState*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_FleetState" data-uid="FleetClients.Core.IFleetManagerClient.FleetState">FleetState</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current state of the fleet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">FleetState FleetState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">FleetStateDto FleetState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +149,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.FleetState.html">FleetState</a></td>
+        <td><span class="xref">GAAPICommon.Core.Dtos.FleetStateDto</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -157,14 +158,15 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress%2CFleetClients.Core.FleetManagerServiceReference.PoseDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress%2CGAAPICommon.Core.Dtos.PoseDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L21">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L33">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_" data-uid="FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle*"></a>
-  <h4 id="FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_" data-uid="FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)">CreateVirtualVehicle(IPAddress, PoseDto)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="FleetClients_Core_IFleetManagerClient_CreateVirtualVehicle_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_" data-uid="FleetClients.Core.IFleetManagerClient.CreateVirtualVehicle(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)">CreateVirtualVehicle(IPAddress, PoseDto)</h4>
+  <div class="markdown level1 summary"><p>Creates a new virtual vehicle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -183,12 +185,14 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>IPv4 address of the vehicle to be created.</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.PoseDto.html">PoseDto</a></td>
+        <td><span class="xref">GAAPICommon.Core.Dtos.PoseDto</span></td>
         <td><span class="parametername">pose</span></td>
-        <td></td>
+        <td><p>The initialization pose.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -203,20 +207,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on creation.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_GetAPISemVer.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.GetAPISemVer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_GetAPISemVer.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.GetAPISemVer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L35">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L83">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_GetAPISemVer_" data-uid="FleetClients.Core.IFleetManagerClient.GetAPISemVer*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_GetAPISemVer" data-uid="FleetClients.Core.IFleetManagerClient.GetAPISemVer">GetAPISemVer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the API version of the server interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -233,20 +239,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span>&lt;<span class="xref">GAAPICommon.Core.Dtos.SemVerDto</span>&gt;</td>
-        <td></td>
+        <td><p>A SemVerDto object representing the semantic version of the server interface.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_GetKingpinDescription_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.GetKingpinDescription(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_GetKingpinDescription_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.GetKingpinDescription(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L23">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L40">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_GetKingpinDescription_" data-uid="FleetClients.Core.IFleetManagerClient.GetKingpinDescription*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_GetKingpinDescription_System_Net_IPAddress_" data-uid="FleetClients.Core.IFleetManagerClient.GetKingpinDescription(System.Net.IPAddress)">GetKingpinDescription(IPAddress)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the xml description of the target Kingpin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -265,7 +273,8 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>IPv4 address of the target Kingpin</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -280,20 +289,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span>&lt;<span class="xref">System.Xml.Linq.XElement</span>&gt;</td>
-        <td></td>
+        <td><p>XElement defining the Kingpins operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_RemoveVehicle_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.RemoveVehicle(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_RemoveVehicle_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.RemoveVehicle(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L25">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L47">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_RemoveVehicle_" data-uid="FleetClients.Core.IFleetManagerClient.RemoveVehicle*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_RemoveVehicle_System_Net_IPAddress_" data-uid="FleetClients.Core.IFleetManagerClient.RemoveVehicle(System.Net.IPAddress)">RemoveVehicle(IPAddress)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a vehicle from the fleet manager</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -312,7 +323,8 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>IPv4 address of the target.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -327,20 +339,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on removal.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetFleetState_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetFleetState_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L29">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L61">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_SetFleetState_" data-uid="FleetClients.Core.IFleetManagerClient.SetFleetState*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_SetFleetState_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_" data-uid="FleetClients.Core.IFleetManagerClient.SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState)">SetFleetState(VehicleControllerState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the fleet state (enabling or disabling vehicles).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -359,7 +373,8 @@
       <tr>
         <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.VehicleControllerState.html">VehicleControllerState</a></td>
         <td><span class="parametername">controllerStates</span></td>
-        <td></td>
+        <td><p>Desired controller state.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -374,20 +389,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on success.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetFrozenState_GACore_Architecture_FrozenState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetFrozenState(GACore.Architecture.FrozenState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetFrozenState_GAAPICommon_Architecture_FrozenState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetFrozenState(GAAPICommon.Architecture.FrozenState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L27">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L54">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_SetFrozenState_" data-uid="FleetClients.Core.IFleetManagerClient.SetFrozenState*"></a>
-  <h4 id="FleetClients_Core_IFleetManagerClient_SetFrozenState_GACore_Architecture_FrozenState_" data-uid="FleetClients.Core.IFleetManagerClient.SetFrozenState(GACore.Architecture.FrozenState)">SetFrozenState(FrozenState)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="FleetClients_Core_IFleetManagerClient_SetFrozenState_GAAPICommon_Architecture_FrozenState_" data-uid="FleetClients.Core.IFleetManagerClient.SetFrozenState(GAAPICommon.Architecture.FrozenState)">SetFrozenState(FrozenState)</h4>
+  <div class="markdown level1 summary"><p>Sets the frozen state of the fleet manager, allowing global vehicle movement to be enabled / disabled and then returned to its previous state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -404,9 +421,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GACore.Architecture.FrozenState</span></td>
+        <td><span class="xref">GAAPICommon.Architecture.FrozenState</span></td>
         <td><span class="parametername">frozenState</span></td>
-        <td></td>
+        <td><p>Desired frozen state.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -421,20 +439,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on success.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetKingpinState_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetKingpinState(System.Net.IPAddress%2CFleetClients.Core.FleetManagerServiceReference.VehicleControllerState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetKingpinState_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetKingpinState(System.Net.IPAddress%2CFleetClients.Core.FleetManagerServiceReference.VehicleControllerState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L31">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L69">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_SetKingpinState_" data-uid="FleetClients.Core.IFleetManagerClient.SetKingpinState*"></a>
   <h4 id="FleetClients_Core_IFleetManagerClient_SetKingpinState_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_VehicleControllerState_" data-uid="FleetClients.Core.IFleetManagerClient.SetKingpinState(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.VehicleControllerState)">SetKingpinState(IPAddress, VehicleControllerState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an individual Kingpins controller state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -453,12 +473,14 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>IPv4 address of target vehicle.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.VehicleControllerState.html">VehicleControllerState</a></td>
         <td><span class="parametername">controllerState</span></td>
-        <td></td>
+        <td><p>Desired controller state.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -473,20 +495,22 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on success.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress%2CFleetClients.Core.FleetManagerServiceReference.PoseDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress%2CGAAPICommon.Core.Dtos.PoseDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L33">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L77">View Source</a>
   </span>
   <a id="FleetClients_Core_IFleetManagerClient_SetPose_" data-uid="FleetClients.Core.IFleetManagerClient.SetPose*"></a>
-  <h4 id="FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_FleetClients_Core_FleetManagerServiceReference_PoseDto_" data-uid="FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,FleetClients.Core.FleetManagerServiceReference.PoseDto)">SetPose(IPAddress, PoseDto)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="FleetClients_Core_IFleetManagerClient_SetPose_System_Net_IPAddress_GAAPICommon_Core_Dtos_PoseDto_" data-uid="FleetClients.Core.IFleetManagerClient.SetPose(System.Net.IPAddress,GAAPICommon.Core.Dtos.PoseDto)">SetPose(IPAddress, PoseDto)</h4>
+  <div class="markdown level1 summary"><p>Sets the pose of a vehicle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -505,12 +529,14 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>IPv4 address of target vehicle.</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="FleetClients.Core.FleetManagerServiceReference.PoseDto.html">PoseDto</a></td>
+        <td><span class="xref">GAAPICommon.Core.Dtos.PoseDto</span></td>
         <td><span class="parametername">pose</span></td>
-        <td></td>
+        <td><p>Desired pose (position + orientation).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -525,7 +551,8 @@
     <tbody>
       <tr>
         <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
-        <td></td>
+        <td><p>Successful service call result on success.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -533,17 +560,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_FleetStateUpdated.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.FleetStateUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient_FleetStateUpdated.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient.FleetStateUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L19">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L25">View Source</a>
   </span>
   <h4 id="FleetClients_Core_IFleetManagerClient_FleetStateUpdated" data-uid="FleetClients.Core.IFleetManagerClient.FleetStateUpdated">FleetStateUpdated</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fired whenever the FleetState property is updated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event Action&lt;FleetState&gt; FleetStateUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">event Action&lt;FleetStateDto&gt; FleetStateUpdated</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -555,7 +583,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="FleetClients.Core.FleetManagerServiceReference.FleetState.html">FleetState</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">GAAPICommon.Core.Dtos.FleetStateDto</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -575,10 +603,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GuidanceAutomation/FleetClients/new/devel/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/GuidanceAutomation/FleetClients/new/docfx-tidy/apiSpec/new?filename=FleetClients_Core_IFleetManagerClient.md&amp;value=---%0Auid%3A%20FleetClients.Core.IFleetManagerClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/devel/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GuidanceAutomation/FleetClients/blob/docfx-tidy/src/FleetClients.Core/Client Interfaces/IFleetManagerClient.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -598,7 +626,7 @@
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright <strong>Guidance Automation Ltd</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
