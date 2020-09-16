@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.0 (16th Sept 20)
+
+* Updates BaseClients package to enable named pipe support. 
+
 ## v3.0.0 (4th Sep 20)
 
 * Major refactor to ```IServiceResult``` and ```IServiceResult<T>``` implementation.

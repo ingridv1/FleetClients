@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaseClients.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Architecture.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.1.0\lib\net472\BaseClients.Architecture.dll</HintPath>
     </Reference>
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BaseClients.2.0.0\lib\net472\BaseClients.Core.dll</HintPath>
+      <HintPath>..\..\packages\BaseClients.2.1.0\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
