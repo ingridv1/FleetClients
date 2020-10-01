@@ -71,6 +71,7 @@
   <xs:element name="PoseDto" nillable="true" type="tns:PoseDto" />
   <xs:complexType name="FleetStateDto">
     <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="FrozenState" type="q1:FrozenState" />
       <xs:element minOccurs="0" name="KingpinStates" nillable="true" type="tns:ArrayOfKingpinStateDto" />
       <xs:element minOccurs="0" name="Tick" type="xs:unsignedByte" />
     </xs:sequence>
@@ -84,20 +85,21 @@
   <xs:element name="ArrayOfKingpinStateDto" nillable="true" type="tns:ArrayOfKingpinStateDto" />
   <xs:complexType name="KingpinStateDto">
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="AgvMode" type="q1:AgvMode" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="AgvMode" type="q2:AgvMode" />
       <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BatteryChargePercentage" type="xs:double" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="CurrentMovementType" type="q2:MovementType" />
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="DynamicLimiterStatus" type="q3:DynamicLimiterStatus" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="ExtendedDataFaultStatus" type="q4:ExtendedDataFaultStatus" />
-      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="FrozenState" type="q5:FrozenState" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="CurrentMovementType" type="q3:MovementType" />
+      <xs:element minOccurs="0" name="CurrentWaypointExtendedData" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="DynamicLimiterStatus" type="q4:DynamicLimiterStatus" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="ExtendedDataFaultStatus" type="q5:ExtendedDataFaultStatus" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="FrozenState" type="q6:FrozenState" />
       <xs:element minOccurs="0" name="Heading" type="xs:float" />
-      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="IPAddress" nillable="true" type="q6:IPAddress" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="IPAddress" nillable="true" type="q7:IPAddress" />
       <xs:element minOccurs="0" name="IsCharging" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsVirtual" type="xs:boolean" />
       <xs:element minOccurs="0" name="LastCompletedInstructionId" type="xs:int" />
-      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="NavigationStatus" type="q7:NavigationStatus" />
-      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="PositionControlStatus" type="q8:PositionControlStatus" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="NavigationStatus" type="q8:NavigationStatus" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="PositionControlStatus" type="q9:PositionControlStatus" />
       <xs:element minOccurs="0" name="Speed" type="xs:double" />
       <xs:element minOccurs="0" name="StateCastExtendedData" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Stationary" type="ser:duration" />

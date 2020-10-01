@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.1 (1st Oct 20)
+
+* Updates package references and dependencies for bug fixes. No code changes. 
+
 ## 3.1.0 (16th Sept 20)
 
 * Updates BaseClients package to enable named pipe support. 
