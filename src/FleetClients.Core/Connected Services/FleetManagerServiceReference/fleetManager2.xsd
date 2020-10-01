@@ -4,7 +4,6 @@
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
   <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" />
-  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" />
   <xs:element name="GetAPISemVer">
     <xs:complexType>
       <xs:sequence />
@@ -104,7 +103,7 @@
   <xs:element name="SetFleetState">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q15:VehicleControllerState" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="controllerState" type="q15:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -119,7 +118,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ipAddress" nillable="true" type="q17:IPAddress" />
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture" minOccurs="0" name="controllerState" type="q18:VehicleControllerState" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/GAAPICommon.Architecture" minOccurs="0" name="controllerState" type="q18:VehicleControllerState" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -9,19 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace FleetClients.Core.FleetManagerServiceReference {
-    using System.Runtime.Serialization;
     
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="VehicleControllerState", Namespace="http://schemas.datacontract.org/2004/07/Controllers.Vehicles.Architecture")]
-    public enum VehicleControllerState : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Enabled = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Disabled = 1,
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0", CallbackContract=typeof(FleetClients.Core.FleetManagerServiceReference.IFleetManagerService_PublicAPI_v2_0Callback))]
@@ -80,18 +68,18 @@ namespace FleetClients.Core.FleetManagerServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(GAAPICommon.Architecture.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetFleetStateResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(GAAPICommon.Architecture.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinStateResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<System.Xml.Linq.XElement>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(GAAPICommon.Core.Dtos.ServiceCallResultDto<GAAPICommon.Core.Dtos.SemVerDto>))]
-        GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, GAAPICommon.Architecture.VehicleControllerState controllerState);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinState", ReplyAction="http://tempuri.org/IFleetManagerService_BaseAPI/SetKingpinStateResponse")]
-        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState);
+        System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, GAAPICommon.Architecture.VehicleControllerState controllerState);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -185,19 +173,19 @@ namespace FleetClients.Core.FleetManagerServiceReference {
             return base.Channel.SetPoseAsync(ipAddress, pose);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetFleetState(GAAPICommon.Architecture.VehicleControllerState controllerState) {
             return base.Channel.SetFleetState(controllerState);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetFleetStateAsync(GAAPICommon.Architecture.VehicleControllerState controllerState) {
             return base.Channel.SetFleetStateAsync(controllerState);
         }
         
-        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public GAAPICommon.Core.Dtos.ServiceCallResultDto SetKingpinState(System.Net.IPAddress ipAddress, GAAPICommon.Architecture.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinState(ipAddress, controllerState);
         }
         
-        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, FleetClients.Core.FleetManagerServiceReference.VehicleControllerState controllerState) {
+        public System.Threading.Tasks.Task<GAAPICommon.Core.Dtos.ServiceCallResultDto> SetKingpinStateAsync(System.Net.IPAddress ipAddress, GAAPICommon.Architecture.VehicleControllerState controllerState) {
             return base.Channel.SetKingpinStateAsync(ipAddress, controllerState);
         }
     }

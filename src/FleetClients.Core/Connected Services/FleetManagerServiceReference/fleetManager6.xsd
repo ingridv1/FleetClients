@@ -8,6 +8,13 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="FrozenState" nillable="true" type="tns:FrozenState" />
+  <xs:simpleType name="VehicleControllerState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="Disabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VehicleControllerState" nillable="true" type="tns:VehicleControllerState" />
   <xs:simpleType name="AgvMode">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Automatic">
