@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.2 (2nd Oct 20)
+
+* Updates package references to flush through GAAPICommon. 
+
 ## 3.1.1 (1st Oct 20)
 
 * Updates package references and dependencies for bug fixes. No code changes. 
