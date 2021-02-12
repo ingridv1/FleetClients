@@ -5,8 +5,9 @@ using GAAPICommon.Architecture;
 using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Net;
+using FleetClients.Core.Client_Interfaces;
 
-namespace FleetClients.Test
+namespace FleetClients.Core.Test
 {
     /// <summary>
     /// Requires a server to be running on local host to be successful
@@ -135,6 +136,38 @@ namespace FleetClients.Test
             IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
 
             var result = client.SetFleetState(VehicleControllerState.Disabled);
+            Assert.AreEqual(0, result.ServiceCode);
+        }
+
+        [Test]
+        public void CreateVirtual_MinValuePose()
+        {
+            PoseDto pose = new PoseDto()
+            {
+                X = double.MinValue,
+                Y = double.MinValue,
+                Heading = double.MinValue
+            };
+
+            IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+            IServiceCallResult result = client.CreateVirtualVehicle("192.168.0.1", pose);
+
+            Assert.AreEqual(0, result.ServiceCode);
+        }
+
+        [Test]
+        public void CreateVirtual_NaNPose()
+        {
+            PoseDto pose = new PoseDto()
+            {
+                X = double.NaN,
+                Y = double.NaN,
+                Heading = double.NaN
+            };
+
+            IFleetManagerClient client = ClientFactory.CreateTcpFleetManagerClient(settings);
+            IServiceCallResult result = client.CreateVirtualVehicle("192.168.0.1", pose);
+
             Assert.AreEqual(0, result.ServiceCode);
         }
     }

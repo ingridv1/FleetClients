@@ -9,8 +9,8 @@
     <ProjectGuid>{E4958A2A-C407-4AFE-BCEF-03831F9BADE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FleetClients.Test</RootNamespace>
-    <AssemblyName>FleetClients.Test</AssemblyName>
+    <RootNamespace>FleetClients.Core.Test</RootNamespace>
+    <AssemblyName>FleetClients.Core.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

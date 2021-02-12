@@ -14,6 +14,29 @@ namespace FleetClients.Core.Client_Interfaces
         /// Creates a new virtual vehicle.
         /// </summary>
         /// <param name="client">The fleet manager client to use.</param>
+        /// <param name="ipV4string">IPv4 address of the vehicle to be created.</param>
+        /// <param name="pose">The initialization pose.</param>
+        /// <returns></returns>
+        public static IServiceCallResult CreateVirtualVehicle(this IFleetManagerClient client, string ipV4string, PoseDto pose)
+        {
+            if (client == null)
+                throw new ArgumentNullException("client");
+
+            if (string.IsNullOrEmpty(ipV4string))
+                throw new ArgumentOutOfRangeException("ipV4string");
+
+            if (pose == null)
+                throw new ArgumentNullException("pose");
+
+            IPAddress ipAddress = IPAddress.Parse(ipV4string);
+
+            return client.CreateVirtualVehicle(ipAddress, pose);
+        }
+
+        /// <summary>
+        /// Creates a new virtual vehicle.
+        /// </summary>
+        /// <param name="client">The fleet manager client to use.</param>
         /// <param name="ipAddress">IPv4 address of the vehicle to be created.</param>
         /// <param name="x">X position in meters.</param>
         /// <param name="y">Y position in meters.</param>

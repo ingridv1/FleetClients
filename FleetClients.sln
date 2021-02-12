@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetClients.Core", "src\FleetClients.Core\FleetClients.Core.csproj", "{679AE168-C004-468A-8AC6-69B99C8D39A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetClients.Test", "tests\FleetClients.Test\FleetClients.Test.csproj", "{E4958A2A-C407-4AFE-BCEF-03831F9BADE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetClients.Core.Test", "tests\FleetClients.Core.Test\FleetClients.Core.Test.csproj", "{E4958A2A-C407-4AFE-BCEF-03831F9BADE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetClients.UI", "src\FleetClients.UI\FleetClients.UI.csproj", "{80A20E0E-3A34-4A7C-B8F4-D21D917F13C6}"
 EndProject

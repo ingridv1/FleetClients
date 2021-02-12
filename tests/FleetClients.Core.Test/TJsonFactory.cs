@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System.IO;
 
-namespace FleetClients.Test
+namespace FleetClients.Core.Test
 {
     [TestFixture]
     [Category("FleetTemplate")]
