@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.3 (12th Feb 21)
+
+* Updates service reference to handle MTOM explicit support. 
+
 ## 3.1.2 (2nd Oct 20)
 
 * Updates package references to flush through GAAPICommon. 
