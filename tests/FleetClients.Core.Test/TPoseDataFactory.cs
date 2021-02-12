@@ -3,7 +3,7 @@ using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace FleetClients.Test
+namespace FleetClients.Core.Test
 {
     [TestFixture]
     [Category("PoseDataFactory")]

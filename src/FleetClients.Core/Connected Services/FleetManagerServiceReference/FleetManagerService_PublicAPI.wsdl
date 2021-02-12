@@ -9,6 +9,7 @@
         </wsrm:RMAssertion>
         <cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex" />
         <ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy" />
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
         <wsaw:UsingAddressing />
       </wsp:All>
     </wsp:ExactlyOne>

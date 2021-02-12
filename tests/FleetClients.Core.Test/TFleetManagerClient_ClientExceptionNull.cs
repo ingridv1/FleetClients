@@ -5,7 +5,7 @@ using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 using System.Net;
 
-namespace FleetClients.Test
+namespace FleetClients.Core.Test
 {
     [TestFixture]
     [Category("Fleet")]
