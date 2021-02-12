@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.4 (12th Feb 21)
+
+* Fixes broken Nunit.props reference in FleetClients.Core.Test.
+
 ## 3.1.3 (12th Feb 21)
 
 * Updates service reference to handle MTOM explicit support. 
