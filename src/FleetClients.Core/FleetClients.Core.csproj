@@ -132,6 +132,9 @@
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\FleetManagerServiceReference\fleetManager1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager2.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -145,9 +148,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\FleetManagerServiceReference\fleetManager6.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FleetManagerServiceReference\fleetManager7.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\FleetManagerServiceReference\FleetManagerService_PublicAPI.wsdl" />
