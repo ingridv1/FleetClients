@@ -41,26 +41,26 @@
     <Reference Include="BaseClients.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\BaseClients.2.1.1\lib\net472\BaseClients.Core.dll</HintPath>
     </Reference>
-    <Reference Include="GAAPICommon.Architecture, Version=1.31.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.31.0\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+    <Reference Include="GAAPICommon.Architecture, Version=1.35.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.35.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
-    <Reference Include="GAAPICommon.Core, Version=1.31.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.31.0\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+    <Reference Include="GAAPICommon.Core, Version=1.35.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.35.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
-    <Reference Include="GACore, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.2.3.2\lib\net472\GACore.dll</HintPath>
+    <Reference Include="GACore, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GACore.2.5.1\lib\net472\GACore.dll</HintPath>
     </Reference>
-    <Reference Include="GACore.Architecture, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.2.3.2\lib\net472\GACore.Architecture.dll</HintPath>
+    <Reference Include="GACore.Architecture, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GACore.2.5.1\lib\net472\GACore.Architecture.dll</HintPath>
     </Reference>
-    <Reference Include="GACore.Controls, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.2.3.2\lib\net472\GACore.Controls.dll</HintPath>
+    <Reference Include="GACore.Controls, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GACore.2.5.1\lib\net472\GACore.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="GACore.Extensions, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.2.3.2\lib\net472\GACore.Extensions.dll</HintPath>
+    <Reference Include="GACore.Extensions, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GACore.2.5.1\lib\net472\GACore.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="GACore.UI, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GACore.2.3.2\lib\net472\GACore.UI.dll</HintPath>
+    <Reference Include="GACore.UI, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GACore.2.5.1\lib\net472\GACore.UI.dll</HintPath>
     </Reference>
     <Reference Include="Markdig, Version=0.23.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Markdig.0.23.0\lib\net452\Markdig.dll</HintPath>
@@ -72,7 +72,7 @@
       <HintPath>..\..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.7.7\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.8\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">

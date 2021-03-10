@@ -12,6 +12,10 @@ ______ _           _   _____ _ _            _
 
 # Release Notes
 
+## 3.1.5 (10th March 21)
+
+* Fixes Navigation Status enum missing the 'No Scanner Data' enumeration. 
+
 ## 3.1.4 (12th Feb 21)
 
 * Fixes broken Nunit.props reference in FleetClients.Core.Test.

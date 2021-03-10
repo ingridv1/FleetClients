@@ -96,6 +96,7 @@
       <xs:enumeration value="HighUncertainty" />
       <xs:enumeration value="PoorAssociaton" />
       <xs:enumeration value="NoResponse" />
+      <xs:enumeration value="NoScannerData" />
       <xs:enumeration value="Unknown">
         <xs:annotation>
           <xs:appinfo>
