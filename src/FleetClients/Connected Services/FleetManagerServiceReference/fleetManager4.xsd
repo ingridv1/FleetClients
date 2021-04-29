@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:41916/fleetManager.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Services" />
+  <xs:complexType name="TupleOfXElementServiceCallDataFtVIqT19">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="XElement" Namespace="http://schemas.datacontract.org/2004/07/System.Xml.Linq" />
+          <GenericParameter Name="ServiceCallData" Namespace="http://schemas.datacontract.org/2004/07/Services" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Services" name="m_Item2" nillable="true" type="q1:ServiceCallData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfXElementServiceCallDataFtVIqT19" nillable="true" type="tns:TupleOfXElementServiceCallDataFtVIqT19" />
+  <xs:complexType name="TupleOfbooleanServiceCallDatayG81JSvh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ServiceCallData" Namespace="http://schemas.datacontract.org/2004/07/Services" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Services" name="m_Item2" nillable="true" type="q2:ServiceCallData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfbooleanServiceCallDatayG81JSvh" nillable="true" type="tns:TupleOfbooleanServiceCallDatayG81JSvh" />
+</xs:schema>
